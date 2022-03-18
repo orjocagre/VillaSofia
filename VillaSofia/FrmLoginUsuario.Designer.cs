@@ -32,10 +32,10 @@ namespace VillaSofia
             this.btnregistro = new System.Windows.Forms.Button();
             this.lblregistro = new System.Windows.Forms.Label();
             this.pnPrincipal = new Guna.UI2.WinForms.Guna2Panel();
+            this.button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.txtpassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtUser = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new Guna.UI2.WinForms.Guna2Button();
             this.pnPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,6 +84,33 @@ namespace VillaSofia
             this.pnPrincipal.Size = new System.Drawing.Size(389, 402);
             this.pnPrincipal.TabIndex = 18;
             // 
+            // button1
+            // 
+            this.button1.CheckedState.Parent = this.button1;
+            this.button1.CustomImages.Parent = this.button1;
+            this.button1.Font = new System.Drawing.Font("Tw Cen MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.HoverState.Parent = this.button1;
+            this.button1.Location = new System.Drawing.Point(109, 204);
+            this.button1.Name = "button1";
+            this.button1.ShadowDecoration.Parent = this.button1;
+            this.button1.Size = new System.Drawing.Size(180, 45);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "ENTRAR";
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.button1.Enter += new System.EventHandler(this.button1_Enter);
+            this.button1.Leave += new System.EventHandler(this.button1_Leave);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tw Cen MT", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(122, 41);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(133, 31);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Bienvenido";
+            // 
             // txtpassword
             // 
             this.txtpassword.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -100,6 +127,7 @@ namespace VillaSofia
             this.txtpassword.HoverState.Parent = this.txtpassword;
             this.txtpassword.IconRight = global::VillaSofia.Properties.Resources.candado;
             this.txtpassword.Location = new System.Drawing.Point(79, 136);
+            this.txtpassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.PasswordChar = '\0';
             this.txtpassword.PlaceholderText = "";
@@ -128,6 +156,7 @@ namespace VillaSofia
             this.txtUser.HoverState.Parent = this.txtUser;
             this.txtUser.IconRight = global::VillaSofia.Properties.Resources.usuarioNegro;
             this.txtUser.Location = new System.Drawing.Point(79, 85);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtUser.Name = "txtUser";
             this.txtUser.PasswordChar = '\0';
             this.txtUser.PlaceholderText = "";
@@ -138,33 +167,6 @@ namespace VillaSofia
             this.txtUser.TabIndex = 18;
             this.txtUser.Enter += new System.EventHandler(this.txtUser_Enter);
             this.txtUser.Leave += new System.EventHandler(this.txtUser_Leave);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tw Cen MT", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(122, 41);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 31);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "Iniciar Sesion";
-            // 
-            // button1
-            // 
-            this.button1.CheckedState.Parent = this.button1;
-            this.button1.CustomImages.Parent = this.button1;
-            this.button1.Font = new System.Drawing.Font("Tw Cen MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.HoverState.Parent = this.button1;
-            this.button1.Location = new System.Drawing.Point(109, 204);
-            this.button1.Name = "button1";
-            this.button1.ShadowDecoration.Parent = this.button1;
-            this.button1.Size = new System.Drawing.Size(180, 45);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "ENTRAR";
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            this.button1.Enter += new System.EventHandler(this.button1_Enter);
-            this.button1.Leave += new System.EventHandler(this.button1_Leave);
             // 
             // FrmLoginUsuario
             // 
