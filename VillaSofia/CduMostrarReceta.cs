@@ -168,7 +168,7 @@ namespace VillaSofia
                 DgvIngredientes.Rows[i].Cells[4].Value = (Convert.ToDouble(DgvIngredientes.Rows[i].Cells[4].Value)) / Convert.ToDouble(lblNumPorc.Text) * Convert.ToDouble(txtCalcularPorciones.Text);
                
                 
-                 txtCalcularPorciones.Clear();
+                txtCalcularPorciones.Clear();
             }
             lblNumPorc.Text = txtCalcularPorciones.Text;
 
