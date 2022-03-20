@@ -58,7 +58,6 @@ namespace VillaSofia
             DgvIngredientes.Columns[4].FillWeight = 0.5F;
             DgvIngredientes.Columns[5].FillWeight = 1;
 
-
         }
 
         void eliminarReceta()
