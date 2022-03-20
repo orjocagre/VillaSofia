@@ -115,7 +115,11 @@ namespace VillaSofia
                     MessageBox.Show("Solo se permiten letras, ingrese nuevamente el Nombre de la Receta", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     e.Handled = true;
                     return;
+                    
                 }
+
+               
+                
             }
         }
 
@@ -140,15 +144,9 @@ namespace VillaSofia
 
      
 
-        private void lblPorciones_Click(object sender, EventArgs e)
-        {
+       
 
-        }
-
-        private void PanelReceta_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+       
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
@@ -167,8 +165,13 @@ namespace VillaSofia
             for(int i=0; i<DgvIngredientes.RowCount; i++)
             {
                 DgvIngredientes.Rows[i].Cells[4].Value = (Convert.ToDouble(DgvIngredientes.Rows[i].Cells[4].Value)) / Convert.ToDouble(lblNumPorc.Text) * Convert.ToDouble(txtCalcularPorciones.Text);
-
+               
+                
+                txtCalcularPorciones.Clear();
             }
+            lblNumPorc.Text = txtCalcularPorciones.Text;
+
+            
         }
 
         private void txtCalcularPorciones_KeyPress(object sender, KeyPressEventArgs e)
@@ -180,8 +183,9 @@ namespace VillaSofia
                 e.Handled = true;
                 return;
             }
-        }
 
+        }
+        //Boton para regresar al menu
         private void btnAtras_Click(object sender, EventArgs e)
         {
             this.Dispose();

@@ -35,6 +35,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PanelReceta = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.btnAtras = new Guna.UI2.WinForms.Guna2Button();
             this.btnCalcular = new Guna.UI2.WinForms.Guna2Button();
             this.btnEliminar = new Guna.UI2.WinForms.Guna2Button();
             this.btnImprimir = new Guna.UI2.WinForms.Guna2Button();
@@ -42,6 +43,7 @@
             this.LblCalcularPorciones = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.BtnEditar = new Guna.UI2.WinForms.Guna2Button();
             this.LblIngredientes = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.BtnBuscar = new Guna.UI2.WinForms.Guna2Button();
             this.lblNumPorc = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblPorciones = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtProcedimiento = new Guna.UI2.WinForms.Guna2TextBox();
@@ -50,8 +52,6 @@
             this.DgvIngredientes = new Guna.UI2.WinForms.Guna2DataGridView();
             this.DgvRecetas = new Guna.UI2.WinForms.Guna2DataGridView();
             this.TxtBuscarReceta = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnAtras = new Guna.UI2.WinForms.Guna2Button();
-            this.BtnBuscar = new Guna.UI2.WinForms.Guna2Button();
             this.PanelReceta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvIngredientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvRecetas)).BeginInit();
@@ -84,7 +84,24 @@
             this.PanelReceta.ShadowDecoration.Parent = this.PanelReceta;
             this.PanelReceta.Size = new System.Drawing.Size(1203, 700);
             this.PanelReceta.TabIndex = 0;
-            this.PanelReceta.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelReceta_Paint);
+            // 
+            // btnAtras
+            // 
+            this.btnAtras.BackColor = System.Drawing.Color.Transparent;
+            this.btnAtras.CheckedState.Parent = this.btnAtras;
+            this.btnAtras.CustomImages.Parent = this.btnAtras;
+            this.btnAtras.FillColor = System.Drawing.Color.Transparent;
+            this.btnAtras.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAtras.ForeColor = System.Drawing.Color.White;
+            this.btnAtras.HoverState.Parent = this.btnAtras;
+            this.btnAtras.Image = global::VillaSofia.Properties.Resources.atrasAzul32;
+            this.btnAtras.ImageSize = new System.Drawing.Size(36, 36);
+            this.btnAtras.Location = new System.Drawing.Point(13, 10);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.ShadowDecoration.Parent = this.btnAtras;
+            this.btnAtras.Size = new System.Drawing.Size(55, 49);
+            this.btnAtras.TabIndex = 18;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // btnCalcular
             // 
@@ -200,22 +217,41 @@
             // 
             this.LblIngredientes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LblIngredientes.BackColor = System.Drawing.Color.Transparent;
-            this.LblIngredientes.Font = new System.Drawing.Font("Edwardian Script ITC", 30F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblIngredientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblIngredientes.Location = new System.Drawing.Point(671, 20);
             this.LblIngredientes.Name = "LblIngredientes";
-            this.LblIngredientes.Size = new System.Drawing.Size(151, 49);
+            this.LblIngredientes.Size = new System.Drawing.Size(177, 39);
             this.LblIngredientes.TabIndex = 11;
             this.LblIngredientes.Text = "Ingredientes";
+            // 
+            // BtnBuscar
+            // 
+            this.BtnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnBuscar.BackColor = System.Drawing.Color.Transparent;
+            this.BtnBuscar.CheckedState.Parent = this.BtnBuscar;
+            this.BtnBuscar.CustomImages.Parent = this.BtnBuscar;
+            this.BtnBuscar.FillColor = System.Drawing.Color.Transparent;
+            this.BtnBuscar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BtnBuscar.ForeColor = System.Drawing.Color.White;
+            this.BtnBuscar.HoverState.Parent = this.BtnBuscar;
+            this.BtnBuscar.Image = global::VillaSofia.Properties.Resources.buscar;
+            this.BtnBuscar.ImageSize = new System.Drawing.Size(32, 32);
+            this.BtnBuscar.Location = new System.Drawing.Point(1156, 29);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.ShadowDecoration.Parent = this.BtnBuscar;
+            this.BtnBuscar.Size = new System.Drawing.Size(44, 40);
+            this.BtnBuscar.TabIndex = 10;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // lblNumPorc
             // 
             this.lblNumPorc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNumPorc.AutoSize = false;
             this.lblNumPorc.BackColor = System.Drawing.Color.Transparent;
-            this.lblNumPorc.Font = new System.Drawing.Font("Edwardian Script ITC", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumPorc.Location = new System.Drawing.Point(554, 20);
+            this.lblNumPorc.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumPorc.Location = new System.Drawing.Point(573, 20);
             this.lblNumPorc.Name = "lblNumPorc";
-            this.lblNumPorc.Size = new System.Drawing.Size(65, 49);
+            this.lblNumPorc.Size = new System.Drawing.Size(65, 39);
             this.lblNumPorc.TabIndex = 9;
             this.lblNumPorc.Text = "0";
             this.lblNumPorc.Click += new System.EventHandler(this.lblNumPorc_Click);
@@ -224,13 +260,12 @@
             // 
             this.lblPorciones.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPorciones.BackColor = System.Drawing.Color.Transparent;
-            this.lblPorciones.Font = new System.Drawing.Font("Edwardian Script ITC", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPorciones.Location = new System.Drawing.Point(419, 20);
+            this.lblPorciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPorciones.Location = new System.Drawing.Point(414, 20);
             this.lblPorciones.Name = "lblPorciones";
-            this.lblPorciones.Size = new System.Drawing.Size(129, 49);
+            this.lblPorciones.Size = new System.Drawing.Size(154, 39);
             this.lblPorciones.TabIndex = 8;
             this.lblPorciones.Text = "Porciones:";
-            this.lblPorciones.Click += new System.EventHandler(this.lblPorciones_Click);
             // 
             // txtProcedimiento
             // 
@@ -250,7 +285,7 @@
             this.txtProcedimiento.FillColor = System.Drawing.Color.Lavender;
             this.txtProcedimiento.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtProcedimiento.FocusedState.Parent = this.txtProcedimiento;
-            this.txtProcedimiento.Font = new System.Drawing.Font("Edwardian Script ITC", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProcedimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProcedimiento.ForeColor = System.Drawing.Color.Black;
             this.txtProcedimiento.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtProcedimiento.HoverState.Parent = this.txtProcedimiento;
@@ -269,20 +304,20 @@
             // LblProcedimiento
             // 
             this.LblProcedimiento.BackColor = System.Drawing.Color.Transparent;
-            this.LblProcedimiento.Font = new System.Drawing.Font("Edwardian Script ITC", 30F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblProcedimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblProcedimiento.Location = new System.Drawing.Point(23, 81);
             this.LblProcedimiento.Name = "LblProcedimiento";
-            this.LblProcedimiento.Size = new System.Drawing.Size(172, 49);
+            this.LblProcedimiento.Size = new System.Drawing.Size(207, 39);
             this.LblProcedimiento.TabIndex = 6;
             this.LblProcedimiento.Text = "Procedimiento";
             // 
             // LblNombreReceta
             // 
             this.LblNombreReceta.BackColor = System.Drawing.Color.Transparent;
-            this.LblNombreReceta.Font = new System.Drawing.Font("Edwardian Script ITC", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNombreReceta.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblNombreReceta.Location = new System.Drawing.Point(74, 20);
             this.LblNombreReceta.Name = "LblNombreReceta";
-            this.LblNombreReceta.Size = new System.Drawing.Size(287, 59);
+            this.LblNombreReceta.Size = new System.Drawing.Size(317, 39);
             this.LblNombreReceta.TabIndex = 5;
             this.LblNombreReceta.Text = "Seleccione una receta";
             // 
@@ -302,7 +337,7 @@
             this.DgvIngredientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -437,43 +472,6 @@
             this.TxtBuscarReceta.TabIndex = 1;
             this.TxtBuscarReceta.TextChanged += new System.EventHandler(this.TxtBuscarReceta_TextChanged);
             this.TxtBuscarReceta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBuscarReceta_KeyPress);
-            // 
-            // btnAtras
-            // 
-            this.btnAtras.BackColor = System.Drawing.Color.Transparent;
-            this.btnAtras.CheckedState.Parent = this.btnAtras;
-            this.btnAtras.CustomImages.Parent = this.btnAtras;
-            this.btnAtras.FillColor = System.Drawing.Color.Transparent;
-            this.btnAtras.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAtras.ForeColor = System.Drawing.Color.White;
-            this.btnAtras.HoverState.Parent = this.btnAtras;
-            this.btnAtras.Image = global::VillaSofia.Properties.Resources.atrasAzul32;
-            this.btnAtras.ImageSize = new System.Drawing.Size(36, 36);
-            this.btnAtras.Location = new System.Drawing.Point(13, 26);
-            this.btnAtras.Name = "btnAtras";
-            this.btnAtras.ShadowDecoration.Parent = this.btnAtras;
-            this.btnAtras.Size = new System.Drawing.Size(55, 49);
-            this.btnAtras.TabIndex = 18;
-            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
-            // 
-            // BtnBuscar
-            // 
-            this.BtnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnBuscar.BackColor = System.Drawing.Color.Transparent;
-            this.BtnBuscar.CheckedState.Parent = this.BtnBuscar;
-            this.BtnBuscar.CustomImages.Parent = this.BtnBuscar;
-            this.BtnBuscar.FillColor = System.Drawing.Color.Transparent;
-            this.BtnBuscar.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BtnBuscar.ForeColor = System.Drawing.Color.White;
-            this.BtnBuscar.HoverState.Parent = this.BtnBuscar;
-            this.BtnBuscar.Image = global::VillaSofia.Properties.Resources.buscar;
-            this.BtnBuscar.ImageSize = new System.Drawing.Size(32, 32);
-            this.BtnBuscar.Location = new System.Drawing.Point(1156, 29);
-            this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.ShadowDecoration.Parent = this.BtnBuscar;
-            this.BtnBuscar.Size = new System.Drawing.Size(44, 40);
-            this.BtnBuscar.TabIndex = 10;
-            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // CduMostrarReceta
             // 
