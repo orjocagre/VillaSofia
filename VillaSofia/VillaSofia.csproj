@@ -163,6 +163,12 @@
     <Compile Include="FrmProformaEvento.Designer.cs">
       <DependentUpon>FrmProformaEvento.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPrueba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrueba.Designer.cs">
+      <DependentUpon>FrmPrueba.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmRegistroEvento.cs">
       <SubType>Form</SubType>
     </Compile>
