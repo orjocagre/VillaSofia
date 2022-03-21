@@ -114,7 +114,7 @@
             this.btnCalcular.ForeColor = System.Drawing.Color.White;
             this.btnCalcular.HoverState.Parent = this.btnCalcular;
             this.btnCalcular.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnCalcular.Location = new System.Drawing.Point(625, 642);
+            this.btnCalcular.Location = new System.Drawing.Point(674, 641);
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.ShadowDecoration.Parent = this.btnCalcular;
             this.btnCalcular.Size = new System.Drawing.Size(107, 40);
@@ -173,7 +173,7 @@
             this.txtCalcularPorciones.FocusedState.Parent = this.txtCalcularPorciones;
             this.txtCalcularPorciones.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCalcularPorciones.HoverState.Parent = this.txtCalcularPorciones;
-            this.txtCalcularPorciones.Location = new System.Drawing.Point(508, 642);
+            this.txtCalcularPorciones.Location = new System.Drawing.Point(557, 642);
             this.txtCalcularPorciones.Name = "txtCalcularPorciones";
             this.txtCalcularPorciones.PasswordChar = '\0';
             this.txtCalcularPorciones.PlaceholderText = "";
@@ -187,10 +187,10 @@
             // 
             this.LblCalcularPorciones.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LblCalcularPorciones.BackColor = System.Drawing.Color.Transparent;
-            this.LblCalcularPorciones.Font = new System.Drawing.Font("Edwardian Script ITC", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCalcularPorciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblCalcularPorciones.Location = new System.Drawing.Point(400, 642);
             this.LblCalcularPorciones.Name = "LblCalcularPorciones";
-            this.LblCalcularPorciones.Size = new System.Drawing.Size(102, 40);
+            this.LblCalcularPorciones.Size = new System.Drawing.Size(154, 39);
             this.LblCalcularPorciones.TabIndex = 13;
             this.LblCalcularPorciones.Text = "Porciones:";
             // 
@@ -217,7 +217,7 @@
             // 
             this.LblIngredientes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LblIngredientes.BackColor = System.Drawing.Color.Transparent;
-            this.LblIngredientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblIngredientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblIngredientes.Location = new System.Drawing.Point(671, 20);
             this.LblIngredientes.Name = "LblIngredientes";
             this.LblIngredientes.Size = new System.Drawing.Size(177, 39);
@@ -241,27 +241,25 @@
             this.BtnBuscar.ShadowDecoration.Parent = this.BtnBuscar;
             this.BtnBuscar.Size = new System.Drawing.Size(44, 40);
             this.BtnBuscar.TabIndex = 10;
-            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
-            // 
+             // 
             // lblNumPorc
             // 
             this.lblNumPorc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNumPorc.AutoSize = false;
             this.lblNumPorc.BackColor = System.Drawing.Color.Transparent;
-            this.lblNumPorc.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumPorc.Location = new System.Drawing.Point(573, 20);
+            this.lblNumPorc.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumPorc.Location = new System.Drawing.Point(557, 20);
             this.lblNumPorc.Name = "lblNumPorc";
             this.lblNumPorc.Size = new System.Drawing.Size(65, 39);
             this.lblNumPorc.TabIndex = 9;
             this.lblNumPorc.Text = "0";
-            this.lblNumPorc.Click += new System.EventHandler(this.lblNumPorc_Click);
             // 
             // lblPorciones
             // 
             this.lblPorciones.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPorciones.BackColor = System.Drawing.Color.Transparent;
-            this.lblPorciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPorciones.Location = new System.Drawing.Point(414, 20);
+            this.lblPorciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPorciones.Location = new System.Drawing.Point(397, 20);
             this.lblPorciones.Name = "lblPorciones";
             this.lblPorciones.Size = new System.Drawing.Size(154, 39);
             this.lblPorciones.TabIndex = 8;
@@ -285,7 +283,7 @@
             this.txtProcedimiento.FillColor = System.Drawing.Color.Lavender;
             this.txtProcedimiento.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtProcedimiento.FocusedState.Parent = this.txtProcedimiento;
-            this.txtProcedimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProcedimiento.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProcedimiento.ForeColor = System.Drawing.Color.Black;
             this.txtProcedimiento.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtProcedimiento.HoverState.Parent = this.txtProcedimiento;
@@ -298,13 +296,13 @@
             this.txtProcedimiento.ReadOnly = true;
             this.txtProcedimiento.SelectedText = "";
             this.txtProcedimiento.ShadowDecoration.Parent = this.txtProcedimiento;
-            this.txtProcedimiento.Size = new System.Drawing.Size(548, 494);
+            this.txtProcedimiento.Size = new System.Drawing.Size(540, 494);
             this.txtProcedimiento.TabIndex = 7;
             // 
             // LblProcedimiento
             // 
             this.LblProcedimiento.BackColor = System.Drawing.Color.Transparent;
-            this.LblProcedimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblProcedimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblProcedimiento.Location = new System.Drawing.Point(23, 81);
             this.LblProcedimiento.Name = "LblProcedimiento";
             this.LblProcedimiento.Size = new System.Drawing.Size(207, 39);
@@ -314,7 +312,7 @@
             // LblNombreReceta
             // 
             this.LblNombreReceta.BackColor = System.Drawing.Color.Transparent;
-            this.LblNombreReceta.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNombreReceta.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblNombreReceta.Location = new System.Drawing.Point(74, 20);
             this.LblNombreReceta.Name = "LblNombreReceta";
             this.LblNombreReceta.Size = new System.Drawing.Size(317, 39);
@@ -337,7 +335,7 @@
             this.DgvIngredientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -354,13 +352,13 @@
             this.DgvIngredientes.DefaultCellStyle = dataGridViewCellStyle3;
             this.DgvIngredientes.EnableHeadersVisualStyles = false;
             this.DgvIngredientes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(201)))), ((int)(((byte)(231)))));
-            this.DgvIngredientes.Location = new System.Drawing.Point(601, 71);
+            this.DgvIngredientes.Location = new System.Drawing.Point(572, 71);
             this.DgvIngredientes.Name = "DgvIngredientes";
             this.DgvIngredientes.ReadOnly = true;
             this.DgvIngredientes.RowHeadersVisible = false;
             this.DgvIngredientes.RowTemplate.Height = 24;
             this.DgvIngredientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvIngredientes.Size = new System.Drawing.Size(302, 555);
+            this.DgvIngredientes.Size = new System.Drawing.Size(331, 555);
             this.DgvIngredientes.TabIndex = 2;
             this.DgvIngredientes.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Indigo;
             this.DgvIngredientes.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(203)))), ((int)(((byte)(232)))));

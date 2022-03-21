@@ -267,11 +267,7 @@ namespace VillaSofia
 
         }
 
-        private void dagTrabajadores_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-           
-        }
+       
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {

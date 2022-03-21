@@ -412,7 +412,6 @@
             this.dagTrabajadores.ThemeStyle.RowsStyle.Height = 22;
             this.dagTrabajadores.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(185)))), ((int)(((byte)(175)))));
             this.dagTrabajadores.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.dagTrabajadores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dagTrabajadores_CellContentClick);
             // 
             // guna2CustomGradientPanel1
             // 

@@ -30,7 +30,7 @@ namespace VillaSofia
         private void CduMostrarReceta_Load(object sender, EventArgs e)
         {
             LoadRecetas("");
-            //LoadIngredientes("");
+           
 
         }
 
@@ -72,11 +72,7 @@ namespace VillaSofia
             LoadRecetas("");
         }
 
-        private void BtnBuscar_Click(object sender, EventArgs e)
-        {
-            
-        }
-
+     
         private void TxtBuscarReceta_TextChanged(object sender, EventArgs e)
         {
             if (TxtBuscarReceta.Text == " ")
@@ -98,14 +94,7 @@ namespace VillaSofia
             }
         }
 
-        private void lblNumPorc_Click(object sender, EventArgs e)
-        {
-            
-          
-        }
-
-     
-
+      
         private void TxtBuscarReceta_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar != (char)Keys.Space)
@@ -118,8 +107,6 @@ namespace VillaSofia
                     
                 }
 
-               
-                
             }
         }
 
@@ -137,16 +124,9 @@ namespace VillaSofia
             lblNumPorc.Text = DT.Rows[0].Field<int>("num_porciones").ToString();
 
             LoadIngredientes(id);
-
-
-
         }
 
      
-
-       
-
-       
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
@@ -165,18 +145,16 @@ namespace VillaSofia
             for(int i=0; i<DgvIngredientes.RowCount; i++)
             {
                 DgvIngredientes.Rows[i].Cells[4].Value = (Convert.ToDouble(DgvIngredientes.Rows[i].Cells[4].Value)) / Convert.ToDouble(lblNumPorc.Text) * Convert.ToDouble(txtCalcularPorciones.Text);
-               
-                
-                txtCalcularPorciones.Clear();
-            }
-            lblNumPorc.Text = txtCalcularPorciones.Text;
 
+            }
             
+            lblNumPorc.Text = txtCalcularPorciones.Text;
+            txtCalcularPorciones.Clear();
+
         }
 
         private void txtCalcularPorciones_KeyPress(object sender, KeyPressEventArgs e)
         {
-
             if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
             {
                 MessageBox.Show("Solo se permiten numeros, ingrese nuevamente los digitos", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

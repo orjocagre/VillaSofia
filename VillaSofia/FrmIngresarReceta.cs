@@ -127,24 +127,8 @@ namespace VillaSofia
             cmbUM.DisplayMember = "DESCRIPCION";
 
         }
-        //GUARDAR UM
-       /*string IngresarUM()
-        {
-            string resp;
-          
-            resp = Convert.ToString(cmbUM.SelectedIndex);
-
-            return resp;
-
-        }*/
-
         
-        //AGREGAR MAS UNIDADES DE MEDIDA
-        private void BtnAgregarMasUnidades_Click(object sender, EventArgs e)
-        {
-           
-
-        }
+       
 
 
 
@@ -217,11 +201,11 @@ namespace VillaSofia
                 }
             }
         }
-        void eliminarIngrediente(int idIng, int idReceta)
+        void eliminarIngrediente(int idIng, int idreceta)
         {
             CLsLogicaIngredienteReceta eliminarIngrediente = new CLsLogicaIngredienteReceta();
 
-            String msj = eliminarIngrediente.EliminarRecetaIngrediente(idIng, idReceta);
+            String msj = eliminarIngrediente.EliminarRecetaIngrediente(idIng, idreceta);
 
             
         }
@@ -235,14 +219,13 @@ namespace VillaSofia
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
-
             String iding = dgvIngredientes.SelectedRows[0].Cells[7].Value.ToString();
             int ingreId = Convert.ToInt32( iding);
-            ClsLogicaAddReceta ingrediente = new ClsLogicaAddReceta();
+           ClsLogicaAddReceta ingrediente = new ClsLogicaAddReceta();
             // DataTable DT = ingrediente.RecetaLista(iding);
 
 
-            eliminarIngrediente(idreceta, ingreId);
+            eliminarIngrediente(ingreId,idreceta);
           
 
             LoadIngredientes(idreceta.ToString());
@@ -250,10 +233,7 @@ namespace VillaSofia
 
         }
 
-        private void GbxReceta_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void BtnAgregarMas_Click(object sender, EventArgs e)
         {
