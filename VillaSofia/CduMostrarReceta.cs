@@ -48,6 +48,7 @@ namespace VillaSofia
             CLsLogicaIngredienteReceta Load = new CLsLogicaIngredienteReceta();
 
             DgvIngredientes.DataSource = Load.ListarIngredientes(x);
+           
             DgvIngredientes.Columns[0].Visible = false;
             DgvIngredientes.Columns[1].Visible = false;
             DgvIngredientes.Columns[2].Visible = false;

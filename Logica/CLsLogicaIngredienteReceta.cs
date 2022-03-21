@@ -58,12 +58,12 @@ namespace Logica
             return mensaje;
         }
 
-        public string EliminarRecetaIngrediente(int ireceta, int idingrediente)
+        public string EliminarRecetaIngrediente(int idingrediente, int ireceta)
         {
             int i;
             ClsDatosIngredienteReceta InReceta = new ClsDatosIngredienteReceta();
 
-            i = InReceta.EliminarReceta(ireceta, idingrediente);
+            i = InReceta.EliminarReceta( idingrediente, ireceta);
             String mensaje;
 
 
@@ -88,10 +88,10 @@ namespace Logica
         //COMPONER
         public DataTable ListarIngredientes(string x)
         {
-            string sql = "SELECT * FROM vistamostraringredientes WHERE vistamostraringredientes.id_receta LIKE '%" + x + "%'";
+            string sql = "SELECT * FROM vistamostraringredientes WHERE vistamostraringredientes.id_receta ="+ x  ;
             // Datos.ClsDatosRegistroTrabajador Lista = new Datos.ClsDatosRegistroTrabajador();
             //  return new ClsDatosTipoTrabajador().ListarTipoTrabajador(sql);
-            return new ClsDatosTipoTrabajador().ListarTipoTrabajador(sql);
+            return new ClsDatosIngredienteReceta().consulta(sql);
         }
       
 

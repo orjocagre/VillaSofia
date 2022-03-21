@@ -60,7 +60,7 @@ namespace Datos
 
 
         }
-        public int EliminarReceta(int ireceta, int idingrediente)
+        public int EliminarReceta( int idingrediente, int ireceta)
         {
             MySqlCommand CM = new MySqlCommand();
             MySqlParameter x = new MySqlParameter();//98704
@@ -80,6 +80,7 @@ namespace Datos
                 CM.Parameters["PidReceta"].Direction = ParameterDirection.Input;
 
 
+                Console.WriteLine("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIdReceta" + ireceta+ "IdIngrediente"+idingrediente);
 
                 CM.ExecuteNonQuery();
                 return 1;
@@ -93,6 +94,7 @@ namespace Datos
             {
                 conex.conectar.Close();
             }
+
         }
 
         public DataTable consulta(String sql)

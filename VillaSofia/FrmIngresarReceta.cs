@@ -205,7 +205,7 @@ namespace VillaSofia
         {
             CLsLogicaIngredienteReceta eliminarIngrediente = new CLsLogicaIngredienteReceta();
 
-            String msj = eliminarIngrediente.EliminarRecetaIngrediente(idreceta, idIng );
+            String msj = eliminarIngrediente.EliminarRecetaIngrediente(idIng, idreceta);
 
             
         }
@@ -225,8 +225,7 @@ namespace VillaSofia
             // DataTable DT = ingrediente.RecetaLista(iding);
 
 
-            eliminarIngrediente(idreceta, ingreId);
-          
+            eliminarIngrediente(ingreId, idreceta);
 
             LoadIngredientes(idreceta.ToString());
 
