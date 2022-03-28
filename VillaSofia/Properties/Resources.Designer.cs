@@ -263,6 +263,26 @@ namespace VillaSofia.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap derechaFtAzul {
+            get {
+                object obj = ResourceManager.GetObject("derechaFtAzul", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap derechaFtNegra {
+            get {
+                object obj = ResourceManager.GetObject("derechaFtNegra", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dineroAzul32 {
             get {
                 object obj = ResourceManager.GetObject("dineroAzul32", resourceCulture);
@@ -536,6 +556,26 @@ namespace VillaSofia.Properties {
         internal static System.Drawing.Bitmap izquierdaBlanca32 {
             get {
                 object obj = ResourceManager.GetObject("izquierdaBlanca32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap izquierdaFtAzul {
+            get {
+                object obj = ResourceManager.GetObject("izquierdaFtAzul", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap izquierdaFtNegra {
+            get {
+                object obj = ResourceManager.GetObject("izquierdaFtNegra", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

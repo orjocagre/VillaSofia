@@ -32,7 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnEliminar = new Guna.UI2.WinForms.Guna2Button();
             this.btnCerrar = new Guna.UI2.WinForms.Guna2Button();
             this.lblFactura = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtBusqueda = new Guna.UI2.WinForms.Guna2TextBox();
@@ -43,8 +42,6 @@
             this.pnPrincipal = new System.Windows.Forms.TableLayoutPanel();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.btnOpciones = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAtras = new Guna.UI2.WinForms.Guna2Button();
             this.chbMostrarTodas = new Guna.UI2.WinForms.Guna2CheckBox();
             this.pnBotonesFacturas = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
@@ -66,7 +63,6 @@
             this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblMesero = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.btnDesplegarNombre = new Guna.UI2.WinForms.Guna2Button();
             this.pnNombreRuc = new Guna.UI2.WinForms.Guna2Panel();
             this.txtRUC = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -74,6 +70,11 @@
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.cmbMesero = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.btnDividirCuenta = new Guna.UI2.WinForms.Guna2Button();
+            this.btnOpciones = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAtras = new Guna.UI2.WinForms.Guna2Button();
+            this.btnEliminar = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDesplegarNombre = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel2.SuspendLayout();
             this.pnPrincipal.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
@@ -95,26 +96,6 @@
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
             this.guna2Panel2.Size = new System.Drawing.Size(52, 59);
             this.guna2Panel2.TabIndex = 13;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BorderColor = System.Drawing.Color.Transparent;
-            this.btnEliminar.CheckedState.Parent = this.btnEliminar;
-            this.btnEliminar.CustomImages.Parent = this.btnEliminar;
-            this.btnEliminar.FillColor = System.Drawing.Color.Transparent;
-            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.HoverState.FillColor = System.Drawing.Color.Gray;
-            this.btnEliminar.HoverState.Image = global::VillaSofia.Properties.Resources.equisBlanca32;
-            this.btnEliminar.HoverState.Parent = this.btnEliminar;
-            this.btnEliminar.Image = global::VillaSofia.Properties.Resources.equis94_148_255Azul32;
-            this.btnEliminar.Location = new System.Drawing.Point(10, 13);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.ShadowDecoration.Parent = this.btnEliminar;
-            this.btnEliminar.Size = new System.Drawing.Size(33, 32);
-            this.btnEliminar.TabIndex = 7;
-            this.btnEliminar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnCerrar
             // 
@@ -273,43 +254,6 @@
             this.guna2HtmlLabel1.TabIndex = 13;
             this.guna2HtmlLabel1.Text = "guna2HtmlLabel1";
             // 
-            // btnOpciones
-            // 
-            this.btnOpciones.CheckedState.Parent = this.btnOpciones;
-            this.btnOpciones.CustomImages.Parent = this.btnOpciones;
-            this.btnOpciones.FillColor = System.Drawing.Color.Transparent;
-            this.btnOpciones.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnOpciones.ForeColor = System.Drawing.Color.White;
-            this.btnOpciones.HoverState.Parent = this.btnOpciones;
-            this.btnOpciones.Image = global::VillaSofia.Properties.Resources.trespuntosGris1;
-            this.btnOpciones.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnOpciones.Location = new System.Drawing.Point(61, 27);
-            this.btnOpciones.Name = "btnOpciones";
-            this.btnOpciones.ShadowDecoration.Parent = this.btnOpciones;
-            this.btnOpciones.Size = new System.Drawing.Size(44, 38);
-            this.btnOpciones.TabIndex = 12;
-            this.btnOpciones.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnOpciones.Click += new System.EventHandler(this.btnOpciones_Click);
-            // 
-            // btnAtras
-            // 
-            this.btnAtras.BorderRadius = 3;
-            this.btnAtras.CheckedState.Parent = this.btnAtras;
-            this.btnAtras.CustomImages.Parent = this.btnAtras;
-            this.btnAtras.FillColor = System.Drawing.Color.Silver;
-            this.btnAtras.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAtras.ForeColor = System.Drawing.Color.White;
-            this.btnAtras.HoverState.Parent = this.btnAtras;
-            this.btnAtras.Image = global::VillaSofia.Properties.Resources.flechaIzquierdaBlanca32;
-            this.btnAtras.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnAtras.Location = new System.Drawing.Point(3, 27);
-            this.btnAtras.Name = "btnAtras";
-            this.btnAtras.ShadowDecoration.Parent = this.btnAtras;
-            this.btnAtras.Size = new System.Drawing.Size(55, 38);
-            this.btnAtras.TabIndex = 11;
-            this.btnAtras.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
-            // 
             // chbMostrarTodas
             // 
             this.chbMostrarTodas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -343,6 +287,7 @@
             // 
             // guna2Panel4
             // 
+            this.guna2Panel4.Controls.Add(this.btnDividirCuenta);
             this.guna2Panel4.Controls.Add(this.guna2HtmlLabel3);
             this.guna2Panel4.Controls.Add(this.txtTotal);
             this.guna2Panel4.Controls.Add(this.lblError);
@@ -649,26 +594,6 @@
             this.lblMesero.Text = "MESERO";
             this.lblMesero.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnDesplegarNombre
-            // 
-            this.btnDesplegarNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDesplegarNombre.CheckedState.Parent = this.btnDesplegarNombre;
-            this.btnDesplegarNombre.CustomImages.Parent = this.btnDesplegarNombre;
-            this.btnDesplegarNombre.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.btnDesplegarNombre.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnDesplegarNombre.ForeColor = System.Drawing.Color.White;
-            this.btnDesplegarNombre.HoverState.Parent = this.btnDesplegarNombre;
-            this.btnDesplegarNombre.Image = global::VillaSofia.Properties.Resources.abajoWhiteSmoke32;
-            this.btnDesplegarNombre.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnDesplegarNombre.Location = new System.Drawing.Point(3, 32);
-            this.btnDesplegarNombre.Name = "btnDesplegarNombre";
-            this.btnDesplegarNombre.ShadowDecoration.Parent = this.btnDesplegarNombre;
-            this.btnDesplegarNombre.Size = new System.Drawing.Size(311, 25);
-            this.btnDesplegarNombre.TabIndex = 13;
-            this.btnDesplegarNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnDesplegarNombre.Click += new System.EventHandler(this.btnDesplegarNombre_Click);
-            // 
             // pnNombreRuc
             // 
             this.pnNombreRuc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -795,6 +720,99 @@
             this.guna2HtmlLabel4.Text = "canceladas";
             this.guna2HtmlLabel4.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnDividirCuenta
+            // 
+            this.btnDividirCuenta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDividirCuenta.CheckedState.Parent = this.btnDividirCuenta;
+            this.btnDividirCuenta.CustomImages.Parent = this.btnDividirCuenta;
+            this.btnDividirCuenta.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDividirCuenta.ForeColor = System.Drawing.Color.White;
+            this.btnDividirCuenta.HoverState.Parent = this.btnDividirCuenta;
+            this.btnDividirCuenta.Location = new System.Drawing.Point(198, 635);
+            this.btnDividirCuenta.Name = "btnDividirCuenta";
+            this.btnDividirCuenta.ShadowDecoration.Parent = this.btnDividirCuenta;
+            this.btnDividirCuenta.Size = new System.Drawing.Size(166, 45);
+            this.btnDividirCuenta.TabIndex = 19;
+            this.btnDividirCuenta.Text = "DIVIDIR CUENTA";
+            this.btnDividirCuenta.Click += new System.EventHandler(this.btnDividirCuenta_Click);
+            // 
+            // btnOpciones
+            // 
+            this.btnOpciones.CheckedState.Parent = this.btnOpciones;
+            this.btnOpciones.CustomImages.Parent = this.btnOpciones;
+            this.btnOpciones.FillColor = System.Drawing.Color.Transparent;
+            this.btnOpciones.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnOpciones.ForeColor = System.Drawing.Color.White;
+            this.btnOpciones.HoverState.Parent = this.btnOpciones;
+            this.btnOpciones.Image = global::VillaSofia.Properties.Resources.trespuntosGris1;
+            this.btnOpciones.ImageSize = new System.Drawing.Size(32, 32);
+            this.btnOpciones.Location = new System.Drawing.Point(61, 27);
+            this.btnOpciones.Name = "btnOpciones";
+            this.btnOpciones.ShadowDecoration.Parent = this.btnOpciones;
+            this.btnOpciones.Size = new System.Drawing.Size(44, 38);
+            this.btnOpciones.TabIndex = 12;
+            this.btnOpciones.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnOpciones.Click += new System.EventHandler(this.btnOpciones_Click);
+            // 
+            // btnAtras
+            // 
+            this.btnAtras.BorderRadius = 3;
+            this.btnAtras.CheckedState.Parent = this.btnAtras;
+            this.btnAtras.CustomImages.Parent = this.btnAtras;
+            this.btnAtras.FillColor = System.Drawing.Color.Silver;
+            this.btnAtras.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAtras.ForeColor = System.Drawing.Color.White;
+            this.btnAtras.HoverState.Parent = this.btnAtras;
+            this.btnAtras.Image = global::VillaSofia.Properties.Resources.flechaIzquierdaBlanca32;
+            this.btnAtras.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnAtras.Location = new System.Drawing.Point(3, 27);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.ShadowDecoration.Parent = this.btnAtras;
+            this.btnAtras.Size = new System.Drawing.Size(55, 38);
+            this.btnAtras.TabIndex = 11;
+            this.btnAtras.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BorderColor = System.Drawing.Color.Transparent;
+            this.btnEliminar.CheckedState.Parent = this.btnEliminar;
+            this.btnEliminar.CustomImages.Parent = this.btnEliminar;
+            this.btnEliminar.FillColor = System.Drawing.Color.Transparent;
+            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.HoverState.FillColor = System.Drawing.Color.Gray;
+            this.btnEliminar.HoverState.Image = global::VillaSofia.Properties.Resources.equisBlanca32;
+            this.btnEliminar.HoverState.Parent = this.btnEliminar;
+            this.btnEliminar.Image = global::VillaSofia.Properties.Resources.equis94_148_255Azul32;
+            this.btnEliminar.Location = new System.Drawing.Point(10, 13);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.ShadowDecoration.Parent = this.btnEliminar;
+            this.btnEliminar.Size = new System.Drawing.Size(33, 32);
+            this.btnEliminar.TabIndex = 7;
+            this.btnEliminar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnDesplegarNombre
+            // 
+            this.btnDesplegarNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDesplegarNombre.CheckedState.Parent = this.btnDesplegarNombre;
+            this.btnDesplegarNombre.CustomImages.Parent = this.btnDesplegarNombre;
+            this.btnDesplegarNombre.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.btnDesplegarNombre.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDesplegarNombre.ForeColor = System.Drawing.Color.White;
+            this.btnDesplegarNombre.HoverState.Parent = this.btnDesplegarNombre;
+            this.btnDesplegarNombre.Image = global::VillaSofia.Properties.Resources.abajoWhiteSmoke32;
+            this.btnDesplegarNombre.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnDesplegarNombre.Location = new System.Drawing.Point(3, 32);
+            this.btnDesplegarNombre.Name = "btnDesplegarNombre";
+            this.btnDesplegarNombre.ShadowDecoration.Parent = this.btnDesplegarNombre;
+            this.btnDesplegarNombre.Size = new System.Drawing.Size(311, 25);
+            this.btnDesplegarNombre.TabIndex = 13;
+            this.btnDesplegarNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDesplegarNombre.Click += new System.EventHandler(this.btnDesplegarNombre_Click);
+            // 
             // CduFacturacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -860,5 +878,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
+        private Guna.UI2.WinForms.Guna2Button btnDividirCuenta;
     }
 }
