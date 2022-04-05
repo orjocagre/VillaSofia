@@ -29,87 +29,62 @@ namespace VillaSofia
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnregistro = new System.Windows.Forms.Button();
-            this.lblregistro = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLoginUsuario));
             this.pnPrincipal = new Guna.UI2.WinForms.Guna2Panel();
+            this.pictVillaS = new System.Windows.Forms.PictureBox();
             this.button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.txtpassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtUser = new Guna.UI2.WinForms.Guna2TextBox();
             this.pnPrincipal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictVillaS)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnregistro
-            // 
-            this.btnregistro.BackColor = System.Drawing.Color.White;
-            this.btnregistro.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.btnregistro.FlatAppearance.BorderSize = 0;
-            this.btnregistro.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.btnregistro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btnregistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnregistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnregistro.ForeColor = System.Drawing.Color.Black;
-            this.btnregistro.Location = new System.Drawing.Point(135, 317);
-            this.btnregistro.Name = "btnregistro";
-            this.btnregistro.Size = new System.Drawing.Size(128, 29);
-            this.btnregistro.TabIndex = 15;
-            this.btnregistro.Text = "Registrarme";
-            this.btnregistro.UseVisualStyleBackColor = false;
-            this.btnregistro.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // lblregistro
-            // 
-            this.lblregistro.AutoSize = true;
-            this.lblregistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblregistro.Location = new System.Drawing.Point(119, 275);
-            this.lblregistro.Name = "lblregistro";
-            this.lblregistro.Size = new System.Drawing.Size(160, 18);
-            this.lblregistro.TabIndex = 14;
-            this.lblregistro.Text = "¿No estas Registrado?";
-            this.lblregistro.Click += new System.EventHandler(this.label1_Click);
             // 
             // pnPrincipal
             // 
-            this.pnPrincipal.BackColor = System.Drawing.Color.White;
+            this.pnPrincipal.BackColor = System.Drawing.SystemColors.Window;
+            this.pnPrincipal.BorderColor = System.Drawing.Color.Red;
+            this.pnPrincipal.Controls.Add(this.pictVillaS);
             this.pnPrincipal.Controls.Add(this.button1);
-            this.pnPrincipal.Controls.Add(this.label2);
             this.pnPrincipal.Controls.Add(this.txtpassword);
             this.pnPrincipal.Controls.Add(this.txtUser);
-            this.pnPrincipal.Controls.Add(this.btnregistro);
-            this.pnPrincipal.Controls.Add(this.lblregistro);
             this.pnPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnPrincipal.FillColor = System.Drawing.Color.White;
             this.pnPrincipal.Location = new System.Drawing.Point(0, 0);
             this.pnPrincipal.Name = "pnPrincipal";
             this.pnPrincipal.ShadowDecoration.Parent = this.pnPrincipal;
-            this.pnPrincipal.Size = new System.Drawing.Size(389, 402);
+            this.pnPrincipal.Size = new System.Drawing.Size(289, 402);
             this.pnPrincipal.TabIndex = 18;
+            // 
+            // pictVillaS
+            // 
+            this.pictVillaS.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictVillaS.Image = ((System.Drawing.Image)(resources.GetObject("pictVillaS.Image")));
+            this.pictVillaS.ImageLocation = "";
+            this.pictVillaS.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictVillaS.InitialImage")));
+            this.pictVillaS.Location = new System.Drawing.Point(43, 3);
+            this.pictVillaS.Name = "pictVillaS";
+            this.pictVillaS.Size = new System.Drawing.Size(214, 201);
+            this.pictVillaS.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictVillaS.TabIndex = 23;
+            this.pictVillaS.TabStop = false;
             // 
             // button1
             // 
             this.button1.CheckedState.Parent = this.button1;
             this.button1.CustomImages.Parent = this.button1;
-            this.button1.Font = new System.Drawing.Font("Tw Cen MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.FillColor = System.Drawing.Color.OrangeRed;
+            this.button1.Font = new System.Drawing.Font("Tw Cen MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.button1.HoverState.Parent = this.button1;
-            this.button1.Location = new System.Drawing.Point(109, 204);
+            this.button1.Location = new System.Drawing.Point(85, 324);
             this.button1.Name = "button1";
             this.button1.ShadowDecoration.Parent = this.button1;
-            this.button1.Size = new System.Drawing.Size(180, 45);
+            this.button1.Size = new System.Drawing.Size(122, 37);
             this.button1.TabIndex = 22;
             this.button1.Text = "ENTRAR";
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             this.button1.Enter += new System.EventHandler(this.button1_Enter);
             this.button1.Leave += new System.EventHandler(this.button1_Leave);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tw Cen MT", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(122, 41);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(133, 31);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "Bienvenido";
             // 
             // txtpassword
             // 
@@ -120,13 +95,15 @@ namespace VillaSofia
             this.txtpassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtpassword.DisabledState.Parent = this.txtpassword;
             this.txtpassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtpassword.FillColor = System.Drawing.Color.GhostWhite;
             this.txtpassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtpassword.FocusedState.Parent = this.txtpassword;
             this.txtpassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpassword.ForeColor = System.Drawing.Color.Black;
             this.txtpassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtpassword.HoverState.Parent = this.txtpassword;
             this.txtpassword.IconRight = global::VillaSofia.Properties.Resources.candado;
-            this.txtpassword.Location = new System.Drawing.Point(79, 136);
+            this.txtpassword.Location = new System.Drawing.Point(26, 267);
             this.txtpassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.PasswordChar = '\0';
@@ -142,6 +119,7 @@ namespace VillaSofia
             // 
             // txtUser
             // 
+            this.txtUser.BackColor = System.Drawing.Color.GhostWhite;
             this.txtUser.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUser.DefaultText = "USUARIO";
             this.txtUser.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -149,13 +127,15 @@ namespace VillaSofia
             this.txtUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtUser.DisabledState.Parent = this.txtUser;
             this.txtUser.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUser.FillColor = System.Drawing.Color.GhostWhite;
             this.txtUser.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUser.FocusedState.Parent = this.txtUser;
             this.txtUser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUser.ForeColor = System.Drawing.Color.Black;
             this.txtUser.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUser.HoverState.Parent = this.txtUser;
             this.txtUser.IconRight = global::VillaSofia.Properties.Resources.usuarioNegro;
-            this.txtUser.Location = new System.Drawing.Point(79, 85);
+            this.txtUser.Location = new System.Drawing.Point(26, 212);
             this.txtUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtUser.Name = "txtUser";
             this.txtUser.PasswordChar = '\0';
@@ -172,25 +152,25 @@ namespace VillaSofia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(389, 402);
+            this.ClientSize = new System.Drawing.Size(289, 402);
             this.Controls.Add(this.pnPrincipal);
+            this.ForeColor = System.Drawing.SystemColors.Window;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmLoginUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SIVISO";
             this.Load += new System.EventHandler(this.FrmLoginUsuario_Load);
             this.pnPrincipal.ResumeLayout(false);
-            this.pnPrincipal.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictVillaS)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btnregistro;
-        private System.Windows.Forms.Label lblregistro;
         private Guna.UI2.WinForms.Guna2Panel pnPrincipal;
         private Guna.UI2.WinForms.Guna2TextBox txtpassword;
         private Guna.UI2.WinForms.Guna2TextBox txtUser;
-        private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Button button1;
+        private System.Windows.Forms.PictureBox pictVillaS;
     }
 }

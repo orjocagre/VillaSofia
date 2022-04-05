@@ -85,7 +85,7 @@ namespace Logica
             return mensaje;
         }
 
-        //COMPONER
+   
         public DataTable ListarIngredientes(string x)
         {
             string sql = "SELECT * FROM vistamostraringredientes WHERE vistamostraringredientes.id_receta ="+ x  ;

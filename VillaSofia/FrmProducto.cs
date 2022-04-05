@@ -483,5 +483,10 @@ namespace VillaSofia
                 btnAbajo.Enabled = true;
             }
         }
+
+        private void txtPrecio_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -25,6 +25,7 @@ namespace VillaSofia
         int estadoCuenta;
         Boolean facturaEditada;
 
+
         public CduFacturacion(VillaSofia vs)
         {
             desplegado = false;
@@ -138,7 +139,7 @@ namespace VillaSofia
             }
 
 
-            
+
         }
 
 
@@ -402,6 +403,7 @@ namespace VillaSofia
 
 
         }
+
         void guardarFactura()
         {
             ClsLogicaOrden orden = new ClsLogicaOrden();
@@ -413,11 +415,12 @@ namespace VillaSofia
             }
             factura.guardarTotalFactura(idFactura, Convert.ToDouble(txtTotal.Text));
             factura.agregarDatosFactura(idFactura, txtNombre.Text, txtRUC.Text, Convert.ToInt32(cmbMesero.SelectedValue));
+
+
         }
+
         void cerrarFactura()
         {
-            ClsLogicaOrden orden = new ClsLogicaOrden();
-            orden.vaciarFactura(idFactura);
             guardarFactura();
 
             Guna2Button btn = (Guna2Button)pnBotonesFacturas.Controls["btnF" + idFactura];
@@ -782,10 +785,6 @@ namespace VillaSofia
             
         }
 
-        private void btnDividirCuenta_Click(object sender, EventArgs e)
-        {
-            FrmDividirCuenta dividir = new FrmDividirCuenta(idFactura, Convert.ToInt32(cmbMesero.SelectedValue));
-            dividir.Visible = true;
-        }
+        
     }
 }

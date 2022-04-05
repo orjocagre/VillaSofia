@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Data;
 
 namespace Datos
@@ -22,7 +18,7 @@ namespace Datos
             comando.Parameters.AddWithValue("@usuario", usuario.Usuario1);
             comando.Parameters.AddWithValue("@password", usuario.Password);
             comando.Parameters.AddWithValue("@nombre", usuario.Nombre);
-            comando.Parameters.AddWithValue("@id_tipo", 2);
+            comando.Parameters.AddWithValue("@id_tipo", 3);
 
             int resultado = comando.ExecuteNonQuery();
 

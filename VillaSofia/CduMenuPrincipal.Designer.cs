@@ -50,6 +50,7 @@
             this.pnPrincipal.ShadowDecoration.Parent = this.pnPrincipal;
             this.pnPrincipal.Size = new System.Drawing.Size(1221, 678);
             this.pnPrincipal.TabIndex = 4;
+            this.pnPrincipal.Paint += new System.Windows.Forms.PaintEventHandler(this.pnPrincipal_Paint);
             // 
             // btnEventos
             // 
@@ -60,7 +61,7 @@
             this.btnEventos.CheckedState.Parent = this.btnEventos;
             this.btnEventos.CustomImages.Parent = this.btnEventos;
             this.btnEventos.FillColor = System.Drawing.Color.Transparent;
-            this.btnEventos.Font = new System.Drawing.Font("Tw Cen MT", 36F, System.Drawing.FontStyle.Bold);
+            this.btnEventos.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold);
             this.btnEventos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnEventos.HoverState.Parent = this.btnEventos;
             this.btnEventos.Image = global::VillaSofia.Properties.Resources.eventos256;
@@ -85,7 +86,7 @@
             this.btnCaja.CheckedState.Parent = this.btnCaja;
             this.btnCaja.CustomImages.Parent = this.btnCaja;
             this.btnCaja.FillColor = System.Drawing.Color.Transparent;
-            this.btnCaja.Font = new System.Drawing.Font("Tw Cen MT", 36F, System.Drawing.FontStyle.Bold);
+            this.btnCaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold);
             this.btnCaja.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(197)))), ((int)(((byte)(59)))));
             this.btnCaja.HoverState.Parent = this.btnCaja;
             this.btnCaja.Image = global::VillaSofia.Properties.Resources.caja256;
@@ -110,7 +111,7 @@
             this.btnVentas.CheckedState.Parent = this.btnVentas;
             this.btnVentas.CustomImages.Parent = this.btnVentas;
             this.btnVentas.FillColor = System.Drawing.Color.Transparent;
-            this.btnVentas.Font = new System.Drawing.Font("Tw Cen MT", 36F, System.Drawing.FontStyle.Bold);
+            this.btnVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold);
             this.btnVentas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(245)))), ((int)(((byte)(0)))));
             this.btnVentas.HoverState.Parent = this.btnVentas;
             this.btnVentas.Image = global::VillaSofia.Properties.Resources.ventas256;
@@ -124,6 +125,7 @@
             this.btnVentas.Text = "VENTAS";
             this.btnVentas.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnVentas.TextOffset = new System.Drawing.Point(25, 115);
+            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
             // 
             // btnMenu
             // 
@@ -134,7 +136,7 @@
             this.btnMenu.CheckedState.Parent = this.btnMenu;
             this.btnMenu.CustomImages.Parent = this.btnMenu;
             this.btnMenu.FillColor = System.Drawing.Color.Transparent;
-            this.btnMenu.Font = new System.Drawing.Font("Tw Cen MT", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(0)))), ((int)(((byte)(201)))));
             this.btnMenu.HoverState.Parent = this.btnMenu;
             this.btnMenu.Image = global::VillaSofia.Properties.Resources.recetas256;

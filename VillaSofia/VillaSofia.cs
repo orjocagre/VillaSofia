@@ -102,21 +102,27 @@ namespace VillaSofia
 
             CduMenuPrincipal mp = new CduMenuPrincipal(this);
             this.Controls.Add(mp);
-            this.btnSesion.Visible = false;
-
+            
             int tipousuario = ClsSession.id_tipo;
             if (tipousuario == 1)
             {
                 this.lblRol.Visible = true;
                 this.lblCajero.Visible = false;
-                
-                
+                this.lblJefeCocina.Visible = false;
+
             }
             else if (tipousuario == 2)
             {
                 this.lblCajero.Visible = true;
                 this.lblRol.Visible = false;
                 this.fileMenu.Visible = false;
+            }
+            else if (tipousuario == 3)
+            {
+                this.lblJefeCocina.Visible = true;
+                this.lblRol.Visible = false;
+                this.fileMenu.Visible = false;
+
             }
 
             
@@ -172,12 +178,11 @@ namespace VillaSofia
 
         private void btnSesion_Click(object sender, EventArgs e)
         {
-            FrmLoginUsuario sesion = new FrmLoginUsuario();
-            sesion.Show();
-            VillaSofia frm = new VillaSofia();
-            frm.Close();
-            frm.Visible = false;
 
+            this.Close();
+            FrmLoginUsuario sesion = new FrmLoginUsuario();
+            sesion.Visible = true;
         }
+
     }
 }

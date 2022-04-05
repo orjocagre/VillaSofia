@@ -42,6 +42,16 @@ namespace VillaSofia
             this.Dispose();
         }
 
-        
+        private void btnVentas_Click(object sender, EventArgs e)
+        {
+            vs.Controls.Remove(this);
+            vs.Controls.Add(new CduMenuPrincipal(vs));
+            this.Dispose();
+        }
+
+        private void pnPrincipal_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

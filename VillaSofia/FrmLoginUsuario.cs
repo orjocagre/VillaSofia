@@ -140,5 +140,7 @@ namespace VillaSofia
         {
             button1.BorderThickness = 0;
         }
+
+       
     }
 }

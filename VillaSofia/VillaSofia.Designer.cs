@@ -39,6 +39,7 @@
             this.LblUsuario = new System.Windows.Forms.Label();
             this.lblRol = new System.Windows.Forms.Label();
             this.lblCajero = new System.Windows.Forms.Label();
+            this.lblJefeCocina = new System.Windows.Forms.Label();
             this.btnSesion = new System.Windows.Forms.Button();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -49,7 +50,7 @@
             this.fileMenu});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(1191, 24);
+            this.menuStrip.Size = new System.Drawing.Size(1191, 28);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
             this.menuStrip.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip_ItemClicked);
@@ -61,36 +62,37 @@
             this.trabajadorToolStripMenuItem,
             this.recetaToolStripMenuItem,
             this.adminstrarUsuariosToolStripMenuItem});
-            this.fileMenu.ImageTransparentColor = System.Drawing.SystemColors.ActiveBorder;
+            this.fileMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fileMenu.ImageTransparentColor = System.Drawing.Color.Gainsboro;
             this.fileMenu.Name = "fileMenu";
-            this.fileMenu.Size = new System.Drawing.Size(62, 20);
+            this.fileMenu.Size = new System.Drawing.Size(81, 24);
             this.fileMenu.Text = "Registro";
             // 
             // productoToolStripMenuItem
             // 
             this.productoToolStripMenuItem.Name = "productoToolStripMenuItem";
-            this.productoToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.productoToolStripMenuItem.Size = new System.Drawing.Size(222, 24);
             this.productoToolStripMenuItem.Text = "Producto";
             this.productoToolStripMenuItem.Click += new System.EventHandler(this.productoToolStripMenuItem_Click);
             // 
             // trabajadorToolStripMenuItem
             // 
             this.trabajadorToolStripMenuItem.Name = "trabajadorToolStripMenuItem";
-            this.trabajadorToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.trabajadorToolStripMenuItem.Size = new System.Drawing.Size(222, 24);
             this.trabajadorToolStripMenuItem.Text = "Trabajador";
             this.trabajadorToolStripMenuItem.Click += new System.EventHandler(this.trabajadorToolStripMenuItem_Click);
             // 
             // recetaToolStripMenuItem
             // 
             this.recetaToolStripMenuItem.Name = "recetaToolStripMenuItem";
-            this.recetaToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.recetaToolStripMenuItem.Size = new System.Drawing.Size(222, 24);
             this.recetaToolStripMenuItem.Text = "Receta";
             this.recetaToolStripMenuItem.Click += new System.EventHandler(this.recetaToolStripMenuItem_Click);
             // 
             // adminstrarUsuariosToolStripMenuItem
             // 
             this.adminstrarUsuariosToolStripMenuItem.Name = "adminstrarUsuariosToolStripMenuItem";
-            this.adminstrarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.adminstrarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(222, 24);
             this.adminstrarUsuariosToolStripMenuItem.Text = "Adminstrar Usuarios";
             this.adminstrarUsuariosToolStripMenuItem.Click += new System.EventHandler(this.adminstrarUsuariosToolStripMenuItem_Click);
             // 
@@ -106,8 +108,9 @@
             // lblRol
             // 
             this.lblRol.AutoSize = true;
+            this.lblRol.BackColor = System.Drawing.Color.White;
             this.lblRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRol.Location = new System.Drawing.Point(69, 0);
+            this.lblRol.Location = new System.Drawing.Point(987, 4);
             this.lblRol.Name = "lblRol";
             this.lblRol.Size = new System.Drawing.Size(107, 20);
             this.lblRol.TabIndex = 4;
@@ -116,21 +119,34 @@
             // lblCajero
             // 
             this.lblCajero.AutoSize = true;
+            this.lblCajero.BackColor = System.Drawing.Color.White;
             this.lblCajero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCajero.Location = new System.Drawing.Point(91, 3);
+            this.lblCajero.Location = new System.Drawing.Point(1014, 7);
             this.lblCajero.Name = "lblCajero";
             this.lblCajero.Size = new System.Drawing.Size(55, 20);
             this.lblCajero.TabIndex = 6;
             this.lblCajero.Text = "Cajero";
             // 
+            // lblJefeCocina
+            // 
+            this.lblJefeCocina.AutoSize = true;
+            this.lblJefeCocina.BackColor = System.Drawing.Color.White;
+            this.lblJefeCocina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJefeCocina.Location = new System.Drawing.Point(987, 4);
+            this.lblJefeCocina.Name = "lblJefeCocina";
+            this.lblJefeCocina.Size = new System.Drawing.Size(115, 20);
+            this.lblJefeCocina.TabIndex = 10;
+            this.lblJefeCocina.Text = "Jefe de Cocina";
+            // 
             // btnSesion
             // 
-            this.btnSesion.Location = new System.Drawing.Point(1116, 3);
+            this.btnSesion.BackColor = System.Drawing.Color.White;
+            this.btnSesion.Location = new System.Drawing.Point(1116, 4);
             this.btnSesion.Name = "btnSesion";
             this.btnSesion.Size = new System.Drawing.Size(75, 23);
             this.btnSesion.TabIndex = 8;
             this.btnSesion.Text = "CerrarSesion";
-            this.btnSesion.UseVisualStyleBackColor = true;
+            this.btnSesion.UseVisualStyleBackColor = false;
             this.btnSesion.Click += new System.EventHandler(this.btnSesion_Click);
             // 
             // VillaSofia
@@ -138,6 +154,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1191, 593);
+            this.Controls.Add(this.lblJefeCocina);
             this.Controls.Add(this.btnSesion);
             this.Controls.Add(this.lblCajero);
             this.Controls.Add(this.lblRol);
@@ -168,6 +185,7 @@
         private System.Windows.Forms.ToolStripMenuItem adminstrarUsuariosToolStripMenuItem;
         private System.Windows.Forms.Label lblRol;
         private System.Windows.Forms.Label lblCajero;
+        private System.Windows.Forms.Label lblJefeCocina;
         private System.Windows.Forms.Button btnSesion;
     }
 }

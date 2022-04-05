@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Logica;
+using System.Globalization;
 namespace VillaSofia
 {
     public partial class FrmIngresarReceta : Form
@@ -48,8 +49,7 @@ namespace VillaSofia
         private void FrmIngresarReceta_Load(object sender, EventArgs e)
         {
             comboUM();
-            //NO MOSTRAR SIEMPRE
-           // LoadIngredientes("");
+            
         }
         //MOSTRAR INGREDIENTES
         void LoadIngredientes(String x)
@@ -81,7 +81,7 @@ namespace VillaSofia
         Boolean validarTexboxIngredientes()
         {
 
-            if (/*TxtCantidades.Text != "" && */txtNombreIngrediente.Text != "")
+            if (txtNombreIngrediente.Text != "")
             {
                 return true;
             }
@@ -131,7 +131,7 @@ namespace VillaSofia
        
 
 
-
+        //Boton para guardar recetas
         private void btnguardarIgredientes_Click(object sender, EventArgs e)
         {
            
@@ -143,12 +143,17 @@ namespace VillaSofia
                  int x = idreceta;
                 this.idreceta = x;
 
-                //int p= Convert.ToInt32(IngresarUM());
+                
                  CLsLogicaIngredienteReceta addRECETAinGRE = new CLsLogicaIngredienteReceta();
                   msj = addRECETAinGRE.AddIngredienteR(y, x,Convert.ToDouble( TxtCantidades.Text),Convert.ToInt32( cmbUM.SelectedValue));
                 
                 MessageBox.Show(msj);
                 LoadIngredientes(x.ToString());
+
+
+
+                txtNombreIngrediente.Clear();
+                TxtCantidades.Clear();
             }
             else
             {
@@ -168,16 +173,8 @@ namespace VillaSofia
                 }
             }
         }
-        //Validacion de numeros
-        private void TxtCantidades_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                MessageBox.Show("Solo se permiten numeros, ingrese nuevamente los digitos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                e.Handled = true;
-                return;
-            }
-        }
+
+
         //Validacion de numeros
         private void txtPorciones_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -210,20 +207,14 @@ namespace VillaSofia
             
         }
 
-        private void dgvIngredientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-
-           
-        }
+      
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
             String iding = dgvIngredientes.SelectedRows[0].Cells[7].Value.ToString();
             int ingreId = Convert.ToInt32( iding);
            ClsLogicaAddReceta ingrediente = new ClsLogicaAddReceta();
-            // DataTable DT = ingrediente.RecetaLista(iding);
-
+           
 
             eliminarIngrediente(ingreId, idreceta);
 
@@ -260,14 +251,55 @@ namespace VillaSofia
             txtPorciones.Enabled = false;
             txtNombreIngrediente.Focus();
             btnSiguiente.Enabled = false;
+
         }
 
         private void btnMostrarRecetas_Click(object sender, EventArgs e)
         {
-            /*this.Close();
+            this.Close();
             CduMostrarReceta rec = new CduMostrarReceta(VS);
             VS.Controls.Add(rec);
-            rec.BringToFront();*/
+            rec.BringToFront();
+
+        }
+
+        private void TxtCantidades_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            CultureInfo cc = System.Threading.Thread.CurrentThread.CurrentCulture;
+
+
+            if (char.IsNumber(e.KeyChar) || e.KeyChar.ToString() == cc.NumberFormat.NumberDecimalSeparator || (e.KeyChar == (char)Keys.Back))
+            {
+
+                e.Handled = false;
+
+
+            }
+            else
+            {
+                MessageBox.Show("Solo se permiten numeros, ingrese nuevamente los digitos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+
+            }
+
+          
+            if ((e.KeyChar == '.') && ((sender as Guna.UI2.WinForms.Guna2TextBox).Text.IndexOf('.') > -1)) 
+            {
+
+                MessageBox.Show("Formato incorecto", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+            }
+
+
+        }
+           
+       
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            FrmIngresarReceta ingr = new FrmIngresarReceta(idreceta, VS);
+            ingr.Visible = true;
+            this.Close();
 
         }
     }

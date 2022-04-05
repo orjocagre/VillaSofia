@@ -59,6 +59,7 @@
             // 
             // PanelReceta
             // 
+            this.PanelReceta.BackColor = System.Drawing.SystemColors.ControlLight;
             this.PanelReceta.Controls.Add(this.btnAtras);
             this.PanelReceta.Controls.Add(this.btnCalcular);
             this.PanelReceta.Controls.Add(this.btnEliminar);
@@ -84,6 +85,7 @@
             this.PanelReceta.ShadowDecoration.Parent = this.PanelReceta;
             this.PanelReceta.Size = new System.Drawing.Size(1203, 700);
             this.PanelReceta.TabIndex = 0;
+            this.PanelReceta.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelReceta_Paint);
             // 
             // btnAtras
             // 
@@ -241,7 +243,7 @@
             this.BtnBuscar.ShadowDecoration.Parent = this.BtnBuscar;
             this.BtnBuscar.Size = new System.Drawing.Size(44, 40);
             this.BtnBuscar.TabIndex = 10;
-             // 
+            // 
             // lblNumPorc
             // 
             this.lblNumPorc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -288,7 +290,7 @@
             this.txtProcedimiento.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtProcedimiento.HoverState.Parent = this.txtProcedimiento;
             this.txtProcedimiento.Location = new System.Drawing.Point(23, 132);
-            this.txtProcedimiento.Margin = new System.Windows.Forms.Padding(6);
+            this.txtProcedimiento.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtProcedimiento.Multiline = true;
             this.txtProcedimiento.Name = "txtProcedimiento";
             this.txtProcedimiento.PasswordChar = '\0';

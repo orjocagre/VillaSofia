@@ -171,5 +171,10 @@ namespace VillaSofia
             principal.Controls.Add(new CduMenuPrincipal(principal));
             
         }
+
+        private void PanelReceta_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
