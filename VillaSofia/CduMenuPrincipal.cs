@@ -44,6 +44,10 @@ namespace VillaSofia
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
+
+
+
+            
             vs.Controls.Remove(this);
             vs.Controls.Add(new CduMenuPrincipal(vs));
             this.Dispose();
