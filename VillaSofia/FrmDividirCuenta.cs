@@ -18,6 +18,7 @@ namespace VillaSofia
         int idNuevaFactura;
         int idCmbMesero;
         Boolean todos;
+
         public FrmDividirCuenta(int idFactura, int idCmbMesero)
         {
             this.idCmbMesero = idCmbMesero;
@@ -32,9 +33,9 @@ namespace VillaSofia
             ClsLogicaOrden orden = new ClsLogicaOrden();
             ClsLogicaFactura factura = new ClsLogicaFactura();
             DataTable DT = factura.infoFactura(idFactura);
-            MessageBox.Show("Mesero "+DT.Rows[0][5]);
-            MessageBox.Show("Nombre"+DT.Rows[0].Field<String>(3));
-            MessageBox.Show("RUC "+DT.Rows[0].Field<String>(4));
+            MessageBox.Show("Mesero " + DT.Rows[0][5]);
+            MessageBox.Show("Nombre" + DT.Rows[0].Field<String>(3));
+            MessageBox.Show("RUC " + DT.Rows[0].Field<String>(4));
 
             DT = orden.listarOrdenes(idFactura);
             for (int i = 0; i < DT.Rows.Count; i++)
@@ -66,7 +67,7 @@ namespace VillaSofia
                 txt.Text = total.ToString("0,0.##");
 
                 lblError.Visible = false;
-                
+
             }
             catch (FormatException ex)
             {
@@ -77,7 +78,7 @@ namespace VillaSofia
 
         void agregarASubCuenta()
         {
-            if(dgvCuenta.SelectedRows.Count > 0)
+            if (dgvCuenta.SelectedRows.Count > 0)
             {
                 int posicion = -1;
                 for (int i = 0; i < dgvSubCuenta.RowCount; i++)
@@ -152,13 +153,13 @@ namespace VillaSofia
                 orden.agregarOrden(Convert.ToInt32(dgvSubCuenta.Rows[i].Cells[0].Value), idNuevaFactura, Convert.ToDouble(dgvSubCuenta.Rows[i].Cells[1].Value), Convert.ToDouble(dgvSubCuenta.Rows[i].Cells[3].Value));
             }
             factura.guardarTotalFactura(idNuevaFactura, Convert.ToDouble(txtTotalSC.Text));
-            
+
             factura.agregarDatosFactura(idNuevaFactura, "", "", idCmbMesero);
         }
 
         void quitarDeSubCuenta()
         {
-            if(dgvSubCuenta.SelectedRows.Count > 0)
+            if (dgvSubCuenta.SelectedRows.Count > 0)
             {
                 int posicion = -1;
                 for (int i = 0; i < dgvCuenta.RowCount; i++)
@@ -205,15 +206,16 @@ namespace VillaSofia
             }
         }
 
-        
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             agregarASubCuenta();
         }
+
         private void btnQuitar_Click(object sender, EventArgs e)
         {
             quitarDeSubCuenta();
         }
+
         private void dgvSubCuenta_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             quitarDeSubCuenta();
@@ -226,7 +228,7 @@ namespace VillaSofia
 
         private void btnTodos_Click(object sender, EventArgs e)
         {
-            if(btnTodos.Text == "TODOS")
+            if (btnTodos.Text == "TODOS")
             {
                 btnTodos.Text = "UNO";
                 todos = false;
@@ -240,7 +242,7 @@ namespace VillaSofia
 
         private void btnDividir_Click(object sender, EventArgs e)
         {
-            if(dgvSubCuenta.RowCount > 0)
+            if (dgvSubCuenta.RowCount > 0)
             {
                 agregarNuevaFactura();
                 guardarFacturas();
