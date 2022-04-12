@@ -165,6 +165,12 @@
     <Compile Include="FrmIngresarReceta.designer.cs">
       <DependentUpon>FrmIngresarReceta.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmInventarioProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInventarioProducto.Designer.cs">
+      <DependentUpon>FrmInventarioProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLoginUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -282,6 +288,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmIngresarReceta.resx">
       <DependentUpon>FrmIngresarReceta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInventarioProducto.resx">
+      <DependentUpon>FrmInventarioProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLoginUsuario.resx">
       <DependentUpon>FrmLoginUsuario.cs</DependentUpon>
