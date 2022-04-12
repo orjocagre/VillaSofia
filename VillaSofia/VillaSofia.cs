@@ -13,11 +13,14 @@ namespace VillaSofia
 {
     public partial class VillaSofia : Form
     {
+        int tipousuario = ClsSession.id_tipo;
         private int childFormNumber = 0;
-
+        bool sesionExit;
         public VillaSofia()
-        {
+        { 
+
             InitializeComponent();
+            sesionExit = false;
         }
        
         private void ShowNewForm(object sender, EventArgs e)
@@ -100,15 +103,17 @@ namespace VillaSofia
         {
             
 
-            CduMenuPrincipal mp = new CduMenuPrincipal(this);
+            CduMenuPrincipal mp = new CduMenuPrincipal(this, tipousuario);
             this.Controls.Add(mp);
             
-            int tipousuario = ClsSession.id_tipo;
+            
             if (tipousuario == 1)
             {
                 this.lblRol.Visible = true;
                 this.lblCajero.Visible = false;
                 this.lblJefeCocina.Visible = false;
+
+                
 
             }
             else if (tipousuario == 2)
@@ -148,7 +153,7 @@ namespace VillaSofia
 
         private void recetaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmIngresarReceta receta = new FrmIngresarReceta(this);
+            FrmIngresarReceta receta = new FrmIngresarReceta(this,tipousuario);
             receta.Show();
             receta.BringToFront();
         }
@@ -178,11 +183,26 @@ namespace VillaSofia
 
         private void btnSesion_Click(object sender, EventArgs e)
         {
-
+            sesionExit=true;
             this.Close();
             FrmLoginUsuario sesion = new FrmLoginUsuario();
             sesion.Visible = true;
+
+            ClsSession ses=new ClsSession();
+           
+                
         }
 
+       
+        private void VillaSofia_FormClosed(object sender, FormClosedEventArgs e)
+        {
+           
+            if (sesionExit==false)
+            {
+                Application.Exit();
+            }
+            
+
+        }
     }
 }

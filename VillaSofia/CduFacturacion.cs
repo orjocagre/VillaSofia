@@ -15,6 +15,7 @@ namespace VillaSofia
 {
     public partial class CduFacturacion : UserControl
     {
+        int tipo_usuario;
         VillaSofia vs;
         List<int> coincidencias;
         int cantTxt;
@@ -26,8 +27,9 @@ namespace VillaSofia
         Boolean facturaEditada;
 
 
-        public CduFacturacion(VillaSofia vs)
-        {
+        public CduFacturacion(VillaSofia vs, int tipo_usuario)
+        { 
+            this.tipo_usuario = tipo_usuario;
             desplegado = false;
             this.vs = vs;
             facturaEditada = false;
@@ -729,7 +731,7 @@ namespace VillaSofia
             {
 
                 this.Dispose();
-                vs.Controls.Add(new CduMenuPrincipal(vs));
+                vs.Controls.Add(new CduMenuPrincipal(vs,tipo_usuario));
 
             }
             else if (result == DialogResult.No)

@@ -155,10 +155,13 @@ namespace VillaSofia
             this.ClientSize = new System.Drawing.Size(289, 402);
             this.Controls.Add(this.pnPrincipal);
             this.ForeColor = System.Drawing.SystemColors.Window;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FrmLoginUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SIVISO";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmLoginUsuario_FormClosed);
             this.Load += new System.EventHandler(this.FrmLoginUsuario_Load);
             this.pnPrincipal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictVillaS)).EndInit();

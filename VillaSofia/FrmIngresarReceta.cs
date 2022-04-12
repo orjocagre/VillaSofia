@@ -16,16 +16,42 @@ namespace VillaSofia
         VillaSofia VS;
         int idreceta;
         Boolean edicion;
-
-        public FrmIngresarReceta(VillaSofia VS)
-        {
+        int tipo_usurio;
+        public FrmIngresarReceta(VillaSofia VS, int tipo_usurio)
+        { this.tipo_usurio = tipo_usurio; 
             edicion = false;
             this.VS = VS;
             InitializeComponent();
+
+
+
+            this.ttipMensaje.SetToolTip(this.txtNombreReceta,"Ingrese el nombre de la nueva Receta");
+            this.ttipMensaje.SetToolTip(this.txtPorciones,"Ingre las porciones de esta Receta");
+            this.ttipMensaje.SetToolTip(this.txtProcedimiento,"Escriba los pasos a seguir para realizar \n Esta Receta");
+            this.ttipMensaje.SetToolTip(this.TxtCantidades,"Ingrese la cantidad de Ingre");
+            this.ttipMensaje.SetToolTip(this.dgvIngredientes,"Muestra los Ingredientes Ingresados");
+            this.ttipMensaje.SetToolTip(this.btnSiguiente,"Ingresar los Ingredientes");
+            this.ttipMensaje.SetToolTip(this.btnguardarIgredientes, "Guarda un Nuevo Ingrediente");
+            this.ttipMensaje.SetToolTip(this.cmbUM,"Unidades de Medida");
+            this.ttipMensaje.SetToolTip(this.BtnAgregarMas,"Agregar una nueva unidad de medida");
+            this.ttipMensaje.SetToolTip(this.btnEditar,"Editar la Receta");
+            this.ttipMensaje.SetToolTip(this.BtnEliminar,"Eliminar ingrediente");
+            this.ttipMensaje.SetToolTip(this.txtNombreIngrediente, "Ingrese el nuevo ingrediente");
+
+
+
+
+
+
+
+
+
+
         }
 
-        public FrmIngresarReceta(int idreceta, VillaSofia VS)
+        public FrmIngresarReceta(int idreceta, VillaSofia VS , int tipo_usurio)
         {
+            this.tipo_usurio = tipo_usurio;
             this.VS = VS;
             this.idreceta = idreceta;
             edicion = true;
@@ -35,14 +61,18 @@ namespace VillaSofia
 
         void llenarCampos()
         {
-            ClsLogicaAddReceta receta = new ClsLogicaAddReceta();
-            DataTable DT = receta.RecetaLista(idreceta.ToString());
+           
+                ClsLogicaAddReceta receta = new ClsLogicaAddReceta();
+                DataTable DT = receta.RecetaLista(idreceta.ToString());
 
-            txtNombreReceta.Text = DT.Rows[0].Field<String>("nombre_receta");
-            txtPorciones.Text = DT.Rows[0].Field<int>("num_porciones").ToString();
-            txtProcedimiento.Text = DT.Rows[0].Field<String>("procedimiento");
+                txtNombreReceta.Text = DT.Rows[0].Field<String>("nombre_receta");
+                txtPorciones.Text = DT.Rows[0].Field<int>("num_porciones").ToString();
+                txtProcedimiento.Text = DT.Rows[0].Field<String>("procedimiento");
 
-            LoadIngredientes(idreceta.ToString());
+                LoadIngredientes(idreceta.ToString());
+            
+            
+            
         }
 
         //MOTRAR DATOS EN EL FORMULARIO
@@ -102,6 +132,8 @@ namespace VillaSofia
 
         void editarReceta()
         {
+
+            
             string resp;
             ClsLogicaAddReceta Receta = new ClsLogicaAddReceta();
             Receta.editarReceta(idreceta,txtNombreReceta.Text, Convert.ToInt32(txtPorciones.Text), txtProcedimiento.Text);
@@ -257,7 +289,7 @@ namespace VillaSofia
         private void btnMostrarRecetas_Click(object sender, EventArgs e)
         {
             this.Close();
-            CduMostrarReceta rec = new CduMostrarReceta(VS);
+            CduMostrarReceta rec = new CduMostrarReceta(VS,tipo_usurio);
             VS.Controls.Add(rec);
             rec.BringToFront();
 
@@ -297,7 +329,7 @@ namespace VillaSofia
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            FrmIngresarReceta ingr = new FrmIngresarReceta(idreceta, VS);
+            FrmIngresarReceta ingr = new FrmIngresarReceta(idreceta, VS,tipo_usurio);
             ingr.Visible = true;
             this.Close();
 

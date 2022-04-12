@@ -15,17 +15,19 @@ namespace VillaSofia
 
         int idReceta;
         VillaSofia principal;
-
-        public CduMostrarReceta(VillaSofia principal)
-        {
+        int tipo_usuario;
+        public CduMostrarReceta(VillaSofia principal, int tipo_usuario)
+        {     this.tipo_usuario = tipo_usuario;
             this.principal = principal;
             idReceta = -1;
             this.Dock = DockStyle.Fill;
             InitializeComponent();
+            this.tipo_usuario = tipo_usuario;
         }
 
-       
-        
+
+
+
 
         private void CduMostrarReceta_Load(object sender, EventArgs e)
         {
@@ -136,8 +138,16 @@ namespace VillaSofia
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
-            FrmIngresarReceta ingr = new FrmIngresarReceta(idReceta, principal);
-            ingr.Visible = true;
+            if (LblNombreReceta.Text!= "Seleccione una receta")
+            {
+                FrmIngresarReceta ingr = new FrmIngresarReceta(idReceta, principal, tipo_usuario);
+                ingr.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("No selecciono la Receta");
+            }
+                
             
         }
 
@@ -168,11 +178,31 @@ namespace VillaSofia
         private void btnAtras_Click(object sender, EventArgs e)
         {
             this.Dispose();
-            principal.Controls.Add(new CduMenuPrincipal(principal));
+            principal.Controls.Add(new CduMenuPrincipal(principal,tipo_usuario));
             
         }
 
         private void PanelReceta_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void LblNombreReceta_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNumPorc_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblBusqueda_Click(object sender, EventArgs e)
         {
 
         }

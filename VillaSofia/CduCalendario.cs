@@ -17,10 +17,13 @@ namespace VillaSofia
         VillaSofia vs;
         Boolean cmbLlenos;
         DataTable DT;
-        public CduCalendario(VillaSofia vs)
+
+        int tipo_usuario;
+        public CduCalendario(VillaSofia vs, int tipo_usuario)
         {
             this.vs = vs;
             cmbLlenos = false;
+            this.tipo_usuario=tipo_usuario;
             InitializeComponent();
             this.Dock = DockStyle.Fill;
 
@@ -210,7 +213,7 @@ namespace VillaSofia
         private void btnAtras_Click(object sender, EventArgs e)
         {
             vs.Controls.Remove(this);
-            vs.Controls.Add(new CduMenuPrincipal(vs));
+            vs.Controls.Add(new CduMenuPrincipal(vs, tipo_usuario));
             this.Dispose();
 
         }

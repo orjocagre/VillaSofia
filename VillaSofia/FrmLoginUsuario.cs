@@ -141,6 +141,9 @@ namespace VillaSofia
             button1.BorderThickness = 0;
         }
 
-       
+        private void FrmLoginUsuario_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

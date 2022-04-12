@@ -140,7 +140,7 @@
             // 
             // btnSesion
             // 
-            this.btnSesion.BackColor = System.Drawing.Color.White;
+            this.btnSesion.BackColor = System.Drawing.Color.RosyBrown;
             this.btnSesion.Location = new System.Drawing.Point(1116, 4);
             this.btnSesion.Name = "btnSesion";
             this.btnSesion.Size = new System.Drawing.Size(75, 23);
@@ -165,6 +165,7 @@
             this.Name = "VillaSofia";
             this.Text = "VillaSofia";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.VillaSofia_FormClosed);
             this.Load += new System.EventHandler(this.VillaSofia_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
