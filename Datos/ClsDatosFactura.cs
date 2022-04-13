@@ -11,7 +11,7 @@ namespace Datos
     public class ClsDatosFactura
     {
         ClsDatosConexion conex = new ClsDatosConexion();
-
+        //prueba factura
         public int agregarFactura(DateTime Pfecha, int Pnum_mesa, String Pnombre, String PRUC, int Pid_trabajador, int Pid_estado_factura)
         {
             MySqlCommand CM = new MySqlCommand();
