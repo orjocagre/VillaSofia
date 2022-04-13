@@ -28,23 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.chbDeshabilitados = new Guna.UI2.WinForms.Guna2CheckBox();
             this.gpSinonimos = new Guna.UI2.WinForms.Guna2GroupBox();
             this.txtSinonimos = new System.Windows.Forms.TextBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnAbajo = new Guna.UI2.WinForms.Guna2Button();
-            this.btnArriba = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAgregar = new Guna.UI2.WinForms.Guna2Button();
-            this.btnEliminar = new Guna.UI2.WinForms.Guna2Button();
             this.dgvProducto = new Guna.UI2.WinForms.Guna2DataGridView();
             this.gbAgregarEditar = new Guna.UI2.WinForms.Guna2GroupBox();
             this.chbEventos = new Guna.UI2.WinForms.Guna2CheckBox();
             this.chbRestaurante = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.btnSinonimos = new Guna.UI2.WinForms.Guna2Button();
             this.btnCancelar = new Guna.UI2.WinForms.Guna2Button();
             this.btnGuardar = new Guna.UI2.WinForms.Guna2Button();
             this.btnClasificacion = new Guna.UI2.WinForms.Guna2Button();
@@ -56,6 +51,11 @@
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.btnAbajo = new Guna.UI2.WinForms.Guna2Button();
+            this.btnArriba = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAgregar = new Guna.UI2.WinForms.Guna2Button();
+            this.btnEliminar = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSinonimos = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.gpSinonimos.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -136,98 +136,18 @@
             this.guna2Panel1.Location = new System.Drawing.Point(1001, 255);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(52, 168);
+            this.guna2Panel1.Size = new System.Drawing.Size(52, 217);
             this.guna2Panel1.TabIndex = 7;
-            // 
-            // btnAbajo
-            // 
-            this.btnAbajo.BorderColor = System.Drawing.Color.Transparent;
-            this.btnAbajo.CheckedState.Parent = this.btnAbajo;
-            this.btnAbajo.CustomImages.Parent = this.btnAbajo;
-            this.btnAbajo.FillColor = System.Drawing.Color.Transparent;
-            this.btnAbajo.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAbajo.ForeColor = System.Drawing.Color.White;
-            this.btnAbajo.HoverState.FillColor = System.Drawing.Color.Gray;
-            this.btnAbajo.HoverState.Image = global::VillaSofia.Properties.Resources.abajoBlanco32;
-            this.btnAbajo.HoverState.Parent = this.btnAbajo;
-            this.btnAbajo.Image = global::VillaSofia.Properties.Resources.abajo94_148_255Azul32;
-            this.btnAbajo.Location = new System.Drawing.Point(10, 127);
-            this.btnAbajo.Name = "btnAbajo";
-            this.btnAbajo.ShadowDecoration.Parent = this.btnAbajo;
-            this.btnAbajo.Size = new System.Drawing.Size(33, 32);
-            this.btnAbajo.TabIndex = 10;
-            this.btnAbajo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAbajo.Click += new System.EventHandler(this.btnAbajo_Click);
-            // 
-            // btnArriba
-            // 
-            this.btnArriba.BorderColor = System.Drawing.Color.Transparent;
-            this.btnArriba.CheckedState.Parent = this.btnArriba;
-            this.btnArriba.CustomImages.Parent = this.btnArriba;
-            this.btnArriba.FillColor = System.Drawing.Color.Transparent;
-            this.btnArriba.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnArriba.ForeColor = System.Drawing.Color.White;
-            this.btnArriba.HoverState.FillColor = System.Drawing.Color.Gray;
-            this.btnArriba.HoverState.Image = global::VillaSofia.Properties.Resources.arribaBlanco32;
-            this.btnArriba.HoverState.Parent = this.btnArriba;
-            this.btnArriba.Image = global::VillaSofia.Properties.Resources.arriba94_148_255Azul32;
-            this.btnArriba.Location = new System.Drawing.Point(10, 89);
-            this.btnArriba.Name = "btnArriba";
-            this.btnArriba.ShadowDecoration.Parent = this.btnArriba;
-            this.btnArriba.Size = new System.Drawing.Size(33, 32);
-            this.btnArriba.TabIndex = 9;
-            this.btnArriba.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnArriba.Click += new System.EventHandler(this.btnArriba_Click);
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.BorderColor = System.Drawing.Color.Transparent;
-            this.btnAgregar.CheckedState.Parent = this.btnAgregar;
-            this.btnAgregar.CustomImages.Parent = this.btnAgregar;
-            this.btnAgregar.FillColor = System.Drawing.Color.Transparent;
-            this.btnAgregar.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.HoverState.FillColor = System.Drawing.Color.Gray;
-            this.btnAgregar.HoverState.Image = global::VillaSofia.Properties.Resources.masBlanco32;
-            this.btnAgregar.HoverState.Parent = this.btnAgregar;
-            this.btnAgregar.Image = global::VillaSofia.Properties.Resources.mas94_148_255Azul32;
-            this.btnAgregar.Location = new System.Drawing.Point(10, 51);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.ShadowDecoration.Parent = this.btnAgregar;
-            this.btnAgregar.Size = new System.Drawing.Size(33, 32);
-            this.btnAgregar.TabIndex = 8;
-            this.btnAgregar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BorderColor = System.Drawing.Color.Transparent;
-            this.btnEliminar.CheckedState.Parent = this.btnEliminar;
-            this.btnEliminar.CustomImages.Parent = this.btnEliminar;
-            this.btnEliminar.FillColor = System.Drawing.Color.Transparent;
-            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.HoverState.FillColor = System.Drawing.Color.Gray;
-            this.btnEliminar.HoverState.Image = global::VillaSofia.Properties.Resources.equisBlanca32;
-            this.btnEliminar.HoverState.Parent = this.btnEliminar;
-            this.btnEliminar.Image = global::VillaSofia.Properties.Resources.equis94_148_255Azul32;
-            this.btnEliminar.Location = new System.Drawing.Point(10, 13);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.ShadowDecoration.Parent = this.btnEliminar;
-            this.btnEliminar.Size = new System.Drawing.Size(33, 32);
-            this.btnEliminar.TabIndex = 7;
-            this.btnEliminar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // dgvProducto
             // 
             this.dgvProducto.AllowUserToAddRows = false;
             this.dgvProducto.AllowUserToDeleteRows = false;
             this.dgvProducto.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvProducto.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvProducto.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvProducto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -236,23 +156,23 @@
             this.dgvProducto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvProducto.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvProducto.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProducto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProducto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvProducto.ColumnHeadersHeight = 20;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvProducto.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProducto.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvProducto.EnableHeadersVisualStyles = false;
             this.dgvProducto.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
             this.dgvProducto.Location = new System.Drawing.Point(12, 255);
@@ -349,25 +269,6 @@
             this.chbRestaurante.UncheckedState.BorderThickness = 0;
             this.chbRestaurante.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.chbRestaurante.UseVisualStyleBackColor = true;
-            // 
-            // btnSinonimos
-            // 
-            this.btnSinonimos.BackColor = System.Drawing.Color.Transparent;
-            this.btnSinonimos.CheckedState.Parent = this.btnSinonimos;
-            this.btnSinonimos.CustomImages.Parent = this.btnSinonimos;
-            this.btnSinonimos.FillColor = System.Drawing.Color.Transparent;
-            this.btnSinonimos.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSinonimos.ForeColor = System.Drawing.Color.White;
-            this.btnSinonimos.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnSinonimos.HoverState.Image = global::VillaSofia.Properties.Resources.derechaBlanca32;
-            this.btnSinonimos.HoverState.Parent = this.btnSinonimos;
-            this.btnSinonimos.Image = global::VillaSofia.Properties.Resources.derechaAzul32;
-            this.btnSinonimos.Location = new System.Drawing.Point(420, 52);
-            this.btnSinonimos.Name = "btnSinonimos";
-            this.btnSinonimos.ShadowDecoration.Parent = this.btnSinonimos;
-            this.btnSinonimos.Size = new System.Drawing.Size(27, 29);
-            this.btnSinonimos.TabIndex = 11;
-            this.btnSinonimos.Click += new System.EventHandler(this.btnSinonimos_Click);
             // 
             // btnCancelar
             // 
@@ -484,7 +385,6 @@
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(100, 29);
             this.txtPrecio.TabIndex = 4;
-            this.txtPrecio.TextChanged += new System.EventHandler(this.txtPrecio_TextChanged);
             // 
             // txtNombre
             // 
@@ -523,6 +423,105 @@
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(61, 23);
             this.guna2HtmlLabel1.TabIndex = 0;
             this.guna2HtmlLabel1.Text = "Nombre";
+            // 
+            // btnAbajo
+            // 
+            this.btnAbajo.BorderColor = System.Drawing.Color.Transparent;
+            this.btnAbajo.CheckedState.Parent = this.btnAbajo;
+            this.btnAbajo.CustomImages.Parent = this.btnAbajo;
+            this.btnAbajo.FillColor = System.Drawing.Color.Transparent;
+            this.btnAbajo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAbajo.ForeColor = System.Drawing.Color.White;
+            this.btnAbajo.HoverState.FillColor = System.Drawing.Color.Gray;
+            this.btnAbajo.HoverState.Image = global::VillaSofia.Properties.Resources.abajoBlanco32;
+            this.btnAbajo.HoverState.Parent = this.btnAbajo;
+            this.btnAbajo.Image = global::VillaSofia.Properties.Resources.abajo94_148_255Azul32;
+            this.btnAbajo.Location = new System.Drawing.Point(10, 127);
+            this.btnAbajo.Name = "btnAbajo";
+            this.btnAbajo.ShadowDecoration.Parent = this.btnAbajo;
+            this.btnAbajo.Size = new System.Drawing.Size(33, 32);
+            this.btnAbajo.TabIndex = 10;
+            this.btnAbajo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAbajo.Click += new System.EventHandler(this.btnAbajo_Click);
+            // 
+            // btnArriba
+            // 
+            this.btnArriba.BorderColor = System.Drawing.Color.Transparent;
+            this.btnArriba.CheckedState.Parent = this.btnArriba;
+            this.btnArriba.CustomImages.Parent = this.btnArriba;
+            this.btnArriba.FillColor = System.Drawing.Color.Transparent;
+            this.btnArriba.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnArriba.ForeColor = System.Drawing.Color.White;
+            this.btnArriba.HoverState.FillColor = System.Drawing.Color.Gray;
+            this.btnArriba.HoverState.Image = global::VillaSofia.Properties.Resources.arribaBlanco32;
+            this.btnArriba.HoverState.Parent = this.btnArriba;
+            this.btnArriba.Image = global::VillaSofia.Properties.Resources.arriba94_148_255Azul32;
+            this.btnArriba.Location = new System.Drawing.Point(10, 89);
+            this.btnArriba.Name = "btnArriba";
+            this.btnArriba.ShadowDecoration.Parent = this.btnArriba;
+            this.btnArriba.Size = new System.Drawing.Size(33, 32);
+            this.btnArriba.TabIndex = 9;
+            this.btnArriba.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnArriba.Click += new System.EventHandler(this.btnArriba_Click);
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.BorderColor = System.Drawing.Color.Transparent;
+            this.btnAgregar.CheckedState.Parent = this.btnAgregar;
+            this.btnAgregar.CustomImages.Parent = this.btnAgregar;
+            this.btnAgregar.FillColor = System.Drawing.Color.Transparent;
+            this.btnAgregar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAgregar.ForeColor = System.Drawing.Color.White;
+            this.btnAgregar.HoverState.FillColor = System.Drawing.Color.Gray;
+            this.btnAgregar.HoverState.Image = global::VillaSofia.Properties.Resources.insertar_fila_grueso_Blanco;
+            this.btnAgregar.HoverState.Parent = this.btnAgregar;
+            this.btnAgregar.Image = global::VillaSofia.Properties.Resources.insertar_fila_grueso_Azul;
+            this.btnAgregar.Location = new System.Drawing.Point(10, 51);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.ShadowDecoration.Parent = this.btnAgregar;
+            this.btnAgregar.Size = new System.Drawing.Size(33, 32);
+            this.btnAgregar.TabIndex = 8;
+            this.btnAgregar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BorderColor = System.Drawing.Color.Transparent;
+            this.btnEliminar.CheckedState.Parent = this.btnEliminar;
+            this.btnEliminar.CustomImages.Parent = this.btnEliminar;
+            this.btnEliminar.FillColor = System.Drawing.Color.Transparent;
+            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.HoverState.FillColor = System.Drawing.Color.Gray;
+            this.btnEliminar.HoverState.Image = global::VillaSofia.Properties.Resources.equisBlanca32;
+            this.btnEliminar.HoverState.Parent = this.btnEliminar;
+            this.btnEliminar.Image = global::VillaSofia.Properties.Resources.equis94_148_255Azul32;
+            this.btnEliminar.Location = new System.Drawing.Point(10, 13);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.ShadowDecoration.Parent = this.btnEliminar;
+            this.btnEliminar.Size = new System.Drawing.Size(33, 32);
+            this.btnEliminar.TabIndex = 7;
+            this.btnEliminar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnSinonimos
+            // 
+            this.btnSinonimos.BackColor = System.Drawing.Color.Transparent;
+            this.btnSinonimos.CheckedState.Parent = this.btnSinonimos;
+            this.btnSinonimos.CustomImages.Parent = this.btnSinonimos;
+            this.btnSinonimos.FillColor = System.Drawing.Color.Transparent;
+            this.btnSinonimos.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSinonimos.ForeColor = System.Drawing.Color.White;
+            this.btnSinonimos.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnSinonimos.HoverState.Image = global::VillaSofia.Properties.Resources.derechaBlanca32;
+            this.btnSinonimos.HoverState.Parent = this.btnSinonimos;
+            this.btnSinonimos.Image = global::VillaSofia.Properties.Resources.derechaAzul32;
+            this.btnSinonimos.Location = new System.Drawing.Point(420, 52);
+            this.btnSinonimos.Name = "btnSinonimos";
+            this.btnSinonimos.ShadowDecoration.Parent = this.btnSinonimos;
+            this.btnSinonimos.Size = new System.Drawing.Size(27, 29);
+            this.btnSinonimos.TabIndex = 11;
+            this.btnSinonimos.Click += new System.EventHandler(this.btnSinonimos_Click);
             // 
             // FrmProducto
             // 

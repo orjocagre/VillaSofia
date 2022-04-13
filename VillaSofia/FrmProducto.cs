@@ -474,6 +474,8 @@ namespace VillaSofia
                 btnEliminar.Enabled = false;
                 btnArriba.Enabled = false;
                 btnAbajo.Enabled = false;
+                btnAgregar.Image = Properties.Resources.mas94_148_255Azul32;
+                btnAgregar.HoverState.Image = Properties.Resources.masBlanco32;
             }
             else
             {
@@ -481,12 +483,13 @@ namespace VillaSofia
                 btnEliminar.Enabled = true;
                 btnArriba.Enabled = true;
                 btnAbajo.Enabled = true;
+                btnAgregar.Image = Properties.Resources.insertar_fila_grueso_Azul;
+                btnAgregar.HoverState.Image = Properties.Resources.insertar_fila_grueso_Blanco;
+
+
             }
         }
 
-        private void txtPrecio_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

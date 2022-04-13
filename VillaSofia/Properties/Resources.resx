@@ -181,11 +181,20 @@
   <data name="eventoblanco256" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\eventoblanco256.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="izquierdaFtNegra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\izquierdaFtNegra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="atrasAzul32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\atrasAzul32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="derechaFtNegra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\derechaFtNegra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="equis94,148,255Azul32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\equis94,148,255Azul321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="insertar_fila" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\insertar_fila.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="imprimirBlanco32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imprimirBlanco32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -223,6 +232,9 @@
   <data name="siguienteBtn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\siguienteBtn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="derechaFtAzul" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\derechaFtAzul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="editarBlanco32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\editarBlanco321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -249,6 +261,9 @@
   </data>
   <data name="comidaBlanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\comidaBlanco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="izquierdaFtAzul" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\izquierdaFtAzul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fondogris" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fondogris.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -331,16 +346,10 @@
   <data name="arriba94,148,255Azul32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arriba94,148,255Azul321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="derechaFtAzul" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\derechaFtAzul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="insertar_fila_grueso_Azul" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\insertar_fila_grueso_Azul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="derechaFtNegra" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\derechaFtNegra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="izquierdaFtAzul" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\izquierdaFtAzul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="izquierdaFtNegra" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\izquierdaFtNegra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="insertar_fila_grueso_Blanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\insertar_fila_grueso_Blanco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

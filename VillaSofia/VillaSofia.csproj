@@ -530,6 +530,9 @@
   <ItemGroup>
     <Content Include="Resources\cocinar.png" />
     <Content Include="Resources\iconologin.ico" />
+    <None Include="Resources\insertar_fila.png" />
+    <None Include="Resources\insertar_fila_grueso_Azul.png" />
+    <None Include="Resources\insertar_fila_grueso_Blanco.png" />
     <Content Include="Resources\trabajo-en-equipo.png" />
     <Content Include="Resources\VSlogin.png" />
   </ItemGroup>
