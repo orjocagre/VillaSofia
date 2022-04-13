@@ -687,34 +687,50 @@ namespace VillaSofia
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            if (estadoCuenta == 1)
+            if(dgvCuenta.Rows.Count > 0)
             {
-                cerrarFactura();
-            }
-            else if (estadoCuenta == 2)
-            {
-                mostrarFormularioDePago();
-            }
-            else if (estadoCuenta == 3)
-            {
+                if (estadoCuenta == 1)
+                {
+                    cerrarFactura();
+                }
+                else if (estadoCuenta == 2)
+                {
+                    mostrarFormularioDePago();
+                }
+                else if (estadoCuenta == 3)
+                {
 
+                }
             }
+            else
+            {
+                MessageBox.Show("La factura esta vacia");
+            }
+
         }
 
         private void btnAbierta_Click(object sender, EventArgs e)
         {
-            if (estadoCuenta == 1)
+            if(dgvCuenta.Rows.Count > 0)
             {
-                dejarAbiertaFactura();
-            }
-            else if (estadoCuenta == 2)
-            {
-                editarFacturaCerrada();
-            }
-            else if (estadoCuenta == 3)
-            {
+                if (estadoCuenta == 1)
+                {
+                    dejarAbiertaFactura();
+                }
+                else if (estadoCuenta == 2)
+                {
+                    editarFacturaCerrada();
+                }
+                else if (estadoCuenta == 3)
+                {
 
+                }
             }
+            else
+            {
+                MessageBox.Show("La factura esta vacia");
+            }
+            
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -789,8 +805,17 @@ namespace VillaSofia
 
         private void btnDividirCuenta_Click(object sender, EventArgs e)
         {
-            FrmDividirCuenta dividir = new FrmDividirCuenta(idFactura, Convert.ToInt32(cmbMesero.SelectedValue));
-            dividir.Visible = true;
+            if(dgvCuenta.Rows.Count > 0)
+            {
+                dejarAbiertaFactura();
+                FrmDividirCuenta dividir = new FrmDividirCuenta(idFactura, Convert.ToInt32(cmbMesero.SelectedValue));
+                dividir.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("La factura esta vacia");
+            }
+            
         }
 
         private void lsbProducto_MouseDown(object sender, MouseEventArgs e)
