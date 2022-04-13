@@ -283,6 +283,15 @@ namespace VillaSofia
             txtPorciones.Enabled = false;
             txtNombreIngrediente.Focus();
             btnSiguiente.Enabled = false;
+            txtNombreIngrediente.Enabled = true;
+            TxtCantidades.Enabled = true;
+            dgvIngredientes.Enabled = true;
+            cmbUM.Enabled = true;
+            BtnAgregarMas.Enabled = true;
+            BtnEliminar.Enabled = true;
+            btnguardarIgredientes.Enabled = true;
+            btnListo.Enabled = true;
+
 
         }
 
@@ -333,6 +342,11 @@ namespace VillaSofia
             ingr.Visible = true;
             this.Close();
 
+        }
+
+        private void btnListo_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
