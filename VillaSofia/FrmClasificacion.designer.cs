@@ -28,23 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnEditar = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAgregar = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAbajo = new Guna.UI2.WinForms.Guna2Button();
+            this.btnArriba = new Guna.UI2.WinForms.Guna2Button();
+            this.btnEliminar = new Guna.UI2.WinForms.Guna2Button();
             this.btnCancelar = new Guna.UI2.WinForms.Guna2Button();
             this.btnGuardar = new Guna.UI2.WinForms.Guna2Button();
             this.dgvTipoProducto = new Guna.UI2.WinForms.Guna2DataGridView();
             this.txtClasificacion = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblAgregarEditar = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnAbajo = new Guna.UI2.WinForms.Guna2Button();
-            this.btnArriba = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAgregar = new Guna.UI2.WinForms.Guna2Button();
-            this.btnEliminar = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTipoProducto)).BeginInit();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTipoProducto)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2CustomGradientPanel1
@@ -61,6 +62,123 @@
             this.guna2CustomGradientPanel1.ShadowDecoration.Parent = this.guna2CustomGradientPanel1;
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(437, 372);
             this.guna2CustomGradientPanel1.TabIndex = 3;
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel1.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2Panel1.Controls.Add(this.btnEditar);
+            this.guna2Panel1.Controls.Add(this.btnAgregar);
+            this.guna2Panel1.Controls.Add(this.btnAbajo);
+            this.guna2Panel1.Controls.Add(this.btnArriba);
+            this.guna2Panel1.Controls.Add(this.btnEliminar);
+            this.guna2Panel1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Panel1.Location = new System.Drawing.Point(373, 93);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
+            this.guna2Panel1.Size = new System.Drawing.Size(52, 211);
+            this.guna2Panel1.TabIndex = 12;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.BorderColor = System.Drawing.Color.Transparent;
+            this.btnEditar.CheckedState.Parent = this.btnEditar;
+            this.btnEditar.CustomImages.Parent = this.btnEditar;
+            this.btnEditar.FillColor = System.Drawing.Color.Transparent;
+            this.btnEditar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnEditar.ForeColor = System.Drawing.Color.White;
+            this.btnEditar.HoverState.FillColor = System.Drawing.Color.Gray;
+            this.btnEditar.HoverState.Image = global::VillaSofia.Properties.Resources.editarBlanco32;
+            this.btnEditar.HoverState.Parent = this.btnEditar;
+            this.btnEditar.Image = global::VillaSofia.Properties.Resources.editarAzul32;
+            this.btnEditar.Location = new System.Drawing.Point(10, 165);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.ShadowDecoration.Parent = this.btnEditar;
+            this.btnEditar.Size = new System.Drawing.Size(33, 32);
+            this.btnEditar.TabIndex = 12;
+            this.btnEditar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.BorderColor = System.Drawing.Color.Transparent;
+            this.btnAgregar.CheckedState.Parent = this.btnAgregar;
+            this.btnAgregar.CustomImages.Parent = this.btnAgregar;
+            this.btnAgregar.FillColor = System.Drawing.Color.Transparent;
+            this.btnAgregar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAgregar.ForeColor = System.Drawing.Color.White;
+            this.btnAgregar.HoverState.FillColor = System.Drawing.Color.Gray;
+            this.btnAgregar.HoverState.Image = global::VillaSofia.Properties.Resources.insertar_fila_grueso_Blanco;
+            this.btnAgregar.HoverState.Parent = this.btnAgregar;
+            this.btnAgregar.Image = global::VillaSofia.Properties.Resources.insertar_fila_grueso_Azul;
+            this.btnAgregar.Location = new System.Drawing.Point(10, 51);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.ShadowDecoration.Parent = this.btnAgregar;
+            this.btnAgregar.Size = new System.Drawing.Size(33, 32);
+            this.btnAgregar.TabIndex = 11;
+            this.btnAgregar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // btnAbajo
+            // 
+            this.btnAbajo.BorderColor = System.Drawing.Color.Transparent;
+            this.btnAbajo.CheckedState.Parent = this.btnAbajo;
+            this.btnAbajo.CustomImages.Parent = this.btnAbajo;
+            this.btnAbajo.FillColor = System.Drawing.Color.Transparent;
+            this.btnAbajo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAbajo.ForeColor = System.Drawing.Color.White;
+            this.btnAbajo.HoverState.FillColor = System.Drawing.Color.Gray;
+            this.btnAbajo.HoverState.Image = global::VillaSofia.Properties.Resources.abajoBlanco32;
+            this.btnAbajo.HoverState.Parent = this.btnAbajo;
+            this.btnAbajo.Image = global::VillaSofia.Properties.Resources.abajo94_148_255Azul32;
+            this.btnAbajo.Location = new System.Drawing.Point(10, 127);
+            this.btnAbajo.Name = "btnAbajo";
+            this.btnAbajo.ShadowDecoration.Parent = this.btnAbajo;
+            this.btnAbajo.Size = new System.Drawing.Size(33, 32);
+            this.btnAbajo.TabIndex = 10;
+            this.btnAbajo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAbajo.Click += new System.EventHandler(this.btnAbajo_Click);
+            // 
+            // btnArriba
+            // 
+            this.btnArriba.BorderColor = System.Drawing.Color.Transparent;
+            this.btnArriba.CheckedState.Parent = this.btnArriba;
+            this.btnArriba.CustomImages.Parent = this.btnArriba;
+            this.btnArriba.FillColor = System.Drawing.Color.Transparent;
+            this.btnArriba.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnArriba.ForeColor = System.Drawing.Color.White;
+            this.btnArriba.HoverState.FillColor = System.Drawing.Color.Gray;
+            this.btnArriba.HoverState.Image = global::VillaSofia.Properties.Resources.arribaBlanco32;
+            this.btnArriba.HoverState.Parent = this.btnArriba;
+            this.btnArriba.Image = global::VillaSofia.Properties.Resources.arriba94_148_255Azul32;
+            this.btnArriba.Location = new System.Drawing.Point(10, 89);
+            this.btnArriba.Name = "btnArriba";
+            this.btnArriba.ShadowDecoration.Parent = this.btnArriba;
+            this.btnArriba.Size = new System.Drawing.Size(33, 32);
+            this.btnArriba.TabIndex = 9;
+            this.btnArriba.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnArriba.Click += new System.EventHandler(this.btnArriba_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BorderColor = System.Drawing.Color.Transparent;
+            this.btnEliminar.CheckedState.Parent = this.btnEliminar;
+            this.btnEliminar.CustomImages.Parent = this.btnEliminar;
+            this.btnEliminar.FillColor = System.Drawing.Color.Transparent;
+            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.HoverState.FillColor = System.Drawing.Color.Gray;
+            this.btnEliminar.HoverState.Image = global::VillaSofia.Properties.Resources.equisBlanca32;
+            this.btnEliminar.HoverState.Parent = this.btnEliminar;
+            this.btnEliminar.Image = global::VillaSofia.Properties.Resources.equis94_148_255Azul32;
+            this.btnEliminar.Location = new System.Drawing.Point(10, 13);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.ShadowDecoration.Parent = this.btnEliminar;
+            this.btnEliminar.Size = new System.Drawing.Size(33, 32);
+            this.btnEliminar.TabIndex = 7;
+            this.btnEliminar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnCancelar
             // 
@@ -97,32 +215,32 @@
             this.dgvTipoProducto.AllowUserToAddRows = false;
             this.dgvTipoProducto.AllowUserToDeleteRows = false;
             this.dgvTipoProducto.AllowUserToResizeRows = false;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvTipoProducto.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvTipoProducto.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvTipoProducto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTipoProducto.BackgroundColor = System.Drawing.Color.White;
             this.dgvTipoProducto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvTipoProducto.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvTipoProducto.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTipoProducto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTipoProducto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvTipoProducto.ColumnHeadersHeight = 26;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTipoProducto.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTipoProducto.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvTipoProducto.EnableHeadersVisualStyles = false;
             this.dgvTipoProducto.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
             this.dgvTipoProducto.Location = new System.Drawing.Point(12, 93);
@@ -191,102 +309,6 @@
             this.lblAgregarEditar.TabIndex = 0;
             this.lblAgregarEditar.Text = "Nombre";
             // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel1.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Panel1.Controls.Add(this.btnAbajo);
-            this.guna2Panel1.Controls.Add(this.btnArriba);
-            this.guna2Panel1.Controls.Add(this.btnAgregar);
-            this.guna2Panel1.Controls.Add(this.btnEliminar);
-            this.guna2Panel1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Panel1.Location = new System.Drawing.Point(373, 93);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(52, 168);
-            this.guna2Panel1.TabIndex = 12;
-            // 
-            // btnAbajo
-            // 
-            this.btnAbajo.BorderColor = System.Drawing.Color.Transparent;
-            this.btnAbajo.CheckedState.Parent = this.btnAbajo;
-            this.btnAbajo.CustomImages.Parent = this.btnAbajo;
-            this.btnAbajo.FillColor = System.Drawing.Color.Transparent;
-            this.btnAbajo.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAbajo.ForeColor = System.Drawing.Color.White;
-            this.btnAbajo.HoverState.FillColor = System.Drawing.Color.Gray;
-            this.btnAbajo.HoverState.Image = global::VillaSofia.Properties.Resources.abajoBlanco32;
-            this.btnAbajo.HoverState.Parent = this.btnAbajo;
-            this.btnAbajo.Image = global::VillaSofia.Properties.Resources.abajo94_148_255Azul32;
-            this.btnAbajo.Location = new System.Drawing.Point(10, 127);
-            this.btnAbajo.Name = "btnAbajo";
-            this.btnAbajo.ShadowDecoration.Parent = this.btnAbajo;
-            this.btnAbajo.Size = new System.Drawing.Size(33, 32);
-            this.btnAbajo.TabIndex = 10;
-            this.btnAbajo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAbajo.Click += new System.EventHandler(this.btnAbajo_Click);
-            // 
-            // btnArriba
-            // 
-            this.btnArriba.BorderColor = System.Drawing.Color.Transparent;
-            this.btnArriba.CheckedState.Parent = this.btnArriba;
-            this.btnArriba.CustomImages.Parent = this.btnArriba;
-            this.btnArriba.FillColor = System.Drawing.Color.Transparent;
-            this.btnArriba.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnArriba.ForeColor = System.Drawing.Color.White;
-            this.btnArriba.HoverState.FillColor = System.Drawing.Color.Gray;
-            this.btnArriba.HoverState.Image = global::VillaSofia.Properties.Resources.arribaBlanco32;
-            this.btnArriba.HoverState.Parent = this.btnArriba;
-            this.btnArriba.Image = global::VillaSofia.Properties.Resources.arriba94_148_255Azul32;
-            this.btnArriba.Location = new System.Drawing.Point(10, 89);
-            this.btnArriba.Name = "btnArriba";
-            this.btnArriba.ShadowDecoration.Parent = this.btnArriba;
-            this.btnArriba.Size = new System.Drawing.Size(33, 32);
-            this.btnArriba.TabIndex = 9;
-            this.btnArriba.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnArriba.Click += new System.EventHandler(this.btnArriba_Click);
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.BorderColor = System.Drawing.Color.Transparent;
-            this.btnAgregar.CheckedState.Parent = this.btnAgregar;
-            this.btnAgregar.CustomImages.Parent = this.btnAgregar;
-            this.btnAgregar.FillColor = System.Drawing.Color.Transparent;
-            this.btnAgregar.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.HoverState.FillColor = System.Drawing.Color.Gray;
-            this.btnAgregar.HoverState.Image = global::VillaSofia.Properties.Resources.masBlanco32;
-            this.btnAgregar.HoverState.Parent = this.btnAgregar;
-            this.btnAgregar.Image = global::VillaSofia.Properties.Resources.mas94_148_255Azul32;
-            this.btnAgregar.Location = new System.Drawing.Point(10, 51);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.ShadowDecoration.Parent = this.btnAgregar;
-            this.btnAgregar.Size = new System.Drawing.Size(33, 32);
-            this.btnAgregar.TabIndex = 8;
-            this.btnAgregar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BorderColor = System.Drawing.Color.Transparent;
-            this.btnEliminar.CheckedState.Parent = this.btnEliminar;
-            this.btnEliminar.CustomImages.Parent = this.btnEliminar;
-            this.btnEliminar.FillColor = System.Drawing.Color.Transparent;
-            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.HoverState.FillColor = System.Drawing.Color.Gray;
-            this.btnEliminar.HoverState.Image = global::VillaSofia.Properties.Resources.equisBlanca32;
-            this.btnEliminar.HoverState.Parent = this.btnEliminar;
-            this.btnEliminar.Image = global::VillaSofia.Properties.Resources.equis94_148_255Azul32;
-            this.btnEliminar.Location = new System.Drawing.Point(10, 13);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.ShadowDecoration.Parent = this.btnEliminar;
-            this.btnEliminar.Size = new System.Drawing.Size(33, 32);
-            this.btnEliminar.TabIndex = 7;
-            this.btnEliminar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
             // FrmClasificacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -299,8 +321,8 @@
             this.Load += new System.EventHandler(this.FrmClasificacion_Load);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTipoProducto)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTipoProducto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -316,7 +338,8 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Button btnAbajo;
         private Guna.UI2.WinForms.Guna2Button btnArriba;
-        private Guna.UI2.WinForms.Guna2Button btnAgregar;
         private Guna.UI2.WinForms.Guna2Button btnEliminar;
+        private Guna.UI2.WinForms.Guna2Button btnAgregar;
+        private Guna.UI2.WinForms.Guna2Button btnEditar;
     }
 }

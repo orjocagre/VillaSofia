@@ -164,16 +164,7 @@ namespace VillaSofia
             }
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-
-            if(dgvTipoProducto.Rows.GetRowCount(DataGridViewElementStates.Selected) > 0 && validarClasificacion())
-            {
-                guardarClasificacion(dgvTipoProducto.SelectedRows[0].Index);
-                cargarTablaClasi();
-            }
-
-        }
+        
 
         void eliminarClasificacion()
         {
@@ -227,6 +218,29 @@ namespace VillaSofia
 
             }
 
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            if (dgvTipoProducto.Rows.GetRowCount(DataGridViewElementStates.Selected) > 0 && validarClasificacion())
+            {
+                guardarClasificacion(dgvTipoProducto.SelectedRows[0].Index);
+                cargarTablaClasi();
+            }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            if (editar)
+            {
+                int posi = dgvTipoProducto.FirstDisplayedScrollingRowIndex;
+                int seleccion = dgvTipoProducto.SelectedRows[0].Index;
+                cargarTablaClasi();
+                dgvTipoProducto.FirstDisplayedScrollingRowIndex = posi;
+                dgvTipoProducto.Rows[seleccion].Selected = true;
+            }
+            editar = true;
+            llenarCampos();
         }
     }
 }
