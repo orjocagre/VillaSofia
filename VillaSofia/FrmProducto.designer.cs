@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.chbDeshabilitados = new Guna.UI2.WinForms.Guna2CheckBox();
             this.gpSinonimos = new Guna.UI2.WinForms.Guna2GroupBox();
@@ -56,6 +56,7 @@
             this.btnAgregar = new Guna.UI2.WinForms.Guna2Button();
             this.btnEliminar = new Guna.UI2.WinForms.Guna2Button();
             this.btnSinonimos = new Guna.UI2.WinForms.Guna2Button();
+            this.btnEditar = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.gpSinonimos.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -128,6 +129,7 @@
             this.guna2Panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2Panel1.Controls.Add(this.btnEditar);
             this.guna2Panel1.Controls.Add(this.btnAbajo);
             this.guna2Panel1.Controls.Add(this.btnArriba);
             this.guna2Panel1.Controls.Add(this.btnAgregar);
@@ -136,7 +138,7 @@
             this.guna2Panel1.Location = new System.Drawing.Point(1001, 255);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(52, 217);
+            this.guna2Panel1.Size = new System.Drawing.Size(52, 211);
             this.guna2Panel1.TabIndex = 7;
             // 
             // dgvProducto
@@ -144,10 +146,10 @@
             this.dgvProducto.AllowUserToAddRows = false;
             this.dgvProducto.AllowUserToDeleteRows = false;
             this.dgvProducto.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvProducto.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvProducto.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvProducto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -156,23 +158,23 @@
             this.dgvProducto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvProducto.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvProducto.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProducto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProducto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvProducto.ColumnHeadersHeight = 20;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvProducto.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProducto.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProducto.EnableHeadersVisualStyles = false;
             this.dgvProducto.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
             this.dgvProducto.Location = new System.Drawing.Point(12, 255);
@@ -523,6 +525,26 @@
             this.btnSinonimos.TabIndex = 11;
             this.btnSinonimos.Click += new System.EventHandler(this.btnSinonimos_Click);
             // 
+            // btnEditar
+            // 
+            this.btnEditar.BorderColor = System.Drawing.Color.Transparent;
+            this.btnEditar.CheckedState.Parent = this.btnEditar;
+            this.btnEditar.CustomImages.Parent = this.btnEditar;
+            this.btnEditar.FillColor = System.Drawing.Color.Transparent;
+            this.btnEditar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnEditar.ForeColor = System.Drawing.Color.White;
+            this.btnEditar.HoverState.FillColor = System.Drawing.Color.Gray;
+            this.btnEditar.HoverState.Image = global::VillaSofia.Properties.Resources.editarBlanco32;
+            this.btnEditar.HoverState.Parent = this.btnEditar;
+            this.btnEditar.Image = global::VillaSofia.Properties.Resources.editarAzul32;
+            this.btnEditar.Location = new System.Drawing.Point(10, 165);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.ShadowDecoration.Parent = this.btnEditar;
+            this.btnEditar.Size = new System.Drawing.Size(33, 32);
+            this.btnEditar.TabIndex = 11;
+            this.btnEditar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
             // FrmProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -572,5 +594,6 @@
         private Guna.UI2.WinForms.Guna2CheckBox chbDeshabilitados;
         private Guna.UI2.WinForms.Guna2CheckBox chbEventos;
         private Guna.UI2.WinForms.Guna2CheckBox chbRestaurante;
+        private Guna.UI2.WinForms.Guna2Button btnEditar;
     }
 }

@@ -204,6 +204,11 @@ namespace VillaSofia
             txtSinonimos.Text = "";
             txtNombre.Text = "";
             txtPrecio.Text = "";
+            int posi = dgvProducto.FirstDisplayedScrollingRowIndex;
+            int selec = dgvProducto.SelectedRows[0].Index;
+            cargarTabla();
+            dgvProducto.FirstDisplayedScrollingRowIndex = posi;
+            dgvProducto.Rows[selec].Selected = true;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -474,6 +479,7 @@ namespace VillaSofia
                 btnEliminar.Enabled = false;
                 btnArriba.Enabled = false;
                 btnAbajo.Enabled = false;
+                btnEditar.Enabled = false;
                 btnAgregar.Image = Properties.Resources.mas94_148_255Azul32;
                 btnAgregar.HoverState.Image = Properties.Resources.masBlanco32;
             }
@@ -483,13 +489,27 @@ namespace VillaSofia
                 btnEliminar.Enabled = true;
                 btnArriba.Enabled = true;
                 btnAbajo.Enabled = true;
+                btnEditar.Enabled = true;
                 btnAgregar.Image = Properties.Resources.insertar_fila_grueso_Azul;
                 btnAgregar.HoverState.Image = Properties.Resources.insertar_fila_grueso_Blanco;
-
-
             }
         }
 
-       
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            if (!chbDeshabilitados.Checked)
+            {
+                if (editar)
+                {
+                    int posi = dgvProducto.FirstDisplayedScrollingRowIndex;
+                    int seleccion = dgvProducto.SelectedRows[0].Index;
+                    cargarTabla();
+                    dgvProducto.FirstDisplayedScrollingRowIndex = posi;
+                    dgvProducto.Rows[seleccion].Selected = true;
+                }
+                editar = true;
+                llenarCampos();
+            }
+        }
     }
 }
