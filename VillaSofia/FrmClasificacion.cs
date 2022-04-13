@@ -45,13 +45,13 @@ namespace VillaSofia
         void guardarClasificacion(int orden)
         {
             ClsLogicaTipoProducto tipoProd = new ClsLogicaTipoProducto();
-            String mensaje = tipoProd.insertarTipoProducto(txtClasificacion.Text, orden);
+            String mensaje = tipoProd.insertarTipoProducto(txtClasificacion.Text.Trim(), orden);
             MessageBox.Show(mensaje);
         }
         void editarClasificacion()
         {
             ClsLogicaTipoProducto tipoProd = new ClsLogicaTipoProducto();
-            String mensaje = tipoProd.editarTipoProducto(idEditar, txtClasificacion.Text);
+            String mensaje = tipoProd.editarTipoProducto(idEditar, txtClasificacion.Text.Trim());
             MessageBox.Show(mensaje);
         }
 
