@@ -497,6 +497,8 @@
             this.dgvCuenta.ThemeStyle.RowsStyle.Height = 28;
             this.dgvCuenta.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.dgvCuenta.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvCuenta.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dgvCuenta_CellBeginEdit);
+            this.dgvCuenta.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCuenta_CellEndEdit);
             this.dgvCuenta.CellValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCuenta_CellValidated);
             // 
             // ID

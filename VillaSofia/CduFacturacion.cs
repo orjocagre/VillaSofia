@@ -825,5 +825,15 @@ namespace VillaSofia
                 insertarRegistroComanda(-1);
             }
         }
+
+        private void dgvCuenta_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
+        {
+            dgvCuenta.CurrentCell.Style.BackColor = Color.FromArgb(255, 94, 148, 255);
+        }
+
+        private void dgvCuenta_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            dgvCuenta.CurrentCell.Style.BackColor = dgvCuenta.CurrentRow.DefaultCellStyle.BackColor;
+        }
     }
 }
