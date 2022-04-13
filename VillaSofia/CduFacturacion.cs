@@ -792,5 +792,13 @@ namespace VillaSofia
             FrmDividirCuenta dividir = new FrmDividirCuenta(idFactura, Convert.ToInt32(cmbMesero.SelectedValue));
             dividir.Visible = true;
         }
+
+        private void lsbProducto_MouseDown(object sender, MouseEventArgs e)
+        {
+            if(e.Button == MouseButtons.Left)
+            {
+                insertarRegistroComanda(-1);
+            }
+        }
     }
 }
