@@ -253,6 +253,7 @@
             this.txtNumPersonas.ShadowDecoration.Parent = this.txtNumPersonas;
             this.txtNumPersonas.Size = new System.Drawing.Size(75, 36);
             this.txtNumPersonas.TabIndex = 22;
+            this.txtNumPersonas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumPersonas_KeyPress);
             // 
             // btnSiguiente
             // 

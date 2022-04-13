@@ -35,6 +35,7 @@
             this.chbTotalCancelado = new Guna.UI2.WinForms.Guna2CheckBox();
             this.TxtAnticipo = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblPorcentaje = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.btnAnterior = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtTotal = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -47,11 +48,10 @@
             this.guna2Separator3 = new Guna.UI2.WinForms.Guna2Separator();
             this.txtApellido = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtNombre = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnGuardar = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.btnAnterior = new Guna.UI2.WinForms.Guna2Button();
-            this.btnGuardar = new Guna.UI2.WinForms.Guna2Button();
             this.pnPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -131,6 +131,7 @@
             this.txtPendiente.ShadowDecoration.Parent = this.txtPendiente;
             this.txtPendiente.Size = new System.Drawing.Size(135, 36);
             this.txtPendiente.TabIndex = 39;
+            this.txtPendiente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPendiente_KeyPress);
             // 
             // guna2HtmlLabel7
             // 
@@ -188,6 +189,7 @@
             this.TxtAnticipo.Size = new System.Drawing.Size(135, 36);
             this.TxtAnticipo.TabIndex = 36;
             this.TxtAnticipo.TextChanged += new System.EventHandler(this.TxtAnticipo_TextChanged);
+            this.TxtAnticipo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtAnticipo_KeyPress);
             // 
             // lblPorcentaje
             // 
@@ -200,6 +202,25 @@
             this.lblPorcentaje.Size = new System.Drawing.Size(32, 22);
             this.lblPorcentaje.TabIndex = 34;
             this.lblPorcentaje.Text = "50%";
+            // 
+            // btnAnterior
+            // 
+            this.btnAnterior.BorderRadius = 3;
+            this.btnAnterior.CheckedState.Parent = this.btnAnterior;
+            this.btnAnterior.CustomImages.Parent = this.btnAnterior;
+            this.btnAnterior.Font = new System.Drawing.Font("Tw Cen MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnterior.ForeColor = System.Drawing.Color.White;
+            this.btnAnterior.HoverState.Parent = this.btnAnterior;
+            this.btnAnterior.Image = global::VillaSofia.Properties.Resources.izquierdaBlanca32;
+            this.btnAnterior.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAnterior.Location = new System.Drawing.Point(14, 481);
+            this.btnAnterior.Name = "btnAnterior";
+            this.btnAnterior.ShadowDecoration.Parent = this.btnAnterior;
+            this.btnAnterior.Size = new System.Drawing.Size(145, 45);
+            this.btnAnterior.TabIndex = 33;
+            this.btnAnterior.Text = "ANTERIOR";
+            this.btnAnterior.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
             // 
             // guna2HtmlLabel2
             // 
@@ -236,6 +257,7 @@
             this.txtTotal.ShadowDecoration.Parent = this.txtTotal;
             this.txtTotal.Size = new System.Drawing.Size(135, 36);
             this.txtTotal.TabIndex = 30;
+            this.txtTotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTotal_KeyPress);
             // 
             // guna2HtmlLabel6
             // 
@@ -272,6 +294,7 @@
             this.txtCedula.ShadowDecoration.Parent = this.txtCedula;
             this.txtCedula.Size = new System.Drawing.Size(295, 36);
             this.txtCedula.TabIndex = 28;
+            this.txtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedula_KeyPress);
             // 
             // guna2HtmlLabel1
             // 
@@ -301,6 +324,7 @@
             this.txtTelefono.HoverState.Parent = this.txtTelefono;
             this.txtTelefono.Location = new System.Drawing.Point(29, 167);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.txtTelefono.MaxLength = 8;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.PasswordChar = '\0';
             this.txtTelefono.PlaceholderText = "";
@@ -308,6 +332,7 @@
             this.txtTelefono.ShadowDecoration.Parent = this.txtTelefono;
             this.txtTelefono.Size = new System.Drawing.Size(287, 36);
             this.txtTelefono.TabIndex = 26;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // guna2HtmlLabel11
             // 
@@ -375,6 +400,7 @@
             this.txtApellido.ShadowDecoration.Parent = this.txtApellido;
             this.txtApellido.Size = new System.Drawing.Size(287, 36);
             this.txtApellido.TabIndex = 22;
+            this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
             // txtNombre
             // 
@@ -399,6 +425,29 @@
             this.txtNombre.ShadowDecoration.Parent = this.txtNombre;
             this.txtNombre.Size = new System.Drawing.Size(287, 36);
             this.txtNombre.TabIndex = 22;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnGuardar.BorderRadius = 3;
+            this.btnGuardar.BorderThickness = 1;
+            this.btnGuardar.CheckedState.Parent = this.btnGuardar;
+            this.btnGuardar.CustomImages.Parent = this.btnGuardar;
+            this.btnGuardar.FillColor = System.Drawing.Color.Transparent;
+            this.btnGuardar.Font = new System.Drawing.Font("Tw Cen MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnGuardar.HoverState.Parent = this.btnGuardar;
+            this.btnGuardar.Image = global::VillaSofia.Properties.Resources.guardarAzul32;
+            this.btnGuardar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnGuardar.Location = new System.Drawing.Point(512, 481);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.ShadowDecoration.Parent = this.btnGuardar;
+            this.btnGuardar.Size = new System.Drawing.Size(145, 45);
+            this.btnGuardar.TabIndex = 21;
+            this.btnGuardar.Text = "GUARDAR";
+            this.btnGuardar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // guna2Separator1
             // 
@@ -430,47 +479,6 @@
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(52, 22);
             this.guna2HtmlLabel5.TabIndex = 16;
             this.guna2HtmlLabel5.Text = "Nombre";
-            // 
-            // btnAnterior
-            // 
-            this.btnAnterior.BorderRadius = 3;
-            this.btnAnterior.CheckedState.Parent = this.btnAnterior;
-            this.btnAnterior.CustomImages.Parent = this.btnAnterior;
-            this.btnAnterior.Font = new System.Drawing.Font("Tw Cen MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAnterior.ForeColor = System.Drawing.Color.White;
-            this.btnAnterior.HoverState.Parent = this.btnAnterior;
-            this.btnAnterior.Image = global::VillaSofia.Properties.Resources.izquierdaBlanca32;
-            this.btnAnterior.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAnterior.Location = new System.Drawing.Point(14, 481);
-            this.btnAnterior.Name = "btnAnterior";
-            this.btnAnterior.ShadowDecoration.Parent = this.btnAnterior;
-            this.btnAnterior.Size = new System.Drawing.Size(145, 45);
-            this.btnAnterior.TabIndex = 33;
-            this.btnAnterior.Text = "ANTERIOR";
-            this.btnAnterior.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnGuardar.BorderRadius = 3;
-            this.btnGuardar.BorderThickness = 1;
-            this.btnGuardar.CheckedState.Parent = this.btnGuardar;
-            this.btnGuardar.CustomImages.Parent = this.btnGuardar;
-            this.btnGuardar.FillColor = System.Drawing.Color.Transparent;
-            this.btnGuardar.Font = new System.Drawing.Font("Tw Cen MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnGuardar.HoverState.Parent = this.btnGuardar;
-            this.btnGuardar.Image = global::VillaSofia.Properties.Resources.guardarAzul32;
-            this.btnGuardar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnGuardar.Location = new System.Drawing.Point(512, 481);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.ShadowDecoration.Parent = this.btnGuardar;
-            this.btnGuardar.Size = new System.Drawing.Size(145, 45);
-            this.btnGuardar.TabIndex = 21;
-            this.btnGuardar.Text = "GUARDAR";
-            this.btnGuardar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // CduRegistroEvento2
             // 
