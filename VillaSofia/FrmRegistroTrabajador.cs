@@ -249,16 +249,18 @@ namespace VillaSofia
 
 
         void eliminarTrabajador(int idTrabajador)
+
         {
             ClsLogicaRegistroTrabajador eliminarTrabajador = new ClsLogicaRegistroTrabajador();
 
             String msj = eliminarTrabajador.EliminarTrabajador(idTrabajador);
-
+            MessageBox.Show(msj);
 
         }
         private void BtnEliminarTrabajador_Click(object sender, EventArgs e)
         {
             String idT = dagTrabajadores.SelectedRows[0].Cells[6].Value.ToString();
+
             int IdT = Convert.ToInt32(idT);
             //ClsLogicaAddReceta ingrediente = new ClsLogicaAddReceta();
             eliminarTrabajador(IdT);

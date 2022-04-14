@@ -97,11 +97,11 @@ namespace Logica
 
             if (i == -1)
             {
-                mensaje = "Error al Eliminar";
+                mensaje = "Este mesero fue usado en una factura y no se puede eliminar";
             }
             else
             {
-                mensaje = "Error al Eliminar";
+                mensaje = "Trabajador eliminado";
             }
 
 
