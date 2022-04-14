@@ -13,7 +13,11 @@ using System.Windows;
 namespace VillaSofia
 {
     public partial class FrmLoginUsuario : Form
+
+
     {
+        Boolean clave_visible = false;
+
         public FrmLoginUsuario()
         {
             InitializeComponent();
@@ -144,6 +148,26 @@ namespace VillaSofia
         private void FrmLoginUsuario_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void pnPrincipal_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtpassword_IconRightClick(object sender, EventArgs e)
+        {
+            clave_visible = (!clave_visible);
+            if(clave_visible) {
+                txtpassword.IconRight = Properties.Resources.ojo_Abierto;
+                txtpassword.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtpassword.IconRight = Properties.Resources.ojo_Cerrado;
+                txtpassword.UseSystemPasswordChar = true;
+            }
+           
         }
     }
 }

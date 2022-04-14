@@ -533,6 +533,8 @@
     <None Include="Resources\insertar_fila.png" />
     <None Include="Resources\insertar_fila_grueso_Azul.png" />
     <None Include="Resources\insertar_fila_grueso_Blanco.png" />
+    <None Include="Resources\ojo_Cerrado.jpg" />
+    <None Include="Resources\ojo_Abierto.jpg" />
     <Content Include="Resources\trabajo-en-equipo.png" />
     <Content Include="Resources\VSlogin.png" />
   </ItemGroup>

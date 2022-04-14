@@ -31,8 +31,8 @@ namespace VillaSofia
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLoginUsuario));
             this.pnPrincipal = new Guna.UI2.WinForms.Guna2Panel();
-            this.pictVillaS = new System.Windows.Forms.PictureBox();
             this.button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.pictVillaS = new System.Windows.Forms.PictureBox();
             this.txtpassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtUser = new Guna.UI2.WinForms.Guna2TextBox();
             this.pnPrincipal.SuspendLayout();
@@ -54,19 +54,7 @@ namespace VillaSofia
             this.pnPrincipal.ShadowDecoration.Parent = this.pnPrincipal;
             this.pnPrincipal.Size = new System.Drawing.Size(289, 402);
             this.pnPrincipal.TabIndex = 18;
-            // 
-            // pictVillaS
-            // 
-            this.pictVillaS.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictVillaS.Image = ((System.Drawing.Image)(resources.GetObject("pictVillaS.Image")));
-            this.pictVillaS.ImageLocation = "";
-            this.pictVillaS.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictVillaS.InitialImage")));
-            this.pictVillaS.Location = new System.Drawing.Point(43, 3);
-            this.pictVillaS.Name = "pictVillaS";
-            this.pictVillaS.Size = new System.Drawing.Size(214, 201);
-            this.pictVillaS.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictVillaS.TabIndex = 23;
-            this.pictVillaS.TabStop = false;
+            this.pnPrincipal.Paint += new System.Windows.Forms.PaintEventHandler(this.pnPrincipal_Paint);
             // 
             // button1
             // 
@@ -86,6 +74,19 @@ namespace VillaSofia
             this.button1.Enter += new System.EventHandler(this.button1_Enter);
             this.button1.Leave += new System.EventHandler(this.button1_Leave);
             // 
+            // pictVillaS
+            // 
+            this.pictVillaS.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictVillaS.Image = ((System.Drawing.Image)(resources.GetObject("pictVillaS.Image")));
+            this.pictVillaS.ImageLocation = "";
+            this.pictVillaS.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictVillaS.InitialImage")));
+            this.pictVillaS.Location = new System.Drawing.Point(43, 3);
+            this.pictVillaS.Name = "pictVillaS";
+            this.pictVillaS.Size = new System.Drawing.Size(214, 201);
+            this.pictVillaS.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictVillaS.TabIndex = 23;
+            this.pictVillaS.TabStop = false;
+            // 
             // txtpassword
             // 
             this.txtpassword.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -100,9 +101,10 @@ namespace VillaSofia
             this.txtpassword.FocusedState.Parent = this.txtpassword;
             this.txtpassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtpassword.ForeColor = System.Drawing.Color.Black;
+            this.txtpassword.HideSelection = false;
             this.txtpassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtpassword.HoverState.Parent = this.txtpassword;
-            this.txtpassword.IconRight = global::VillaSofia.Properties.Resources.candado;
+            this.txtpassword.IconRight = global::VillaSofia.Properties.Resources.ojo_Cerrado;
             this.txtpassword.Location = new System.Drawing.Point(26, 267);
             this.txtpassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtpassword.Name = "txtpassword";
@@ -114,6 +116,7 @@ namespace VillaSofia
             this.txtpassword.Size = new System.Drawing.Size(240, 36);
             this.txtpassword.TabIndex = 19;
             this.txtpassword.Tag = "";
+            this.txtpassword.IconRightClick += new System.EventHandler(this.txtpassword_IconRightClick);
             this.txtpassword.Enter += new System.EventHandler(this.txtpassword_Enter);
             this.txtpassword.Leave += new System.EventHandler(this.txtpassword_Leave);
             // 
@@ -132,6 +135,7 @@ namespace VillaSofia
             this.txtUser.FocusedState.Parent = this.txtUser;
             this.txtUser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUser.ForeColor = System.Drawing.Color.Black;
+            this.txtUser.HideSelection = false;
             this.txtUser.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUser.HoverState.Parent = this.txtUser;
             this.txtUser.IconRight = global::VillaSofia.Properties.Resources.usuarioNegro;
