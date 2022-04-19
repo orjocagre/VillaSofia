@@ -974,7 +974,7 @@
             <DataSetName>DsInforme</DataSetName>
             <Top>9.23078cm</Top>
             <Height>1.835cm</Height>
-            <Width>22.72771cm</Width>
+            <Width>22.72768cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -983,10 +983,10 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>23cm</Height>
+        <Height>18cm</Height>
         <Style />
       </Body>
-      <Width>29.45203cm</Width>
+      <Width>23.5cm</Width>
       <Page>
         <PageHeader>
           <Height>3.04271cm</Height>

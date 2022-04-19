@@ -35,6 +35,7 @@
             this.trabajadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recetaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adminstrarUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bitacoraDeActividadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.LblUsuario = new System.Windows.Forms.Label();
             this.lblRol = new System.Windows.Forms.Label();
@@ -61,7 +62,8 @@
             this.productoToolStripMenuItem,
             this.trabajadorToolStripMenuItem,
             this.recetaToolStripMenuItem,
-            this.adminstrarUsuariosToolStripMenuItem});
+            this.adminstrarUsuariosToolStripMenuItem,
+            this.bitacoraDeActividadesToolStripMenuItem});
             this.fileMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fileMenu.ImageTransparentColor = System.Drawing.Color.Gainsboro;
             this.fileMenu.Name = "fileMenu";
@@ -71,30 +73,37 @@
             // productoToolStripMenuItem
             // 
             this.productoToolStripMenuItem.Name = "productoToolStripMenuItem";
-            this.productoToolStripMenuItem.Size = new System.Drawing.Size(222, 24);
+            this.productoToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
             this.productoToolStripMenuItem.Text = "Producto";
             this.productoToolStripMenuItem.Click += new System.EventHandler(this.productoToolStripMenuItem_Click);
             // 
             // trabajadorToolStripMenuItem
             // 
             this.trabajadorToolStripMenuItem.Name = "trabajadorToolStripMenuItem";
-            this.trabajadorToolStripMenuItem.Size = new System.Drawing.Size(222, 24);
+            this.trabajadorToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
             this.trabajadorToolStripMenuItem.Text = "Trabajador";
             this.trabajadorToolStripMenuItem.Click += new System.EventHandler(this.trabajadorToolStripMenuItem_Click);
             // 
             // recetaToolStripMenuItem
             // 
             this.recetaToolStripMenuItem.Name = "recetaToolStripMenuItem";
-            this.recetaToolStripMenuItem.Size = new System.Drawing.Size(222, 24);
+            this.recetaToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
             this.recetaToolStripMenuItem.Text = "Receta";
             this.recetaToolStripMenuItem.Click += new System.EventHandler(this.recetaToolStripMenuItem_Click);
             // 
             // adminstrarUsuariosToolStripMenuItem
             // 
             this.adminstrarUsuariosToolStripMenuItem.Name = "adminstrarUsuariosToolStripMenuItem";
-            this.adminstrarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(222, 24);
+            this.adminstrarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
             this.adminstrarUsuariosToolStripMenuItem.Text = "Adminstrar Usuarios";
             this.adminstrarUsuariosToolStripMenuItem.Click += new System.EventHandler(this.adminstrarUsuariosToolStripMenuItem_Click);
+            // 
+            // bitacoraDeActividadesToolStripMenuItem
+            // 
+            this.bitacoraDeActividadesToolStripMenuItem.Name = "bitacoraDeActividadesToolStripMenuItem";
+            this.bitacoraDeActividadesToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
+            this.bitacoraDeActividadesToolStripMenuItem.Text = "Bitacora de actividades";
+            this.bitacoraDeActividadesToolStripMenuItem.Click += new System.EventHandler(this.bitacoraDeActividadesToolStripMenuItem_Click);
             // 
             // LblUsuario
             // 
@@ -188,6 +197,7 @@
         private System.Windows.Forms.Label lblCajero;
         private System.Windows.Forms.Label lblJefeCocina;
         private System.Windows.Forms.Button btnSesion;
+        private System.Windows.Forms.ToolStripMenuItem bitacoraDeActividadesToolStripMenuItem;
     }
 }
 

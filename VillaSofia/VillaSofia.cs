@@ -137,9 +137,9 @@ namespace VillaSofia
 
         private void productoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmProducto pro = new FrmProducto(this);
-            pro.Show();
-            pro.BringToFront();
+            //FrmBitacoraUsuario BitUs = new FrmBitacoraUsuario(this);
+            //BitUs.Show();
+            //BitUs.BringToFront();
         }
 
         private void trabajadorToolStripMenuItem_Click(object sender, EventArgs e)
@@ -203,6 +203,13 @@ namespace VillaSofia
             }
             
 
+        }
+
+        private void bitacoraDeActividadesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmRegistroUsuario registro = new FrmRegistroUsuario();
+            registro.Show();
+            registro.BringToFront();
         }
     }
 }

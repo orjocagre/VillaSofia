@@ -39,10 +39,10 @@
             // RPTVentas
             // 
             this.RPTVentas.LocalReport.ReportEmbeddedResource = "VillaSofia.ReportEstadistic.rdlc";
-            this.RPTVentas.Location = new System.Drawing.Point(230, 3);
+            this.RPTVentas.Location = new System.Drawing.Point(242, 18);
             this.RPTVentas.Name = "RPTVentas";
             this.RPTVentas.ServerReport.BearerToken = null;
-            this.RPTVentas.Size = new System.Drawing.Size(731, 460);
+            this.RPTVentas.Size = new System.Drawing.Size(675, 420);
             this.RPTVentas.TabIndex = 0;
             // 
             // LblD
