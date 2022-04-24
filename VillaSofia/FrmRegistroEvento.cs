@@ -21,9 +21,6 @@ namespace VillaSofia
         public double total;
         public int idEvento;
 
-
-
-
         public FrmRegistroEvento(CduCalendario cal)
         {
             this.idEvento = -1;
@@ -124,6 +121,17 @@ namespace VillaSofia
         
         private void txtHora_KeyDown(object sender, KeyEventArgs e)
         {
+            int numero = -1;
+            if (e.KeyValue >= ((int)Keys.NumPad0) && e.KeyValue <= ((int)Keys.NumPad9))
+            { // numpad
+                numero = e.KeyValue - ((int)Keys.NumPad0);
+            }
+            else if (e.KeyValue >= ((int)Keys.D0) && e.KeyValue <= ((int)Keys.D9))
+            { // regular numbers
+                numero = e.KeyValue - ((int)Keys.D0);
+            }
+
+
             int tam = txtHora.Text.Length;
             //MessageBox.Show(e.KeyCode.ToString());
 
@@ -132,23 +140,48 @@ namespace VillaSofia
             {
                 e.SuppressKeyPress = e.KeyCode == Keys.Back ? false : true;
             }
-            //si ya se ingreso un 1 en la hora solo admite un 0 1 o 2
-            if (txtHora.Text == "1" && tam == 1 && ((e.KeyCode >= Keys.D3 && e.KeyCode <= Keys.D9) || (e.KeyCode >= Keys.NumPad3 && e.KeyCode <= Keys.NumPad9) || e.KeyCode == Keys.Back))
-            {
-                //MessageBox.Show("aqui");
-
-                e.SuppressKeyPress = true;
-
-            }
-
-            
 
             //verifica si la teclas que se acaba de presionar es un numero
-            if ((e.KeyCode >= Keys.D0 && e.KeyCode <= Keys.D9) ||
+            else if ((e.KeyCode >= Keys.D0 && e.KeyCode <= Keys.D9) ||
                 (e.KeyCode >= Keys.NumPad0 && e.KeyCode <= Keys.NumPad9) ||
                 e.KeyCode == Keys.Decimal || e.KeyCode == Keys.Back)
             {
+                //si esta vacio y se ingresa un numero mayor o igual a 2
+                if (tam == 0 && e.KeyCode != Keys.D1 && e.KeyCode != Keys.NumPad1 && e.KeyCode != Keys.D0 && e.KeyCode != Keys.NumPad0 && e.KeyCode != Keys.Back)
+                {
+                    txtHora.Text = "0" + numero + ":";
+                    txtHora.SelectionStart = txtHora.Text.Length;
+                    e.SuppressKeyPress = true;
+                }
+                //si ya se ingreso un 1 en la Hora solo admite un 0 1 o 2
+                else if (txtHora.Text == "1" && tam == 1 && ((e.KeyCode >= Keys.D3 && e.KeyCode <= Keys.D9) || (e.KeyCode >= Keys.NumPad3 && e.KeyCode <= Keys.NumPad9)))
+                {
+                    txtHora.Text = "0" + txtHora.Text + ":" + numero;
+                    e.SuppressKeyPress = true;
+                    txtHora.SelectionStart = txtHora.Text.Length;
 
+                }
+                //pone los 2 puntos
+                else if (tam == 1)
+                {
+                    if (e.KeyCode == Keys.Back)
+                    {
+                        //txtHora.Text = txtHora.Text.Substring(0, 1);
+                    }
+                    else
+                    {
+                        txtHora.Text = txtHora.Text + numero + ":";
+                        e.SuppressKeyPress = true;
+                    }
+                    txtHora.SelectionStart = txtHora.Text.Length;
+                }
+                //se ingresa el primer minuto y es mayor que seis
+                else if (tam == 3 && ((e.KeyCode >= Keys.D6 && e.KeyCode <= Keys.D9) || (e.KeyCode >= Keys.NumPad6 && e.KeyCode <= Keys.NumPad9)))
+                {
+                    txtHora.Text = txtHora.Text + "0" + numero;
+                    txtHora.SelectionStart = txtHora.Text.Length;
+                    e.SuppressKeyPress = true;
+                }
             }
             else
             {
@@ -226,74 +259,42 @@ namespace VillaSofia
             
         }
 
-        private void txtHoraComida_KeyUp(object sender, KeyEventArgs e)
-        {
-            int tam = txtHoraComida.Text.Length;
-            if (tam == 2)
-            {
-                if (e.KeyCode == Keys.Back)
-                {
-                    txtHoraComida.Text = txtHoraComida.Text.Substring(0, 1);
-                }
-                else
-                {
-                    txtHoraComida.Text = txtHoraComida.Text + ":";
-                }
-                txtHoraComida.SelectionStart = txtHoraComida.Text.Length;
+        //private void txtHoraComida_KeyUp(object sender, KeyEventArgs e)
+        //{
+        //    int tam = txtHoraComida.Text.Length;
+        //    if (tam == 2)
+        //    {
+        //        if (e.KeyCode == Keys.Back)
+        //        {
+        //            txtHoraComida.Text = txtHoraComida.Text.Substring(0, 1);
+        //        }
+        //        else
+        //        {
+        //            txtHoraComida.Text = txtHoraComida.Text + ":";
+        //        }
+        //        txtHoraComida.SelectionStart = txtHoraComida.Text.Length;
 
 
-            }
+        //    }
 
-            if (tam == 1 && !(e.KeyCode == Keys.D1 || e.KeyCode == Keys.NumPad1 || e.KeyCode == Keys.D0 || e.KeyCode == Keys.NumPad0) && txtHora.Text != "0")
-            {
+        //    if (tam == 1 && !(e.KeyCode == Keys.D1 || e.KeyCode == Keys.NumPad1 || e.KeyCode == Keys.D0 || e.KeyCode == Keys.NumPad0) && txtHora.Text != "0")
+        //    {
 
-                txtHoraComida.Text = "0" + txtHoraComida.Text + ":";
-                txtHoraComida.SelectionStart = txtHoraComida.Text.Length;
+        //        txtHoraComida.Text = "0" + txtHoraComida.Text + ":";
+        //        txtHoraComida.SelectionStart = txtHoraComida.Text.Length;
 
-            }
+        //    }
 
-            if (tam == 4 && ((e.KeyCode >= Keys.D6 && e.KeyCode <= Keys.D9) || (e.KeyCode >= Keys.NumPad6 && e.KeyCode <= Keys.NumPad9)))
-            {
-                txtHoraComida.Text = txtHoraComida.Text.Substring(0, 3) + "0" + txtHoraComida.Text.Substring(3, 1);
-                txtHoraComida.SelectionStart = txtHoraComida.Text.Length;
-            }
-        }
+        //    if (tam == 4 && ((e.KeyCode >= Keys.D6 && e.KeyCode <= Keys.D9) || (e.KeyCode >= Keys.NumPad6 && e.KeyCode <= Keys.NumPad9)))
+        //    {
+        //        txtHoraComida.Text = txtHoraComida.Text.Substring(0, 3) + "0" + txtHoraComida.Text.Substring(3, 1);
+        //        txtHoraComida.SelectionStart = txtHoraComida.Text.Length;
+        //    }
+        //}
 
-        private void txtHoraComida_KeyDown(object sender, KeyEventArgs e)
-        {
-            int tam = txtHoraComida.Text.Length;
-            //MessageBox.Show(e.KeyCode.ToString());
-
-            //si ya tiene el tama;o correcto solo se admite la tecla borrar
-            if (tam > 4)
-            {
-                e.SuppressKeyPress = e.KeyCode == Keys.Back ? false : true;
-            }
-            //si ya se ingreso un 1 en la hora solo admite un 0 1 o 2
-            if (txtHoraComida.Text == "1" && tam == 1 && ((e.KeyCode >= Keys.D3 && e.KeyCode <= Keys.D9) || (e.KeyCode >= Keys.NumPad3 && e.KeyCode <= Keys.NumPad9) || e.KeyCode == Keys.Back))
-            {
-                //MessageBox.Show("aqui");
-
-                e.SuppressKeyPress = true;
-
-            }
+       
 
 
-
-            //verifica si la teclas que se acaba de presionar es un numero
-            if ((e.KeyCode >= Keys.D0 && e.KeyCode <= Keys.D9) ||
-                (e.KeyCode >= Keys.NumPad0 && e.KeyCode <= Keys.NumPad9) ||
-                e.KeyCode == Keys.Decimal || e.KeyCode == Keys.Back)
-            {
-
-            }
-            else
-            {
-                e.SuppressKeyPress = true;
-            }
-        }
-
-        
         private void FrmRegistroEvento_Activated(object sender, EventArgs e)
         {
             mostrarTotal();
@@ -405,5 +406,81 @@ namespace VillaSofia
             }
 
         }
+        private void txtHoraComida_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            int numero = -1;
+            if (e.KeyValue >= ((int)Keys.NumPad0) && e.KeyValue <= ((int)Keys.NumPad9))
+            { // numpad
+                numero = e.KeyValue - ((int)Keys.NumPad0);
+            }
+            else if (e.KeyValue >= ((int)Keys.D0) && e.KeyValue <= ((int)Keys.D9))
+            { // regular numbers
+                numero = e.KeyValue - ((int)Keys.D0);
+            }
+            
+
+            int tam = txtHoraComida.Text.Length;
+            //MessageBox.Show(e.KeyCode.ToString());
+
+            //si ya tiene el tama;o correcto solo se admite la tecla borrar
+            if (tam > 4)
+            {
+                e.SuppressKeyPress = e.KeyCode == Keys.Back ? false : true;
+            }
+            
+            //verifica si la teclas que se acaba de presionar es un numero
+            else if ((e.KeyCode >= Keys.D0 && e.KeyCode <= Keys.D9) ||
+                (e.KeyCode >= Keys.NumPad0 && e.KeyCode <= Keys.NumPad9) ||
+                e.KeyCode == Keys.Decimal || e.KeyCode == Keys.Back)
+            {
+                //si esta vacio y se ingresa un numero mayor o igual a 2
+                if (tam == 0 && e.KeyCode != Keys.D1 && e.KeyCode != Keys.NumPad1 && e.KeyCode != Keys.D0 && e.KeyCode != Keys.NumPad0 && e.KeyCode != Keys.Back)
+                {
+                    txtHoraComida.Text = "0" + numero + ":";
+                    txtHoraComida.SelectionStart = txtHoraComida.Text.Length;
+                    e.SuppressKeyPress = true;
+                }
+                //si ya se ingreso un 1 en la hora solo admite un 0 1 o 2
+                else if (txtHoraComida.Text == "1" && tam == 1 && ((e.KeyCode >= Keys.D3 && e.KeyCode <= Keys.D9) || (e.KeyCode >= Keys.NumPad3 && e.KeyCode <= Keys.NumPad9)))
+                {
+                    txtHoraComida.Text = "0" + txtHoraComida.Text + ":" + numero;
+                    e.SuppressKeyPress = true;
+                    txtHoraComida.SelectionStart = txtHoraComida.Text.Length;
+
+                }
+                //pone los 2 puntos
+                else if (tam == 1)
+                {
+                    if (e.KeyCode == Keys.Back)
+                    {
+                        //txtHoraComida.Text = txtHoraComida.Text.Substring(0, 1);
+                    }
+                    else
+                    {
+                        txtHoraComida.Text = txtHoraComida.Text + numero + ":";
+                        e.SuppressKeyPress = true;
+                    }
+                    txtHoraComida.SelectionStart = txtHoraComida.Text.Length;
+                }
+                //se ingresa el primer minuto y es mayor que seis
+                else if (tam == 3 && ((e.KeyCode >= Keys.D6 && e.KeyCode <= Keys.D9) || (e.KeyCode >= Keys.NumPad6 && e.KeyCode <= Keys.NumPad9)))
+                {
+                    txtHoraComida.Text = txtHoraComida.Text + "0" + numero;
+                    txtHoraComida.SelectionStart = txtHoraComida.Text.Length;
+                    e.SuppressKeyPress = true;
+                }
+            }
+            else
+            {
+                e.SuppressKeyPress = true;
+            }
+            
+
+
+        }
+
+
+        
     }
 }

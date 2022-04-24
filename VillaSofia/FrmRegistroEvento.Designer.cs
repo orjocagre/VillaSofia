@@ -398,7 +398,6 @@
             this.txtHoraComida.TabIndex = 13;
             this.txtHoraComida.Enter += new System.EventHandler(this.txtHoraComida_Enter);
             this.txtHoraComida.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtHoraComida_KeyDown);
-            this.txtHoraComida.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtHoraComida_KeyUp);
             this.txtHoraComida.Leave += new System.EventHandler(this.txtHoraComida_Leave);
             // 
             // btnProforma
