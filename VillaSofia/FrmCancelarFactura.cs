@@ -22,6 +22,10 @@ namespace VillaSofia
             this.total = total;
             this.fact = fact;
             InitializeComponent();
+            txtTotal.Text = "C$ "+total.ToString("#,#.00");
+            SRtipoCambio.Tipo_Cambio_BCNSoapClient tipoCambio = new SRtipoCambio.Tipo_Cambio_BCNSoapClient();
+            DateTime hoy = DateTime.Now;
+            txtTotalDolares.Text = "$ "+(total / tipoCambio.RecuperaTC_Dia(hoy.Year, hoy.Month, hoy.Day)).ToString("#,#.00");
             
         }
 
@@ -117,6 +121,11 @@ namespace VillaSofia
             {
                 chbTarjeta.Checked = false;
             }
+        }
+
+        private void guna2HtmlLabel2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

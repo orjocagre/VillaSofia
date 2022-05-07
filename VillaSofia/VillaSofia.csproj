@@ -80,6 +80,8 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -144,6 +146,11 @@
     </Compile>
     <Compile Include="CduRegistroEvento2.Designer.cs">
       <DependentUpon>CduRegistroEvento2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\SRtipoCambio\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -360,6 +367,10 @@
     <EmbeddedResource Include="VillaSofia.resx">
       <DependentUpon>VillaSofia.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Connected Services\SRtipoCambio\ServicioTC.wsdl" />
+    <None Include="Connected Services\SRtipoCambio\VillaSofia.SRtipoCambio.RecuperaTC_MesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
@@ -383,6 +394,7 @@
       <DependentUpon>DsInforme.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\System.Xml.Linq.XElement.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -568,6 +580,13 @@
     <None Include="Resources\candado.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\SRtipoCambio\ServicioTC.disco" />
+    <None Include="Connected Services\SRtipoCambio\configuration91.svcinfo" />
+    <None Include="Connected Services\SRtipoCambio\configuration.svcinfo" />
+    <None Include="Connected Services\SRtipoCambio\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Resources\cocinar.png" />
     <Content Include="Resources\iconologin.ico" />
     <None Include="Resources\insertar_fila.png" />
@@ -590,6 +609,11 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\SRtipoCambio\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
