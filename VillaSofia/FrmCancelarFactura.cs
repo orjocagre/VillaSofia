@@ -26,12 +26,13 @@ namespace VillaSofia
             this.fact = fact;
             this.deshabilitarEventoChb = false;
             InitializeComponent();
-            txtTotal.Text = "C$ "+total.ToString("#,0.00");
+
+            txtTotal.Text = "C$ " + total.ToString("#,0.00");
             SRtipoCambio.Tipo_Cambio_BCNSoapClient tc = new SRtipoCambio.Tipo_Cambio_BCNSoapClient();
             DateTime hoy = DateTime.Now;
             tipoCambio = tc.RecuperaTC_Dia(hoy.Year, hoy.Month, hoy.Day);
-            txtTotalDolares.Text = "$ "+(total / tipoCambio).ToString("#,0.00");
-            
+            txtTotalDolares.Text = "$ " + (total / tipoCambio).ToString("#,0.00");
+
         }
         void mostrarFaltante()
         {
@@ -40,7 +41,7 @@ namespace VillaSofia
             double dolares = txtEfectivoDolares.Text == "" ? 0 : Convert.ToDouble(txtEfectivoDolares.Text);
             faltante = total - tarjeta - cordobas - (dolares * tipoCambio);
 
-            if(faltante <= 0)
+            if (faltante <= 0)
             {
                 btnListo.Enabled = true;
                 lblFaltante.Visible = false;
@@ -50,9 +51,9 @@ namespace VillaSofia
                 btnListo.Enabled = false;
                 lblFaltante.Visible = true;
             }
-            if(dolares > 0)
+            if (dolares > 0)
             {
-                lblFaltante.Text = "*faltan C$ " + faltante.ToString("#,0.00") + " o " + (faltante/tipoCambio).ToString("#,0.00");
+                lblFaltante.Text = "*faltan C$ " + faltante.ToString("#,0.00") + " o " + (faltante / tipoCambio).ToString("#,0.00");
             }
             else
             {
@@ -63,21 +64,20 @@ namespace VillaSofia
 
         private void chbEfectivo_CheckedChanged(object sender, EventArgs e)
         {
-            if (deshabilitarEventoChb)
-            {
-                deshabilitarEventoChb = false;
-            }
-            else
+            if (!deshabilitarEventoChb)
             {
                 if (chbEfectivo.Checked)
                 {
                     if (txtEfectivoCordobas.Text == "" && txtEfectivoDolares.Text == "")
                     {
-                        txtEfectivoCordobas.Text = total.ToString("0.00");
-                    }
-                    else
-                    {
-                        txtEfectivoCordobas.Text = faltante.ToString("0.00");
+                        if (txtTarjeta.Text == "")
+                        {
+                            txtEfectivoCordobas.Text = total.ToString("0.00");
+                        }
+                        else
+                        {
+                            txtEfectivoCordobas.Text = faltante.ToString("0.00");
+                        }
                     }
                 }
                 else
@@ -90,21 +90,20 @@ namespace VillaSofia
 
         private void chbTarjeta_CheckedChanged(object sender, EventArgs e)
         {
-            if (deshabilitarEventoChb)
-            {
-                deshabilitarEventoChb = false;
-            }
-            else
+            if (!deshabilitarEventoChb)
             {
                 if (chbTarjeta.Checked)
                 {
                     if (txtTarjeta.Text == "")
                     {
-                        txtTarjeta.Text = total.ToString("0.00");
-                    }
-                    else
-                    {
-                        txtTarjeta.Text = faltante.ToString("0.00");
+                        if (txtEfectivoCordobas.Text == "" && txtEfectivoDolares.Text == "")
+                        {
+                            txtTarjeta.Text = total.ToString("0.00");
+                        }
+                        else
+                        {
+                            txtTarjeta.Text = faltante.ToString("0.00");
+                        }
                     }
                 }
                 else
@@ -112,7 +111,6 @@ namespace VillaSofia
                     txtTarjeta.Text = "";
                 }
             }
-            
         }
         void listo()
         {
@@ -139,6 +137,7 @@ namespace VillaSofia
         private void txtEfectivoCordobas_TextChanged(object sender, EventArgs e)
         {
             deshabilitarEventoChb = true;
+            
             if (txtEfectivoDolares.Text != "" || txtEfectivoCordobas.Text != "")
             {
                 chbEfectivo.Checked = true;
@@ -154,6 +153,7 @@ namespace VillaSofia
         private void txtEfectivoDolares_TextChanged(object sender, EventArgs e)
         {
             deshabilitarEventoChb = true;
+
             if (txtEfectivoDolares.Text != "" || txtEfectivoCordobas.Text != "")
             {
                 chbEfectivo.Checked = true;
@@ -163,6 +163,7 @@ namespace VillaSofia
                 chbEfectivo.Checked = false;
             }
             deshabilitarEventoChb = false;
+
             mostrarFaltante();
 
         }
@@ -170,6 +171,7 @@ namespace VillaSofia
         private void txtTarjeta_TextChanged(object sender, EventArgs e)
         {
             deshabilitarEventoChb = true;
+
             if (txtTarjeta.Text != "")
             {
                 chbTarjeta.Checked = true;

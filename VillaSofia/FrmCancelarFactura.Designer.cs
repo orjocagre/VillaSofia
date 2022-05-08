@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.pnPrincipal = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
+            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtTotalDolares = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtTotal = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblFaltante = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtEfectivoDolares = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtEfectivoCordobas = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTarjeta = new Guna.UI2.WinForms.Guna2TextBox();
@@ -36,11 +41,6 @@
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.chbEfectivo = new Guna.UI2.WinForms.Guna2CheckBox();
             this.chbTarjeta = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.lblFaltante = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txtTotal = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txtTotalDolares = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
-            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,13 +63,77 @@
             this.pnPrincipal.Location = new System.Drawing.Point(0, 0);
             this.pnPrincipal.Name = "pnPrincipal";
             this.pnPrincipal.ShadowDecoration.Parent = this.pnPrincipal;
-            this.pnPrincipal.Size = new System.Drawing.Size(316, 354);
+            this.pnPrincipal.Size = new System.Drawing.Size(316, 345);
             this.pnPrincipal.TabIndex = 0;
+            // 
+            // guna2Separator1
+            // 
+            this.guna2Separator1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.guna2Separator1.Location = new System.Drawing.Point(12, 61);
+            this.guna2Separator1.Name = "guna2Separator1";
+            this.guna2Separator1.Size = new System.Drawing.Size(289, 19);
+            this.guna2Separator1.TabIndex = 35;
+            // 
+            // guna2HtmlLabel5
+            // 
+            this.guna2HtmlLabel5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.guna2HtmlLabel5.AutoSize = false;
+            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Tw Cen MT", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(9, 3);
+            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(143, 52);
+            this.guna2HtmlLabel5.TabIndex = 36;
+            this.guna2HtmlLabel5.Text = "Total:";
+            this.guna2HtmlLabel5.TextAlignment = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // txtTotalDolares
+            // 
+            this.txtTotalDolares.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.txtTotalDolares.AutoSize = false;
+            this.txtTotalDolares.BackColor = System.Drawing.Color.Transparent;
+            this.txtTotalDolares.Font = new System.Drawing.Font("Tw Cen MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalDolares.ForeColor = System.Drawing.Color.Silver;
+            this.txtTotalDolares.Location = new System.Drawing.Point(158, 33);
+            this.txtTotalDolares.Name = "txtTotalDolares";
+            this.txtTotalDolares.Size = new System.Drawing.Size(143, 38);
+            this.txtTotalDolares.TabIndex = 34;
+            this.txtTotalDolares.Text = "$ 48.00";
+            this.txtTotalDolares.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // txtTotal
+            // 
+            this.txtTotal.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.txtTotal.AutoSize = false;
+            this.txtTotal.BackColor = System.Drawing.Color.Transparent;
+            this.txtTotal.Font = new System.Drawing.Font("Tw Cen MT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotal.ForeColor = System.Drawing.Color.Black;
+            this.txtTotal.Location = new System.Drawing.Point(12, 3);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(290, 33);
+            this.txtTotal.TabIndex = 33;
+            this.txtTotal.Text = "C$ 1,245.00";
+            this.txtTotal.TextAlignment = System.Drawing.ContentAlignment.BottomRight;
+            // 
+            // lblFaltante
+            // 
+            this.lblFaltante.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lblFaltante.AutoSize = false;
+            this.lblFaltante.BackColor = System.Drawing.Color.Transparent;
+            this.lblFaltante.Font = new System.Drawing.Font("Tw Cen MT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFaltante.ForeColor = System.Drawing.Color.Silver;
+            this.lblFaltante.Location = new System.Drawing.Point(12, 241);
+            this.lblFaltante.Name = "lblFaltante";
+            this.lblFaltante.Size = new System.Drawing.Size(290, 30);
+            this.lblFaltante.TabIndex = 32;
+            this.lblFaltante.Text = "*faltan C$ 458 o $ 34 ";
+            this.lblFaltante.Visible = false;
+            this.lblFaltante.Click += new System.EventHandler(this.guna2HtmlLabel2_Click);
             // 
             // txtEfectivoDolares
             // 
-            this.txtEfectivoDolares.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEfectivoDolares.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.txtEfectivoDolares.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEfectivoDolares.DefaultText = "";
             this.txtEfectivoDolares.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -82,7 +146,7 @@
             this.txtEfectivoDolares.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEfectivoDolares.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEfectivoDolares.HoverState.Parent = this.txtEfectivoDolares;
-            this.txtEfectivoDolares.Location = new System.Drawing.Point(132, 183);
+            this.txtEfectivoDolares.Location = new System.Drawing.Point(132, 174);
             this.txtEfectivoDolares.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.txtEfectivoDolares.Name = "txtEfectivoDolares";
             this.txtEfectivoDolares.PasswordChar = '\0';
@@ -96,8 +160,7 @@
             // 
             // txtEfectivoCordobas
             // 
-            this.txtEfectivoCordobas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEfectivoCordobas.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.txtEfectivoCordobas.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEfectivoCordobas.DefaultText = "";
             this.txtEfectivoCordobas.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -110,7 +173,7 @@
             this.txtEfectivoCordobas.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEfectivoCordobas.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEfectivoCordobas.HoverState.Parent = this.txtEfectivoCordobas;
-            this.txtEfectivoCordobas.Location = new System.Drawing.Point(132, 141);
+            this.txtEfectivoCordobas.Location = new System.Drawing.Point(132, 132);
             this.txtEfectivoCordobas.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.txtEfectivoCordobas.Name = "txtEfectivoCordobas";
             this.txtEfectivoCordobas.PasswordChar = '\0';
@@ -124,8 +187,7 @@
             // 
             // txtTarjeta
             // 
-            this.txtTarjeta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTarjeta.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.txtTarjeta.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTarjeta.DefaultText = "";
             this.txtTarjeta.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -138,7 +200,7 @@
             this.txtTarjeta.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTarjeta.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTarjeta.HoverState.Parent = this.txtTarjeta;
-            this.txtTarjeta.Location = new System.Drawing.Point(132, 99);
+            this.txtTarjeta.Location = new System.Drawing.Point(132, 90);
             this.txtTarjeta.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.txtTarjeta.Name = "txtTarjeta";
             this.txtTarjeta.PasswordChar = '\0';
@@ -152,14 +214,14 @@
             // 
             // btnListo
             // 
-            this.btnListo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnListo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnListo.CheckedState.Parent = this.btnListo;
             this.btnListo.CustomImages.Parent = this.btnListo;
             this.btnListo.Enabled = false;
             this.btnListo.Font = new System.Drawing.Font("Tw Cen MT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListo.ForeColor = System.Drawing.Color.White;
             this.btnListo.HoverState.Parent = this.btnListo;
-            this.btnListo.Location = new System.Drawing.Point(12, 297);
+            this.btnListo.Location = new System.Drawing.Point(12, 288);
             this.btnListo.Name = "btnListo";
             this.btnListo.ShadowDecoration.Parent = this.btnListo;
             this.btnListo.Size = new System.Drawing.Size(290, 45);
@@ -169,9 +231,10 @@
             // 
             // guna2HtmlLabel1
             // 
+            this.guna2HtmlLabel1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Tw Cen MT Condensed", 18F);
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(111, 185);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(111, 176);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(12, 30);
             this.guna2HtmlLabel1.TabIndex = 0;
@@ -179,13 +242,14 @@
             // 
             // chbEfectivo
             // 
+            this.chbEfectivo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.chbEfectivo.AutoSize = true;
             this.chbEfectivo.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.chbEfectivo.CheckedState.BorderRadius = 2;
             this.chbEfectivo.CheckedState.BorderThickness = 0;
             this.chbEfectivo.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.chbEfectivo.Font = new System.Drawing.Font("Tw Cen MT Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chbEfectivo.Location = new System.Drawing.Point(12, 145);
+            this.chbEfectivo.Location = new System.Drawing.Point(12, 136);
             this.chbEfectivo.Name = "chbEfectivo";
             this.chbEfectivo.Size = new System.Drawing.Size(123, 32);
             this.chbEfectivo.TabIndex = 4;
@@ -199,13 +263,14 @@
             // 
             // chbTarjeta
             // 
+            this.chbTarjeta.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.chbTarjeta.AutoSize = true;
             this.chbTarjeta.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.chbTarjeta.CheckedState.BorderRadius = 2;
             this.chbTarjeta.CheckedState.BorderThickness = 0;
             this.chbTarjeta.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.chbTarjeta.Font = new System.Drawing.Font("Tw Cen MT Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chbTarjeta.Location = new System.Drawing.Point(12, 103);
+            this.chbTarjeta.Location = new System.Drawing.Point(12, 94);
             this.chbTarjeta.Name = "chbTarjeta";
             this.chbTarjeta.Size = new System.Drawing.Size(84, 32);
             this.chbTarjeta.TabIndex = 3;
@@ -217,75 +282,18 @@
             this.chbTarjeta.UseVisualStyleBackColor = true;
             this.chbTarjeta.CheckedChanged += new System.EventHandler(this.chbTarjeta_CheckedChanged);
             // 
-            // lblFaltante
-            // 
-            this.lblFaltante.AutoSize = false;
-            this.lblFaltante.BackColor = System.Drawing.Color.Transparent;
-            this.lblFaltante.Font = new System.Drawing.Font("Tw Cen MT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFaltante.ForeColor = System.Drawing.Color.Silver;
-            this.lblFaltante.Location = new System.Drawing.Point(12, 250);
-            this.lblFaltante.Name = "lblFaltante";
-            this.lblFaltante.Size = new System.Drawing.Size(290, 30);
-            this.lblFaltante.TabIndex = 32;
-            this.lblFaltante.Text = "*faltan C$ 458 o $ 34 ";
-            this.lblFaltante.Visible = false;
-            this.lblFaltante.Click += new System.EventHandler(this.guna2HtmlLabel2_Click);
-            // 
-            // txtTotal
-            // 
-            this.txtTotal.AutoSize = false;
-            this.txtTotal.BackColor = System.Drawing.Color.Transparent;
-            this.txtTotal.Font = new System.Drawing.Font("Tw Cen MT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.ForeColor = System.Drawing.Color.Black;
-            this.txtTotal.Location = new System.Drawing.Point(12, 12);
-            this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(290, 33);
-            this.txtTotal.TabIndex = 33;
-            this.txtTotal.Text = "C$ 1,245.00";
-            this.txtTotal.TextAlignment = System.Drawing.ContentAlignment.BottomRight;
-            // 
-            // txtTotalDolares
-            // 
-            this.txtTotalDolares.AutoSize = false;
-            this.txtTotalDolares.BackColor = System.Drawing.Color.Transparent;
-            this.txtTotalDolares.Font = new System.Drawing.Font("Tw Cen MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalDolares.ForeColor = System.Drawing.Color.Silver;
-            this.txtTotalDolares.Location = new System.Drawing.Point(158, 42);
-            this.txtTotalDolares.Name = "txtTotalDolares";
-            this.txtTotalDolares.Size = new System.Drawing.Size(143, 38);
-            this.txtTotalDolares.TabIndex = 34;
-            this.txtTotalDolares.Text = "$ 48.00";
-            this.txtTotalDolares.TextAlignment = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // guna2Separator1
-            // 
-            this.guna2Separator1.Location = new System.Drawing.Point(12, 70);
-            this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(289, 19);
-            this.guna2Separator1.TabIndex = 35;
-            // 
-            // guna2HtmlLabel5
-            // 
-            this.guna2HtmlLabel5.AutoSize = false;
-            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Tw Cen MT", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(9, 12);
-            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(143, 52);
-            this.guna2HtmlLabel5.TabIndex = 36;
-            this.guna2HtmlLabel5.Text = "Total:";
-            this.guna2HtmlLabel5.TextAlignment = System.Drawing.ContentAlignment.BottomLeft;
-            // 
             // FrmCancelarFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(316, 354);
+            this.ClientSize = new System.Drawing.Size(316, 345);
             this.Controls.Add(this.pnPrincipal);
+            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmCancelarFactura";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmCancelarFactura";
             this.pnPrincipal.ResumeLayout(false);
             this.pnPrincipal.PerformLayout();
             this.ResumeLayout(false);
