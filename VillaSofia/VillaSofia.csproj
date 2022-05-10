@@ -264,6 +264,12 @@
     <Compile Include="FrmUM.designer.cs">
       <DependentUpon>FrmUM.cs</DependentUpon>
     </Compile>
+    <Compile Include="MessageBoxCambioDeFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageBoxCambioDeFactura.Designer.cs">
+      <DependentUpon>MessageBoxCambioDeFactura.cs</DependentUpon>
+    </Compile>
     <Compile Include="MessageBoxPersonalizado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -354,6 +360,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUM.resx">
       <DependentUpon>FrmUM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageBoxCambioDeFactura.resx">
+      <DependentUpon>MessageBoxCambioDeFactura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MessageBoxPersonalizado.resx">
       <DependentUpon>MessageBoxPersonalizado.cs</DependentUpon>
@@ -588,6 +597,7 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="Resources\cocinar.png" />
+    <None Include="Resources\flecha-derecha-arriba.png" />
     <Content Include="Resources\iconologin.ico" />
     <None Include="Resources\insertar_fila.png" />
     <None Include="Resources\insertar_fila_grueso_Azul.png" />

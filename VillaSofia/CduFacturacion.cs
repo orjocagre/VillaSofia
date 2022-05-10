@@ -448,8 +448,10 @@ namespace VillaSofia
         }
         void mostrarFormularioDePago()
         {
-            FrmCancelarFactura canf = new FrmCancelarFactura(Convert.ToDouble(txtTotal.Text), this, idFactura);
-            canf.Visible = true;
+            FrmCancelarFactura canf = new FrmCancelarFactura(Convert.ToDouble(txtTotal.Text), this, idFactura, vs);
+            vs.AddOwnedForm(canf);
+            canf.Show();
+            vs.Enabled = false;
             canf.txtEfectivoCordobas.Focus();
         }
         public void cancelarFactura()
@@ -652,7 +654,10 @@ namespace VillaSofia
         {
             if (facturaEditada)
             {
-                MessageBox.Show("Desea cerrar la cuenta o dejarla abierta?");
+                MessageBoxCambioDeFactura cdf = new MessageBoxCambioDeFactura(this, vs);
+                vs.AddOwnedForm(cdf);
+                cdf.Show();
+                vs.Enabled = false;
 
             }
             else
@@ -663,13 +668,39 @@ namespace VillaSofia
 
 
         }
+        public void dejarAbiertaMessageBox()
+        {
+            if (dgvCuenta.Rows.Count > 0)
+            {
+                dejarAbiertaFactura();
+            }
+            else
+            {
+                MessageBox.Show("La factura esta vacia");
+            }
+
+        }
+        public void cerrarFacturaMessageBox()
+        {
+            if (dgvCuenta.Rows.Count > 0)
+            {
+                cerrarFactura();
+            }
+            else
+            {
+                MessageBox.Show("La factura esta vacia");
+            }
+        }
 
         void evento_Click(Object sender, EventArgs e)
         {
 
             if (facturaEditada)
             {
-                MessageBox.Show("Desea cerrar la cuenta o dejarla abierta?");
+                MessageBoxCambioDeFactura cdf = new MessageBoxCambioDeFactura(this, vs);
+                vs.AddOwnedForm(cdf);
+                cdf.Show();
+                vs.Enabled=false;
             }
             else
             {
@@ -834,6 +865,11 @@ namespace VillaSofia
         private void dgvCuenta_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             dgvCuenta.CurrentCell.Style.BackColor = dgvCuenta.CurrentRow.DefaultCellStyle.BackColor;
+        }
+
+        private void pnBotonesFacturas_Click(object sender, EventArgs e)
+        {
+            mostrarPanelVacio();
         }
     }
 }

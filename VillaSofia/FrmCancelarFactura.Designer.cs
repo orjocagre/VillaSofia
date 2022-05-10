@@ -288,12 +288,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(316, 345);
             this.Controls.Add(this.pnPrincipal);
-            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmCancelarFactura";
             this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmCancelarFactura_FormClosed);
             this.pnPrincipal.ResumeLayout(false);
             this.pnPrincipal.PerformLayout();
             this.ResumeLayout(false);

@@ -19,8 +19,10 @@ namespace VillaSofia
         double faltante;
         Boolean deshabilitarEventoChb;
         CduFacturacion fact;
-        public FrmCancelarFactura(double total, CduFacturacion fact, int idFactura)
+        VillaSofia vs;
+        public FrmCancelarFactura(double total, CduFacturacion fact, int idFactura, VillaSofia vs)
         {
+            this.vs = vs;
             this.idFactura = idFactura;
             this.total = this.faltante = total;
             this.fact = fact;
@@ -291,6 +293,9 @@ namespace VillaSofia
             }
         }
 
-
+        private void FrmCancelarFactura_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            vs.Enabled = true;
+        }
     }
 }

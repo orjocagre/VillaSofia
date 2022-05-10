@@ -35,6 +35,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnPricipal = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
+            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.btnDescartar = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDividir = new Guna.UI2.WinForms.Guna2Button();
+            this.btnTodos = new Guna.UI2.WinForms.Guna2Button();
             this.btnQuitar = new Guna.UI2.WinForms.Guna2Button();
             this.btnAgregar = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -55,12 +61,6 @@
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnTodos = new Guna.UI2.WinForms.Guna2Button();
-            this.btnDividir = new Guna.UI2.WinForms.Guna2Button();
-            this.btnDescartar = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.pnPricipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubCuenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCuenta)).BeginInit();
@@ -91,6 +91,88 @@
             this.pnPricipal.ShadowDecoration.Parent = this.pnPricipal;
             this.pnPricipal.Size = new System.Drawing.Size(1304, 660);
             this.pnPricipal.TabIndex = 0;
+            // 
+            // guna2Separator1
+            // 
+            this.guna2Separator1.Location = new System.Drawing.Point(21, 568);
+            this.guna2Separator1.Name = "guna2Separator1";
+            this.guna2Separator1.Size = new System.Drawing.Size(1259, 10);
+            this.guna2Separator1.TabIndex = 27;
+            // 
+            // guna2HtmlLabel5
+            // 
+            this.guna2HtmlLabel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Tw Cen MT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(952, 44);
+            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(133, 30);
+            this.guna2HtmlLabel5.TabIndex = 26;
+            this.guna2HtmlLabel5.Text = "SUB-CUENTA";
+            // 
+            // guna2HtmlLabel4
+            // 
+            this.guna2HtmlLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Tw Cen MT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(263, 44);
+            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(86, 30);
+            this.guna2HtmlLabel4.TabIndex = 26;
+            this.guna2HtmlLabel4.Text = "CUENTA";
+            // 
+            // btnDescartar
+            // 
+            this.btnDescartar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnDescartar.BorderRadius = 5;
+            this.btnDescartar.BorderThickness = 2;
+            this.btnDescartar.CheckedState.Parent = this.btnDescartar;
+            this.btnDescartar.CustomImages.Parent = this.btnDescartar;
+            this.btnDescartar.FillColor = System.Drawing.Color.White;
+            this.btnDescartar.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDescartar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnDescartar.HoverState.Parent = this.btnDescartar;
+            this.btnDescartar.Location = new System.Drawing.Point(1045, 595);
+            this.btnDescartar.Name = "btnDescartar";
+            this.btnDescartar.ShadowDecoration.Parent = this.btnDescartar;
+            this.btnDescartar.Size = new System.Drawing.Size(128, 46);
+            this.btnDescartar.TabIndex = 25;
+            this.btnDescartar.Text = "DESCARTAR";
+            this.btnDescartar.Click += new System.EventHandler(this.btnDescartar_Click);
+            // 
+            // btnDividir
+            // 
+            this.btnDividir.BorderRadius = 5;
+            this.btnDividir.CheckedState.Parent = this.btnDividir;
+            this.btnDividir.CustomImages.Parent = this.btnDividir;
+            this.btnDividir.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDividir.ForeColor = System.Drawing.Color.White;
+            this.btnDividir.HoverState.Parent = this.btnDividir;
+            this.btnDividir.Location = new System.Drawing.Point(1179, 595);
+            this.btnDividir.Name = "btnDividir";
+            this.btnDividir.ShadowDecoration.Parent = this.btnDividir;
+            this.btnDividir.Size = new System.Drawing.Size(102, 46);
+            this.btnDividir.TabIndex = 24;
+            this.btnDividir.Text = "DIVIDIR";
+            this.btnDividir.Click += new System.EventHandler(this.btnDividir_Click);
+            // 
+            // btnTodos
+            // 
+            this.btnTodos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTodos.BorderRadius = 5;
+            this.btnTodos.CheckedState.Parent = this.btnTodos;
+            this.btnTodos.CustomImages.Parent = this.btnTodos;
+            this.btnTodos.FillColor = System.Drawing.Color.White;
+            this.btnTodos.Font = new System.Drawing.Font("Tw Cen MT", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTodos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnTodos.HoverState.Parent = this.btnTodos;
+            this.btnTodos.Location = new System.Drawing.Point(597, 257);
+            this.btnTodos.Name = "btnTodos";
+            this.btnTodos.ShadowDecoration.Parent = this.btnTodos;
+            this.btnTodos.Size = new System.Drawing.Size(105, 86);
+            this.btnTodos.TabIndex = 24;
+            this.btnTodos.Text = "UNO";
+            this.btnTodos.Click += new System.EventHandler(this.btnTodos_Click);
             // 
             // btnQuitar
             // 
@@ -438,88 +520,6 @@
             this.Total.Name = "Total";
             this.Total.ReadOnly = true;
             // 
-            // btnTodos
-            // 
-            this.btnTodos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnTodos.BorderRadius = 5;
-            this.btnTodos.CheckedState.Parent = this.btnTodos;
-            this.btnTodos.CustomImages.Parent = this.btnTodos;
-            this.btnTodos.FillColor = System.Drawing.Color.White;
-            this.btnTodos.Font = new System.Drawing.Font("Tw Cen MT", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTodos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnTodos.HoverState.Parent = this.btnTodos;
-            this.btnTodos.Location = new System.Drawing.Point(597, 257);
-            this.btnTodos.Name = "btnTodos";
-            this.btnTodos.ShadowDecoration.Parent = this.btnTodos;
-            this.btnTodos.Size = new System.Drawing.Size(105, 86);
-            this.btnTodos.TabIndex = 24;
-            this.btnTodos.Text = "UNO";
-            this.btnTodos.Click += new System.EventHandler(this.btnTodos_Click);
-            // 
-            // btnDividir
-            // 
-            this.btnDividir.BorderRadius = 5;
-            this.btnDividir.CheckedState.Parent = this.btnDividir;
-            this.btnDividir.CustomImages.Parent = this.btnDividir;
-            this.btnDividir.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDividir.ForeColor = System.Drawing.Color.White;
-            this.btnDividir.HoverState.Parent = this.btnDividir;
-            this.btnDividir.Location = new System.Drawing.Point(1179, 595);
-            this.btnDividir.Name = "btnDividir";
-            this.btnDividir.ShadowDecoration.Parent = this.btnDividir;
-            this.btnDividir.Size = new System.Drawing.Size(102, 46);
-            this.btnDividir.TabIndex = 24;
-            this.btnDividir.Text = "DIVIDIR";
-            this.btnDividir.Click += new System.EventHandler(this.btnDividir_Click);
-            // 
-            // btnDescartar
-            // 
-            this.btnDescartar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnDescartar.BorderRadius = 5;
-            this.btnDescartar.BorderThickness = 2;
-            this.btnDescartar.CheckedState.Parent = this.btnDescartar;
-            this.btnDescartar.CustomImages.Parent = this.btnDescartar;
-            this.btnDescartar.FillColor = System.Drawing.Color.White;
-            this.btnDescartar.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDescartar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnDescartar.HoverState.Parent = this.btnDescartar;
-            this.btnDescartar.Location = new System.Drawing.Point(1045, 595);
-            this.btnDescartar.Name = "btnDescartar";
-            this.btnDescartar.ShadowDecoration.Parent = this.btnDescartar;
-            this.btnDescartar.Size = new System.Drawing.Size(128, 46);
-            this.btnDescartar.TabIndex = 25;
-            this.btnDescartar.Text = "DESCARTAR";
-            this.btnDescartar.Click += new System.EventHandler(this.btnDescartar_Click);
-            // 
-            // guna2HtmlLabel4
-            // 
-            this.guna2HtmlLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Tw Cen MT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(263, 44);
-            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(86, 30);
-            this.guna2HtmlLabel4.TabIndex = 26;
-            this.guna2HtmlLabel4.Text = "CUENTA";
-            // 
-            // guna2HtmlLabel5
-            // 
-            this.guna2HtmlLabel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Tw Cen MT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(952, 44);
-            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(133, 30);
-            this.guna2HtmlLabel5.TabIndex = 26;
-            this.guna2HtmlLabel5.Text = "SUB-CUENTA";
-            // 
-            // guna2Separator1
-            // 
-            this.guna2Separator1.Location = new System.Drawing.Point(21, 568);
-            this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(1259, 10);
-            this.guna2Separator1.TabIndex = 27;
-            // 
             // FrmDividirCuenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -527,6 +527,7 @@
             this.ClientSize = new System.Drawing.Size(1304, 660);
             this.Controls.Add(this.pnPricipal);
             this.Name = "FrmDividirCuenta";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmDividirCuenta";
             this.pnPricipal.ResumeLayout(false);
