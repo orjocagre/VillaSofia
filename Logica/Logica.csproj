@@ -61,6 +61,7 @@
     <Compile Include="ClsLogicaTipoTrabajador.cs" />
     <Compile Include="ClsLogicaUM.cs" />
     <Compile Include="ClsLogicaUsuario.cs" />
+    <Compile Include="ClsLogicaValidacionesC.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

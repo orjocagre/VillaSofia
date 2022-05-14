@@ -168,6 +168,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmBitacoraUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBitacoraUsuarios.Designer.cs">
+      <DependentUpon>FrmBitacoraUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCancelarFactura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -315,6 +321,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CduRegistroEvento2.resx">
       <DependentUpon>CduRegistroEvento2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBitacoraUsuarios.resx">
+      <DependentUpon>FrmBitacoraUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCancelarFactura.resx">
       <DependentUpon>FrmCancelarFactura.cs</DependentUpon>

@@ -71,12 +71,60 @@ namespace VillaSofia
         }
         Boolean validarCedula()
         {
+            errorProvider1.Clear();
+            String cedula = txtCedula.Text;
+            String cedulasimple = cedula.Replace("-", String.Empty);
+            cedulasimple = cedulasimple.ToUpper();
+            lblCedulaPasada.Text = cedula.ToUpper();
+            // MessageBox.Show(cedulasimple);
 
-            if (txtCedula.Text.Length == 16)
+            if (cedula.Length == 16)
+            {
+                // MessageBox.Show(Convert.ToString(cedula.Length));
+                Boolean prefijo, fecha, letra;
+                ClsLogicaValidacionesC validacion = new ClsLogicaValidacionesC();
+                prefijo = validacion.ValidarPrefijosCedula(cedulasimple);
+                fecha = validacion.ValidarFechaCedula(cedulasimple, DTPfecha_De_Nacimiento.Value.ToString("yyyy/MM/dd"));
+                letra = validacion.ValidarLetraCeduda(cedulasimple);
+
+                if (prefijo == true && fecha == true && letra == true)
+                {
+                    LblRespuesta.Text = "Cédula Válida";
+                    return true;
+                    // txtCedula.Text = String.Empty;
+                    LblRespuesta.ForeColor = Color.Green;
+                }
+                else
+                {
+                    if (prefijo == false || fecha == false || letra == false)
+                    {
+                        LblRespuesta.Text = "Cédula no es Válida";
+                        return false;
+                        //txtCedula.Text = String.Empty;
+                        LblRespuesta.ForeColor = Color.Red;
+
+                    }
+                    if (fecha == false)
+                    {
+                        errorProvider1.SetError(DTPfecha_De_Nacimiento, "Fecha de Nacimiento no corresponde");
+                        return false;
+                    }
+
+                }
+                lblCedulaDigitada.Visible = true;
+                lblCedulaPasada.Visible = true;
+            }
+
+            else
+                errorProvider1.SetError(txtCedula, "Por favor ingresa los datos completos de la cédula");
+            return false;
+        }
+        /*
+            if (txtCedula2.Text.Length == 16)
             {
                 for (int i = 0; i < 16; i++)
                 {
-                    char c = txtCedula.Text.ToCharArray()[i];
+                    char c = txtCedula2.Text.ToCharArray()[i];
                     if (i == 15)
                     {
                         if (!char.IsLetter(c))
@@ -104,8 +152,10 @@ namespace VillaSofia
             else
             {
                 return false;
-            }
-        }
+            }*/
+
+
+
         string IngresarPersona()
         {
             String resp;
