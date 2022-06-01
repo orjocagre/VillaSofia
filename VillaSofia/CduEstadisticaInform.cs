@@ -43,5 +43,12 @@ namespace VillaSofia
             RPTVentas.LocalReport.DataSources.Add(rp);
             RPTVentas.RefreshReport();
         }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            vs.Controls.Remove(this);
+            vs.Controls.Add(new CduMenuPrincipal(vs, tipo_usuario));
+            this.Dispose();
+        }
     }
 }

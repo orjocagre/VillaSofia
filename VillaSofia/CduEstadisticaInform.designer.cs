@@ -34,21 +34,22 @@
             this.DataTimeDesde = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.DataTimeHasta = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.BtnGenInfor = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAtras = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // RPTVentas
             // 
             this.RPTVentas.LocalReport.ReportEmbeddedResource = "VillaSofia.ReportEstadistic.rdlc";
-            this.RPTVentas.Location = new System.Drawing.Point(242, 18);
+            this.RPTVentas.Location = new System.Drawing.Point(270, 45);
             this.RPTVentas.Name = "RPTVentas";
             this.RPTVentas.ServerReport.BearerToken = null;
-            this.RPTVentas.Size = new System.Drawing.Size(675, 420);
+            this.RPTVentas.Size = new System.Drawing.Size(788, 498);
             this.RPTVentas.TabIndex = 0;
             // 
             // LblD
             // 
             this.LblD.AutoSize = true;
-            this.LblD.Location = new System.Drawing.Point(36, 41);
+            this.LblD.Location = new System.Drawing.Point(60, 94);
             this.LblD.Name = "LblD";
             this.LblD.Size = new System.Drawing.Size(39, 13);
             this.LblD.TabIndex = 1;
@@ -57,7 +58,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(36, 96);
+            this.label2.Location = new System.Drawing.Point(60, 149);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(36, 13);
             this.label2.TabIndex = 2;
@@ -68,7 +69,7 @@
             this.DataTimeDesde.CheckedState.Parent = this.DataTimeDesde;
             this.DataTimeDesde.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.DataTimeDesde.HoverState.Parent = this.DataTimeDesde;
-            this.DataTimeDesde.Location = new System.Drawing.Point(24, 57);
+            this.DataTimeDesde.Location = new System.Drawing.Point(48, 110);
             this.DataTimeDesde.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.DataTimeDesde.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.DataTimeDesde.Name = "DataTimeDesde";
@@ -82,7 +83,7 @@
             this.DataTimeHasta.CheckedState.Parent = this.DataTimeHasta;
             this.DataTimeHasta.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.DataTimeHasta.HoverState.Parent = this.DataTimeHasta;
-            this.DataTimeHasta.Location = new System.Drawing.Point(24, 112);
+            this.DataTimeHasta.Location = new System.Drawing.Point(48, 165);
             this.DataTimeHasta.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.DataTimeHasta.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.DataTimeHasta.Name = "DataTimeHasta";
@@ -98,7 +99,7 @@
             this.BtnGenInfor.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.BtnGenInfor.ForeColor = System.Drawing.Color.White;
             this.BtnGenInfor.HoverState.Parent = this.BtnGenInfor;
-            this.BtnGenInfor.Location = new System.Drawing.Point(24, 167);
+            this.BtnGenInfor.Location = new System.Drawing.Point(48, 220);
             this.BtnGenInfor.Name = "BtnGenInfor";
             this.BtnGenInfor.ShadowDecoration.Parent = this.BtnGenInfor;
             this.BtnGenInfor.Size = new System.Drawing.Size(162, 31);
@@ -106,10 +107,27 @@
             this.BtnGenInfor.Text = "Generar Informe";
             this.BtnGenInfor.Click += new System.EventHandler(this.BtnGenInfor_Click);
             // 
+            // btnAtras
+            // 
+            this.btnAtras.CheckedState.Parent = this.btnAtras;
+            this.btnAtras.CustomImages.Parent = this.btnAtras;
+            this.btnAtras.FillColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnAtras.Font = new System.Drawing.Font("Tw Cen MT", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnAtras.ForeColor = System.Drawing.Color.White;
+            this.btnAtras.HoverState.Parent = this.btnAtras;
+            this.btnAtras.Image = global::VillaSofia.Properties.Resources.flechaIzquierdaBlanca32;
+            this.btnAtras.Location = new System.Drawing.Point(48, 45);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.ShadowDecoration.Parent = this.btnAtras;
+            this.btnAtras.Size = new System.Drawing.Size(68, 42);
+            this.btnAtras.TabIndex = 6;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
+            // 
             // CduEstadisticaInform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.BtnGenInfor);
             this.Controls.Add(this.DataTimeHasta);
             this.Controls.Add(this.DataTimeDesde);
@@ -117,7 +135,7 @@
             this.Controls.Add(this.LblD);
             this.Controls.Add(this.RPTVentas);
             this.Name = "CduEstadisticaInform";
-            this.Size = new System.Drawing.Size(964, 466);
+            this.Size = new System.Drawing.Size(1206, 661);
             this.Load += new System.EventHandler(this.CduPanelVacio_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -132,5 +150,6 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker DataTimeDesde;
         private Guna.UI2.WinForms.Guna2DateTimePicker DataTimeHasta;
         private Guna.UI2.WinForms.Guna2Button BtnGenInfor;
+        private Guna.UI2.WinForms.Guna2Button btnAtras;
     }
 }

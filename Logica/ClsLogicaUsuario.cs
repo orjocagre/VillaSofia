@@ -11,6 +11,7 @@ namespace Logica
 {
     public class ClsLogicaUsuario
     {
+        Datos.ClsDatosUsuario objetoD = new Datos.ClsDatosUsuario();
         public string ctrlRegistro(ClsModeloUsuario usuario)
         {
 
@@ -94,7 +95,42 @@ namespace Logica
             }
             return respuesta;
         }
+        /*
+        public string LogicaEditarUsuario(int id, string username, string password, string rol, string nombre)
+        {
+            return objetoD.EditarUsuario(id, username, password, rol, nombre);
+        }
 
+        public string LogicaCambiarEstadoUsuario(string id, string accion)
+        {
+            return objetoD.CambiarEstado(id, accion);
+        }
+        */
+        public string Lou(string id, string log)
+        {
+
+            return objetoD.LogueoU(id, log);
+        }
+        
+        public void IniciarSesion(int ID, String fecha, String Hora, String IpMaquina)
+        {
+            objetoD.AgregarInicioSesion(ID, fecha, Hora, IpMaquina);
+        }
+        /*
+        public void CerrarSesion(int ID, String fecha, String Hora)
+        {
+            objetoD.AgregarCierreSesion(ID, fecha, Hora);
+        }
+
+        //Método para llamar la bitacora
+
+        public DataTable HistorialBitacora(String Condicion)
+        {
+            String Sql = "Select * from vistaBitacoraLogin where Usuario like '%" + Condicion + "%';";
+            return objetoD.bitacora(Sql);
+
+        }
+        */
         private string generarSHA1(string cadena)
         {
 

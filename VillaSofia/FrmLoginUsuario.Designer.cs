@@ -31,8 +31,8 @@ namespace VillaSofia
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLoginUsuario));
             this.pnPrincipal = new Guna.UI2.WinForms.Guna2Panel();
-            this.button1 = new Guna.UI2.WinForms.Guna2Button();
             this.pictVillaS = new System.Windows.Forms.PictureBox();
+            this.button1 = new Guna.UI2.WinForms.Guna2Button();
             this.txtpassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtUser = new Guna.UI2.WinForms.Guna2TextBox();
             this.pnPrincipal.SuspendLayout();
@@ -56,24 +56,6 @@ namespace VillaSofia
             this.pnPrincipal.TabIndex = 18;
             this.pnPrincipal.Paint += new System.Windows.Forms.PaintEventHandler(this.pnPrincipal_Paint);
             // 
-            // button1
-            // 
-            this.button1.CheckedState.Parent = this.button1;
-            this.button1.CustomImages.Parent = this.button1;
-            this.button1.FillColor = System.Drawing.Color.OrangeRed;
-            this.button1.Font = new System.Drawing.Font("Tw Cen MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.HoverState.Parent = this.button1;
-            this.button1.Location = new System.Drawing.Point(76, 323);
-            this.button1.Name = "button1";
-            this.button1.ShadowDecoration.Parent = this.button1;
-            this.button1.Size = new System.Drawing.Size(122, 37);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "ENTRAR";
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            this.button1.Enter += new System.EventHandler(this.button1_Enter);
-            this.button1.Leave += new System.EventHandler(this.button1_Leave);
-            // 
             // pictVillaS
             // 
             this.pictVillaS.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -86,6 +68,24 @@ namespace VillaSofia
             this.pictVillaS.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictVillaS.TabIndex = 23;
             this.pictVillaS.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.CheckedState.Parent = this.button1;
+            this.button1.CustomImages.Parent = this.button1;
+            this.button1.FillColor = System.Drawing.Color.OrangeRed;
+            this.button1.Font = new System.Drawing.Font("Tw Cen MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button1.HoverState.Parent = this.button1;
+            this.button1.Location = new System.Drawing.Point(89, 322);
+            this.button1.Name = "button1";
+            this.button1.ShadowDecoration.Parent = this.button1;
+            this.button1.Size = new System.Drawing.Size(122, 37);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "ENTRAR";
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.button1.Enter += new System.EventHandler(this.button1_Enter);
+            this.button1.Leave += new System.EventHandler(this.button1_Leave);
             // 
             // txtpassword
             // 
@@ -164,7 +164,7 @@ namespace VillaSofia
             this.MaximizeBox = false;
             this.Name = "FrmLoginUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SIVISO";
+            this.Text = "ISVS";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmLoginUsuario_FormClosed);
             this.Load += new System.EventHandler(this.FrmLoginUsuario_Load);
             this.pnPrincipal.ResumeLayout(false);

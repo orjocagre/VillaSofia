@@ -75,7 +75,7 @@ namespace VillaSofia
             String cedula = txtCedula.Text;
             String cedulasimple = cedula.Replace("-", String.Empty);
             cedulasimple = cedulasimple.ToUpper();
-            lblCedulaPasada.Text = cedula.ToUpper();
+            //lblCedulaPasada.Text = cedula.ToUpper();
             // MessageBox.Show(cedulasimple);
 
             if (cedula.Length == 16)
@@ -100,7 +100,7 @@ namespace VillaSofia
                     {
                         LblRespuesta.Text = "Cédula no es Válida";
                         return false;
-                        //txtCedula.Text = String.Empty;
+                        txtCedula.Text = String.Empty;
                         LblRespuesta.ForeColor = Color.Red;
 
                     }
@@ -111,8 +111,8 @@ namespace VillaSofia
                     }
 
                 }
-                lblCedulaDigitada.Visible = true;
-                lblCedulaPasada.Visible = true;
+                //lblCedulaDigitada.Visible = true;
+                //lblCedulaPasada.Visible = true;
             }
 
             else
