@@ -9,10 +9,10 @@ namespace Datos
 {
     public class ClsDatosConexion
     {
-        /*static string host = "127.0.0.1";
-        static string usuario = "root";
-        static string clave = "root";
-        static string BaseDatos = "vs0808522";*/
+        //static string host = "127.0.0.1";
+        //static string usuario = "root";
+        //static string clave = "root";
+        //static string BaseDatos = "vs0808522";
 
         static string host = "bxz5oysljxjxpbctsnrf-mysql.services.clever-cloud.com";
         static string usuario = "ut6e1oluo4pqdxba";
