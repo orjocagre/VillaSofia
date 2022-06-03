@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.GbxReceta = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.btnListo = new Guna.UI2.WinForms.Guna2Button();
             this.btnEditar = new Guna.UI2.WinForms.Guna2Button();
             this.BtnAgregarMas = new Guna.UI2.WinForms.Guna2Button();
             this.btnMostrarRecetas = new Guna.UI2.WinForms.Guna2Button();
@@ -52,7 +53,6 @@
             this.txtNombreReceta = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblNombreReceta = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.ttipMensaje = new Guna.UI2.WinForms.Guna2HtmlToolTip();
-            this.btnListo = new Guna.UI2.WinForms.Guna2Button();
             this.GbxReceta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIngredientes)).BeginInit();
             this.SuspendLayout();
@@ -88,10 +88,34 @@
             this.GbxReceta.Location = new System.Drawing.Point(2, 1);
             this.GbxReceta.Name = "GbxReceta";
             this.GbxReceta.ShadowDecoration.Parent = this.GbxReceta;
-            this.GbxReceta.Size = new System.Drawing.Size(1033, 540);
+            this.GbxReceta.Size = new System.Drawing.Size(1101, 597);
             this.GbxReceta.TabIndex = 0;
             this.GbxReceta.Text = "Agregar Datos de Receta";
             this.GbxReceta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btnListo
+            // 
+            this.btnListo.BackColor = System.Drawing.Color.Transparent;
+            this.btnListo.BorderColor = System.Drawing.Color.Teal;
+            this.btnListo.BorderRadius = 1;
+            this.btnListo.BorderThickness = 1;
+            this.btnListo.CheckedState.Parent = this.btnListo;
+            this.btnListo.CustomImages.Parent = this.btnListo;
+            this.btnListo.Enabled = false;
+            this.btnListo.FillColor = System.Drawing.Color.MintCream;
+            this.btnListo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListo.ForeColor = System.Drawing.Color.Black;
+            this.btnListo.HoverState.Parent = this.btnListo;
+            this.btnListo.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnListo.ImageSize = new System.Drawing.Size(32, 32);
+            this.btnListo.Location = new System.Drawing.Point(996, 542);
+            this.btnListo.Name = "btnListo";
+            this.btnListo.ShadowDecoration.Parent = this.btnListo;
+            this.btnListo.Size = new System.Drawing.Size(71, 47);
+            this.btnListo.TabIndex = 25;
+            this.btnListo.Text = "LISTO";
+            this.btnListo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnListo.Click += new System.EventHandler(this.btnListo_Click);
             // 
             // btnEditar
             // 
@@ -107,7 +131,7 @@
             this.btnEditar.HoverState.Parent = this.btnEditar;
             this.btnEditar.Image = global::VillaSofia.Properties.Resources.editar__1_;
             this.btnEditar.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnEditar.Location = new System.Drawing.Point(412, 475);
+            this.btnEditar.Location = new System.Drawing.Point(431, 532);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.ShadowDecoration.Parent = this.btnEditar;
             this.btnEditar.Size = new System.Drawing.Size(62, 54);
@@ -126,7 +150,7 @@
             this.BtnAgregarMas.HoverState.Parent = this.BtnAgregarMas;
             this.BtnAgregarMas.Image = global::VillaSofia.Properties.Resources.anadir__2_;
             this.BtnAgregarMas.ImageSize = new System.Drawing.Size(32, 32);
-            this.BtnAgregarMas.Location = new System.Drawing.Point(989, 82);
+            this.BtnAgregarMas.Location = new System.Drawing.Point(1062, 146);
             this.BtnAgregarMas.Name = "BtnAgregarMas";
             this.BtnAgregarMas.ShadowDecoration.Parent = this.BtnAgregarMas;
             this.BtnAgregarMas.Size = new System.Drawing.Size(34, 36);
@@ -166,7 +190,7 @@
             this.BtnEliminar.HoverState.Parent = this.BtnEliminar;
             this.BtnEliminar.Image = global::VillaSofia.Properties.Resources.cancelar__1_;
             this.BtnEliminar.ImageSize = new System.Drawing.Size(32, 32);
-            this.BtnEliminar.Location = new System.Drawing.Point(998, 244);
+            this.BtnEliminar.Location = new System.Drawing.Point(1064, 311);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.ShadowDecoration.Parent = this.BtnEliminar;
             this.BtnEliminar.Size = new System.Drawing.Size(32, 46);
@@ -187,7 +211,7 @@
             this.btnSiguiente.Image = global::VillaSofia.Properties.Resources.siguienteBtn;
             this.btnSiguiente.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnSiguiente.ImageSize = new System.Drawing.Size(72, 72);
-            this.btnSiguiente.Location = new System.Drawing.Point(147, 475);
+            this.btnSiguiente.Location = new System.Drawing.Point(166, 532);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.ShadowDecoration.Parent = this.btnSiguiente;
             this.btnSiguiente.Size = new System.Drawing.Size(179, 62);
@@ -211,7 +235,7 @@
             this.btnguardarIgredientes.Image = global::VillaSofia.Properties.Resources.save64;
             this.btnguardarIgredientes.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnguardarIgredientes.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnguardarIgredientes.Location = new System.Drawing.Point(732, 130);
+            this.btnguardarIgredientes.Location = new System.Drawing.Point(798, 205);
             this.btnguardarIgredientes.Name = "btnguardarIgredientes";
             this.btnguardarIgredientes.ShadowDecoration.Parent = this.btnguardarIgredientes;
             this.btnguardarIgredientes.Size = new System.Drawing.Size(176, 47);
@@ -222,34 +246,34 @@
             // 
             // dgvIngredientes
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(203)))), ((int)(((byte)(232)))));
-            this.dgvIngredientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(203)))), ((int)(((byte)(232)))));
+            this.dgvIngredientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvIngredientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvIngredientes.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgvIngredientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvIngredientes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvIngredientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.InactiveCaption;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvIngredientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.InactiveCaption;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvIngredientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvIngredientes.ColumnHeadersHeight = 65;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(220)))), ((int)(((byte)(239)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(139)))), ((int)(((byte)(205)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvIngredientes.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(220)))), ((int)(((byte)(239)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(139)))), ((int)(((byte)(205)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvIngredientes.DefaultCellStyle = dataGridViewCellStyle12;
             this.dgvIngredientes.Enabled = false;
             this.dgvIngredientes.EnableHeadersVisualStyles = false;
             this.dgvIngredientes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(201)))), ((int)(((byte)(231)))));
-            this.dgvIngredientes.Location = new System.Drawing.Point(511, 191);
+            this.dgvIngredientes.Location = new System.Drawing.Point(577, 258);
             this.dgvIngredientes.Name = "dgvIngredientes";
             this.dgvIngredientes.RowHeadersVisible = false;
             this.dgvIngredientes.RowHeadersWidth = 20;
@@ -267,15 +291,15 @@
             this.dgvIngredientes.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(201)))), ((int)(((byte)(231)))));
             this.dgvIngredientes.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
             this.dgvIngredientes.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvIngredientes.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvIngredientes.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvIngredientes.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvIngredientes.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvIngredientes.ThemeStyle.HeaderStyle.Height = 65;
             this.dgvIngredientes.ThemeStyle.ReadOnly = false;
             this.dgvIngredientes.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(220)))), ((int)(((byte)(239)))));
             this.dgvIngredientes.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvIngredientes.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvIngredientes.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvIngredientes.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvIngredientes.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.dgvIngredientes.ThemeStyle.RowsStyle.Height = 26;
             this.dgvIngredientes.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(139)))), ((int)(((byte)(205)))));
             this.dgvIngredientes.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
@@ -290,7 +314,7 @@
             this.txtProcedimiento.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtProcedimiento.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtProcedimiento.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProcedimiento.Location = new System.Drawing.Point(10, 201);
+            this.txtProcedimiento.Location = new System.Drawing.Point(29, 258);
             this.txtProcedimiento.Multiline = true;
             this.txtProcedimiento.Name = "txtProcedimiento";
             this.txtProcedimiento.PasswordChar = '\0';
@@ -303,9 +327,9 @@
             this.lblProcedimiento.BackColor = System.Drawing.Color.Transparent;
             this.lblProcedimiento.Font = new System.Drawing.Font("Segoe UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProcedimiento.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblProcedimiento.Location = new System.Drawing.Point(10, 168);
+            this.lblProcedimiento.Location = new System.Drawing.Point(29, 205);
             this.lblProcedimiento.Name = "lblProcedimiento";
-            this.lblProcedimiento.Size = new System.Drawing.Size(134, 27);
+            this.lblProcedimiento.Size = new System.Drawing.Size(229, 47);
             this.lblProcedimiento.TabIndex = 17;
             this.lblProcedimiento.Text = "Procedimiento";
             // 
@@ -324,14 +348,14 @@
             this.TxtCantidades.FocusedState.Parent = this.TxtCantidades;
             this.TxtCantidades.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxtCantidades.HoverState.Parent = this.TxtCantidades;
-            this.TxtCantidades.Location = new System.Drawing.Point(686, 82);
-            this.TxtCantidades.Margin = new System.Windows.Forms.Padding(1);
+            this.TxtCantidades.Location = new System.Drawing.Point(761, 146);
+            this.TxtCantidades.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
             this.TxtCantidades.Name = "TxtCantidades";
             this.TxtCantidades.PasswordChar = '\0';
             this.TxtCantidades.PlaceholderText = "";
             this.TxtCantidades.SelectedText = "";
             this.TxtCantidades.ShadowDecoration.Parent = this.TxtCantidades;
-            this.TxtCantidades.Size = new System.Drawing.Size(104, 34);
+            this.TxtCantidades.Size = new System.Drawing.Size(105, 36);
             this.TxtCantidades.TabIndex = 14;
             this.TxtCantidades.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCantidades_KeyPress_1);
             // 
@@ -340,9 +364,9 @@
             this.lblCantidad.BackColor = System.Drawing.Color.Transparent;
             this.lblCantidad.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantidad.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblCantidad.Location = new System.Drawing.Point(511, 82);
+            this.lblCantidad.Location = new System.Drawing.Point(574, 135);
             this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(106, 27);
+            this.lblCantidad.Size = new System.Drawing.Size(184, 47);
             this.lblCantidad.TabIndex = 13;
             this.lblCantidad.Text = "Cantidades:";
             // 
@@ -351,9 +375,9 @@
             this.lblNombreIngrediente.BackColor = System.Drawing.Color.Transparent;
             this.lblNombreIngrediente.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreIngrediente.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblNombreIngrediente.Location = new System.Drawing.Point(511, 43);
+            this.lblNombreIngrediente.Location = new System.Drawing.Point(577, 82);
             this.lblNombreIngrediente.Name = "lblNombreIngrediente";
-            this.lblNombreIngrediente.Size = new System.Drawing.Size(112, 27);
+            this.lblNombreIngrediente.Size = new System.Drawing.Size(191, 47);
             this.lblNombreIngrediente.TabIndex = 12;
             this.lblNombreIngrediente.Text = "Ingrediente:";
             // 
@@ -372,14 +396,14 @@
             this.txtNombreIngrediente.FocusedState.Parent = this.txtNombreIngrediente;
             this.txtNombreIngrediente.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNombreIngrediente.HoverState.Parent = this.txtNombreIngrediente;
-            this.txtNombreIngrediente.Location = new System.Drawing.Point(686, 43);
+            this.txtNombreIngrediente.Location = new System.Drawing.Point(798, 92);
             this.txtNombreIngrediente.Margin = new System.Windows.Forms.Padding(0);
             this.txtNombreIngrediente.Name = "txtNombreIngrediente";
             this.txtNombreIngrediente.PasswordChar = '\0';
             this.txtNombreIngrediente.PlaceholderText = "";
             this.txtNombreIngrediente.SelectedText = "";
             this.txtNombreIngrediente.ShadowDecoration.Parent = this.txtNombreIngrediente;
-            this.txtNombreIngrediente.Size = new System.Drawing.Size(287, 27);
+            this.txtNombreIngrediente.Size = new System.Drawing.Size(287, 37);
             this.txtNombreIngrediente.TabIndex = 11;
             this.txtNombreIngrediente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreIngrediente_KeyPress);
             // 
@@ -397,7 +421,7 @@
             this.cmbUM.HoverState.Parent = this.cmbUM;
             this.cmbUM.ItemHeight = 30;
             this.cmbUM.ItemsAppearance.Parent = this.cmbUM;
-            this.cmbUM.Location = new System.Drawing.Point(807, 82);
+            this.cmbUM.Location = new System.Drawing.Point(875, 146);
             this.cmbUM.Name = "cmbUM";
             this.cmbUM.ShadowDecoration.Parent = this.cmbUM;
             this.cmbUM.Size = new System.Drawing.Size(170, 36);
@@ -417,14 +441,14 @@
             this.txtPorciones.FocusedState.Parent = this.txtPorciones;
             this.txtPorciones.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPorciones.HoverState.Parent = this.txtPorciones;
-            this.txtPorciones.Location = new System.Drawing.Point(200, 126);
+            this.txtPorciones.Location = new System.Drawing.Point(273, 150);
             this.txtPorciones.Margin = new System.Windows.Forms.Padding(0);
             this.txtPorciones.Name = "txtPorciones";
             this.txtPorciones.PasswordChar = '\0';
             this.txtPorciones.PlaceholderText = "";
             this.txtPorciones.SelectedText = "";
             this.txtPorciones.ShadowDecoration.Parent = this.txtPorciones;
-            this.txtPorciones.Size = new System.Drawing.Size(254, 31);
+            this.txtPorciones.Size = new System.Drawing.Size(254, 32);
             this.txtPorciones.TabIndex = 8;
             this.txtPorciones.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPorciones_KeyPress);
             // 
@@ -432,9 +456,9 @@
             // 
             this.SpdrReceta.BackColor = System.Drawing.Color.Transparent;
             this.SpdrReceta.FillColor = System.Drawing.Color.LightSeaGreen;
-            this.SpdrReceta.Location = new System.Drawing.Point(463, 43);
+            this.SpdrReceta.Location = new System.Drawing.Point(539, 65);
             this.SpdrReceta.Name = "SpdrReceta";
-            this.SpdrReceta.Size = new System.Drawing.Size(26, 447);
+            this.SpdrReceta.Size = new System.Drawing.Size(19, 478);
             this.SpdrReceta.TabIndex = 7;
             // 
             // lblPorciones
@@ -442,9 +466,9 @@
             this.lblPorciones.BackColor = System.Drawing.Color.Transparent;
             this.lblPorciones.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPorciones.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblPorciones.Location = new System.Drawing.Point(52, 130);
+            this.lblPorciones.Location = new System.Drawing.Point(29, 135);
             this.lblPorciones.Name = "lblPorciones";
-            this.lblPorciones.Size = new System.Drawing.Size(128, 27);
+            this.lblPorciones.Size = new System.Drawing.Size(218, 47);
             this.lblPorciones.TabIndex = 2;
             this.lblPorciones.Text = "No .Porciones";
             // 
@@ -462,14 +486,14 @@
             this.txtNombreReceta.FocusedState.Parent = this.txtNombreReceta;
             this.txtNombreReceta.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNombreReceta.HoverState.Parent = this.txtNombreReceta;
-            this.txtNombreReceta.Location = new System.Drawing.Point(199, 82);
+            this.txtNombreReceta.Location = new System.Drawing.Point(323, 92);
             this.txtNombreReceta.Margin = new System.Windows.Forms.Padding(0);
             this.txtNombreReceta.Name = "txtNombreReceta";
             this.txtNombreReceta.PasswordChar = '\0';
             this.txtNombreReceta.PlaceholderText = "";
             this.txtNombreReceta.SelectedText = "";
             this.txtNombreReceta.ShadowDecoration.Parent = this.txtNombreReceta;
-            this.txtNombreReceta.Size = new System.Drawing.Size(254, 37);
+            this.txtNombreReceta.Size = new System.Drawing.Size(204, 37);
             this.txtNombreReceta.TabIndex = 1;
             this.txtNombreReceta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreReceta_KeyPress);
             // 
@@ -478,9 +502,9 @@
             this.lblNombreReceta.BackColor = System.Drawing.Color.Transparent;
             this.lblNombreReceta.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreReceta.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblNombreReceta.Location = new System.Drawing.Point(29, 92);
+            this.lblNombreReceta.Location = new System.Drawing.Point(29, 82);
             this.lblNombreReceta.Name = "lblNombreReceta";
-            this.lblNombreReceta.Size = new System.Drawing.Size(167, 27);
+            this.lblNombreReceta.Size = new System.Drawing.Size(291, 47);
             this.lblNombreReceta.TabIndex = 0;
             this.lblNombreReceta.Text = "Nombre de Receta";
             // 
@@ -493,36 +517,12 @@
             this.ttipMensaje.IsBalloon = true;
             this.ttipMensaje.MaximumSize = new System.Drawing.Size(0, 0);
             // 
-            // btnListo
-            // 
-            this.btnListo.BackColor = System.Drawing.Color.Transparent;
-            this.btnListo.BorderColor = System.Drawing.Color.Teal;
-            this.btnListo.BorderRadius = 1;
-            this.btnListo.BorderThickness = 1;
-            this.btnListo.CheckedState.Parent = this.btnListo;
-            this.btnListo.CustomImages.Parent = this.btnListo;
-            this.btnListo.Enabled = false;
-            this.btnListo.FillColor = System.Drawing.Color.MintCream;
-            this.btnListo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListo.ForeColor = System.Drawing.Color.Black;
-            this.btnListo.HoverState.Parent = this.btnListo;
-            this.btnListo.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnListo.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnListo.Location = new System.Drawing.Point(930, 475);
-            this.btnListo.Name = "btnListo";
-            this.btnListo.ShadowDecoration.Parent = this.btnListo;
-            this.btnListo.Size = new System.Drawing.Size(71, 47);
-            this.btnListo.TabIndex = 25;
-            this.btnListo.Text = "LISTO";
-            this.btnListo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnListo.Click += new System.EventHandler(this.btnListo_Click);
-            // 
             // FrmIngresarReceta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
-            this.ClientSize = new System.Drawing.Size(1037, 542);
+            this.ClientSize = new System.Drawing.Size(1104, 602);
             this.Controls.Add(this.GbxReceta);
             this.Name = "FrmIngresarReceta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

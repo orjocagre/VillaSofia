@@ -33,6 +33,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbxTrabajador = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.DTPfecha_De_Nacimiento = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.LblRespuesta = new System.Windows.Forms.Label();
+            this.txtCedula = new System.Windows.Forms.MaskedTextBox();
+            this.btnAddTipoTrabajador = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnGuardarTrabajador = new Guna.UI2.WinForms.Guna2Button();
             this.lblCedula = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.TxtSalario = new Guna.UI2.WinForms.Guna2TextBox();
@@ -49,14 +54,7 @@
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.BtnEditar = new Guna.UI2.WinForms.Guna2Button();
             this.BtnEliminarTrabajador = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAddTipoTrabajador = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.txtCedula = new System.Windows.Forms.MaskedTextBox();
-            this.lblCedulaPasada = new System.Windows.Forms.Label();
-            this.lblCedulaDigitada = new System.Windows.Forms.Label();
-            this.LblRespuesta = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.DTPfecha_De_Nacimiento = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.gbxTrabajador.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dagTrabajadores)).BeginInit();
             this.guna2CustomGradientPanel1.SuspendLayout();
@@ -70,8 +68,6 @@
             this.gbxTrabajador.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.gbxTrabajador.Controls.Add(this.guna2HtmlLabel1);
             this.gbxTrabajador.Controls.Add(this.DTPfecha_De_Nacimiento);
-            this.gbxTrabajador.Controls.Add(this.lblCedulaPasada);
-            this.gbxTrabajador.Controls.Add(this.lblCedulaDigitada);
             this.gbxTrabajador.Controls.Add(this.LblRespuesta);
             this.gbxTrabajador.Controls.Add(this.txtCedula);
             this.gbxTrabajador.Controls.Add(this.btnAddTipoTrabajador);
@@ -99,6 +95,77 @@
             this.gbxTrabajador.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.gbxTrabajador.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.gbxTrabajador.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Teal;
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(499, 106);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(153, 47);
+            this.guna2HtmlLabel1.TabIndex = 24;
+            this.guna2HtmlLabel1.Text = "Fecha Nac";
+            // 
+            // DTPfecha_De_Nacimiento
+            // 
+            this.DTPfecha_De_Nacimiento.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.DTPfecha_De_Nacimiento.CheckedState.Parent = this.DTPfecha_De_Nacimiento;
+            this.DTPfecha_De_Nacimiento.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.DTPfecha_De_Nacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.DTPfecha_De_Nacimiento.HoverState.Parent = this.DTPfecha_De_Nacimiento;
+            this.DTPfecha_De_Nacimiento.Location = new System.Drawing.Point(658, 117);
+            this.DTPfecha_De_Nacimiento.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.DTPfecha_De_Nacimiento.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.DTPfecha_De_Nacimiento.Name = "DTPfecha_De_Nacimiento";
+            this.DTPfecha_De_Nacimiento.ShadowDecoration.Parent = this.DTPfecha_De_Nacimiento;
+            this.DTPfecha_De_Nacimiento.Size = new System.Drawing.Size(224, 36);
+            this.DTPfecha_De_Nacimiento.TabIndex = 23;
+            this.DTPfecha_De_Nacimiento.Value = new System.DateTime(2022, 4, 13, 12, 34, 38, 13);
+            // 
+            // LblRespuesta
+            // 
+            this.LblRespuesta.AutoSize = true;
+            this.LblRespuesta.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.LblRespuesta.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblRespuesta.Location = new System.Drawing.Point(516, 226);
+            this.LblRespuesta.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.LblRespuesta.Name = "LblRespuesta";
+            this.LblRespuesta.Size = new System.Drawing.Size(158, 21);
+            this.LblRespuesta.TabIndex = 20;
+            this.LblRespuesta.Text = "Esperando Respuesta";
+            // 
+            // txtCedula
+            // 
+            this.txtCedula.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCedula.Location = new System.Drawing.Point(639, 68);
+            this.txtCedula.Margin = new System.Windows.Forms.Padding(5);
+            this.txtCedula.Mask = "000-000000-0000>L";
+            this.txtCedula.Name = "txtCedula";
+            this.txtCedula.Size = new System.Drawing.Size(210, 33);
+            this.txtCedula.TabIndex = 19;
+            // 
+            // btnAddTipoTrabajador
+            // 
+            this.btnAddTipoTrabajador.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddTipoTrabajador.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAddTipoTrabajador.BorderColor = System.Drawing.Color.LightSeaGreen;
+            this.btnAddTipoTrabajador.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.btnAddTipoTrabajador.BorderThickness = 3;
+            this.btnAddTipoTrabajador.CheckedState.Parent = this.btnAddTipoTrabajador;
+            this.btnAddTipoTrabajador.CustomImages.Parent = this.btnAddTipoTrabajador;
+            this.btnAddTipoTrabajador.FillColor = System.Drawing.Color.Transparent;
+            this.btnAddTipoTrabajador.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAddTipoTrabajador.ForeColor = System.Drawing.Color.DarkOrange;
+            this.btnAddTipoTrabajador.HoverState.Parent = this.btnAddTipoTrabajador;
+            this.btnAddTipoTrabajador.Image = global::VillaSofia.Properties.Resources.mas94_148_255Azul32;
+            this.btnAddTipoTrabajador.Location = new System.Drawing.Point(854, 166);
+            this.btnAddTipoTrabajador.Name = "btnAddTipoTrabajador";
+            this.btnAddTipoTrabajador.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnAddTipoTrabajador.ShadowDecoration.Parent = this.btnAddTipoTrabajador;
+            this.btnAddTipoTrabajador.Size = new System.Drawing.Size(40, 38);
+            this.btnAddTipoTrabajador.TabIndex = 18;
+            this.btnAddTipoTrabajador.Click += new System.EventHandler(this.btnAddTipoTrabajador_Click);
             // 
             // btnGuardarTrabajador
             // 
@@ -143,7 +210,7 @@
             this.TxtSalario.ForeColor = System.Drawing.Color.Black;
             this.TxtSalario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxtSalario.HoverState.Parent = this.TxtSalario;
-            this.TxtSalario.Location = new System.Drawing.Point(191, 168);
+            this.TxtSalario.Location = new System.Drawing.Point(191, 174);
             this.TxtSalario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtSalario.Name = "TxtSalario";
             this.TxtSalario.PasswordChar = '\0';
@@ -160,7 +227,7 @@
             this.lblSalario.BackColor = System.Drawing.Color.Transparent;
             this.lblSalario.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSalario.ForeColor = System.Drawing.Color.Teal;
-            this.lblSalario.Location = new System.Drawing.Point(48, 151);
+            this.lblSalario.Location = new System.Drawing.Point(48, 162);
             this.lblSalario.Name = "lblSalario";
             this.lblSalario.Size = new System.Drawing.Size(101, 47);
             this.lblSalario.TabIndex = 12;
@@ -192,7 +259,7 @@
             this.lblCargo.BackColor = System.Drawing.Color.Transparent;
             this.lblCargo.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCargo.ForeColor = System.Drawing.Color.Teal;
-            this.lblCargo.Location = new System.Drawing.Point(499, 158);
+            this.lblCargo.Location = new System.Drawing.Point(499, 162);
             this.lblCargo.Name = "lblCargo";
             this.lblCargo.Size = new System.Drawing.Size(89, 47);
             this.lblCargo.TabIndex = 10;
@@ -214,7 +281,7 @@
             this.txtTelefono.ForeColor = System.Drawing.Color.Black;
             this.txtTelefono.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTelefono.HoverState.Parent = this.txtTelefono;
-            this.txtTelefono.Location = new System.Drawing.Point(191, 218);
+            this.txtTelefono.Location = new System.Drawing.Point(191, 226);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.PasswordChar = '\0';
@@ -309,7 +376,7 @@
             this.lblTrabajador.BackColor = System.Drawing.Color.Transparent;
             this.lblTrabajador.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTrabajador.ForeColor = System.Drawing.Color.Teal;
-            this.lblTrabajador.Location = new System.Drawing.Point(48, 60);
+            this.lblTrabajador.Location = new System.Drawing.Point(48, 54);
             this.lblTrabajador.Name = "lblTrabajador";
             this.lblTrabajador.Size = new System.Drawing.Size(136, 47);
             this.lblTrabajador.TabIndex = 0;
@@ -423,101 +490,9 @@
             this.BtnEliminarTrabajador.Text = "Eliminar";
             this.BtnEliminarTrabajador.Click += new System.EventHandler(this.BtnEliminarTrabajador_Click);
             // 
-            // btnAddTipoTrabajador
-            // 
-            this.btnAddTipoTrabajador.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddTipoTrabajador.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAddTipoTrabajador.BorderColor = System.Drawing.Color.LightSeaGreen;
-            this.btnAddTipoTrabajador.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.btnAddTipoTrabajador.BorderThickness = 3;
-            this.btnAddTipoTrabajador.CheckedState.Parent = this.btnAddTipoTrabajador;
-            this.btnAddTipoTrabajador.CustomImages.Parent = this.btnAddTipoTrabajador;
-            this.btnAddTipoTrabajador.FillColor = System.Drawing.Color.Transparent;
-            this.btnAddTipoTrabajador.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAddTipoTrabajador.ForeColor = System.Drawing.Color.DarkOrange;
-            this.btnAddTipoTrabajador.HoverState.Parent = this.btnAddTipoTrabajador;
-            this.btnAddTipoTrabajador.Image = global::VillaSofia.Properties.Resources.mas94_148_255Azul32;
-            this.btnAddTipoTrabajador.Location = new System.Drawing.Point(854, 167);
-            this.btnAddTipoTrabajador.Name = "btnAddTipoTrabajador";
-            this.btnAddTipoTrabajador.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnAddTipoTrabajador.ShadowDecoration.Parent = this.btnAddTipoTrabajador;
-            this.btnAddTipoTrabajador.Size = new System.Drawing.Size(40, 38);
-            this.btnAddTipoTrabajador.TabIndex = 18;
-            this.btnAddTipoTrabajador.Click += new System.EventHandler(this.btnAddTipoTrabajador_Click);
-            // 
-            // txtCedula
-            // 
-            this.txtCedula.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCedula.Location = new System.Drawing.Point(639, 68);
-            this.txtCedula.Margin = new System.Windows.Forms.Padding(5);
-            this.txtCedula.Mask = "000-000000-0000>L";
-            this.txtCedula.Name = "txtCedula";
-            this.txtCedula.Size = new System.Drawing.Size(210, 33);
-            this.txtCedula.TabIndex = 19;
-            // 
-            // lblCedulaPasada
-            // 
-            this.lblCedulaPasada.AutoSize = true;
-            this.lblCedulaPasada.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCedulaPasada.Location = new System.Drawing.Point(695, 254);
-            this.lblCedulaPasada.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.lblCedulaPasada.Name = "lblCedulaPasada";
-            this.lblCedulaPasada.Size = new System.Drawing.Size(33, 21);
-            this.lblCedulaPasada.TabIndex = 22;
-            this.lblCedulaPasada.Text = ">:0";
-            this.lblCedulaPasada.Visible = false;
-            // 
-            // lblCedulaDigitada
-            // 
-            this.lblCedulaDigitada.AutoSize = true;
-            this.lblCedulaDigitada.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCedulaDigitada.Location = new System.Drawing.Point(534, 254);
-            this.lblCedulaDigitada.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.lblCedulaDigitada.Name = "lblCedulaDigitada";
-            this.lblCedulaDigitada.Size = new System.Drawing.Size(123, 21);
-            this.lblCedulaDigitada.TabIndex = 21;
-            this.lblCedulaDigitada.Text = "Cédula Digitada:";
-            this.lblCedulaDigitada.Visible = false;
-            // 
-            // LblRespuesta
-            // 
-            this.LblRespuesta.AutoSize = true;
-            this.LblRespuesta.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblRespuesta.Location = new System.Drawing.Point(534, 218);
-            this.LblRespuesta.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.LblRespuesta.Name = "LblRespuesta";
-            this.LblRespuesta.Size = new System.Drawing.Size(158, 21);
-            this.LblRespuesta.TabIndex = 20;
-            this.LblRespuesta.Text = "Esperando Respuesta";
-            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // DTPfecha_De_Nacimiento
-            // 
-            this.DTPfecha_De_Nacimiento.CheckedState.Parent = this.DTPfecha_De_Nacimiento;
-            this.DTPfecha_De_Nacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.DTPfecha_De_Nacimiento.HoverState.Parent = this.DTPfecha_De_Nacimiento;
-            this.DTPfecha_De_Nacimiento.Location = new System.Drawing.Point(658, 125);
-            this.DTPfecha_De_Nacimiento.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.DTPfecha_De_Nacimiento.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.DTPfecha_De_Nacimiento.Name = "DTPfecha_De_Nacimiento";
-            this.DTPfecha_De_Nacimiento.ShadowDecoration.Parent = this.DTPfecha_De_Nacimiento;
-            this.DTPfecha_De_Nacimiento.Size = new System.Drawing.Size(224, 36);
-            this.DTPfecha_De_Nacimiento.TabIndex = 23;
-            this.DTPfecha_De_Nacimiento.Value = new System.DateTime(2022, 4, 13, 12, 34, 38, 13);
-            // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Teal;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(499, 117);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(153, 47);
-            this.guna2HtmlLabel1.TabIndex = 24;
-            this.guna2HtmlLabel1.Text = "Fecha Nac";
             // 
             // FrmRegistroTrabajador
             // 
@@ -558,8 +533,6 @@
         private Guna.UI2.WinForms.Guna2Button BtnEditar;
         private Guna.UI2.WinForms.Guna2Button BtnEliminarTrabajador;
         private System.Windows.Forms.MaskedTextBox txtCedula;
-        private System.Windows.Forms.Label lblCedulaPasada;
-        private System.Windows.Forms.Label lblCedulaDigitada;
         private System.Windows.Forms.Label LblRespuesta;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private Guna.UI2.WinForms.Guna2DateTimePicker DTPfecha_De_Nacimiento;
