@@ -116,6 +116,7 @@
             // 
             // lblRol
             // 
+            this.lblRol.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblRol.AutoSize = true;
             this.lblRol.BackColor = System.Drawing.Color.White;
             this.lblRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -127,6 +128,7 @@
             // 
             // lblCajero
             // 
+            this.lblCajero.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCajero.AutoSize = true;
             this.lblCajero.BackColor = System.Drawing.Color.White;
             this.lblCajero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -138,6 +140,7 @@
             // 
             // lblJefeCocina
             // 
+            this.lblJefeCocina.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblJefeCocina.AutoSize = true;
             this.lblJefeCocina.BackColor = System.Drawing.Color.White;
             this.lblJefeCocina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -149,6 +152,7 @@
             // 
             // btnSesion
             // 
+            this.btnSesion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSesion.BackColor = System.Drawing.Color.RosyBrown;
             this.btnSesion.Location = new System.Drawing.Point(1116, 4);
             this.btnSesion.Name = "btnSesion";

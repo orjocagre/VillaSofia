@@ -33,6 +33,7 @@
             this.btnCaja = new Guna.UI2.WinForms.Guna2Button();
             this.btnVentas = new Guna.UI2.WinForms.Guna2Button();
             this.btnMenu = new Guna.UI2.WinForms.Guna2Button();
+            this.btnInventario = new Guna.UI2.WinForms.Guna2Button();
             this.pnPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -40,6 +41,7 @@
             // 
             this.pnPrincipal.BackgroundImage = global::VillaSofia.Properties.Resources.fondogris;
             this.pnPrincipal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnPrincipal.Controls.Add(this.btnInventario);
             this.pnPrincipal.Controls.Add(this.btnEventos);
             this.pnPrincipal.Controls.Add(this.btnCaja);
             this.pnPrincipal.Controls.Add(this.btnVentas);
@@ -152,6 +154,21 @@
             this.btnMenu.TextOffset = new System.Drawing.Point(15, 115);
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
+            // btnInventario
+            // 
+            this.btnInventario.CheckedState.Parent = this.btnInventario;
+            this.btnInventario.CustomImages.Parent = this.btnInventario;
+            this.btnInventario.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnInventario.ForeColor = System.Drawing.Color.White;
+            this.btnInventario.HoverState.Parent = this.btnInventario;
+            this.btnInventario.Location = new System.Drawing.Point(478, 122);
+            this.btnInventario.Name = "btnInventario";
+            this.btnInventario.ShadowDecoration.Parent = this.btnInventario;
+            this.btnInventario.Size = new System.Drawing.Size(180, 45);
+            this.btnInventario.TabIndex = 4;
+            this.btnInventario.Text = "Inventario";
+            this.btnInventario.Click += new System.EventHandler(this.btnInventario_Click);
+            // 
             // CduMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -171,5 +188,6 @@
         private Guna.UI2.WinForms.Guna2Button btnMenu;
         private Guna.UI2.WinForms.Guna2Button btnCaja;
         private Guna.UI2.WinForms.Guna2Panel pnPrincipal;
+        private Guna.UI2.WinForms.Guna2Button btnInventario;
     }
 }
