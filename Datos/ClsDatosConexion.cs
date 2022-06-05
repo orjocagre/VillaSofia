@@ -19,6 +19,7 @@ namespace Datos
         //static string clave = "WeZuge38NwtPEyu2TmcS";
         //static string BaseDatos = "btvgotij9h4tsvz21ler";
 
+
         public MySqlConnection conectar = new MySqlConnection("datasource=" + host + ";username=" + usuario + ";password=" + clave + ";database=" + BaseDatos);
 
     }

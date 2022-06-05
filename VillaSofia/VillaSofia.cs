@@ -207,9 +207,9 @@ namespace VillaSofia
 
         private void bitacoraDeActividadesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmRegistroUsuario registro = new FrmRegistroUsuario();
-            registro.Show();
-            registro.BringToFront();
+            FrmBitacoraUsuarios bitacora = new FrmBitacoraUsuarios();
+            bitacora.Show();
+            bitacora.BringToFront();
         }
     }
 }
