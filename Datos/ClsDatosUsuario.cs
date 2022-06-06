@@ -7,10 +7,9 @@ namespace Datos
     public class ClsDatosUsuario
     {
         ClsDatosConexion conex = new ClsDatosConexion();
+        ClsDatosMetodosGlobales metodoG = new ClsDatosMetodosGlobales();
         public int registro(ClsModeloUsuario usuario)
         {
-
-            
             conex.conectar.Open();
 
             String sql = "INSERT INTO usuarios (usuario,password,nombre,id_tipo)" +
@@ -24,7 +23,6 @@ namespace Datos
             int resultado = comando.ExecuteNonQuery();
 
             return resultado;
-
         }
 
         public bool existeUsuario(string usuario)
@@ -33,7 +31,7 @@ namespace Datos
 
 
             //MySqlConnection conexion = Datos.DatosConexion.getConexion();
-            //conexion.Open();
+            //conex.conectar.Open();
 
             //String sql = "SELECT id FROM usuarios WHERE usuario LIKE @usuario";
             //MySqlCommand comando = new MySqlCommand(sql, conexion);
@@ -58,6 +56,26 @@ namespace Datos
 
 
         }
+
+        public DataTable DatosLogin(string user, string password)
+        {
+
+            MySqlCommand CMD = new MySqlCommand("ValidarUsuario", conex.conectar);
+            CMD.CommandType = CommandType.StoredProcedure;
+
+            CMD.Parameters.AddWithValue("@pUsername", user);
+            CMD.Parameters.AddWithValue("@pPassword", password);
+
+            MySqlDataAdapter DA = new MySqlDataAdapter(CMD);
+
+            DataTable DT = new DataTable();
+
+            DA.Fill(DT);
+
+            return DT;
+
+        }
+
         /*
         public string EditarUsuario(int id, string username, string password, string rol, string nombre, string apellido, int id_sucursal)
         {
@@ -97,11 +115,12 @@ namespace Datos
         }
 
         /---------
+        */
         public string CambiarEstado(string _id, string _accion)
         {
-            Conectar.conectar.Open();
+            conex.conectar.Open();
 
-            MySqlCommand CMD = new MySqlCommand("CambiarEstadoUsuario", Conectar.conectar);
+            MySqlCommand CMD = new MySqlCommand("CambiarEstadoUsuario", conex.conectar);
             CMD.CommandType = CommandType.StoredProcedure;
 
             CMD.Parameters.AddWithValue("@pId", _id);
@@ -123,12 +142,12 @@ namespace Datos
             }
             finally
             {
-                Conectar.conectar.Close();
+                conex.conectar.Close();
             }
 
 
         }
-        */
+        
         public string LogueoU(string id, string LogU)
         {
 
@@ -258,7 +277,7 @@ namespace Datos
         }
 
         // Método para traer la biracora del inicio de sesión en el sistema
-
+        ya ta
         public DataTable bitacora(String Sql)
         {
             return metodoG.bd_consultas(Sql);
@@ -275,6 +294,12 @@ namespace Datos
         }
         /---------
         */
+
+        public DataTable bitacora(String Sql)
+        {
+            return metodoG.bdConsultas(Sql);
+        }
+
         public ClsModeloUsuario validacion(string usuario)
         {
             //MySqlDataReader reader;
