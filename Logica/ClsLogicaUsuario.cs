@@ -77,7 +77,7 @@ namespace Logica
                 }
                 else
                 {
-                    Console.WriteLine("\n\n\n\n\n\n\n\n\n"+modeloUsuario.Password + " " + generarSHA1(password));
+                    Console.WriteLine("\n\n\n\n\n\n\n\n\n" + modeloUsuario.Password + " " + generarSHA1(password));
                     if (modeloUsuario.Password != generarSHA1(password))
                     {
                         respuesta = "El usuario y/o contraseña no existen";
@@ -106,7 +106,6 @@ namespace Logica
         {
             return objetoD.EditarUsuario(id, username, password, rol, nombre);
         }
-
         public string LogicaCambiarEstadoUsuario(string id, string accion)
         {
             return objetoD.CambiarEstado(id, accion);
@@ -117,7 +116,7 @@ namespace Logica
 
             return objetoD.LogueoU(id, log);
         }
-        
+
         public void IniciarSesion(int ID, String fecha, String Hora, String IpMaquina)
         {
             objetoD.AgregarInicioSesion(ID, fecha, Hora, IpMaquina);
@@ -127,7 +126,6 @@ namespace Logica
         {
             objetoD.AgregarCierreSesion(ID, fecha, Hora);
         }
-        */
         //Método para llamar la bitacora
 
         public DataTable HistorialBitacora(String Condicion)

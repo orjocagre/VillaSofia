@@ -173,6 +173,26 @@ namespace VillaSofia.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap buscarAzul {
+            get {
+                object obj = ResourceManager.GetObject("buscarAzul", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap buscarNegro {
+            get {
+                object obj = ResourceManager.GetObject("buscarNegro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap caja256 {
             get {
                 object obj = ResourceManager.GetObject("caja256", resourceCulture);

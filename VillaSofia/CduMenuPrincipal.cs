@@ -87,5 +87,12 @@ namespace VillaSofia
 
 
         }
+
+        private void btnInventario_Click(object sender, EventArgs e)
+        {
+            vs.Controls.Remove(this);
+            vs.Controls.Add(new CduInventario(vs, tipo_usuario));
+            this.Dispose();
+        }
     }
 }

@@ -117,6 +117,18 @@
     <Compile Include="CduFacturacionVacio.Designer.cs">
       <DependentUpon>CduFacturacionVacio.cs</DependentUpon>
     </Compile>
+    <Compile Include="CduInventario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CduInventario.Designer.cs">
+      <DependentUpon>CduInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CduPestanaListaCompras.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CduPestanaListaCompras.Designer.cs">
+      <DependentUpon>CduPestanaListaCompras.cs</DependentUpon>
+    </Compile>
     <Compile Include="CduMenuPrincipal.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -140,6 +152,18 @@
     </Compile>
     <Compile Include="CduPanelVacio.Designer.cs">
       <DependentUpon>CduPanelVacio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CduPestanaRegistrarCompras.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CduPestanaRegistrarCompras.Designer.cs">
+      <DependentUpon>CduPestanaRegistrarCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CduPestanaInventario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CduPestanaInventario.Designer.cs">
+      <DependentUpon>CduPestanaInventario.cs</DependentUpon>
     </Compile>
     <Compile Include="CduRegistroEvento2.cs">
       <SubType>UserControl</SubType>
@@ -307,6 +331,12 @@
     <EmbeddedResource Include="CduFacturacionVacio.resx">
       <DependentUpon>CduFacturacionVacio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CduInventario.resx">
+      <DependentUpon>CduInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CduPestanaListaCompras.resx">
+      <DependentUpon>CduPestanaListaCompras.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CduMenuPrincipal.resx">
       <DependentUpon>CduMenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -318,6 +348,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CduPanelVacio.resx">
       <DependentUpon>CduPanelVacio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CduPestanaInventario.resx">
+      <DependentUpon>CduPestanaInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CduPestanaRegistrarCompras.resx">
+      <DependentUpon>CduPestanaRegistrarCompras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CduRegistroEvento2.resx">
       <DependentUpon>CduRegistroEvento2.cs</DependentUpon>
@@ -605,6 +641,8 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Resources\buscarNegro.png" />
+    <None Include="Resources\buscarAzul.png" />
     <Content Include="Resources\cocinar.png" />
     <None Include="Resources\flecha-derecha-arriba.png" />
     <Content Include="Resources\iconologin.ico" />
