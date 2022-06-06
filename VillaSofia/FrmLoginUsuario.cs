@@ -192,7 +192,7 @@ namespace VillaSofia
             string mensaje = objeto.Lou(id, accion);
         }
 
-        //ocultacion de la contraseña
+        //oculto de la contraseña
         private void txtpassword_IconRightClick(object sender, EventArgs e)
         {
             clave_visible = (!clave_visible);
