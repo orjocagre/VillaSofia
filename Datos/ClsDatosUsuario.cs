@@ -57,25 +57,6 @@ namespace Datos
 
         }
 
-        public DataTable DatosLogin(string user, string password)
-        {
-
-            MySqlCommand CMD = new MySqlCommand("ValidarUsuario", conex.conectar);
-            CMD.CommandType = CommandType.StoredProcedure;
-
-            CMD.Parameters.AddWithValue("@pUsername", user);
-            CMD.Parameters.AddWithValue("@pPassword", password);
-
-            MySqlDataAdapter DA = new MySqlDataAdapter(CMD);
-
-            DataTable DT = new DataTable();
-
-            DA.Fill(DT);
-
-            return DT;
-
-        }
-
         /*
         public string EditarUsuario(int id, string username, string password, string rol, string nombre, string apellido, int id_sucursal)
         {
@@ -228,16 +209,16 @@ namespace Datos
             }
 
         }  //Fin del método
-        /*
+        
         public int AgregarCierreSesion(int ID, String fecha, String Hora)
         {
             try
             {
                 MySqlCommand CM = new MySqlCommand();
                 MySqlParameter x;
-                Conectar.conectar.Open();
+                conex.conectar.Open();
 
-                CM.Connection = Conectar.conectar;
+                CM.Connection = conex.conectar;
                 CM.CommandType = CommandType.StoredProcedure;
                 CM.CommandText = "AgregarSalidaBitacora";
 
@@ -270,36 +251,28 @@ namespace Datos
 
             finally
             {
-                Conectar.conectar.Close();
+                conex.conectar.Close();
             }
             //Fin del método
 
         }
 
         // Método para traer la biracora del inicio de sesión en el sistema
-        ya ta
-        public DataTable bitacora(String Sql)
-        {
-            return metodoG.bd_consultas(Sql);
-        }
-
-        public DataTable nombreSucursal(String Sql)
-        {
-            return metodoG.bd_consultas(Sql);
-        }
-
-        public DataTable CmbSucursal(String Sql)
-        {
-            return metodoG.bd_consultas(Sql);
-        }
-        /---------
-        */
-
+        //ya ta
         public DataTable bitacora(String Sql)
         {
             return metodoG.bdConsultas(Sql);
         }
 
+        public DataTable nombreSucursal(String Sql)
+        {
+            return metodoG.bdConsultas(Sql);
+        }
+
+        public DataTable CmbSucursal(String Sql)
+        {
+            return metodoG.bdConsultas(Sql);
+        }
         public ClsModeloUsuario validacion(string usuario)
         {
             //MySqlDataReader reader;

@@ -88,7 +88,7 @@ namespace VillaSofia
                 DataTable DT = new DataTable();
 
 
-                DT = objetoN.LoginSis(usuario, password);
+                //DT = objetoN.LoginSis(usuario, password);
                 //---------
                 string respuesta = ctrl.crtlLogin(usuario, password);
                 if (respuesta.Length > 0)
@@ -125,7 +125,7 @@ namespace VillaSofia
 
                         //MessageBox.Show("Bienvenido " + rol.ToString());
                         //                                ant (TxtUsuario.Text)
-                        VillaSofia SESION = new VillaSofia();
+                       // VillaSofia SESION = new VillaSofia();
                         //CduMenuPrincipal SESSION = new CduMenuPrincipal();
                         //SESION.setUserLabel(infoUser);
 
