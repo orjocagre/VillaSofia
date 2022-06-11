@@ -48,8 +48,8 @@
     <Compile Include="ClsLogicaBuscador.cs" />
     <Compile Include="ClsLogicaEvento.cs" />
     <Compile Include="ClsLogicaFactura.cs" />
-    <Compile Include="CLsLogicaIngredienteReceta.cs" />
-    <Compile Include="ClsLogicaIngredientes.cs" />
+    <Compile Include="CLsLogicaInsumoReceta.cs" />
+    <Compile Include="ClsLogicaInsumo.cs" />
     <Compile Include="ClsLogicaOrden.cs" />
     <Compile Include="ClsLogicaOrdenEvento.cs" />
     <Compile Include="ClsLogicaPersona.cs" />

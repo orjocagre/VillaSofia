@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PanelReceta = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.lblBusqueda = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnAtras = new Guna.UI2.WinForms.Guna2Button();
             this.btnCalcular = new Guna.UI2.WinForms.Guna2Button();
             this.btnEliminar = new Guna.UI2.WinForms.Guna2Button();
@@ -49,12 +50,11 @@
             this.txtProcedimiento = new Guna.UI2.WinForms.Guna2TextBox();
             this.LblProcedimiento = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.LblNombreReceta = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.DgvIngredientes = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.DgvInsumos = new Guna.UI2.WinForms.Guna2DataGridView();
             this.DgvRecetas = new Guna.UI2.WinForms.Guna2DataGridView();
             this.TxtBuscarReceta = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblBusqueda = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.PanelReceta.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvIngredientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvInsumos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvRecetas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,7 +76,7 @@
             this.PanelReceta.Controls.Add(this.txtProcedimiento);
             this.PanelReceta.Controls.Add(this.LblProcedimiento);
             this.PanelReceta.Controls.Add(this.LblNombreReceta);
-            this.PanelReceta.Controls.Add(this.DgvIngredientes);
+            this.PanelReceta.Controls.Add(this.DgvInsumos);
             this.PanelReceta.Controls.Add(this.DgvRecetas);
             this.PanelReceta.Controls.Add(this.TxtBuscarReceta);
             this.PanelReceta.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -88,6 +88,19 @@
             this.PanelReceta.Size = new System.Drawing.Size(1203, 700);
             this.PanelReceta.TabIndex = 0;
             this.PanelReceta.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelReceta_Paint);
+            // 
+            // lblBusqueda
+            // 
+            this.lblBusqueda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblBusqueda.BackColor = System.Drawing.Color.Transparent;
+            this.lblBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBusqueda.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblBusqueda.Location = new System.Drawing.Point(991, 37);
+            this.lblBusqueda.Name = "lblBusqueda";
+            this.lblBusqueda.Size = new System.Drawing.Size(84, 22);
+            this.lblBusqueda.TabIndex = 19;
+            this.lblBusqueda.Text = "Busqueda";
+            this.lblBusqueda.Click += new System.EventHandler(this.lblBusqueda_Click);
             // 
             // btnAtras
             // 
@@ -328,75 +341,75 @@
             this.LblNombreReceta.Text = "Seleccione una receta";
             this.LblNombreReceta.Click += new System.EventHandler(this.LblNombreReceta_Click);
             // 
-            // DgvIngredientes
+            // DgvInsumos
             // 
-            this.DgvIngredientes.AllowUserToAddRows = false;
-            this.DgvIngredientes.AllowUserToDeleteRows = false;
-            this.DgvIngredientes.AllowUserToResizeRows = false;
-            dataGridViewCellStyle31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(203)))), ((int)(((byte)(232)))));
-            this.DgvIngredientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle31;
-            this.DgvIngredientes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.DgvInsumos.AllowUserToAddRows = false;
+            this.DgvInsumos.AllowUserToDeleteRows = false;
+            this.DgvInsumos.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(203)))), ((int)(((byte)(232)))));
+            this.DgvInsumos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.DgvInsumos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DgvIngredientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DgvIngredientes.BackgroundColor = System.Drawing.Color.Lavender;
-            this.DgvIngredientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DgvIngredientes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.DgvIngredientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle32.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvIngredientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle32;
-            this.DgvIngredientes.ColumnHeadersHeight = 20;
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(220)))), ((int)(((byte)(239)))));
-            dataGridViewCellStyle33.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle33.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(139)))), ((int)(((byte)(205)))));
-            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgvIngredientes.DefaultCellStyle = dataGridViewCellStyle33;
-            this.DgvIngredientes.EnableHeadersVisualStyles = false;
-            this.DgvIngredientes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(201)))), ((int)(((byte)(231)))));
-            this.DgvIngredientes.Location = new System.Drawing.Point(572, 71);
-            this.DgvIngredientes.Name = "DgvIngredientes";
-            this.DgvIngredientes.ReadOnly = true;
-            this.DgvIngredientes.RowHeadersVisible = false;
-            this.DgvIngredientes.RowTemplate.Height = 24;
-            this.DgvIngredientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvIngredientes.Size = new System.Drawing.Size(331, 555);
-            this.DgvIngredientes.TabIndex = 2;
-            this.DgvIngredientes.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Indigo;
-            this.DgvIngredientes.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(203)))), ((int)(((byte)(232)))));
-            this.DgvIngredientes.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.DgvIngredientes.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.DgvIngredientes.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.DgvIngredientes.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.DgvIngredientes.ThemeStyle.BackColor = System.Drawing.Color.Lavender;
-            this.DgvIngredientes.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(201)))), ((int)(((byte)(231)))));
-            this.DgvIngredientes.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
-            this.DgvIngredientes.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.DgvIngredientes.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DgvIngredientes.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.DgvIngredientes.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.DgvIngredientes.ThemeStyle.HeaderStyle.Height = 20;
-            this.DgvIngredientes.ThemeStyle.ReadOnly = true;
-            this.DgvIngredientes.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(220)))), ((int)(((byte)(239)))));
-            this.DgvIngredientes.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.DgvIngredientes.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DgvIngredientes.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.DgvIngredientes.ThemeStyle.RowsStyle.Height = 24;
-            this.DgvIngredientes.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(139)))), ((int)(((byte)(205)))));
-            this.DgvIngredientes.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.DgvInsumos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DgvInsumos.BackgroundColor = System.Drawing.Color.Lavender;
+            this.DgvInsumos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DgvInsumos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.DgvInsumos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvInsumos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.DgvInsumos.ColumnHeadersHeight = 20;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(220)))), ((int)(((byte)(239)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(139)))), ((int)(((byte)(205)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvInsumos.DefaultCellStyle = dataGridViewCellStyle3;
+            this.DgvInsumos.EnableHeadersVisualStyles = false;
+            this.DgvInsumos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(201)))), ((int)(((byte)(231)))));
+            this.DgvInsumos.Location = new System.Drawing.Point(572, 71);
+            this.DgvInsumos.Name = "DgvInsumos";
+            this.DgvInsumos.ReadOnly = true;
+            this.DgvInsumos.RowHeadersVisible = false;
+            this.DgvInsumos.RowTemplate.Height = 24;
+            this.DgvInsumos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgvInsumos.Size = new System.Drawing.Size(331, 555);
+            this.DgvInsumos.TabIndex = 2;
+            this.DgvInsumos.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Indigo;
+            this.DgvInsumos.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(203)))), ((int)(((byte)(232)))));
+            this.DgvInsumos.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.DgvInsumos.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.DgvInsumos.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.DgvInsumos.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.DgvInsumos.ThemeStyle.BackColor = System.Drawing.Color.Lavender;
+            this.DgvInsumos.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(201)))), ((int)(((byte)(231)))));
+            this.DgvInsumos.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
+            this.DgvInsumos.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.DgvInsumos.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DgvInsumos.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.DgvInsumos.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.DgvInsumos.ThemeStyle.HeaderStyle.Height = 20;
+            this.DgvInsumos.ThemeStyle.ReadOnly = true;
+            this.DgvInsumos.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(220)))), ((int)(((byte)(239)))));
+            this.DgvInsumos.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.DgvInsumos.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DgvInsumos.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.DgvInsumos.ThemeStyle.RowsStyle.Height = 24;
+            this.DgvInsumos.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(139)))), ((int)(((byte)(205)))));
+            this.DgvInsumos.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
             // DgvRecetas
             // 
             this.DgvRecetas.AllowUserToResizeRows = false;
-            dataGridViewCellStyle34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(203)))), ((int)(((byte)(232)))));
-            this.DgvRecetas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(203)))), ((int)(((byte)(232)))));
+            this.DgvRecetas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.DgvRecetas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DgvRecetas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -404,23 +417,23 @@
             this.DgvRecetas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DgvRecetas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DgvRecetas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle35.Font = new System.Drawing.Font("Edwardian Script ITC", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle35.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvRecetas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Edwardian Script ITC", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvRecetas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.DgvRecetas.ColumnHeadersHeight = 4;
-            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(220)))), ((int)(((byte)(239)))));
-            dataGridViewCellStyle36.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle36.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(139)))), ((int)(((byte)(205)))));
-            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgvRecetas.DefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(220)))), ((int)(((byte)(239)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(139)))), ((int)(((byte)(205)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvRecetas.DefaultCellStyle = dataGridViewCellStyle6;
             this.DgvRecetas.EnableHeadersVisualStyles = false;
             this.DgvRecetas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(201)))), ((int)(((byte)(231)))));
             this.DgvRecetas.Location = new System.Drawing.Point(918, 132);
@@ -476,6 +489,7 @@
             this.TxtBuscarReceta.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxtBuscarReceta.HoverState.Parent = this.TxtBuscarReceta;
             this.TxtBuscarReceta.Location = new System.Drawing.Point(918, 71);
+            this.TxtBuscarReceta.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.TxtBuscarReceta.Name = "TxtBuscarReceta";
             this.TxtBuscarReceta.PasswordChar = '\0';
             this.TxtBuscarReceta.PlaceholderText = "";
@@ -485,19 +499,6 @@
             this.TxtBuscarReceta.TabIndex = 1;
             this.TxtBuscarReceta.TextChanged += new System.EventHandler(this.TxtBuscarReceta_TextChanged);
             this.TxtBuscarReceta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBuscarReceta_KeyPress);
-            // 
-            // lblBusqueda
-            // 
-            this.lblBusqueda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblBusqueda.BackColor = System.Drawing.Color.Transparent;
-            this.lblBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBusqueda.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lblBusqueda.Location = new System.Drawing.Point(991, 37);
-            this.lblBusqueda.Name = "lblBusqueda";
-            this.lblBusqueda.Size = new System.Drawing.Size(84, 22);
-            this.lblBusqueda.TabIndex = 19;
-            this.lblBusqueda.Text = "Busqueda";
-            this.lblBusqueda.Click += new System.EventHandler(this.lblBusqueda_Click);
             // 
             // CduMostrarReceta
             // 
@@ -509,7 +510,7 @@
             this.Load += new System.EventHandler(this.CduMostrarReceta_Load);
             this.PanelReceta.ResumeLayout(false);
             this.PanelReceta.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvIngredientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvInsumos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvRecetas)).EndInit();
             this.ResumeLayout(false);
 
@@ -519,7 +520,7 @@
 
         private Guna.UI2.WinForms.Guna2GradientPanel PanelReceta;
         private Guna.UI2.WinForms.Guna2HtmlLabel LblNombreReceta;
-        private Guna.UI2.WinForms.Guna2DataGridView DgvIngredientes;
+        private Guna.UI2.WinForms.Guna2DataGridView DgvInsumos;
         private Guna.UI2.WinForms.Guna2DataGridView DgvRecetas;
         private Guna.UI2.WinForms.Guna2TextBox TxtBuscarReceta;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblNumPorc;

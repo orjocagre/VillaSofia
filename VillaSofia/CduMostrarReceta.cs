@@ -45,21 +45,21 @@ namespace VillaSofia
             DgvRecetas.Columns[2].Visible = false;
             DgvRecetas.Columns[3].Visible = false;
         }
-        void LoadIngredientes(String x)
+        void LoadInsumos(String x)
         {
-            CLsLogicaIngredienteReceta Load = new CLsLogicaIngredienteReceta();
+            CLsLogicaInsumoReceta Load = new CLsLogicaInsumoReceta();
 
-            DgvIngredientes.DataSource = Load.ListarIngredientes(x);
+            DgvInsumos.DataSource = Load.ListarInsumos(x);
            
-            DgvIngredientes.Columns[0].Visible = false;
-            DgvIngredientes.Columns[1].Visible = false;
-            DgvIngredientes.Columns[2].Visible = false;
-            DgvIngredientes.Columns[6].Visible = false;
-            DgvIngredientes.Columns[7].Visible = false;
+            DgvInsumos.Columns[0].Visible = false;
+            DgvInsumos.Columns[1].Visible = false;
+            DgvInsumos.Columns[2].Visible = false;
+            DgvInsumos.Columns[6].Visible = false;
+            DgvInsumos.Columns[7].Visible = false;
 
-            DgvIngredientes.Columns[3].FillWeight = 2;
-            DgvIngredientes.Columns[4].FillWeight = 0.5F;
-            DgvIngredientes.Columns[5].FillWeight = 1;
+            DgvInsumos.Columns[3].FillWeight = 2;
+            DgvInsumos.Columns[4].FillWeight = 0.5F;
+            DgvInsumos.Columns[5].FillWeight = 1;
 
         }
 
@@ -71,7 +71,7 @@ namespace VillaSofia
             lblNumPorc.Text = "0";
             txtProcedimiento.Text = "";
             idReceta = -1;
-            LoadIngredientes("-1");
+            LoadInsumos("-1");
             LoadRecetas("");
         }
 
@@ -126,7 +126,7 @@ namespace VillaSofia
 
             lblNumPorc.Text = DT.Rows[0].Field<int>("num_porciones").ToString();
 
-            LoadIngredientes(id);
+            LoadInsumos(id);
         }
 
      
@@ -153,9 +153,9 @@ namespace VillaSofia
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
-            for(int i=0; i<DgvIngredientes.RowCount; i++)
+            for(int i=0; i<DgvInsumos.RowCount; i++)
             {
-                DgvIngredientes.Rows[i].Cells[4].Value = (Convert.ToDouble(DgvIngredientes.Rows[i].Cells[4].Value)) / Convert.ToDouble(lblNumPorc.Text) * Convert.ToDouble(txtCalcularPorciones.Text);
+                DgvInsumos.Rows[i].Cells[4].Value = (Convert.ToDouble(DgvInsumos.Rows[i].Cells[4].Value)) / Convert.ToDouble(lblNumPorc.Text) * Convert.ToDouble(txtCalcularPorciones.Text);
 
             }
             

@@ -16,6 +16,7 @@ namespace VillaSofia
         CduPestanaInventario pinv;
         CduPestanaListaCompras plc;
         CduPestanaRegistrarCompras prc;
+        CduPestanaAjusteInventario pai;
 
         public CduInventario(VillaSofia vs, int tipo_usuario)
         {
@@ -51,6 +52,13 @@ namespace VillaSofia
             prc.Anchor = (AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Bottom);
             prc.SendToBack();
 
+            //panel de pestana de ajuste de inventario
+            pai = new CduPestanaAjusteInventario();
+            this.Controls.Add(pai);
+            pai.Location = new Point(0, 110);
+            pai.Size = new Size(this.Width, this.Height - 110);
+            pai.Anchor = (AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Bottom);
+            pai.SendToBack();
 
             pinv.BringToFront();
 
@@ -111,6 +119,8 @@ namespace VillaSofia
             pinv.BringToFront();
             plc.SendToBack();
             prc.SendToBack();
+            pai.SendToBack();
+
 
         }
 
@@ -128,6 +138,8 @@ namespace VillaSofia
             plc.BringToFront();
             pinv.SendToBack();
             prc.SendToBack();
+            pai.SendToBack();
+
 
         }
 
@@ -145,6 +157,8 @@ namespace VillaSofia
             prc.BringToFront();
             pinv.SendToBack();
             plc.SendToBack();
+            pai.SendToBack();
+
         }
 
         private void btnAjusteInventario_Click(object sender, EventArgs e)
@@ -157,6 +171,12 @@ namespace VillaSofia
             btnAjusteInventario.ForeColor = Color.Black;
             btnKardex.ForeColor = Color.Gray;
             btnInventarioMinimo.ForeColor = Color.Gray;
+
+            pai.BringToFront();
+            pinv.SendToBack();
+            plc.SendToBack();
+            prc.SendToBack();
+
         }
 
         private void btnKardex_Click(object sender, EventArgs e)

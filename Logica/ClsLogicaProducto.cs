@@ -169,5 +169,13 @@ namespace Logica
             String sql = "SELECT sinonimo.nombreF AS sinF, sinonimo.nombre AS sin, producto.nombre AS nom, producto.idProducto AS id FROM sinonimo, producto WHERE producto.idProducto = sinonimo.idProducto AND (producto.id_restaurante_evento = " + id_restaurante_evento.ToString() + " OR producto.id_restaurante_evento = 3) AND producto.visible = 1";
             return registro.consulta(sql);
         }
+
+        public void vincularRecetaProducto(int id_producto, int id_receta)
+        {
+            ClsDatosProducto producto = new ClsDatosProducto();
+            String sql = "UPDATE producto SET producto.id_receta = "+ id_receta + " WHERE producto.idProducto = "+ id_producto;
+            producto.consulta(sql);
+            Console.WriteLine(id_producto + " " +id_receta);
+        }
     }
 }

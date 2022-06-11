@@ -17,6 +17,8 @@ namespace VillaSofia
         int idreceta;
         Boolean edicion;
         int tipo_usurio;
+        FrmProducto frmpro;
+        int idProducto;
         public FrmIngresarReceta(VillaSofia VS, int tipo_usurio)
         { this.tipo_usurio = tipo_usurio; 
             edicion = false;
@@ -29,18 +31,52 @@ namespace VillaSofia
             this.ttipMensaje.SetToolTip(this.txtPorciones,"Ingre las porciones de esta Receta");
             this.ttipMensaje.SetToolTip(this.txtProcedimiento,"Escriba los pasos a seguir para realizar \n Esta Receta");
             this.ttipMensaje.SetToolTip(this.TxtCantidades,"Ingrese la cantidad de Ingre");
-            this.ttipMensaje.SetToolTip(this.dgvIngredientes,"Muestra los Ingredientes Ingresados");
-            this.ttipMensaje.SetToolTip(this.btnSiguiente,"Ingresar los Ingredientes");
-            this.ttipMensaje.SetToolTip(this.btnguardarIgredientes, "Guarda un Nuevo Ingrediente");
+            this.ttipMensaje.SetToolTip(this.dgvInsumos,"Muestra los Insumos Ingresados");
+            this.ttipMensaje.SetToolTip(this.btnSiguiente,"Ingresar los Insumos");
+            this.ttipMensaje.SetToolTip(this.btnguardarInsumo, "Guarda un Nuevo Insumo");
             this.ttipMensaje.SetToolTip(this.cmbUM,"Unidades de Medida");
             this.ttipMensaje.SetToolTip(this.BtnAgregarMas,"Agregar una nueva unidad de medida");
             this.ttipMensaje.SetToolTip(this.btnEditar,"Editar la Receta");
-            this.ttipMensaje.SetToolTip(this.BtnEliminar,"Eliminar ingrediente");
-            this.ttipMensaje.SetToolTip(this.txtNombreIngrediente, "Ingrese el nuevo ingrediente");
+            this.ttipMensaje.SetToolTip(this.BtnEliminar,"Eliminar insumo");
+            this.ttipMensaje.SetToolTip(this.txtNombreInsumo, "Ingrese el nuevo insumo");
 
 
 
 
+
+
+
+
+
+
+        }
+        public FrmIngresarReceta(VillaSofia VS, int tipo_usurio, String nomProd, FrmProducto frmpro, int idProducto)
+        {
+            this.frmpro = frmpro;
+            this.tipo_usurio = tipo_usurio;
+            edicion = false;
+            this.VS = VS;
+            this.idProducto = idProducto;
+            InitializeComponent();
+
+
+
+            this.ttipMensaje.SetToolTip(this.txtNombreReceta, "Ingrese el nombre de la nueva Receta");
+            this.ttipMensaje.SetToolTip(this.txtPorciones, "Ingre las porciones de esta Receta");
+            this.ttipMensaje.SetToolTip(this.txtProcedimiento, "Escriba los pasos a seguir para realizar \n Esta Receta");
+            this.ttipMensaje.SetToolTip(this.TxtCantidades, "Ingrese la cantidad de Ingre");
+            this.ttipMensaje.SetToolTip(this.dgvInsumos, "Muestra los Insumos Ingresados");
+            this.ttipMensaje.SetToolTip(this.btnSiguiente, "Ingresar los Insumos");
+            this.ttipMensaje.SetToolTip(this.btnguardarInsumo, "Guarda un Nuevo Insumo");
+            this.ttipMensaje.SetToolTip(this.cmbUM, "Unidades de Medida");
+            this.ttipMensaje.SetToolTip(this.BtnAgregarMas, "Agregar una nueva unidad de medida");
+            this.ttipMensaje.SetToolTip(this.btnEditar, "Editar la Receta");
+            this.ttipMensaje.SetToolTip(this.BtnEliminar, "Eliminar insumo");
+            this.ttipMensaje.SetToolTip(this.txtNombreInsumo, "Ingrese el nuevo insumo");
+
+
+
+            txtNombreReceta.Text = nomProd;
 
 
 
@@ -69,7 +105,7 @@ namespace VillaSofia
                 txtPorciones.Text = DT.Rows[0].Field<int>("num_porciones").ToString();
                 txtProcedimiento.Text = DT.Rows[0].Field<String>("procedimiento");
 
-                LoadIngredientes(idreceta.ToString());
+                LoadInsumos(idreceta.ToString());
             
             
             
@@ -82,17 +118,17 @@ namespace VillaSofia
             
         }
         //MOSTRAR INGREDIENTES
-        void LoadIngredientes(String x)
+        void LoadInsumos(String x)
         {
-           CLsLogicaIngredienteReceta Load = new CLsLogicaIngredienteReceta();
+           CLsLogicaInsumoReceta Load = new CLsLogicaInsumoReceta();
 
-            dgvIngredientes.DataSource = Load.ListarIngredientes(x);
-            dgvIngredientes.Columns[0].Visible = false;
-            dgvIngredientes.Columns[1].Visible = false;
-            dgvIngredientes.Columns[2].Visible = false;
-            dgvIngredientes.Columns[2].Visible = false;
-            dgvIngredientes.Columns[6].Visible = false;
-            dgvIngredientes.Columns[7].Visible = false;
+            dgvInsumos.DataSource = Load.ListarInsumos(x);
+            dgvInsumos.Columns[0].Visible = false;
+            dgvInsumos.Columns[1].Visible = false;
+            dgvInsumos.Columns[2].Visible = false;
+            dgvInsumos.Columns[2].Visible = false;
+            dgvInsumos.Columns[6].Visible = false;
+            dgvInsumos.Columns[7].Visible = false;
         }
         //VALIDAR TEXBOX VACIOS
         Boolean validarTexboxReceta()
@@ -108,10 +144,10 @@ namespace VillaSofia
             }
 
         }
-        Boolean validarTexboxIngredientes()
+        Boolean validarTexboxInsumos()
         {
 
-            if (txtNombreIngrediente.Text != "")
+            if (txtNombreInsumo.Text != "")
             {
                 return true;
             }
@@ -125,9 +161,12 @@ namespace VillaSofia
         void IngresarReceta()
         {
             string resp;
-            CLsLogicaIngredienteReceta Receta = new CLsLogicaIngredienteReceta();
+            CLsLogicaInsumoReceta Receta = new CLsLogicaInsumoReceta();
             resp = Receta.ingresarDatosReceta(txtNombreReceta.Text,Convert.ToInt32( txtPorciones.Text), txtProcedimiento.Text);
             idreceta = Convert.ToInt32(resp);
+
+            ClsLogicaProducto producto = new ClsLogicaProducto();
+            producto.vincularRecetaProducto(idProducto, idreceta);
         }
 
         void editarReceta()
@@ -140,11 +179,11 @@ namespace VillaSofia
         }
 
         //METODO PARA INGRESAR DATOS
-        string IngresarIngrediente()
+        string IngresarInsumo()
         {
             string resp;
-            CLsLogicaIngredienteReceta AddIngrediente = new CLsLogicaIngredienteReceta();
-            resp = AddIngrediente.ingresarDatosIngrediente( txtNombreIngrediente.Text);
+            CLsLogicaInsumoReceta AddInsumo = new CLsLogicaInsumoReceta();
+            resp = AddInsumo.ingresarDatosInsumo( txtNombreInsumo.Text);
 
             return resp;
 
@@ -168,23 +207,23 @@ namespace VillaSofia
         {
            
 
-            if (validarTexboxIngredientes() && validarTexboxReceta())
+            if (validarTexboxInsumos() && validarTexboxReceta())
             {
                 string msj;
-                 int y = Convert.ToInt32(IngresarIngrediente());
+                 int y = Convert.ToInt32(IngresarInsumo());
                  int x = idreceta;
                 this.idreceta = x;
 
                 
-                 CLsLogicaIngredienteReceta addRECETAinGRE = new CLsLogicaIngredienteReceta();
-                  msj = addRECETAinGRE.AddIngredienteR(y, x,Convert.ToDouble( TxtCantidades.Text),Convert.ToInt32( cmbUM.SelectedValue));
+                 CLsLogicaInsumoReceta addRECETAinGRE = new CLsLogicaInsumoReceta();
+                  msj = addRECETAinGRE.AddInsumoR(y, x,Convert.ToDouble( TxtCantidades.Text),Convert.ToInt32( cmbUM.SelectedValue));
                 
                 MessageBox.Show(msj);
-                LoadIngredientes(x.ToString());
+                LoadInsumos(x.ToString());
 
 
 
-                txtNombreIngrediente.Clear();
+                txtNombreInsumo.Clear();
                 TxtCantidades.Clear();
             }
             else
@@ -193,13 +232,13 @@ namespace VillaSofia
             }
         }
         //Validacion de letras
-        private void txtNombreIngrediente_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtNombreInsumo_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar != (char)Keys.Space)
             {
                 if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
                 {
-                    MessageBox.Show("Solo se permiten letras, ingrese nuevamente el Nombre el ingrediente", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Solo se permiten letras, ingrese nuevamente el Nombre el insumo", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     e.Handled = true;
                     return;
                 }
@@ -230,11 +269,11 @@ namespace VillaSofia
                 }
             }
         }
-        void eliminarIngrediente(int idIng, int idreceta)
+        void eliminarInsumo(int idIng, int idreceta)
         {
-            CLsLogicaIngredienteReceta eliminarIngrediente = new CLsLogicaIngredienteReceta();
+            CLsLogicaInsumoReceta eliminarInsumo = new CLsLogicaInsumoReceta();
 
-            String msj = eliminarIngrediente.EliminarRecetaIngrediente(idIng, idreceta);
+            String msj = eliminarInsumo.EliminarRecetaInsumo(idIng, idreceta);
 
             
         }
@@ -243,14 +282,14 @@ namespace VillaSofia
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
-            String iding = dgvIngredientes.SelectedRows[0].Cells[7].Value.ToString();
+            String iding = dgvInsumos.SelectedRows[0].Cells[7].Value.ToString();
             int ingreId = Convert.ToInt32( iding);
-           ClsLogicaAddReceta ingrediente = new ClsLogicaAddReceta();
+           ClsLogicaAddReceta insumo = new ClsLogicaAddReceta();
            
 
-            eliminarIngrediente(ingreId, idreceta);
+            eliminarInsumo(ingreId, idreceta);
 
-            LoadIngredientes(idreceta.ToString());
+            LoadInsumos(idreceta.ToString());
 
 
         }
@@ -281,15 +320,15 @@ namespace VillaSofia
             txtProcedimiento.Enabled = false;
             txtNombreReceta.Enabled = false;
             txtPorciones.Enabled = false;
-            txtNombreIngrediente.Focus();
+            txtNombreInsumo.Focus();
             btnSiguiente.Enabled = false;
-            txtNombreIngrediente.Enabled = true;
+            txtNombreInsumo.Enabled = true;
             TxtCantidades.Enabled = true;
-            dgvIngredientes.Enabled = true;
+            dgvInsumos.Enabled = true;
             cmbUM.Enabled = true;
             BtnAgregarMas.Enabled = true;
             BtnEliminar.Enabled = true;
-            btnguardarIgredientes.Enabled = true;
+            btnguardarInsumo.Enabled = true;
             btnListo.Enabled = true;
 
 
@@ -346,7 +385,13 @@ namespace VillaSofia
 
         private void btnListo_Click(object sender, EventArgs e)
         {
+            
             this.Close();
+        }
+
+        private void FrmIngresarReceta_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            frmpro.Enabled = true;
         }
     }
 }

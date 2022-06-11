@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.GbxReceta = new Guna.UI2.WinForms.Guna2GroupBox();
             this.btnListo = new Guna.UI2.WinForms.Guna2Button();
             this.btnEditar = new Guna.UI2.WinForms.Guna2Button();
@@ -38,14 +38,14 @@
             this.btnMostrarRecetas = new Guna.UI2.WinForms.Guna2Button();
             this.BtnEliminar = new Guna.UI2.WinForms.Guna2Button();
             this.btnSiguiente = new Guna.UI2.WinForms.Guna2Button();
-            this.btnguardarIgredientes = new Guna.UI2.WinForms.Guna2Button();
-            this.dgvIngredientes = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.btnguardarInsumo = new Guna.UI2.WinForms.Guna2Button();
+            this.dgvInsumos = new Guna.UI2.WinForms.Guna2DataGridView();
             this.txtProcedimiento = new Guna.UI.WinForms.GunaTextBox();
             this.lblProcedimiento = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.TxtCantidades = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblCantidad = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblNombreIngrediente = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txtNombreIngrediente = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtNombreInsumo = new Guna.UI2.WinForms.Guna2TextBox();
             this.cmbUM = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtPorciones = new Guna.UI2.WinForms.Guna2TextBox();
             this.SpdrReceta = new Guna.UI2.WinForms.Guna2VSeparator();
@@ -54,7 +54,7 @@
             this.lblNombreReceta = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.ttipMensaje = new Guna.UI2.WinForms.Guna2HtmlToolTip();
             this.GbxReceta.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvIngredientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInsumos)).BeginInit();
             this.SuspendLayout();
             // 
             // GbxReceta
@@ -67,14 +67,14 @@
             this.GbxReceta.Controls.Add(this.btnMostrarRecetas);
             this.GbxReceta.Controls.Add(this.BtnEliminar);
             this.GbxReceta.Controls.Add(this.btnSiguiente);
-            this.GbxReceta.Controls.Add(this.btnguardarIgredientes);
-            this.GbxReceta.Controls.Add(this.dgvIngredientes);
+            this.GbxReceta.Controls.Add(this.btnguardarInsumo);
+            this.GbxReceta.Controls.Add(this.dgvInsumos);
             this.GbxReceta.Controls.Add(this.txtProcedimiento);
             this.GbxReceta.Controls.Add(this.lblProcedimiento);
             this.GbxReceta.Controls.Add(this.TxtCantidades);
             this.GbxReceta.Controls.Add(this.lblCantidad);
             this.GbxReceta.Controls.Add(this.lblNombreIngrediente);
-            this.GbxReceta.Controls.Add(this.txtNombreIngrediente);
+            this.GbxReceta.Controls.Add(this.txtNombreInsumo);
             this.GbxReceta.Controls.Add(this.cmbUM);
             this.GbxReceta.Controls.Add(this.txtPorciones);
             this.GbxReceta.Controls.Add(this.SpdrReceta);
@@ -220,89 +220,89 @@
             this.btnSiguiente.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
             // 
-            // btnguardarIgredientes
+            // btnguardarInsumo
             // 
-            this.btnguardarIgredientes.BorderColor = System.Drawing.Color.Teal;
-            this.btnguardarIgredientes.BorderRadius = 1;
-            this.btnguardarIgredientes.BorderThickness = 1;
-            this.btnguardarIgredientes.CheckedState.Parent = this.btnguardarIgredientes;
-            this.btnguardarIgredientes.CustomImages.Parent = this.btnguardarIgredientes;
-            this.btnguardarIgredientes.Enabled = false;
-            this.btnguardarIgredientes.FillColor = System.Drawing.Color.MintCream;
-            this.btnguardarIgredientes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnguardarIgredientes.ForeColor = System.Drawing.Color.Black;
-            this.btnguardarIgredientes.HoverState.Parent = this.btnguardarIgredientes;
-            this.btnguardarIgredientes.Image = global::VillaSofia.Properties.Resources.save64;
-            this.btnguardarIgredientes.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnguardarIgredientes.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnguardarIgredientes.Location = new System.Drawing.Point(798, 205);
-            this.btnguardarIgredientes.Name = "btnguardarIgredientes";
-            this.btnguardarIgredientes.ShadowDecoration.Parent = this.btnguardarIgredientes;
-            this.btnguardarIgredientes.Size = new System.Drawing.Size(176, 47);
-            this.btnguardarIgredientes.TabIndex = 20;
-            this.btnguardarIgredientes.Text = "AGREGAR INGREDIENTES";
-            this.btnguardarIgredientes.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnguardarIgredientes.Click += new System.EventHandler(this.btnguardarIgredientes_Click);
+            this.btnguardarInsumo.BorderColor = System.Drawing.Color.Teal;
+            this.btnguardarInsumo.BorderRadius = 1;
+            this.btnguardarInsumo.BorderThickness = 1;
+            this.btnguardarInsumo.CheckedState.Parent = this.btnguardarInsumo;
+            this.btnguardarInsumo.CustomImages.Parent = this.btnguardarInsumo;
+            this.btnguardarInsumo.Enabled = false;
+            this.btnguardarInsumo.FillColor = System.Drawing.Color.MintCream;
+            this.btnguardarInsumo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnguardarInsumo.ForeColor = System.Drawing.Color.Black;
+            this.btnguardarInsumo.HoverState.Parent = this.btnguardarInsumo;
+            this.btnguardarInsumo.Image = global::VillaSofia.Properties.Resources.save64;
+            this.btnguardarInsumo.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnguardarInsumo.ImageSize = new System.Drawing.Size(32, 32);
+            this.btnguardarInsumo.Location = new System.Drawing.Point(798, 205);
+            this.btnguardarInsumo.Name = "btnguardarInsumo";
+            this.btnguardarInsumo.ShadowDecoration.Parent = this.btnguardarInsumo;
+            this.btnguardarInsumo.Size = new System.Drawing.Size(176, 47);
+            this.btnguardarInsumo.TabIndex = 20;
+            this.btnguardarInsumo.Text = "AGREGAR INGREDIENTES";
+            this.btnguardarInsumo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnguardarInsumo.Click += new System.EventHandler(this.btnguardarIgredientes_Click);
             // 
-            // dgvIngredientes
+            // dgvInsumos
             // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(203)))), ((int)(((byte)(232)))));
-            this.dgvIngredientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
-            this.dgvIngredientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvIngredientes.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dgvIngredientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvIngredientes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvIngredientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.InactiveCaption;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvIngredientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
-            this.dgvIngredientes.ColumnHeadersHeight = 65;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(220)))), ((int)(((byte)(239)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.DarkSlateGray;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(139)))), ((int)(((byte)(205)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvIngredientes.DefaultCellStyle = dataGridViewCellStyle12;
-            this.dgvIngredientes.Enabled = false;
-            this.dgvIngredientes.EnableHeadersVisualStyles = false;
-            this.dgvIngredientes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(201)))), ((int)(((byte)(231)))));
-            this.dgvIngredientes.Location = new System.Drawing.Point(577, 258);
-            this.dgvIngredientes.Name = "dgvIngredientes";
-            this.dgvIngredientes.RowHeadersVisible = false;
-            this.dgvIngredientes.RowHeadersWidth = 20;
-            this.dgvIngredientes.RowTemplate.Height = 26;
-            this.dgvIngredientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvIngredientes.Size = new System.Drawing.Size(481, 268);
-            this.dgvIngredientes.TabIndex = 18;
-            this.dgvIngredientes.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Indigo;
-            this.dgvIngredientes.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(203)))), ((int)(((byte)(232)))));
-            this.dgvIngredientes.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dgvIngredientes.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dgvIngredientes.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dgvIngredientes.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvIngredientes.ThemeStyle.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.dgvIngredientes.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(201)))), ((int)(((byte)(231)))));
-            this.dgvIngredientes.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
-            this.dgvIngredientes.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvIngredientes.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvIngredientes.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvIngredientes.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvIngredientes.ThemeStyle.HeaderStyle.Height = 65;
-            this.dgvIngredientes.ThemeStyle.ReadOnly = false;
-            this.dgvIngredientes.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(220)))), ((int)(((byte)(239)))));
-            this.dgvIngredientes.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvIngredientes.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvIngredientes.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.dgvIngredientes.ThemeStyle.RowsStyle.Height = 26;
-            this.dgvIngredientes.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(139)))), ((int)(((byte)(205)))));
-            this.dgvIngredientes.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(203)))), ((int)(((byte)(232)))));
+            this.dgvInsumos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvInsumos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvInsumos.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dgvInsumos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvInsumos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvInsumos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.InactiveCaption;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInsumos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvInsumos.ColumnHeadersHeight = 65;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(220)))), ((int)(((byte)(239)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(139)))), ((int)(((byte)(205)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvInsumos.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvInsumos.Enabled = false;
+            this.dgvInsumos.EnableHeadersVisualStyles = false;
+            this.dgvInsumos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(201)))), ((int)(((byte)(231)))));
+            this.dgvInsumos.Location = new System.Drawing.Point(577, 258);
+            this.dgvInsumos.Name = "dgvInsumos";
+            this.dgvInsumos.RowHeadersVisible = false;
+            this.dgvInsumos.RowHeadersWidth = 20;
+            this.dgvInsumos.RowTemplate.Height = 26;
+            this.dgvInsumos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvInsumos.Size = new System.Drawing.Size(481, 268);
+            this.dgvInsumos.TabIndex = 18;
+            this.dgvInsumos.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Indigo;
+            this.dgvInsumos.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(203)))), ((int)(((byte)(232)))));
+            this.dgvInsumos.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgvInsumos.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgvInsumos.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgvInsumos.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgvInsumos.ThemeStyle.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.dgvInsumos.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(201)))), ((int)(((byte)(231)))));
+            this.dgvInsumos.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
+            this.dgvInsumos.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvInsumos.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvInsumos.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvInsumos.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvInsumos.ThemeStyle.HeaderStyle.Height = 65;
+            this.dgvInsumos.ThemeStyle.ReadOnly = false;
+            this.dgvInsumos.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(220)))), ((int)(((byte)(239)))));
+            this.dgvInsumos.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvInsumos.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvInsumos.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.dgvInsumos.ThemeStyle.RowsStyle.Height = 26;
+            this.dgvInsumos.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(139)))), ((int)(((byte)(205)))));
+            this.dgvInsumos.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
             // txtProcedimiento
             // 
@@ -329,7 +329,7 @@
             this.lblProcedimiento.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.lblProcedimiento.Location = new System.Drawing.Point(29, 205);
             this.lblProcedimiento.Name = "lblProcedimiento";
-            this.lblProcedimiento.Size = new System.Drawing.Size(229, 47);
+            this.lblProcedimiento.Size = new System.Drawing.Size(134, 27);
             this.lblProcedimiento.TabIndex = 17;
             this.lblProcedimiento.Text = "Procedimiento";
             // 
@@ -349,7 +349,7 @@
             this.TxtCantidades.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxtCantidades.HoverState.Parent = this.TxtCantidades;
             this.TxtCantidades.Location = new System.Drawing.Point(761, 146);
-            this.TxtCantidades.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.TxtCantidades.Margin = new System.Windows.Forms.Padding(0);
             this.TxtCantidades.Name = "TxtCantidades";
             this.TxtCantidades.PasswordChar = '\0';
             this.TxtCantidades.PlaceholderText = "";
@@ -366,7 +366,7 @@
             this.lblCantidad.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.lblCantidad.Location = new System.Drawing.Point(574, 135);
             this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(184, 47);
+            this.lblCantidad.Size = new System.Drawing.Size(106, 27);
             this.lblCantidad.TabIndex = 13;
             this.lblCantidad.Text = "Cantidades:";
             // 
@@ -377,35 +377,35 @@
             this.lblNombreIngrediente.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.lblNombreIngrediente.Location = new System.Drawing.Point(577, 82);
             this.lblNombreIngrediente.Name = "lblNombreIngrediente";
-            this.lblNombreIngrediente.Size = new System.Drawing.Size(191, 47);
+            this.lblNombreIngrediente.Size = new System.Drawing.Size(112, 27);
             this.lblNombreIngrediente.TabIndex = 12;
             this.lblNombreIngrediente.Text = "Ingrediente:";
             // 
-            // txtNombreIngrediente
+            // txtNombreInsumo
             // 
-            this.txtNombreIngrediente.BackColor = System.Drawing.Color.Transparent;
-            this.txtNombreIngrediente.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNombreIngrediente.DefaultText = "";
-            this.txtNombreIngrediente.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNombreIngrediente.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNombreIngrediente.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNombreIngrediente.DisabledState.Parent = this.txtNombreIngrediente;
-            this.txtNombreIngrediente.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNombreIngrediente.Enabled = false;
-            this.txtNombreIngrediente.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNombreIngrediente.FocusedState.Parent = this.txtNombreIngrediente;
-            this.txtNombreIngrediente.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNombreIngrediente.HoverState.Parent = this.txtNombreIngrediente;
-            this.txtNombreIngrediente.Location = new System.Drawing.Point(798, 92);
-            this.txtNombreIngrediente.Margin = new System.Windows.Forms.Padding(0);
-            this.txtNombreIngrediente.Name = "txtNombreIngrediente";
-            this.txtNombreIngrediente.PasswordChar = '\0';
-            this.txtNombreIngrediente.PlaceholderText = "";
-            this.txtNombreIngrediente.SelectedText = "";
-            this.txtNombreIngrediente.ShadowDecoration.Parent = this.txtNombreIngrediente;
-            this.txtNombreIngrediente.Size = new System.Drawing.Size(287, 37);
-            this.txtNombreIngrediente.TabIndex = 11;
-            this.txtNombreIngrediente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreIngrediente_KeyPress);
+            this.txtNombreInsumo.BackColor = System.Drawing.Color.Transparent;
+            this.txtNombreInsumo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNombreInsumo.DefaultText = "";
+            this.txtNombreInsumo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNombreInsumo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNombreInsumo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNombreInsumo.DisabledState.Parent = this.txtNombreInsumo;
+            this.txtNombreInsumo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNombreInsumo.Enabled = false;
+            this.txtNombreInsumo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNombreInsumo.FocusedState.Parent = this.txtNombreInsumo;
+            this.txtNombreInsumo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNombreInsumo.HoverState.Parent = this.txtNombreInsumo;
+            this.txtNombreInsumo.Location = new System.Drawing.Point(798, 92);
+            this.txtNombreInsumo.Margin = new System.Windows.Forms.Padding(0);
+            this.txtNombreInsumo.Name = "txtNombreInsumo";
+            this.txtNombreInsumo.PasswordChar = '\0';
+            this.txtNombreInsumo.PlaceholderText = "";
+            this.txtNombreInsumo.SelectedText = "";
+            this.txtNombreInsumo.ShadowDecoration.Parent = this.txtNombreInsumo;
+            this.txtNombreInsumo.Size = new System.Drawing.Size(287, 37);
+            this.txtNombreInsumo.TabIndex = 11;
+            this.txtNombreInsumo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreInsumo_KeyPress);
             // 
             // cmbUM
             // 
@@ -468,7 +468,7 @@
             this.lblPorciones.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.lblPorciones.Location = new System.Drawing.Point(29, 135);
             this.lblPorciones.Name = "lblPorciones";
-            this.lblPorciones.Size = new System.Drawing.Size(218, 47);
+            this.lblPorciones.Size = new System.Drawing.Size(128, 27);
             this.lblPorciones.TabIndex = 2;
             this.lblPorciones.Text = "No .Porciones";
             // 
@@ -504,7 +504,7 @@
             this.lblNombreReceta.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.lblNombreReceta.Location = new System.Drawing.Point(29, 82);
             this.lblNombreReceta.Name = "lblNombreReceta";
-            this.lblNombreReceta.Size = new System.Drawing.Size(291, 47);
+            this.lblNombreReceta.Size = new System.Drawing.Size(167, 27);
             this.lblNombreReceta.TabIndex = 0;
             this.lblNombreReceta.Text = "Nombre de Receta";
             // 
@@ -527,10 +527,11 @@
             this.Name = "FrmIngresarReceta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro de Recetas";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmIngresarReceta_FormClosed);
             this.Load += new System.EventHandler(this.FrmIngresarReceta_Load);
             this.GbxReceta.ResumeLayout(false);
             this.GbxReceta.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvIngredientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInsumos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -545,14 +546,14 @@
         private Guna.UI2.WinForms.Guna2TextBox TxtCantidades;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblCantidad;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblNombreIngrediente;
-        private Guna.UI2.WinForms.Guna2TextBox txtNombreIngrediente;
+        private Guna.UI2.WinForms.Guna2TextBox txtNombreInsumo;
         private Guna.UI2.WinForms.Guna2ComboBox cmbUM;
         private Guna.UI2.WinForms.Guna2TextBox txtPorciones;
         private Guna.UI.WinForms.GunaTextBox txtProcedimiento;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblProcedimiento;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvIngredientes;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvInsumos;
         private Guna.UI2.WinForms.Guna2Button btnSiguiente;
-        private Guna.UI2.WinForms.Guna2Button btnguardarIgredientes;
+        private Guna.UI2.WinForms.Guna2Button btnguardarInsumo;
         private Guna.UI2.WinForms.Guna2Button BtnEliminar;
         private Guna.UI2.WinForms.Guna2Button btnMostrarRecetas;
         private Guna.UI2.WinForms.Guna2Button BtnAgregarMas;
