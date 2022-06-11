@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
+using System.Data;
 using Datos;
 
 
@@ -95,6 +96,11 @@ namespace Logica
             }
             return respuesta;
         }
+
+        public System.Data.DataTable LoginSis(string user, string password)
+        {
+            return objetoD.DatosLogin(user, password);
+        }
         /*
         public string LogicaEditarUsuario(int id, string username, string password, string rol, string nombre)
         {
@@ -121,12 +127,14 @@ namespace Logica
             objetoD.AgregarCierreSesion(ID, fecha, Hora);
         }
         //Método para llamar la bitacora
+
         public DataTable HistorialBitacora(String Condicion)
         {
             String Sql = "Select * from vistaBitacoraLogin where Usuario like '%" + Condicion + "%';";
             return objetoD.bitacora(Sql);
+
         }
-        */
+        
         private string generarSHA1(string cadena)
         {
 

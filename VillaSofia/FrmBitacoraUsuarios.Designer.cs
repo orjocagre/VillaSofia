@@ -29,13 +29,13 @@ namespace VillaSofia
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.GbxHistorial = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.dtgvHistorialBitacora = new Guna.UI2.WinForms.Guna2DataGridView();
             this.lblBusquedaUsuario = new System.Windows.Forms.Label();
             this.txtBusquedaUsuario = new Guna.UI2.WinForms.Guna2TextBox();
-            this.dtgvHistorialBitacora = new Guna.UI2.WinForms.Guna2DataGridView();
             this.GbxHistorial.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvHistorialBitacora)).BeginInit();
             this.SuspendLayout();
@@ -54,74 +54,35 @@ namespace VillaSofia
             this.GbxHistorial.TabIndex = 17;
             this.GbxHistorial.Text = "Data Grid Bitacora";
             // 
-            // lblBusquedaUsuario
-            // 
-            this.lblBusquedaUsuario.AutoSize = true;
-            this.lblBusquedaUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.lblBusquedaUsuario.ForeColor = System.Drawing.Color.Black;
-            this.lblBusquedaUsuario.Location = new System.Drawing.Point(34, 75);
-            this.lblBusquedaUsuario.Name = "lblBusquedaUsuario";
-            this.lblBusquedaUsuario.Size = new System.Drawing.Size(161, 15);
-            this.lblBusquedaUsuario.TabIndex = 4;
-            this.lblBusquedaUsuario.Text = "Filtro para Busqueda Usuario ";
-            // 
-            // txtBusquedaUsuario
-            // 
-            this.txtBusquedaUsuario.BorderColor = System.Drawing.Color.Black;
-            this.txtBusquedaUsuario.BorderRadius = 3;
-            this.txtBusquedaUsuario.BorderThickness = 2;
-            this.txtBusquedaUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBusquedaUsuario.DefaultText = "";
-            this.txtBusquedaUsuario.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtBusquedaUsuario.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtBusquedaUsuario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBusquedaUsuario.DisabledState.Parent = this.txtBusquedaUsuario;
-            this.txtBusquedaUsuario.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBusquedaUsuario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBusquedaUsuario.FocusedState.Parent = this.txtBusquedaUsuario;
-            this.txtBusquedaUsuario.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtBusquedaUsuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBusquedaUsuario.HoverState.Parent = this.txtBusquedaUsuario;
-            this.txtBusquedaUsuario.Location = new System.Drawing.Point(204, 66);
-            this.txtBusquedaUsuario.Margin = new System.Windows.Forms.Padding(6);
-            this.txtBusquedaUsuario.Name = "txtBusquedaUsuario";
-            this.txtBusquedaUsuario.PasswordChar = '\0';
-            this.txtBusquedaUsuario.PlaceholderText = "";
-            this.txtBusquedaUsuario.SelectedText = "";
-            this.txtBusquedaUsuario.ShadowDecoration.Parent = this.txtBusquedaUsuario;
-            this.txtBusquedaUsuario.Size = new System.Drawing.Size(548, 33);
-            this.txtBusquedaUsuario.TabIndex = 3;
-            this.txtBusquedaUsuario.TextChanged += new System.EventHandler(this.txtBusquedaUsuario_TextChanged);
-            // 
             // dtgvHistorialBitacora
             // 
             this.dtgvHistorialBitacora.AllowUserToAddRows = false;
             this.dtgvHistorialBitacora.AllowUserToDeleteRows = false;
             this.dtgvHistorialBitacora.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
-            this.dtgvHistorialBitacora.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
+            this.dtgvHistorialBitacora.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgvHistorialBitacora.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvHistorialBitacora.BackgroundColor = System.Drawing.Color.White;
             this.dtgvHistorialBitacora.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgvHistorialBitacora.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dtgvHistorialBitacora.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvHistorialBitacora.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvHistorialBitacora.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgvHistorialBitacora.ColumnHeadersHeight = 25;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(185)))), ((int)(((byte)(175)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgvHistorialBitacora.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(185)))), ((int)(((byte)(175)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgvHistorialBitacora.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtgvHistorialBitacora.EnableHeadersVisualStyles = false;
             this.dtgvHistorialBitacora.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(222)))), ((int)(((byte)(218)))));
             this.dtgvHistorialBitacora.Location = new System.Drawing.Point(3, 125);
@@ -154,6 +115,46 @@ namespace VillaSofia
             this.dtgvHistorialBitacora.ThemeStyle.RowsStyle.Height = 22;
             this.dtgvHistorialBitacora.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(185)))), ((int)(((byte)(175)))));
             this.dtgvHistorialBitacora.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dtgvHistorialBitacora.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvHistorialBitacora_CellContentClick_1);
+            // 
+            // lblBusquedaUsuario
+            // 
+            this.lblBusquedaUsuario.AutoSize = true;
+            this.lblBusquedaUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.lblBusquedaUsuario.ForeColor = System.Drawing.Color.Black;
+            this.lblBusquedaUsuario.Location = new System.Drawing.Point(34, 75);
+            this.lblBusquedaUsuario.Name = "lblBusquedaUsuario";
+            this.lblBusquedaUsuario.Size = new System.Drawing.Size(182, 15);
+            this.lblBusquedaUsuario.TabIndex = 4;
+            this.lblBusquedaUsuario.Text = "Filtro para Busqueda por Usuario ";
+            // 
+            // txtBusquedaUsuario
+            // 
+            this.txtBusquedaUsuario.BorderColor = System.Drawing.Color.Black;
+            this.txtBusquedaUsuario.BorderRadius = 3;
+            this.txtBusquedaUsuario.BorderThickness = 2;
+            this.txtBusquedaUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBusquedaUsuario.DefaultText = "";
+            this.txtBusquedaUsuario.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtBusquedaUsuario.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtBusquedaUsuario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBusquedaUsuario.DisabledState.Parent = this.txtBusquedaUsuario;
+            this.txtBusquedaUsuario.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBusquedaUsuario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBusquedaUsuario.FocusedState.Parent = this.txtBusquedaUsuario;
+            this.txtBusquedaUsuario.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtBusquedaUsuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBusquedaUsuario.HoverState.Parent = this.txtBusquedaUsuario;
+            this.txtBusquedaUsuario.Location = new System.Drawing.Point(204, 66);
+            this.txtBusquedaUsuario.Margin = new System.Windows.Forms.Padding(6);
+            this.txtBusquedaUsuario.Name = "txtBusquedaUsuario";
+            this.txtBusquedaUsuario.PasswordChar = '\0';
+            this.txtBusquedaUsuario.PlaceholderText = "";
+            this.txtBusquedaUsuario.SelectedText = "";
+            this.txtBusquedaUsuario.ShadowDecoration.Parent = this.txtBusquedaUsuario;
+            this.txtBusquedaUsuario.Size = new System.Drawing.Size(548, 33);
+            this.txtBusquedaUsuario.TabIndex = 3;
+            this.txtBusquedaUsuario.TextChanged += new System.EventHandler(this.txtBusquedaUsuario_TextChanged);
             // 
             // FrmBitacoraUsuarios
             // 
