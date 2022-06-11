@@ -9,13 +9,13 @@ namespace Datos
 {
     
     
-        public class ClsDatosIngrendientes
+        public class ClsDatosInsumo
         {
 
 
             ClsDatosConexion conex = new ClsDatosConexion();
 
-            public int AddIngrediente(string nombrreIngrediente)
+            public int AddInsumo(string nombrreInsumo)
             {
                 MySqlCommand CM = new MySqlCommand();
                 MySqlParameter x = new MySqlParameter();//98704
@@ -26,10 +26,10 @@ namespace Datos
 
                     CM.Connection = conex.conectar;
                     CM.CommandType = CommandType.StoredProcedure;
-                    CM.CommandText = "AgregarIngrediente";
+                    CM.CommandText = "AgregarInsumo";
 
-                    CM.Parameters.AddWithValue("Pnombre_ingrediente", nombrreIngrediente);
-                    CM.Parameters["Pnombre_ingrediente"].Direction = ParameterDirection.Input;
+                    CM.Parameters.AddWithValue("Pnombre", nombrreInsumo);
+                    CM.Parameters["Pnombre"].Direction = ParameterDirection.Input;
 
                    
 
@@ -52,7 +52,7 @@ namespace Datos
             }
 
 
-          public DataTable ListarIngredientes(String sql)
+          public DataTable ListarInsumos(String sql)
           {
             return new ClsDatosMetodosGlobales().bdConsultas(sql);
           }

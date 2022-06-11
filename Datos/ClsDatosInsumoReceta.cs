@@ -7,11 +7,11 @@ using MySql.Data.MySqlClient;
 using System.Data;
 namespace Datos
 {
-    public class ClsDatosIngredienteReceta
+    public class ClsDatosInsumoReceta
     {
         ClsDatosConexion conex = new ClsDatosConexion();
 
-        public int AddIngredienteReceta(int idIngrediente, int idReceta, double cantidad, int IDUM)
+        public int AddInsumoReceta(int idInsumo, int idReceta, double cantidad, int IDUM)
         {
             MySqlCommand CM = new MySqlCommand();
             MySqlParameter x = new MySqlParameter();
@@ -19,15 +19,15 @@ namespace Datos
             try
             {
                 conex.conectar.Open();
-                Console.WriteLine("\n \n \n \n \n " + idIngrediente + "" + idReceta + "" + cantidad + "" + IDUM);
+                Console.WriteLine("\n \n \n \n \n " + idInsumo + "" + idReceta + "" + cantidad + "" + IDUM);
                 CM.Connection = conex.conectar; 
                 CM.CommandType = CommandType.StoredProcedure;
-                CM.CommandText = "AgregarIngredienteReceta";
+                CM.CommandText = "AgregarInsumoReceta";
 
                 
 
-                CM.Parameters.AddWithValue("PIdIngrediente", idIngrediente);
-                CM.Parameters["PIdIngrediente"].Direction = ParameterDirection.Input;
+                CM.Parameters.AddWithValue("PIdInsumo", idInsumo);
+                CM.Parameters["PIdInsumo"].Direction = ParameterDirection.Input;
 
                 CM.Parameters.AddWithValue("PIdReceta", idReceta);
                 CM.Parameters["PIdReceta"].Direction = ParameterDirection.Input;
@@ -60,7 +60,7 @@ namespace Datos
 
 
         }
-        public int EliminarReceta( int idingrediente, int ireceta)
+        public int EliminarReceta( int idinsumo, int ireceta)
         {
             MySqlCommand CM = new MySqlCommand();
             MySqlParameter x = new MySqlParameter();//98704
@@ -71,16 +71,16 @@ namespace Datos
 
                 CM.Connection = conex.conectar;
                 CM.CommandType = CommandType.StoredProcedure;
-                CM.CommandText = "EliminarRecetaIngrediente";
+                CM.CommandText = "EliminarRecetaInsumo";
 
-                CM.Parameters.AddWithValue("PidIngrediente", idingrediente);
-                CM.Parameters["PidIngrediente"].Direction = ParameterDirection.Input;
+                CM.Parameters.AddWithValue("PidInsumo", idinsumo);
+                CM.Parameters["PidInsumo"].Direction = ParameterDirection.Input;
 
                 CM.Parameters.AddWithValue("PidReceta", ireceta);
                 CM.Parameters["PidReceta"].Direction = ParameterDirection.Input;
 
 
-                Console.WriteLine("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIdReceta" + ireceta+ "IdIngrediente"+idingrediente);
+                Console.WriteLine("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIdReceta" + ireceta+ "IdInsumo"+idinsumo);
 
                 CM.ExecuteNonQuery();
                 return 1;

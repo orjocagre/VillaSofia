@@ -18,10 +18,12 @@ namespace VillaSofia
         VillaSofia VS;
         Boolean editar = false;
         int idEditar = 0;
+        int idReceta;
 
         public FrmProducto(VillaSofia VS)
         {
             this.VS = VS;
+            idReceta = -1;
             InitializeComponent();
             btnCancelar.Visible = false;
 
@@ -111,9 +113,19 @@ namespace VillaSofia
             {
                 guardarSinonimos(Convert.ToInt32(mensaje));
                 MessageBox.Show("Guardado");
+
+
+                FrmIngresarReceta ingrec = new FrmIngresarReceta(VS, 1, txtNombre.Text, this, Convert.ToInt32(mensaje));
+                this.AddOwnedForm(ingrec);
+                ingrec.Show();
+                this.Enabled = false;
+                ingrec.Show();
+
                 txtNombre.Text = "";
                 txtPrecio.Text = "";
                 txtSinonimos.Text = "";
+
+                
             }
             else
             {
@@ -232,7 +244,6 @@ namespace VillaSofia
                     try
                     {
                         dgvProducto.FirstDisplayedScrollingRowIndex = dgvProducto.RowCount - 1;
-
                     }
                     catch (ArgumentOutOfRangeException) { }
                 }

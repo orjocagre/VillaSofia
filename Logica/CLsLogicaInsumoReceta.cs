@@ -8,17 +8,17 @@ using System.Data;
 
 namespace Logica
 {
-   public class CLsLogicaIngredienteReceta
+   public class CLsLogicaInsumoReceta
     {
 
 
-        public String ingresarDatosIngrediente(string nombreIng)
+        public String ingresarDatosInsumo(string nombreIng)
         {
 
-            ClsLogicaIngredientes AddIngrediente = new ClsLogicaIngredientes();
+            ClsLogicaInsumo AddInsumo = new ClsLogicaInsumo();
 
 
-            string X = AddIngrediente.ingresarIngredientes(nombreIng);
+            string X = AddInsumo.ingresarInsumos(nombreIng);
 
             return X;
         }
@@ -35,17 +35,17 @@ namespace Logica
         }
        
 
-        public String AddIngredienteR(int idIngrediente, int idReceta, double cantidad,int IDUM)
+        public String AddInsumoR(int idInsumo, int idReceta, double cantidad,int IDUM)
         {
 
 
-            ClsDatosIngredienteReceta IReceta = new ClsDatosIngredienteReceta();
-            int i = IReceta.AddIngredienteReceta(idIngrediente,idReceta,cantidad, IDUM);
+            ClsDatosInsumoReceta IReceta = new ClsDatosInsumoReceta();
+            int i = IReceta.AddInsumoReceta(idInsumo,idReceta,cantidad, IDUM);
 
             string mensaje="";
             if (i == 1)
             {
-                mensaje = "Ya esta agregado este ingrediente a la receta,\n Ingrese un nuevo ingrediente!";
+                mensaje = "Ya esta agregado este insumo a la receta,\n Ingrese un nuevo insumo!";
 
             }
            if(i == 7)
@@ -58,12 +58,12 @@ namespace Logica
             return mensaje;
         }
 
-        public string EliminarRecetaIngrediente(int idingrediente, int ireceta)
+        public string EliminarRecetaInsumo(int idinsumo, int ireceta)
         {
             int i;
-            ClsDatosIngredienteReceta InReceta = new ClsDatosIngredienteReceta();
+            ClsDatosInsumoReceta InReceta = new ClsDatosInsumoReceta();
 
-            i = InReceta.EliminarReceta( idingrediente, ireceta);
+            i = InReceta.EliminarReceta( idinsumo, ireceta);
             String mensaje;
 
 
@@ -86,12 +86,12 @@ namespace Logica
         }
 
    
-        public DataTable ListarIngredientes(string x)
+        public DataTable ListarInsumos(string x)
         {
-            string sql = "SELECT * FROM vistamostraringredientes WHERE vistamostraringredientes.id_receta ="+ x  ;
+            string sql = "SELECT * FROM vistamostrarinsumos WHERE vistamostrarinsumos.id_receta ="+ x  ;
             // Datos.ClsDatosRegistroTrabajador Lista = new Datos.ClsDatosRegistroTrabajador();
             //  return new ClsDatosTipoTrabajador().ListarTipoTrabajador(sql);
-            return new ClsDatosIngredienteReceta().consulta(sql);
+            return new ClsDatosInsumoReceta().consulta(sql);
         }
       
 
