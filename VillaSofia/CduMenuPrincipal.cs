@@ -94,5 +94,11 @@ namespace VillaSofia
             vs.Controls.Add(new CduInventario(vs, tipo_usuario));
             this.Dispose();
         }
+
+        private void btnConexion_Click(object sender, EventArgs e)
+        {
+            FrmConexionDinamica frmconexion= new FrmConexionDinamica();
+            frmconexion.ShowDialog();
+        }
     }
 }

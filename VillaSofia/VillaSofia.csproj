@@ -228,6 +228,12 @@
     <Compile Include="FrmClasificacion.designer.cs">
       <DependentUpon>FrmClasificacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmConexionDinamica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConexionDinamica.Designer.cs">
+      <DependentUpon>FrmConexionDinamica.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmDividirCuenta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -387,6 +393,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmClasificacion.resx">
       <DependentUpon>FrmClasificacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConexionDinamica.resx">
+      <DependentUpon>FrmConexionDinamica.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDividirCuenta.resx">
       <DependentUpon>FrmDividirCuenta.cs</DependentUpon>
