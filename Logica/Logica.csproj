@@ -50,6 +50,7 @@
     <Compile Include="ClsLogicaFactura.cs" />
     <Compile Include="CLsLogicaInsumoReceta.cs" />
     <Compile Include="ClsLogicaInsumo.cs" />
+    <Compile Include="ClsLogicaInventario.cs" />
     <Compile Include="ClsLogicaOrden.cs" />
     <Compile Include="ClsLogicaOrdenEvento.cs" />
     <Compile Include="ClsLogicaPersona.cs" />

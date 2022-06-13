@@ -1,5 +1,4 @@
 ﻿using System;
-
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,22 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Logica;
 
 namespace VillaSofia
 {
-    public partial class CduPestanaInventario : UserControl
+    public partial class FrmInsumo : Form
     {
-        public CduPestanaInventario()
+        public FrmInsumo()
         {
             InitializeComponent();
-            llenarDgvInventario();
         }
 
-        void llenarDgvInventario()
+        private void guna2HtmlLabel2_Click(object sender, EventArgs e)
         {
-            ClsLogicaInventario inventario = new ClsLogicaInventario();
-            dgvInventario.DataSource = inventario.mostrarInventarioActual();
 
         }
     }
