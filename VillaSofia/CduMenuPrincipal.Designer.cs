@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.pnPrincipal = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnInventario = new Guna.UI2.WinForms.Guna2Button();
             this.btnEventos = new Guna.UI2.WinForms.Guna2Button();
             this.btnCaja = new Guna.UI2.WinForms.Guna2Button();
             this.btnVentas = new Guna.UI2.WinForms.Guna2Button();
             this.btnMenu = new Guna.UI2.WinForms.Guna2Button();
-            this.btnInventario = new Guna.UI2.WinForms.Guna2Button();
+            this.btnConexion = new Guna.UI2.WinForms.Guna2CircleButton();
             this.pnPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,6 +42,7 @@
             // 
             this.pnPrincipal.BackgroundImage = global::VillaSofia.Properties.Resources.fondogris;
             this.pnPrincipal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnPrincipal.Controls.Add(this.btnConexion);
             this.pnPrincipal.Controls.Add(this.btnInventario);
             this.pnPrincipal.Controls.Add(this.btnEventos);
             this.pnPrincipal.Controls.Add(this.btnCaja);
@@ -53,6 +55,21 @@
             this.pnPrincipal.Size = new System.Drawing.Size(1221, 678);
             this.pnPrincipal.TabIndex = 4;
             this.pnPrincipal.Paint += new System.Windows.Forms.PaintEventHandler(this.pnPrincipal_Paint);
+            // 
+            // btnInventario
+            // 
+            this.btnInventario.CheckedState.Parent = this.btnInventario;
+            this.btnInventario.CustomImages.Parent = this.btnInventario;
+            this.btnInventario.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnInventario.ForeColor = System.Drawing.Color.White;
+            this.btnInventario.HoverState.Parent = this.btnInventario;
+            this.btnInventario.Location = new System.Drawing.Point(478, 122);
+            this.btnInventario.Name = "btnInventario";
+            this.btnInventario.ShadowDecoration.Parent = this.btnInventario;
+            this.btnInventario.Size = new System.Drawing.Size(180, 45);
+            this.btnInventario.TabIndex = 4;
+            this.btnInventario.Text = "Inventario";
+            this.btnInventario.Click += new System.EventHandler(this.btnInventario_Click);
             // 
             // btnEventos
             // 
@@ -154,20 +171,21 @@
             this.btnMenu.TextOffset = new System.Drawing.Point(15, 115);
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
-            // btnInventario
+            // btnConexion
             // 
-            this.btnInventario.CheckedState.Parent = this.btnInventario;
-            this.btnInventario.CustomImages.Parent = this.btnInventario;
-            this.btnInventario.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnInventario.ForeColor = System.Drawing.Color.White;
-            this.btnInventario.HoverState.Parent = this.btnInventario;
-            this.btnInventario.Location = new System.Drawing.Point(478, 122);
-            this.btnInventario.Name = "btnInventario";
-            this.btnInventario.ShadowDecoration.Parent = this.btnInventario;
-            this.btnInventario.Size = new System.Drawing.Size(180, 45);
-            this.btnInventario.TabIndex = 4;
-            this.btnInventario.Text = "Inventario";
-            this.btnInventario.Click += new System.EventHandler(this.btnInventario_Click);
+            this.btnConexion.CheckedState.Parent = this.btnConexion;
+            this.btnConexion.CustomImages.Parent = this.btnConexion;
+            this.btnConexion.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnConexion.ForeColor = System.Drawing.Color.White;
+            this.btnConexion.HoverState.Parent = this.btnConexion;
+            this.btnConexion.Location = new System.Drawing.Point(751, 44);
+            this.btnConexion.Name = "btnConexion";
+            this.btnConexion.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnConexion.ShadowDecoration.Parent = this.btnConexion;
+            this.btnConexion.Size = new System.Drawing.Size(148, 148);
+            this.btnConexion.TabIndex = 5;
+            this.btnConexion.Text = "Conexion";
+            this.btnConexion.Click += new System.EventHandler(this.btnConexion_Click);
             // 
             // CduMenuPrincipal
             // 
@@ -189,5 +207,6 @@
         private Guna.UI2.WinForms.Guna2Button btnCaja;
         private Guna.UI2.WinForms.Guna2Panel pnPrincipal;
         private Guna.UI2.WinForms.Guna2Button btnInventario;
+        private Guna.UI2.WinForms.Guna2CircleButton btnConexion;
     }
 }
