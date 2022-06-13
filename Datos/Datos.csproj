@@ -50,8 +50,8 @@
     <Compile Include="ClsDatosConexion.cs" />
     <Compile Include="ClsDatosEvento.cs" />
     <Compile Include="ClsDatosFactura.cs" />
-    <Compile Include="ClsDatosIngredienteReceta.cs" />
-    <Compile Include="ClsDatosIngrendientes.cs" />
+    <Compile Include="ClsDatosInsumoReceta.cs" />
+    <Compile Include="ClsDatosInsumo.cs" />
     <Compile Include="ClsDatosMetodosGlobales.cs" />
     <Compile Include="ClsDatosOrden.cs" />
     <Compile Include="ClsDatosOrdenEvento.cs" />

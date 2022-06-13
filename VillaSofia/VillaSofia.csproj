@@ -123,6 +123,18 @@
     <Compile Include="CduInventario.Designer.cs">
       <DependentUpon>CduInventario.cs</DependentUpon>
     </Compile>
+    <Compile Include="CduPestanaAjusteInventario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CduPestanaAjusteInventario.Designer.cs">
+      <DependentUpon>CduPestanaAjusteInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CduPestanaAjusteInventarioIngresar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CduPestanaAjusteInventarioIngresar.Designer.cs">
+      <DependentUpon>CduPestanaAjusteInventarioIngresar.cs</DependentUpon>
+    </Compile>
     <Compile Include="CduPestanaListaCompras.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -339,6 +351,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CduInventario.resx">
       <DependentUpon>CduInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CduPestanaAjusteInventario.resx">
+      <DependentUpon>CduPestanaAjusteInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CduPestanaAjusteInventarioIngresar.resx">
+      <DependentUpon>CduPestanaAjusteInventarioIngresar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CduPestanaListaCompras.resx">
       <DependentUpon>CduPestanaListaCompras.cs</DependentUpon>

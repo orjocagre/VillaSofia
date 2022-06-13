@@ -7,7 +7,7 @@ using System.Data;
 using Datos;
 namespace Logica
 {
-    public class ClsLogicaIngredientes
+    public class ClsLogicaInsumo
     {
 
         //LISTO
@@ -38,25 +38,25 @@ namespace Logica
        
 
 
-        public string ingresarIngredientes(string nombreIng)
+        public string ingresarInsumos(string nombreIng)
         {
             String mensaje;
             int i;
-             ClsDatosIngrendientes Ingrediente = new ClsDatosIngrendientes();
-           i = Ingrediente.AddIngrediente(nombreIng);
+             ClsDatosInsumo Insumo = new ClsDatosInsumo();
+           i = Insumo.AddInsumo(nombreIng);
             /*
-              int a = Ingrediente.AddIngrediente(nombreIng);
+              int a = Insumo.AddInsumo(nombreIng);
               string U = "";
               if (a == 1)
               {
 
-                  U = "Este Ingrediente ya se encuentra guardado,\n ingrese un nuevo ingrediente";
+                  U = "Este Insumo ya se encuentra guardado,\n ingrese un nuevo insumo";
 
 
               }
               if (a == 7)
               {
-                  U = "Se guardo un nuevo ingrediente guardo con exito";
+                  U = "Se guardo un nuevo insumo guardo con exito";
               }
 
               return U;*/
@@ -84,14 +84,14 @@ namespace Logica
 
         /*
 
-        //Listar Ingredientes 
-        public DataTable ListarIngredientes(String x)
+        //Listar Insumos 
+        public DataTable ListarInsumos(String x)
         {
             String sql = "SELECT * FROM vistatrabajador WHERE vistatrabajador.cedula LIKE '%" + x + "%'";
             Datos.ClsDatosIngrendientes Lista = new Datos.ClsDatosIngrendientes();
 
             DataTable DT = new DataTable();
-            DT = Lista.ListarIngredientes(sql);
+            DT = Lista.ListarInsumos(sql);
             return DT;
         }
         */

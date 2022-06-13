@@ -24,16 +24,6 @@ namespace VillaSofia
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-            
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -41,25 +31,6 @@ namespace VillaSofia
             registro.Show();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtpassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtUser_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -116,6 +87,9 @@ namespace VillaSofia
                 ClsLogicaUsuario ctrl = new ClsLogicaUsuario();
                 DataTable DT = new DataTable();
 
+
+                //DT = objetoN.LoginSis(usuario, password);
+                //---------
                 string respuesta = ctrl.crtlLogin(usuario, password);
                 if (respuesta.Length > 0)
                 {
@@ -129,17 +103,17 @@ namespace VillaSofia
 
 
                 }
-
+                //--------
+                
                 if (DT.Rows.Count == 1)
                 {
                     string Logueo = DT.Rows[0][6].ToString();
                     if (Logueo != "True")
-                    {
+                    { //revision de estos apartados
                         string id = DT.Rows[0][0].ToString();
                         string rol = DT.Rows[0][4].ToString();
                         string nombre = DT.Rows[0][5].ToString();
                         string apellido = DT.Rows[0][6].ToString();
-                        string infoUser = nombre + " " + apellido + " - " + rol;
 
                         CambiarEstado(id, "Activado");
 
@@ -151,7 +125,7 @@ namespace VillaSofia
 
                         //MessageBox.Show("Bienvenido " + rol.ToString());
                         //                                ant (TxtUsuario.Text)
-                        VillaSofia SESION = new VillaSofia();
+                       // VillaSofia SESION = new VillaSofia();
                         //CduMenuPrincipal SESSION = new CduMenuPrincipal();
                         //SESION.setUserLabel(infoUser);
 
@@ -169,6 +143,7 @@ namespace VillaSofia
                 }
                 else
                 {
+                    //revisar esta mierda
                     MessageBox.Show("No existen coincidencias");
 
 
@@ -185,6 +160,8 @@ namespace VillaSofia
 
         }
 
+
+        //si aja 
         private void button1_Enter(object sender, EventArgs e)
         {
             button1.BorderThickness = 1;
@@ -194,7 +171,7 @@ namespace VillaSofia
         {
             button1.BorderThickness = 0;
         }
-
+       
         private void FrmLoginUsuario_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
@@ -204,7 +181,10 @@ namespace VillaSofia
         {
 
         }
+        //si aja
 
+
+        //practicamente el trigger que se ativa al iniciar session bitacora
         void CambiarEstado(string id, string accion)
         {
             ClsLogicaUsuario objeto = new ClsLogicaUsuario();
@@ -212,6 +192,7 @@ namespace VillaSofia
             string mensaje = objeto.Lou(id, accion);
         }
 
+        //oculto de la contraseña
         private void txtpassword_IconRightClick(object sender, EventArgs e)
         {
             clave_visible = (!clave_visible);

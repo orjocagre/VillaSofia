@@ -18,20 +18,21 @@ namespace VillaSofia
             InitializeComponent();
         }
 
-        ClsLogicaUsuario logicUser = new ClsLogicaUsuario();
-        private void dtgvHistorialBitacora_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+        ClsLogicaUsuario BitUser = new ClsLogicaUsuario();
 
         private void txtBusquedaUsuario_TextChanged(object sender, EventArgs e)
         {
-           // dtgvHistorialBitacora.DataSource = logicUser.HistorialBitacora(txtBusquedaUsuario.Text);
+             dtgvHistorialBitacora.DataSource = BitUser.HistorialBitacora(txtBusquedaUsuario.Text);
         }
 
         private void FrmBitacoraUsuarios_Load(object sender, EventArgs e)
         {
-           // dtgvHistorialBitacora.DataSource = logicUser.HistorialBitacora("");
+             dtgvHistorialBitacora.DataSource = BitUser.HistorialBitacora("");
+        }
+
+        private void dtgvHistorialBitacora_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

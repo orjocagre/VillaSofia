@@ -24,7 +24,22 @@ namespace VillaSofia
 
         private void btnBuscarLista_Click(object sender, EventArgs e)
         {
-            dtpRegistroLista.Visible = !dtpRegistroLista.Visible;
+            if(dtpRegistroLista.Visible)
+            {
+                dtpRegistroLista.Visible = false;
+                btnBuscarLista.Image = Properties.Resources.buscarNegro;
+                dgvRegistroListas.Location = new Point(dgvRegistroListas.Location.X, dgvRegistroListas.Location.Y - dtpRegistroLista.Height - 2);
+                dgvRegistroListas.Height = dgvRegistroListas.Height + dtpRegistroLista.Height;
+            }
+            else
+            {
+                dtpRegistroLista.Visible = true;
+                btnBuscarLista.Image = Properties.Resources.buscarAzul;
+                dgvRegistroListas.Location = new Point(dgvRegistroListas.Location.X, dgvRegistroListas.Location.Y + dtpRegistroLista.Height + 2);
+                dgvRegistroListas.Height = dgvRegistroListas.Height - dtpRegistroLista.Height;
+
+            }
+
         }
     }
 }

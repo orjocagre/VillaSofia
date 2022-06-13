@@ -7,10 +7,9 @@ namespace Datos
     public class ClsDatosUsuario
     {
         ClsDatosConexion conex = new ClsDatosConexion();
+        ClsDatosMetodosGlobales metodoG = new ClsDatosMetodosGlobales();
         public int registro(ClsModeloUsuario usuario)
         {
-
-            
             conex.conectar.Open();
 
             String sql = "INSERT INTO usuarios (usuario,password,nombre,id_tipo)" +
@@ -24,7 +23,6 @@ namespace Datos
             int resultado = comando.ExecuteNonQuery();
 
             return resultado;
-
         }
 
         public bool existeUsuario(string usuario)
@@ -33,7 +31,7 @@ namespace Datos
 
 
             //MySqlConnection conexion = Datos.DatosConexion.getConexion();
-            //conexion.Open();
+            //conex.conectar.Open();
 
             //String sql = "SELECT id FROM usuarios WHERE usuario LIKE @usuario";
             //MySqlCommand comando = new MySqlCommand(sql, conexion);
@@ -58,6 +56,7 @@ namespace Datos
 
 
         }
+
         /*
         public string EditarUsuario(int id, string username, string password, string rol, string nombre, string apellido, int id_sucursal)
         {
@@ -97,11 +96,12 @@ namespace Datos
         }
 
         /---------
+        */
         public string CambiarEstado(string _id, string _accion)
         {
-            Conectar.conectar.Open();
+            conex.conectar.Open();
 
-            MySqlCommand CMD = new MySqlCommand("CambiarEstadoUsuario", Conectar.conectar);
+            MySqlCommand CMD = new MySqlCommand("CambiarEstadoUsuario", conex.conectar);
             CMD.CommandType = CommandType.StoredProcedure;
 
             CMD.Parameters.AddWithValue("@pId", _id);
@@ -123,12 +123,12 @@ namespace Datos
             }
             finally
             {
-                Conectar.conectar.Close();
+                conex.conectar.Close();
             }
 
 
         }
-        */
+        
         public string LogueoU(string id, string LogU)
         {
 
@@ -209,16 +209,16 @@ namespace Datos
             }
 
         }  //Fin del método
-        /*
+        
         public int AgregarCierreSesion(int ID, String fecha, String Hora)
         {
             try
             {
                 MySqlCommand CM = new MySqlCommand();
                 MySqlParameter x;
-                Conectar.conectar.Open();
+                conex.conectar.Open();
 
-                CM.Connection = Conectar.conectar;
+                CM.Connection = conex.conectar;
                 CM.CommandType = CommandType.StoredProcedure;
                 CM.CommandText = "AgregarSalidaBitacora";
 
@@ -251,30 +251,28 @@ namespace Datos
 
             finally
             {
-                Conectar.conectar.Close();
+                conex.conectar.Close();
             }
             //Fin del método
 
         }
 
         // Método para traer la biracora del inicio de sesión en el sistema
-
+        //ya ta
         public DataTable bitacora(String Sql)
         {
-            return metodoG.bd_consultas(Sql);
+            return metodoG.bdConsultas(Sql);
         }
 
         public DataTable nombreSucursal(String Sql)
         {
-            return metodoG.bd_consultas(Sql);
+            return metodoG.bdConsultas(Sql);
         }
 
         public DataTable CmbSucursal(String Sql)
         {
-            return metodoG.bd_consultas(Sql);
+            return metodoG.bdConsultas(Sql);
         }
-        /---------
-        */
         public ClsModeloUsuario validacion(string usuario)
         {
             //MySqlDataReader reader;
