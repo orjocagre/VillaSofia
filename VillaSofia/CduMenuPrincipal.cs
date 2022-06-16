@@ -95,9 +95,11 @@ namespace VillaSofia
             this.Dispose();
         }
 
-        private void btnConexion_Click(object sender, EventArgs e)
+      
+
+        private void btnConexion_Click_1(object sender, EventArgs e)
         {
-            FrmConexionDinamica frmconexion= new FrmConexionDinamica();
+            FrmConexionDinamica frmconexion = new FrmConexionDinamica();
             frmconexion.ShowDialog();
         }
     }
