@@ -143,8 +143,8 @@ namespace VillaSofia
                 }
                 else
                 {
-                    //revisar esta mierda
-                    MessageBox.Show("No existen coincidencias");
+                    //revisar e
+                    MessageBox.Show("Bienvenid@ a ISVS");
 
 
                 }

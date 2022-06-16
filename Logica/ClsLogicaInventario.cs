@@ -30,4 +30,5 @@ namespace Logica
             return msj;
 
         }
+    }
 }
