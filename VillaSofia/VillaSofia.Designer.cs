@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VillaSofia));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.productoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -38,15 +39,17 @@
             this.bitacoraDeActividadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.LblUsuario = new System.Windows.Forms.Label();
-            this.lblRol = new System.Windows.Forms.Label();
+            this.lblSuperAdmin = new System.Windows.Forms.Label();
             this.lblCajero = new System.Windows.Forms.Label();
             this.lblJefeCocina = new System.Windows.Forms.Label();
             this.btnSesion = new System.Windows.Forms.Button();
+            this.lblAdministrador = new System.Windows.Forms.Label();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip
             // 
+            this.menuStrip.BackColor = System.Drawing.Color.Lavender;
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileMenu});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
@@ -114,25 +117,25 @@
             this.LblUsuario.TabIndex = 2;
             this.LblUsuario.Click += new System.EventHandler(this.label1_Click);
             // 
-            // lblRol
+            // lblSuperAdmin
             // 
-            this.lblRol.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblRol.AutoSize = true;
-            this.lblRol.BackColor = System.Drawing.Color.White;
-            this.lblRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRol.Location = new System.Drawing.Point(987, 4);
-            this.lblRol.Name = "lblRol";
-            this.lblRol.Size = new System.Drawing.Size(107, 20);
-            this.lblRol.TabIndex = 4;
-            this.lblRol.Text = "Administrador";
+            this.lblSuperAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSuperAdmin.AutoSize = true;
+            this.lblSuperAdmin.BackColor = System.Drawing.Color.Lavender;
+            this.lblSuperAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSuperAdmin.Location = new System.Drawing.Point(465, 6);
+            this.lblSuperAdmin.Name = "lblSuperAdmin";
+            this.lblSuperAdmin.Size = new System.Drawing.Size(97, 20);
+            this.lblSuperAdmin.TabIndex = 4;
+            this.lblSuperAdmin.Text = "SuperAdmin";
             // 
             // lblCajero
             // 
             this.lblCajero.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCajero.AutoSize = true;
-            this.lblCajero.BackColor = System.Drawing.Color.White;
+            this.lblCajero.BackColor = System.Drawing.Color.Lavender;
             this.lblCajero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCajero.Location = new System.Drawing.Point(1014, 7);
+            this.lblCajero.Location = new System.Drawing.Point(488, 4);
             this.lblCajero.Name = "lblCajero";
             this.lblCajero.Size = new System.Drawing.Size(55, 20);
             this.lblCajero.TabIndex = 6;
@@ -142,37 +145,54 @@
             // 
             this.lblJefeCocina.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblJefeCocina.AutoSize = true;
-            this.lblJefeCocina.BackColor = System.Drawing.Color.White;
+            this.lblJefeCocina.BackColor = System.Drawing.Color.Lavender;
             this.lblJefeCocina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblJefeCocina.Location = new System.Drawing.Point(987, 4);
+            this.lblJefeCocina.Location = new System.Drawing.Point(465, 6);
             this.lblJefeCocina.Name = "lblJefeCocina";
             this.lblJefeCocina.Size = new System.Drawing.Size(115, 20);
             this.lblJefeCocina.TabIndex = 10;
             this.lblJefeCocina.Text = "Jefe de Cocina";
+            this.lblJefeCocina.Click += new System.EventHandler(this.lblJefeCocina_Click);
             // 
             // btnSesion
             // 
             this.btnSesion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSesion.BackColor = System.Drawing.Color.RosyBrown;
-            this.btnSesion.Location = new System.Drawing.Point(1116, 4);
+            this.btnSesion.BackColor = System.Drawing.Color.Firebrick;
+            this.btnSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSesion.ForeColor = System.Drawing.Color.White;
+            this.btnSesion.Location = new System.Drawing.Point(1086, 4);
             this.btnSesion.Name = "btnSesion";
-            this.btnSesion.Size = new System.Drawing.Size(75, 23);
+            this.btnSesion.Size = new System.Drawing.Size(105, 24);
             this.btnSesion.TabIndex = 8;
-            this.btnSesion.Text = "CerrarSesion";
+            this.btnSesion.Text = "Cerrar Sesión";
             this.btnSesion.UseVisualStyleBackColor = false;
             this.btnSesion.Click += new System.EventHandler(this.btnSesion_Click);
+            // 
+            // lblAdministrador
+            // 
+            this.lblAdministrador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblAdministrador.AutoSize = true;
+            this.lblAdministrador.BackColor = System.Drawing.Color.Lavender;
+            this.lblAdministrador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdministrador.Location = new System.Drawing.Point(473, 6);
+            this.lblAdministrador.Name = "lblAdministrador";
+            this.lblAdministrador.Size = new System.Drawing.Size(107, 20);
+            this.lblAdministrador.TabIndex = 12;
+            this.lblAdministrador.Text = "Administrador";
             // 
             // VillaSofia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1191, 593);
+            this.Controls.Add(this.lblAdministrador);
             this.Controls.Add(this.lblJefeCocina);
             this.Controls.Add(this.btnSesion);
             this.Controls.Add(this.lblCajero);
-            this.Controls.Add(this.lblRol);
+            this.Controls.Add(this.lblSuperAdmin);
             this.Controls.Add(this.LblUsuario);
             this.Controls.Add(this.menuStrip);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip;
             this.Name = "VillaSofia";
@@ -197,11 +217,12 @@
         private System.Windows.Forms.ToolStripMenuItem recetaToolStripMenuItem;
         private System.Windows.Forms.Label LblUsuario;
         private System.Windows.Forms.ToolStripMenuItem adminstrarUsuariosToolStripMenuItem;
-        private System.Windows.Forms.Label lblRol;
+        private System.Windows.Forms.Label lblSuperAdmin;
         private System.Windows.Forms.Label lblCajero;
         private System.Windows.Forms.Label lblJefeCocina;
         private System.Windows.Forms.Button btnSesion;
         private System.Windows.Forms.ToolStripMenuItem bitacoraDeActividadesToolStripMenuItem;
+        private System.Windows.Forms.Label lblAdministrador;
     }
 }
 

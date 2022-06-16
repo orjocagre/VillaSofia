@@ -109,7 +109,7 @@ namespace VillaSofia
             
             if (tipousuario == 1)
             {
-                this.lblRol.Visible = true;
+                this.lblAdministrador.Visible = false;
                 this.lblCajero.Visible = false;
                 this.lblJefeCocina.Visible = false;
 
@@ -119,20 +119,30 @@ namespace VillaSofia
             else if (tipousuario == 2)
             {
                 this.lblCajero.Visible = true;
-                this.lblRol.Visible = false;
+                this.lblSuperAdmin.Visible = false;
                 this.fileMenu.Visible = false;
+                this.lblAdministrador.Visible = false;
             }
             else if (tipousuario == 3)
             {
                 this.lblJefeCocina.Visible = true;
-                this.lblRol.Visible = false;
+                this.lblSuperAdmin.Visible = false;
                 this.fileMenu.Visible = false;
+                this.lblAdministrador.Visible = false;
+                this.lblCajero.Visible = false;
 
             }
+            else if (tipousuario == 4)
+            {
+                this.lblJefeCocina.Visible = true;
+                this.lblSuperAdmin.Visible = false;
+                this.lblCajero.Visible = false;
+            }
 
-            
 
-           
+
+
+
         }
 
         private void productoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -210,6 +220,11 @@ namespace VillaSofia
             FrmBitacoraUsuarios bitacora = new FrmBitacoraUsuarios();
             bitacora.Show();
             bitacora.BringToFront();
+        }
+
+        private void lblJefeCocina_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

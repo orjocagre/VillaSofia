@@ -118,10 +118,11 @@ namespace Logica
             objetoD.AgregarInicioSesion(ID, fecha, Hora, IpMaquina);
         }
         
+        /*
         public void CerrarSesion(int ID, String fecha, String Hora)
         {
             objetoD.AgregarCierreSesion(ID, fecha, Hora);
-        }
+        }*/
 
         //Método para llamar la bitacora
 

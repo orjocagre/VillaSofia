@@ -19,6 +19,7 @@ namespace VillaSofia
             this.vs = vs;
             this.Dock = DockStyle.Fill;
             InitializeComponent();
+            Mostrar();
         }
 
         private void btnEventos_Click(object sender, EventArgs e)
@@ -73,7 +74,10 @@ namespace VillaSofia
                 this.btnCaja.Visible = true;
                 this.btnMenu.Visible = false;
                 this.btnVentas.Visible = false;
-                
+                this.btnEventos.Visible = false;
+                this.btnInventario.Visible = false;
+                this.btnConexion.Visible = false;
+
             }
             if (tipo_usuario==3)
             {//jefe de cocina
@@ -82,6 +86,18 @@ namespace VillaSofia
                 this.btnCaja.Visible = false;
                 this.btnMenu.Visible = true;
                 this.btnVentas.Visible = false;
+                this.btnEventos.Visible = false;
+                this.btnInventario.Visible = false;
+                this.btnConexion.Visible = false;
+
+
+            }
+            if (tipo_usuario==4)
+            {
+
+                this.btnConexion.Visible = false;
+
+
 
             }
 

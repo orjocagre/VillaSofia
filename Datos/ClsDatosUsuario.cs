@@ -18,12 +18,12 @@ namespace Datos
             comando.Parameters.AddWithValue("@usuario", usuario.Usuario1);
             comando.Parameters.AddWithValue("@password", usuario.Password);
             comando.Parameters.AddWithValue("@nombre", usuario.Nombre);
-            //reasignar tipos de cuenta de roles en el sistema
-            comando.Parameters.AddWithValue("@id_tipo", 3);
+            comando.Parameters.AddWithValue("@id_tipo", usuario.Id_tpo);
 
             int resultado = comando.ExecuteNonQuery();
 
             return resultado;
+
         }
 
         public bool existeUsuario(string usuario)
@@ -59,21 +59,25 @@ namespace Datos
         }
 
         /*
-        public string EditarUsuario(int id, string usuario, string password, string tipo, string nombre)
+        public string EditarUsuario(int id, string username, string password, string rol, string nombre, string apellido, int id_sucursal)
         {
-            conex.conectar.Open();
+            Conectar.conectar.Open();
 
-            MySqlCommand CMD = new MySqlCommand("EditarUsuario", conex.conectar);
+            MySqlCommand CMD = new MySqlCommand("EditarUsuario", Conectar.conectar);
             CMD.CommandType = CommandType.StoredProcedure;
 
             CMD.Parameters.AddWithValue("@pId", id);
-            CMD.Parameters.AddWithValue("@pusuario", usuario);
+            CMD.Parameters.AddWithValue("@pUser", username);
             CMD.Parameters.AddWithValue("@pPasw", password);
 
-            CMD.Parameters.AddWithValue("@pid_tipo", tipo);
+            CMD.Parameters.AddWithValue("@pRol", rol);
 
             CMD.Parameters.AddWithValue("@pNombre", nombre);
+            CMD.Parameters.AddWithValue("@pApellido", apellido);
+            CMD.Parameters.AddWithValue("@pid_sucursal", id_sucursal);
             CMD.Parameters.Add("@pMsj", MySqlDbType.VarChar, 30);
+            CMD.Parameters["@pMsj"].Direction = ParameterDirection.Output;
+
             try
             {
                 CMD.ExecuteNonQuery();
@@ -86,13 +90,14 @@ namespace Datos
             }
             finally
             {
-                conex.conectar.Close();
+                Conectar.conectar.Close();
             }
 
 
         }
-        */
 
+        /---------
+        */
         public string CambiarEstado(string _id, string _accion)
         {
             conex.conectar.Open();
