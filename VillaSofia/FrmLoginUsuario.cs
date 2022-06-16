@@ -129,7 +129,7 @@ namespace VillaSofia
                         //CduMenuPrincipal SESSION = new CduMenuPrincipal();
                         //SESION.setUserLabel(infoUser);
 
-                        //SESION.AsignarID(id);
+                        //SESION.Asignar(id);
                         //SESSION.Mostrar();
 
 
