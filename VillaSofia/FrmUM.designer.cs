@@ -47,8 +47,8 @@
             this.gbxUnidadesM.Controls.Add(this.LblUM);
             this.gbxUnidadesM.Controls.Add(this.txtUM);
             this.gbxUnidadesM.Controls.Add(this.dgvUM);
-            this.gbxUnidadesM.CustomBorderColor = System.Drawing.Color.LightCyan;
-            this.gbxUnidadesM.FillColor = System.Drawing.Color.Snow;
+            this.gbxUnidadesM.CustomBorderColor = System.Drawing.Color.Lavender;
+            this.gbxUnidadesM.FillColor = System.Drawing.Color.Lavender;
             this.gbxUnidadesM.Font = new System.Drawing.Font("Segoe UI Black", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxUnidadesM.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.gbxUnidadesM.Location = new System.Drawing.Point(3, -2);
@@ -61,10 +61,11 @@
             // 
             // BtnGuardar
             // 
+            this.BtnGuardar.BorderRadius = 1;
             this.BtnGuardar.CheckedState.Parent = this.BtnGuardar;
             this.BtnGuardar.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BtnGuardar.CustomImages.Parent = this.BtnGuardar;
-            this.BtnGuardar.FillColor = System.Drawing.Color.LightCyan;
+            this.BtnGuardar.FillColor = System.Drawing.Color.Lavender;
             this.BtnGuardar.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGuardar.ForeColor = System.Drawing.Color.Black;
             this.BtnGuardar.HoverState.Parent = this.BtnGuardar;
@@ -115,7 +116,7 @@
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
             this.dgvUM.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvUM.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvUM.BackgroundColor = System.Drawing.Color.Azure;
+            this.dgvUM.BackgroundColor = System.Drawing.Color.Lavender;
             this.dgvUM.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvUM.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvUM.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -150,7 +151,7 @@
             this.dgvUM.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.dgvUM.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.dgvUM.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvUM.ThemeStyle.BackColor = System.Drawing.Color.Azure;
+            this.dgvUM.ThemeStyle.BackColor = System.Drawing.Color.Lavender;
             this.dgvUM.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(222)))), ((int)(((byte)(218)))));
             this.dgvUM.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             this.dgvUM.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;

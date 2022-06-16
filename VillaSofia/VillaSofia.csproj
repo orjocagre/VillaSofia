@@ -228,6 +228,12 @@
     <Compile Include="FrmClasificacion.designer.cs">
       <DependentUpon>FrmClasificacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmConexionDinamica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConexionDinamica.Designer.cs">
+      <DependentUpon>FrmConexionDinamica.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmDividirCuenta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -387,6 +393,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmClasificacion.resx">
       <DependentUpon>FrmClasificacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConexionDinamica.resx">
+      <DependentUpon>FrmConexionDinamica.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDividirCuenta.resx">
       <DependentUpon>FrmDividirCuenta.cs</DependentUpon>
@@ -661,14 +670,27 @@
     </None>
     <None Include="Resources\buscarNegro.png" />
     <None Include="Resources\buscarAzul.png" />
+    <Content Include="Resources\bdConfig.png" />
+    <Content Include="Resources\cajeAuto.png" />
+    <Content Include="Resources\calendar.png" />
+    <Content Include="Resources\calendario %281%29.png" />
     <Content Include="Resources\cocinar.png" />
     <None Include="Resources\flecha-derecha-arriba.png" />
+    <Content Include="Resources\emigrar %281%29.png" />
+    <Content Include="Resources\emigrar.png" />
     <Content Include="Resources\iconologin.ico" />
     <None Include="Resources\insertar_fila.png" />
     <None Include="Resources\insertar_fila_grueso_Azul.png" />
     <None Include="Resources\insertar_fila_grueso_Blanco.png" />
     <None Include="Resources\ojo_Cerrado.jpg" />
     <None Include="Resources\ojo_Abierto.jpg" />
+    <Content Include="Resources\INV.png" />
+    <Content Include="Resources\PVillaSofia.png" />
+    <Content Include="Resources\PVSA.png" />
+    <Content Include="Resources\PVSB.png" />
+    <Content Include="Resources\PVSN.png" />
+    <Content Include="Resources\recipe.png" />
+    <Content Include="Resources\sales.png" />
     <Content Include="Resources\trabajo-en-equipo.png" />
     <Content Include="Resources\VSlogin.png" />
   </ItemGroup>

@@ -52,6 +52,7 @@
     <Compile Include="ClsDatosFactura.cs" />
     <Compile Include="ClsDatosInsumoReceta.cs" />
     <Compile Include="ClsDatosInsumo.cs" />
+    <Compile Include="ClsDatosInventario.cs" />
     <Compile Include="ClsDatosMetodosGlobales.cs" />
     <Compile Include="ClsDatosOrden.cs" />
     <Compile Include="ClsDatosOrdenEvento.cs" />
@@ -69,6 +70,10 @@
     <Compile Include="ClsModeloUsuario.cs" />
     <Compile Include="ClsSession.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="credenciales.txt" />
+    <EmbeddedResource Include="Properties\credenciales.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
