@@ -18,11 +18,12 @@ namespace Datos
             comando.Parameters.AddWithValue("@usuario", usuario.Usuario1);
             comando.Parameters.AddWithValue("@password", usuario.Password);
             comando.Parameters.AddWithValue("@nombre", usuario.Nombre);
-            comando.Parameters.AddWithValue("@id_tipo", 3);
+            comando.Parameters.AddWithValue("@id_tipo", usuario.Id_tpo);
 
             int resultado = comando.ExecuteNonQuery();
 
             return resultado;
+
         }
 
         public bool existeUsuario(string usuario)

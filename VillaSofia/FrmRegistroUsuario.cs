@@ -22,10 +22,11 @@ namespace VillaSofia
         private void button1_Click(object sender, EventArgs e)
         {
             ClsModeloUsuario usuario = new ClsModeloUsuario();
-            usuario.Usuario1 = textBox1.Text;
-            usuario.Password = textBox2.Text;
-            usuario.ConPassword = textBox3.Text;
-            usuario.Nombre = textBox4.Text;
+            usuario.Usuario1 = txtUsuario.Text;
+            usuario.Password = txtPassword.Text;
+            usuario.ConPassword = txtConfirmarPassword.Text;
+            usuario.Nombre = txtNombreUsuario.Text;
+            usuario.Id_tpo = cmbx_Tipousuario.SelectedIndex + 2;
 
             try
             {
@@ -40,13 +41,18 @@ namespace VillaSofia
                 }
                 else
                 {
-                    MessageBox.Show("Usuario Registrado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("HOAL", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void FrmRegistroUsuario_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
