@@ -15,7 +15,49 @@ namespace Datos
         {
             return new ClsDatosMetodosGlobales().bdConsultas(sql);
         }
-        
-        
+
+        public int agregarEntrada(int Pid_insumo, int Pcantidad, DateTime Pfecha, int Pprecio)
+        {
+            MySqlCommand CM = new MySqlCommand();
+            MySqlParameter x = new MySqlParameter();
+
+            try
+            {
+                conex.conectar.Open();
+                CM.Connection = conex.conectar;
+                CM.CommandType = CommandType.StoredProcedure;
+                CM.CommandText = "AgregarEntradaInsumo";
+
+                CM.Parameters.AddWithValue("Pid_insumo", Pid_insumo);
+                CM.Parameters["Pid_insumo"].Direction = ParameterDirection.Input;
+
+                CM.Parameters.AddWithValue("Pcantidad", Pcantidad);
+                CM.Parameters["Pcantidad"].Direction = ParameterDirection.Input;
+
+                CM.Parameters.AddWithValue("Pfecha", Pfecha.Date);
+                CM.Parameters["Pfecha"].Direction = ParameterDirection.Input;
+
+                CM.Parameters.AddWithValue("Pprecio", Pprecio);
+                CM.Parameters["Pprecio"].Direction = ParameterDirection.Input;
+
+                x = CM.Parameters.AddWithValue("Pmsj", "");
+                CM.Parameters["Pmsj"].Direction = ParameterDirection.Output;
+
+                CM.ExecuteNonQuery();
+
+                return Convert.ToInt32(x.Value.ToString());
+
+
+            }
+            catch (MySqlException e)
+            {
+                Console.WriteLine(e.ToString());
+                return 3;
+            }
+            finally
+            {
+                conex.conectar.Close();
+            }
+        }
     }
 }

@@ -42,6 +42,9 @@
             this.txtHora = new Guna.UI2.WinForms.Guna2TextBox();
             this.dtpFechaEvento = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.dgvInventario = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.rdbPresentacion = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.rdbUm = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).BeginInit();
             this.SuspendLayout();
@@ -49,8 +52,11 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.White;
+            this.guna2Panel1.Controls.Add(this.rdbUm);
+            this.guna2Panel1.Controls.Add(this.rdbPresentacion);
             this.guna2Panel1.Controls.Add(this.guna2Button3);
             this.guna2Panel1.Controls.Add(this.txtBusqueda);
+            this.guna2Panel1.Controls.Add(this.guna2HtmlLabel3);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel2);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel1);
             this.guna2Panel1.Controls.Add(this.guna2Button2);
@@ -268,7 +274,7 @@
             this.dgvInventario.ColumnHeadersHeight = 20;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 16F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Silver;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
@@ -281,8 +287,9 @@
             this.dgvInventario.Name = "dgvInventario";
             this.dgvInventario.ReadOnly = true;
             this.dgvInventario.RowHeadersVisible = false;
+            this.dgvInventario.RowTemplate.Height = 26;
             this.dgvInventario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvInventario.Size = new System.Drawing.Size(1145, 544);
+            this.dgvInventario.Size = new System.Drawing.Size(1145, 529);
             this.dgvInventario.TabIndex = 1;
             this.dgvInventario.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Light;
             this.dgvInventario.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
@@ -301,11 +308,69 @@
             this.dgvInventario.ThemeStyle.ReadOnly = true;
             this.dgvInventario.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvInventario.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvInventario.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.dgvInventario.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.dgvInventario.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvInventario.ThemeStyle.RowsStyle.Height = 22;
+            this.dgvInventario.ThemeStyle.RowsStyle.Height = 26;
             this.dgvInventario.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.Silver;
             this.dgvInventario.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            // 
+            // rdbPresentacion
+            // 
+            this.rdbPresentacion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.rdbPresentacion.AutoSize = true;
+            this.rdbPresentacion.Checked = true;
+            this.rdbPresentacion.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdbPresentacion.CheckedState.BorderThickness = 0;
+            this.rdbPresentacion.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdbPresentacion.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rdbPresentacion.CheckedState.InnerOffset = -4;
+            this.rdbPresentacion.Font = new System.Drawing.Font("Tw Cen MT", 14.25F);
+            this.rdbPresentacion.Location = new System.Drawing.Point(175, 636);
+            this.rdbPresentacion.Name = "rdbPresentacion";
+            this.rdbPresentacion.Size = new System.Drawing.Size(122, 26);
+            this.rdbPresentacion.TabIndex = 33;
+            this.rdbPresentacion.TabStop = true;
+            this.rdbPresentacion.Text = "Presentación";
+            this.rdbPresentacion.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rdbPresentacion.UncheckedState.BorderThickness = 2;
+            this.rdbPresentacion.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rdbPresentacion.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rdbPresentacion.UseVisualStyleBackColor = true;
+            this.rdbPresentacion.CheckedChanged += new System.EventHandler(this.rdbPresentacion_CheckedChanged);
+            // 
+            // rdbUm
+            // 
+            this.rdbUm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.rdbUm.AutoSize = true;
+            this.rdbUm.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdbUm.CheckedState.BorderThickness = 0;
+            this.rdbUm.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdbUm.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rdbUm.CheckedState.InnerOffset = -4;
+            this.rdbUm.Font = new System.Drawing.Font("Tw Cen MT", 14.25F);
+            this.rdbUm.Location = new System.Drawing.Point(303, 636);
+            this.rdbUm.Name = "rdbUm";
+            this.rdbUm.Size = new System.Drawing.Size(168, 26);
+            this.rdbUm.TabIndex = 33;
+            this.rdbUm.Text = "Unidad de medida";
+            this.rdbUm.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rdbUm.UncheckedState.BorderThickness = 2;
+            this.rdbUm.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rdbUm.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rdbUm.UseVisualStyleBackColor = true;
+            this.rdbUm.CheckedChanged += new System.EventHandler(this.rdbUm_CheckedChanged);
+            // 
+            // guna2HtmlLabel3
+            // 
+            this.guna2HtmlLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(18, 638);
+            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(144, 24);
+            this.guna2HtmlLabel3.TabIndex = 30;
+            this.guna2HtmlLabel3.Text = "Mostrar en base a:";
             // 
             // CduPestanaInventario
             // 
@@ -334,5 +399,8 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         public Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2TextBox txtBusqueda;
+        private Guna.UI2.WinForms.Guna2RadioButton rdbUm;
+        private Guna.UI2.WinForms.Guna2RadioButton rdbPresentacion;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
     }
 }
