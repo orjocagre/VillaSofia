@@ -12,6 +12,8 @@ namespace VillaSofia
 {
     public partial class CduInventario : UserControl
     {
+        VillaSofia vs;
+        int tipoUsuario;
         int seleccionMenu;
         CduPestanaInventario pinv;
         CduPestanaListaCompras plc;
@@ -20,6 +22,8 @@ namespace VillaSofia
 
         public CduInventario(VillaSofia vs, int tipo_usuario)
         {
+            this.vs = vs;
+            this.tipoUsuario = tipo_usuario;
             Dock = DockStyle.Fill;
             seleccionMenu = 0;
 
@@ -45,7 +49,7 @@ namespace VillaSofia
             plc.SendToBack();
 
             //panel de pestana de registrar compras 
-            prc = new CduPestanaRegistrarCompras();
+            prc = new CduPestanaRegistrarCompras(vs,tipo_usuario);
             this.Controls.Add(prc);
             prc.Location = new Point(0, 110);
             prc.Size = new Size(this.Width, this.Height - 110);
@@ -212,6 +216,13 @@ namespace VillaSofia
             btnAjusteInventario.ForeColor = Color.Gray;
             btnKardex.ForeColor = Color.Gray;
             btnInventarioMinimo.ForeColor = Color.Gray;
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            vs.Controls.Add(new CduMenuPrincipal(vs, tipoUsuario));
+            
         }
     }
 }

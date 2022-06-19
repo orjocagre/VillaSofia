@@ -246,6 +246,12 @@
     <Compile Include="FrmIngresarReceta.designer.cs">
       <DependentUpon>FrmIngresarReceta.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmInsumo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInsumo.Designer.cs">
+      <DependentUpon>FrmInsumo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmInventarioProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -402,6 +408,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmIngresarReceta.resx">
       <DependentUpon>FrmIngresarReceta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInsumo.resx">
+      <DependentUpon>FrmInsumo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmInventarioProducto.resx">
       <DependentUpon>FrmInventarioProducto.cs</DependentUpon>

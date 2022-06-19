@@ -45,5 +45,13 @@ namespace Logica
             return new ClsDatosUM().UM(sql);
         }
 
+
+        public DataTable listarUm()
+        {
+            ClsDatosUM um = new ClsDatosUM();
+            String sql = "SELECT um.id_UM AS ID, um.descripcion AS NOMBRE, um.id_tipo_um AS TIPO, um.conversion AS CONVERSION FROM um";
+            return um.consultas(sql);
+        }
+
     }
 }

@@ -44,6 +44,7 @@
             this.lblJefeCocina = new System.Windows.Forms.Label();
             this.btnSesion = new System.Windows.Forms.Button();
             this.lblAdministrador = new System.Windows.Forms.Label();
+            this.insumoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,7 +67,8 @@
             this.trabajadorToolStripMenuItem,
             this.recetaToolStripMenuItem,
             this.adminstrarUsuariosToolStripMenuItem,
-            this.bitacoraDeActividadesToolStripMenuItem});
+            this.bitacoraDeActividadesToolStripMenuItem,
+            this.insumoToolStripMenuItem});
             this.fileMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fileMenu.ImageTransparentColor = System.Drawing.Color.Gainsboro;
             this.fileMenu.Name = "fileMenu";
@@ -180,6 +182,13 @@
             this.lblAdministrador.TabIndex = 12;
             this.lblAdministrador.Text = "Administrador";
             // 
+            // insumoToolStripMenuItem
+            // 
+            this.insumoToolStripMenuItem.Name = "insumoToolStripMenuItem";
+            this.insumoToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
+            this.insumoToolStripMenuItem.Text = "Insumo";
+            this.insumoToolStripMenuItem.Click += new System.EventHandler(this.insumoToolStripMenuItem_Click);
+            // 
             // VillaSofia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -223,6 +232,7 @@
         private System.Windows.Forms.Button btnSesion;
         private System.Windows.Forms.ToolStripMenuItem bitacoraDeActividadesToolStripMenuItem;
         private System.Windows.Forms.Label lblAdministrador;
+        private System.Windows.Forms.ToolStripMenuItem insumoToolStripMenuItem;
     }
 }
 

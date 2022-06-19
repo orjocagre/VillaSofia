@@ -16,7 +16,7 @@ namespace Datos
             return new ClsDatosMetodosGlobales().bdConsultas(sql);
         }
 
-        public int agregarEntrada(int Pid_insumo, int Pcantidad, DateTime Pfecha, int Pprecio)
+        public int agregarEntrada(int Pid_insumo, double Pcantidad, DateTime Pfecha, double Pprecio)
         {
             MySqlCommand CM = new MySqlCommand();
             MySqlParameter x = new MySqlParameter();
@@ -59,5 +59,8 @@ namespace Datos
                 conex.conectar.Close();
             }
         }
+
+
+       
     }
 }

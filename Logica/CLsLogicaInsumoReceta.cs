@@ -17,8 +17,8 @@ namespace Logica
 
             ClsLogicaInsumo AddInsumo = new ClsLogicaInsumo();
 
-
-            string X = AddInsumo.ingresarInsumos(nombreIng);
+            //---------------------------------------------------------------------------------------------OJO------------------------------------------------------------------------------------------
+            string X = AddInsumo.AgregarInsumo(nombreIng,0,0,0,0,"");
 
             return X;
         }

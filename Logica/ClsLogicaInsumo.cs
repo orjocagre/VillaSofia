@@ -10,75 +10,49 @@ namespace Logica
     public class ClsLogicaInsumo
     {
 
-        //LISTO
 
-      /*  public String ingresarDatosReceta(string nombreReceta, int porciones, string procedimiento)
-        {
-
-            ClsLogicaAddReceta Receta = new ClsLogicaAddReceta();
-
-
-            string X = Receta.AddReceta(nombreReceta, porciones, procedimiento);
-            return X;
-
-        }
-        */
-
-      /*  public int ingresarUM(int numero)
-        {
-            //HACER DESDE CERO
-            ClsLogicaTelefono AddTelefono = new ClsLogicaTelefono();
-
-
-            int X = AddTelefono.agregarTelefono(numero);
-            return X;
-
-        }*/
-
-       
-
-
-        public string ingresarInsumos(string nombreIng)
+        public String AgregarInsumo(string Pnombre, int Pid_UM, double Ppresentacion, double Pprecio, double Pexistencia, String Penvase)
         {
             String mensaje;
-            int i;
-             ClsDatosInsumo Insumo = new ClsDatosInsumo();
-           i = Insumo.AddInsumo(nombreIng);
-            /*
-              int a = Insumo.AddInsumo(nombreIng);
-              string U = "";
-              if (a == 1)
-              {
-
-                  U = "Este Insumo ya se encuentra guardado,\n ingrese un nuevo insumo";
-
-
-              }
-              if (a == 7)
-              {
-                  U = "Se guardo un nuevo insumo guardo con exito";
-              }
-
-              return U;*/
-            if (i == -1)
+            int msj;
+            ClsDatosInsumo Insumo = new ClsDatosInsumo();
+            msj = Insumo.AgregarInsumo(Pnombre, Pid_UM, Ppresentacion, Pprecio, Pexistencia, Penvase);
+           
+            if (msj == -3)
             {
                 mensaje = "Error al guardar";
 
             }
+            else if (msj == -1)
+            {
+                mensaje = "Um invalida";
+            }
+            else if (msj == -2)
+            {
+                mensaje = "El insumo ya existe";
+            }
             else
             {
-                mensaje = i.ToString();
-
-
+                mensaje = msj.ToString();
             }
-
-
 
             return mensaje;
 
+        }
+
+        public DataTable cmbUm()
+        {
+            ClsDatosInsumo insumo = new ClsDatosInsumo();
+            String sql = "SELECT um.id_UM AS ID, um.descripcion AS DESCRIPCION FROM um";
+            return insumo.consulta(sql);
+        }
 
 
-
+        public DataTable dgvInsumo(String nombre)
+        {
+            ClsDatosInsumo insumo = new ClsDatosInsumo();
+            String sql = "SELECT insumo.id_insumo AS ID, insumo.nombre AS NOMBRE, um.descripcion AS UM, insumo.presentacion AS PRESENTACION, insumo.precio AS PRECIO, insumo.envase AS ENVASE FROM insumo, um WHERE insumo.id_UM = um.id_UM AND insumo.nombre LIKE '%" + nombre+"%'";
+            return insumo.consulta(sql);
         }
 
 
@@ -95,6 +69,8 @@ namespace Logica
             return DT;
         }
         */
+
+
 
 
     }

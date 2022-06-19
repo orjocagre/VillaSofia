@@ -226,5 +226,13 @@ namespace VillaSofia
         {
 
         }
+
+        private void insumoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmInsumo insumo = new FrmInsumo(this);
+            this.AddOwnedForm(insumo);
+            insumo.Show();
+            this.Enabled = false;
+        }
     }
 }

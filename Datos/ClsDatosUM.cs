@@ -55,6 +55,11 @@ namespace Datos
             return new ClsDatosMetodosGlobales().bdConsultas(sql);
         }
 
+        public DataTable consultas(String sql)
+        {
+            return new ClsDatosMetodosGlobales().bdConsultas(sql);
+        }
+
 
 
 
