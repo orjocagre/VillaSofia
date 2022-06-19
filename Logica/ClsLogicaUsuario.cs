@@ -97,10 +97,10 @@ namespace Logica
             return respuesta;
         }
 
-        /*
-        public string LogicaEditarUsuario(int id, string username, string password, string rol, string nombre)
+        /* acordarse de cambiar estado
+        public string LogicaEditarUsuario(int id, string usuario, string password, string tipo, string nombre)
         {
-            return objetoD.EditarUsuario(id, username, password, rol, nombre);
+            return objetoD.EditarUsuario(id, usuario, password, tipo, nombre);
         }
         public string LogicaCambiarEstadoUsuario(string id, string accion)
         {
@@ -118,16 +118,17 @@ namespace Logica
             objetoD.AgregarInicioSesion(ID, fecha, Hora, IpMaquina);
         }
         
+        /*
         public void CerrarSesion(int ID, String fecha, String Hora)
         {
             objetoD.AgregarCierreSesion(ID, fecha, Hora);
-        }
+        }*/
 
         //Método para llamar la bitacora
 
         public DataTable HistorialBitacora(String Condicion)
         {
-            String Sql = "Select * from vistaBitacoraLogin where Usuario like '%" + Condicion + "%';";
+            String Sql = "Select * from vistabitacora where Usuario like '%" + Condicion + "%';";
             return objetoD.bitacora(Sql);
 
         }
