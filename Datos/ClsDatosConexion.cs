@@ -24,13 +24,17 @@ namespace Datos
         //static string[] lineas = File.ReadAllLines(@"C:\credenciales.txt");
 
         //devuelve el .txt en una sola variable como texto
-        static String strResourceName = "credenciales.txt";
-        static Assembly asm = Assembly.GetExecutingAssembly();
-        static Stream rsrcStream = asm.GetManifestResourceStream(asm.GetName().Name + ".Properties." + strResourceName);
-        static StreamReader sRdr = new StreamReader(rsrcStream);
-        static String credenciales = sRdr.ReadToEnd();
+       // static String strResourceName = "credenciales.txt";
+        //static Assembly asm = Assembly.GetExecutingAssembly();
+        //static Stream rsrcStream = asm.GetManifestResourceStream(asm.GetName().Name + ".Properties." + strResourceName);
+        //static StreamReader sRdr = new StreamReader(rsrcStream);
+        //static String credenciales = sRdr.ReadToEnd();
         //transforma el string multilinea en an array de strings
-        static string[] lineas = credenciales.Split(new string[] { System.Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
+        static String rt = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName, "credenciales.txt");
+        static string[] lineas = File.ReadAllLines(rt);
+        /// <summary>
+        /// static string[] lineas = credenciales.Split(new string[] { System.Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
+        /// </summary>
 
         static string host = lineas[0];
         static string usuario = lineas[1];

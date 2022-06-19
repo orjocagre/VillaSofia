@@ -71,9 +71,5 @@
     <Compile Include="ClsSession.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="credenciales.txt" />
-    <EmbeddedResource Include="Properties\credenciales.txt" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
