@@ -53,6 +53,10 @@ namespace Logica
                 mensaje = "Se guardo con Éxito el nuevo igrediente!";
 
            }
+           if(i == -1)
+            {
+                mensaje = "Error en systaxis sql";
+            }
            
           
             return mensaje;

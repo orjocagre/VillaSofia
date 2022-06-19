@@ -19,7 +19,7 @@ namespace Datos
             try
             {
                 conex.conectar.Open();
-                Console.WriteLine("\n \n \n \n \n " + idInsumo + "" + idReceta + "" + cantidad + "" + IDUM);
+                //Console.WriteLine("\n \n \n \n \n " + idInsumo + "" + idReceta + "" + cantidad + "" + IDUM);
                 CM.Connection = conex.conectar; 
                 CM.CommandType = CommandType.StoredProcedure;
                 CM.CommandText = "AgregarInsumoReceta";

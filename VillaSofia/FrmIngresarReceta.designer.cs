@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
             this.GbxReceta = new Guna.UI2.WinForms.Guna2GroupBox();
             this.btnListo = new Guna.UI2.WinForms.Guna2Button();
             this.btnEditar = new Guna.UI2.WinForms.Guna2Button();
-            this.BtnAgregarMas = new Guna.UI2.WinForms.Guna2Button();
             this.btnMostrarRecetas = new Guna.UI2.WinForms.Guna2Button();
             this.BtnEliminar = new Guna.UI2.WinForms.Guna2Button();
             this.btnSiguiente = new Guna.UI2.WinForms.Guna2Button();
@@ -45,7 +44,6 @@
             this.TxtCantidades = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblCantidad = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblNombreIngrediente = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txtNombreInsumo = new Guna.UI2.WinForms.Guna2TextBox();
             this.cmbUM = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtPorciones = new Guna.UI2.WinForms.Guna2TextBox();
             this.SpdrReceta = new Guna.UI2.WinForms.Guna2VSeparator();
@@ -53,6 +51,8 @@
             this.txtNombreReceta = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblNombreReceta = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.ttipMensaje = new Guna.UI2.WinForms.Guna2HtmlToolTip();
+            this.txtBusqueda = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lsbInsumo = new System.Windows.Forms.ListBox();
             this.GbxReceta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInsumos)).BeginInit();
             this.SuspendLayout();
@@ -61,9 +61,10 @@
             // 
             this.GbxReceta.BackColor = System.Drawing.Color.White;
             this.GbxReceta.BorderColor = System.Drawing.Color.LightSeaGreen;
+            this.GbxReceta.Controls.Add(this.lsbInsumo);
+            this.GbxReceta.Controls.Add(this.txtBusqueda);
             this.GbxReceta.Controls.Add(this.btnListo);
             this.GbxReceta.Controls.Add(this.btnEditar);
-            this.GbxReceta.Controls.Add(this.BtnAgregarMas);
             this.GbxReceta.Controls.Add(this.btnMostrarRecetas);
             this.GbxReceta.Controls.Add(this.BtnEliminar);
             this.GbxReceta.Controls.Add(this.btnSiguiente);
@@ -74,7 +75,6 @@
             this.GbxReceta.Controls.Add(this.TxtCantidades);
             this.GbxReceta.Controls.Add(this.lblCantidad);
             this.GbxReceta.Controls.Add(this.lblNombreIngrediente);
-            this.GbxReceta.Controls.Add(this.txtNombreInsumo);
             this.GbxReceta.Controls.Add(this.cmbUM);
             this.GbxReceta.Controls.Add(this.txtPorciones);
             this.GbxReceta.Controls.Add(this.SpdrReceta);
@@ -137,25 +137,6 @@
             this.btnEditar.Size = new System.Drawing.Size(62, 54);
             this.btnEditar.TabIndex = 24;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // BtnAgregarMas
-            // 
-            this.BtnAgregarMas.BackColor = System.Drawing.Color.Transparent;
-            this.BtnAgregarMas.CheckedState.Parent = this.BtnAgregarMas;
-            this.BtnAgregarMas.CustomImages.Parent = this.BtnAgregarMas;
-            this.BtnAgregarMas.Enabled = false;
-            this.BtnAgregarMas.FillColor = System.Drawing.Color.Transparent;
-            this.BtnAgregarMas.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BtnAgregarMas.ForeColor = System.Drawing.Color.White;
-            this.BtnAgregarMas.HoverState.Parent = this.BtnAgregarMas;
-            this.BtnAgregarMas.Image = global::VillaSofia.Properties.Resources.anadir__2_;
-            this.BtnAgregarMas.ImageSize = new System.Drawing.Size(32, 32);
-            this.BtnAgregarMas.Location = new System.Drawing.Point(1062, 146);
-            this.BtnAgregarMas.Name = "BtnAgregarMas";
-            this.BtnAgregarMas.ShadowDecoration.Parent = this.BtnAgregarMas;
-            this.BtnAgregarMas.Size = new System.Drawing.Size(34, 36);
-            this.BtnAgregarMas.TabIndex = 23;
-            this.BtnAgregarMas.Click += new System.EventHandler(this.BtnAgregarMas_Click);
             // 
             // btnMostrarRecetas
             // 
@@ -240,36 +221,36 @@
             this.btnguardarInsumo.ShadowDecoration.Parent = this.btnguardarInsumo;
             this.btnguardarInsumo.Size = new System.Drawing.Size(176, 47);
             this.btnguardarInsumo.TabIndex = 20;
-            this.btnguardarInsumo.Text = "AGREGAR INGREDIENTES";
+            this.btnguardarInsumo.Text = "AGREGAR INGREDIENTE";
             this.btnguardarInsumo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnguardarInsumo.Click += new System.EventHandler(this.btnguardarIgredientes_Click);
             // 
             // dgvInsumos
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(203)))), ((int)(((byte)(232)))));
-            this.dgvInsumos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(203)))), ((int)(((byte)(232)))));
+            this.dgvInsumos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
             this.dgvInsumos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvInsumos.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgvInsumos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvInsumos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvInsumos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.InactiveCaption;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvInsumos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.InactiveCaption;
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInsumos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
             this.dgvInsumos.ColumnHeadersHeight = 65;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(220)))), ((int)(((byte)(239)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.DarkSlateGray;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(139)))), ((int)(((byte)(205)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvInsumos.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(220)))), ((int)(((byte)(239)))));
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(139)))), ((int)(((byte)(205)))));
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvInsumos.DefaultCellStyle = dataGridViewCellStyle27;
             this.dgvInsumos.Enabled = false;
             this.dgvInsumos.EnableHeadersVisualStyles = false;
             this.dgvInsumos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(201)))), ((int)(((byte)(231)))));
@@ -381,32 +362,6 @@
             this.lblNombreIngrediente.TabIndex = 12;
             this.lblNombreIngrediente.Text = "Ingrediente:";
             // 
-            // txtNombreInsumo
-            // 
-            this.txtNombreInsumo.BackColor = System.Drawing.Color.Transparent;
-            this.txtNombreInsumo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNombreInsumo.DefaultText = "";
-            this.txtNombreInsumo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNombreInsumo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNombreInsumo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNombreInsumo.DisabledState.Parent = this.txtNombreInsumo;
-            this.txtNombreInsumo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNombreInsumo.Enabled = false;
-            this.txtNombreInsumo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNombreInsumo.FocusedState.Parent = this.txtNombreInsumo;
-            this.txtNombreInsumo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNombreInsumo.HoverState.Parent = this.txtNombreInsumo;
-            this.txtNombreInsumo.Location = new System.Drawing.Point(798, 92);
-            this.txtNombreInsumo.Margin = new System.Windows.Forms.Padding(0);
-            this.txtNombreInsumo.Name = "txtNombreInsumo";
-            this.txtNombreInsumo.PasswordChar = '\0';
-            this.txtNombreInsumo.PlaceholderText = "";
-            this.txtNombreInsumo.SelectedText = "";
-            this.txtNombreInsumo.ShadowDecoration.Parent = this.txtNombreInsumo;
-            this.txtNombreInsumo.Size = new System.Drawing.Size(287, 37);
-            this.txtNombreInsumo.TabIndex = 11;
-            this.txtNombreInsumo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreInsumo_KeyPress);
-            // 
             // cmbUM
             // 
             this.cmbUM.BackColor = System.Drawing.Color.Transparent;
@@ -424,7 +379,7 @@
             this.cmbUM.Location = new System.Drawing.Point(875, 146);
             this.cmbUM.Name = "cmbUM";
             this.cmbUM.ShadowDecoration.Parent = this.cmbUM;
-            this.cmbUM.Size = new System.Drawing.Size(170, 36);
+            this.cmbUM.Size = new System.Drawing.Size(183, 36);
             this.cmbUM.TabIndex = 10;
             // 
             // txtPorciones
@@ -517,6 +472,46 @@
             this.ttipMensaje.IsBalloon = true;
             this.ttipMensaje.MaximumSize = new System.Drawing.Size(0, 0);
             // 
+            // txtBusqueda
+            // 
+            this.txtBusqueda.BorderRadius = 2;
+            this.txtBusqueda.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBusqueda.DefaultText = "";
+            this.txtBusqueda.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtBusqueda.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtBusqueda.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBusqueda.DisabledState.Parent = this.txtBusqueda;
+            this.txtBusqueda.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBusqueda.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBusqueda.FocusedState.Parent = this.txtBusqueda;
+            this.txtBusqueda.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBusqueda.HoverState.Parent = this.txtBusqueda;
+            this.txtBusqueda.Location = new System.Drawing.Point(761, 71);
+            this.txtBusqueda.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.txtBusqueda.Name = "txtBusqueda";
+            this.txtBusqueda.PasswordChar = '\0';
+            this.txtBusqueda.PlaceholderText = "";
+            this.txtBusqueda.SelectedText = "";
+            this.txtBusqueda.ShadowDecoration.Parent = this.txtBusqueda;
+            this.txtBusqueda.Size = new System.Drawing.Size(297, 38);
+            this.txtBusqueda.TabIndex = 26;
+            this.txtBusqueda.TextChanged += new System.EventHandler(this.txtBusqueda_TextChanged);
+            this.txtBusqueda.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBusqueda_KeyDown);
+            this.txtBusqueda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBusqueda_KeyPress);
+            this.txtBusqueda.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBusqueda_KeyUp);
+            // 
+            // lsbInsumo
+            // 
+            this.lsbInsumo.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lsbInsumo.FormattingEnabled = true;
+            this.lsbInsumo.ItemHeight = 25;
+            this.lsbInsumo.Location = new System.Drawing.Point(592, 205);
+            this.lsbInsumo.Name = "lsbInsumo";
+            this.lsbInsumo.Size = new System.Drawing.Size(129, 29);
+            this.lsbInsumo.TabIndex = 43;
+            this.lsbInsumo.Visible = false;
+            this.lsbInsumo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lsbInsumo_MouseDown);
+            // 
             // FrmIngresarReceta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -546,7 +541,6 @@
         private Guna.UI2.WinForms.Guna2TextBox TxtCantidades;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblCantidad;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblNombreIngrediente;
-        private Guna.UI2.WinForms.Guna2TextBox txtNombreInsumo;
         private Guna.UI2.WinForms.Guna2ComboBox cmbUM;
         private Guna.UI2.WinForms.Guna2TextBox txtPorciones;
         private Guna.UI.WinForms.GunaTextBox txtProcedimiento;
@@ -556,9 +550,10 @@
         private Guna.UI2.WinForms.Guna2Button btnguardarInsumo;
         private Guna.UI2.WinForms.Guna2Button BtnEliminar;
         private Guna.UI2.WinForms.Guna2Button btnMostrarRecetas;
-        private Guna.UI2.WinForms.Guna2Button BtnAgregarMas;
         private Guna.UI2.WinForms.Guna2Button btnEditar;
         private Guna.UI2.WinForms.Guna2HtmlToolTip ttipMensaje;
         private Guna.UI2.WinForms.Guna2Button btnListo;
+        private Guna.UI2.WinForms.Guna2TextBox txtBusqueda;
+        private System.Windows.Forms.ListBox lsbInsumo;
     }
 }
