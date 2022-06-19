@@ -8,6 +8,7 @@ using System.Data;
 
 namespace Logica
 {
+    //linea para salir es este chacuatol
     public class ClsLogicaInventario
     {
         public DataTable mostrarInventarioActualEnUm()

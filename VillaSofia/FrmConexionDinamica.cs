@@ -25,16 +25,24 @@ namespace VillaSofia
 
         private void btnGuardarConexion_Click(object sender, EventArgs e)
         {
-            StreamWriter escribir = new StreamWriter(@"C:\credenciales.txt");
+
+            
+
+            String rt = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName,"credenciales.txt");
+            MessageBox.Show(rt);
+            StreamWriter escribir = new StreamWriter(rt);
             try
             {
-                escribir.WriteLine("host:" + txtHost.Text);
+                escribir.WriteLine(txtHost.Text);
 
-                escribir.WriteLine("usuario:" + txtUsuario.Text);
+                escribir.WriteLine(txtUsuario.Text);
                
-                escribir.WriteLine("Clave:" + txtClave.Text);
+                escribir.WriteLine(txtClave.Text);
               
-                escribir.WriteLine("Base de Datos:" + txtNombre_bd.Text);
+                escribir.WriteLine(txtNombre_bd.Text);
+
+                MessageBox.Show("Se guardo con Exito el Nuevo servidor! :D");
+
             }
             catch (Exception)
             {
