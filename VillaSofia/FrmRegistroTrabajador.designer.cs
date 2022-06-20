@@ -103,7 +103,7 @@
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(499, 106);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(81, 24);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(141, 41);
             this.guna2HtmlLabel1.TabIndex = 24;
             this.guna2HtmlLabel1.Text = "Fecha Nac";
             // 
@@ -146,6 +146,7 @@
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(210, 33);
             this.txtCedula.TabIndex = 19;
+            this.txtCedula.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtCedula_MaskInputRejected);
             // 
             // btnAddTipoTrabajador
             // 
@@ -192,7 +193,7 @@
             this.lblCedula.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
             this.lblCedula.Location = new System.Drawing.Point(499, 60);
             this.lblCedula.Name = "lblCedula";
-            this.lblCedula.Size = new System.Drawing.Size(56, 24);
+            this.lblCedula.Size = new System.Drawing.Size(97, 41);
             this.lblCedula.TabIndex = 15;
             this.lblCedula.Text = "Cedúla";
             // 
@@ -231,7 +232,7 @@
             this.lblSalario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
             this.lblSalario.Location = new System.Drawing.Point(48, 162);
             this.lblSalario.Name = "lblSalario";
-            this.lblSalario.Size = new System.Drawing.Size(57, 24);
+            this.lblSalario.Size = new System.Drawing.Size(98, 41);
             this.lblSalario.TabIndex = 12;
             this.lblSalario.Text = "Salario";
             // 
@@ -263,7 +264,7 @@
             this.lblCargo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
             this.lblCargo.Location = new System.Drawing.Point(499, 162);
             this.lblCargo.Name = "lblCargo";
-            this.lblCargo.Size = new System.Drawing.Size(50, 24);
+            this.lblCargo.Size = new System.Drawing.Size(87, 41);
             this.lblCargo.TabIndex = 10;
             this.lblCargo.Text = "Cargo";
             // 
@@ -302,7 +303,7 @@
             this.lblTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
             this.lblTelefono.Location = new System.Drawing.Point(48, 215);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(69, 24);
+            this.lblTelefono.Size = new System.Drawing.Size(117, 41);
             this.lblTelefono.TabIndex = 6;
             this.lblTelefono.Text = "Telefono";
             // 
@@ -369,7 +370,7 @@
             this.labelApellidos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
             this.labelApellidos.Location = new System.Drawing.Point(48, 106);
             this.labelApellidos.Name = "labelApellidos";
-            this.labelApellidos.Size = new System.Drawing.Size(72, 24);
+            this.labelApellidos.Size = new System.Drawing.Size(125, 41);
             this.labelApellidos.TabIndex = 1;
             this.labelApellidos.Text = "Apellidos";
             // 
@@ -380,7 +381,7 @@
             this.lblTrabajador.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
             this.lblTrabajador.Location = new System.Drawing.Point(48, 54);
             this.lblTrabajador.Name = "lblTrabajador";
-            this.lblTrabajador.Size = new System.Drawing.Size(71, 24);
+            this.lblTrabajador.Size = new System.Drawing.Size(121, 41);
             this.lblTrabajador.TabIndex = 0;
             this.lblTrabajador.Text = "Nombres";
             // 

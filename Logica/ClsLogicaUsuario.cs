@@ -128,7 +128,7 @@ namespace Logica
 
         public DataTable HistorialBitacora(String Condicion)
         {
-            String Sql = "Select * from vistabitacora where Usuario like '%" + Condicion + "%';";
+            String Sql = "Select * from vistaum where Usuario like '%" + Condicion + "%';";
             return objetoD.bitacora(Sql);
 
         }
