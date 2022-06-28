@@ -414,6 +414,7 @@ namespace VillaSofia
             for (int i = 0; i < dgvCuenta.RowCount; i++)
             {
                 orden.agregarOrden(Convert.ToInt32(dgvCuenta.Rows[i].Cells[0].Value), idFactura, Convert.ToDouble(dgvCuenta.Rows[i].Cells[1].Value), Convert.ToDouble(dgvCuenta.Rows[i].Cells[3].Value));
+                disminuirInventario(Convert.ToInt32(dgvCuenta.Rows[i].Cells[0].Value), Convert.ToInt32(dgvCuenta.Rows[i].Cells[1].Value));
             }
             factura.guardarTotalFactura(idFactura, Convert.ToDouble(txtTotal.Text));
             factura.agregarDatosFactura(idFactura, txtNombre.Text, txtRUC.Text, Convert.ToInt32(cmbMesero.SelectedValue));
@@ -445,6 +446,12 @@ namespace VillaSofia
             dgvCuenta.ReadOnly = true;
             facturaEditada = false;
 
+        }
+        void disminuirInventario(int idProducto, int cantidad)
+        {
+            ClsLogicaInventario inventario = new ClsLogicaInventario();
+            inventario.disminuirUnProductodeInventario(idProducto, cantidad);
+            
         }
         void mostrarFormularioDePago()
         {

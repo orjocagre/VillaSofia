@@ -44,5 +44,55 @@ namespace Logica
             String sql = "SELECT insumo.id_insumo AS ID, insumo.id_UM AS UM, um.id_tipo_um AS TIPO, um.conversion AS CONVERSION FROM insumo, um WHERE insumo.id_UM = um.id_UM ORDER BY insumo.id_insumo";
             return inventario.consulta(sql);
         }
+
+        public void disminuirUnProductodeInventario(int idProducto, int unidades)
+        {
+            ClsDatosInventario inventario = new ClsDatosInventario();
+            String sql = "SELECT insumo.id_insumo AS ID, insumo_receta.cantidad AS CANTIDAD, insumo_receta.IdUM AS IDUMRECETA, insumo.id_UM AS IDUMINSUMO FROM insumo, insumo_receta, receta, producto, um WHERE producto.id_receta = receta.id_receta AND receta.id_receta = insumo_receta.idReceta AND insumo_receta.idInsumo = insumo.id_insumo AND insumo_receta.IdUM = um.id_UM AND producto.idProducto = " + idProducto;
+            DataTable insumos = inventario.consulta(sql);
+            sql = "SELECT um.id_UM AS ID, um.conversion AS conversion FROM um";
+            DataTable um = inventario.consulta(sql);
+
+            for(int i=0; i<insumos.Rows.Count; i++)
+            {
+                int idInsumo = Convert.ToInt32(insumos.Rows[i][0]);
+                double cantidadEnUMReceta = Convert.ToDouble(insumos.Rows[i][1]);
+                int idUMReceta = Convert.ToInt32(insumos.Rows[i][2]);
+                int idUMInsumo = Convert.ToInt32(insumos.Rows[i][3]);
+                double conversionUMReceta = -1;
+                double conversionUMInsumo = -1;
+
+
+                for (int j=0; j<um.Rows.Count; j++)
+                {
+                    if(conversionUMReceta == -1 || conversionUMInsumo == -1)
+                    {
+                        if (idUMReceta == Convert.ToInt32(um.Rows[j][0]))
+                        {
+                            conversionUMReceta = Convert.ToDouble(um.Rows[j][1]);
+                        }
+                        if (idUMInsumo == Convert.ToInt32(um.Rows[j][0]))
+                        {
+                            conversionUMInsumo = Convert.ToDouble(um.Rows[j][1]);
+                        }
+                    }
+                    else
+                    {
+                        j = um.Rows.Count;
+                    }
+                }
+                if (conversionUMReceta != -1 && conversionUMInsumo != -1)
+                {
+                    double cantidadEnUMInsumo = ((cantidadEnUMReceta * conversionUMReceta) / conversionUMInsumo) * unidades;
+                    inventario.agregarSalida(idInsumo, cantidadEnUMInsumo, DateTime.Now, 0);
+
+                }
+                else
+                {
+                    Console.WriteLine("\n\n\n\n\n\n" + conversionUMReceta + " " + conversionUMInsumo + " " + idInsumo + " " + cantidadEnUMReceta + " " + idUMReceta + " " + idUMInsumo);
+                }
+                    
+            }
+        }
     }
 }
