@@ -347,5 +347,10 @@ namespace VillaSofia
                 BtnEditar.FillColor = Color.Orange;
             }
         }
+
+        private void txtCedula_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
     }
 }
