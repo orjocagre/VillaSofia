@@ -432,5 +432,10 @@ namespace VillaSofia
                 }
             }
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(DateTime.Now.ToString("yyy-MM-dd HH:mm:ss"));
+        }
     }
 }

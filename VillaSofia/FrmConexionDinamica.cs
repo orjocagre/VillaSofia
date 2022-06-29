@@ -26,31 +26,38 @@ namespace VillaSofia
         private void btnGuardarConexion_Click(object sender, EventArgs e)
         {
 
-            
-
-            String rt = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName,"credenciales.txt");
-            MessageBox.Show(rt);
-            StreamWriter escribir = new StreamWriter(rt);
-            try
+            if(txtClave.Text.Trim() != "" && txtHost.Text.Trim() != "" && txtNombre_bd.Text.Trim() == "" && txtUsuario.Text.Trim() == "")
             {
-                escribir.WriteLine(txtHost.Text);
+                String rt = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName, "credenciales.txt");
+                MessageBox.Show(rt);
+                StreamWriter escribir = new StreamWriter(rt);
+                try
+                {
+                    escribir.WriteLine(txtHost.Text);
 
-                escribir.WriteLine(txtUsuario.Text);
-               
-                escribir.WriteLine(txtClave.Text);
-              
-                escribir.WriteLine(txtNombre_bd.Text);
+                    escribir.WriteLine(txtUsuario.Text);
 
-                MessageBox.Show("Se guardo con Exito el Nuevo servidor! :D");
+                    escribir.WriteLine(txtClave.Text);
 
+                    escribir.WriteLine(txtNombre_bd.Text);
+
+                    MessageBox.Show("Se guardo con Exito el Nuevo servidor! :D");
+
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Eror al guardar la conexion");
+
+                    throw;
+                }
+                escribir.Close();
             }
-            catch (Exception)
+            else
             {
-                MessageBox.Show("Eror al guardar la conexion");
-
-                throw;
+                MessageBox.Show("Todos los campos son obligatorios");
             }
-           escribir.Close();
+
+           
 
 
 
