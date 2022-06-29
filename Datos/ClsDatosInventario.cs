@@ -34,7 +34,7 @@ namespace Datos
                 CM.Parameters.AddWithValue("Pcantidad", Pcantidad);
                 CM.Parameters["Pcantidad"].Direction = ParameterDirection.Input;
 
-                CM.Parameters.AddWithValue("Pfecha", Pfecha.Date);
+                CM.Parameters.AddWithValue("Pfecha", Pfecha.Date.ToString("yyy-MM-dd HH:mm:ss"));
                 CM.Parameters["Pfecha"].Direction = ParameterDirection.Input;
 
                 CM.Parameters.AddWithValue("Pprecio", Pprecio);
@@ -79,7 +79,7 @@ namespace Datos
                 CM.Parameters.AddWithValue("Pcantidad", Pcantidad);
                 CM.Parameters["Pcantidad"].Direction = ParameterDirection.Input;
 
-                CM.Parameters.AddWithValue("Pfecha", Pfecha.Date);
+                CM.Parameters.AddWithValue("Pfecha", Pfecha.Date.ToString("yyy-MM-dd HH:mm:ss"));
                 CM.Parameters["Pfecha"].Direction = ParameterDirection.Input;
 
                 CM.Parameters.AddWithValue("Pprecio", Pprecio);

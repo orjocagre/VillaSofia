@@ -57,7 +57,7 @@ namespace Logica
             }
             if (conversionUMCompra != -1 && conversionUMInsumo != -1)
             {
-                double cantidadEnUMInsumo = Pcantidad * presentacion * conversionUMCompra;
+                double cantidadEnUMInsumo = (Pcantidad * presentacion * conversionUMCompra) / conversionUMInsumo;
 
                 int msj = inventario.agregarEntrada(Pid_insumo, cantidadEnUMInsumo, Pfecha, Pprecio);
                 return msj;

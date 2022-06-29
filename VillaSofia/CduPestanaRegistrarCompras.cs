@@ -297,9 +297,9 @@ namespace VillaSofia
 
             for(int i=0; i<dgvInsumo.RowCount; i++)
             {
-                MessageBox.Show(dgvInsumo.Rows[i].Cells["id"].Value.ToString());
-                MessageBox.Show(dgvInsumo.Rows[i].Cells["cantidad"].Value.ToString());
-                MessageBox.Show(dgvInsumo.Rows[i].Cells["precio"].Value.ToString());
+                //MessageBox.Show(dgvInsumo.Rows[i].Cells["id"].Value.ToString());
+                //MessageBox.Show(dgvInsumo.Rows[i].Cells["cantidad"].Value.ToString());
+                //MessageBox.Show(dgvInsumo.Rows[i].Cells["precio"].Value.ToString());
 
 
 
@@ -331,6 +331,8 @@ namespace VillaSofia
                 autoCompletar();
                 e.Handled = true;
             }
+
+            
         }
 
         private void txtBusqueda_KeyUp(object sender, KeyEventArgs e)
@@ -408,6 +410,27 @@ namespace VillaSofia
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             guardar();
+        }
+
+        private void btnAgregar_Enter(object sender, EventArgs e)
+        {
+            btnAgregar.BorderThickness = 1;
+        }
+
+        private void btnAgregar_Leave(object sender, EventArgs e)
+        {
+            btnAgregar.BorderThickness = 0;
+        }
+
+        private void txtBusqueda_Leave(object sender, EventArgs e)
+        {
+            if (!lsbInsumo.Focused)
+            {
+                if (lsbInsumo.Visible)
+                {
+                    autoCompletar();
+                }
+            }
         }
     }
 }

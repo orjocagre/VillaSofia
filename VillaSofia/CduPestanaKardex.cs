@@ -284,6 +284,11 @@ namespace VillaSofia
                 autoCompletar();
                 e.Handled = true;
             }
+            if (lsbInsumo.Visible && (int)e.KeyChar == (int)Keys.Tab)
+            {
+                autoCompletar();
+                e.Handled = true;
+            }
         }
 
         private void txtBusqueda_KeyUp(object sender, KeyEventArgs e)
