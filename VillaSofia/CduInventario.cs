@@ -19,6 +19,7 @@ namespace VillaSofia
         CduPestanaListaCompras plc;
         CduPestanaRegistrarCompras prc;
         CduPestanaAjusteInventario pai;
+        CduPestanaKardex pka;
 
         public CduInventario(VillaSofia vs, int tipo_usuario)
         {
@@ -63,6 +64,14 @@ namespace VillaSofia
             pai.Size = new Size(this.Width, this.Height - 110);
             pai.Anchor = (AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Bottom);
             pai.SendToBack();
+
+            //panel de pestana de kardex
+            pka = new CduPestanaKardex(vs, tipo_usuario);
+            this.Controls.Add(pka);
+            pka.Location = new Point(0, 110);
+            pka.Size = new Size(this.Width, this.Height - 110);
+            pka.Anchor = (AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Bottom);
+            pka.SendToBack();
 
             pinv.BringToFront();
 
@@ -124,6 +133,7 @@ namespace VillaSofia
             plc.SendToBack();
             prc.SendToBack();
             pai.SendToBack();
+            pka.SendToBack();
 
 
         }
@@ -143,6 +153,7 @@ namespace VillaSofia
             pinv.SendToBack();
             prc.SendToBack();
             pai.SendToBack();
+            pka.SendToBack();
 
 
         }
@@ -162,6 +173,7 @@ namespace VillaSofia
             pinv.SendToBack();
             plc.SendToBack();
             pai.SendToBack();
+            pka.SendToBack();
 
         }
 
@@ -180,6 +192,7 @@ namespace VillaSofia
             pinv.SendToBack();
             plc.SendToBack();
             prc.SendToBack();
+            pka.SendToBack();
 
         }
 
@@ -193,6 +206,12 @@ namespace VillaSofia
             btnAjusteInventario.ForeColor = Color.Gray;
             btnKardex.ForeColor = Color.Black;
             btnInventarioMinimo.ForeColor = Color.Gray;
+
+            pka.BringToFront();
+            pai.SendToBack();
+            pinv.SendToBack();
+            plc.SendToBack();
+            prc.SendToBack();
         }
 
         private void btnInventarioMinimo_Click(object sender, EventArgs e)

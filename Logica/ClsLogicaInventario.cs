@@ -24,11 +24,48 @@ namespace Logica
             return inventario.consulta("SELECT insumo.id_insumo AS ID, insumo.nombre AS NOMBRE, (insumo.existencia / insumo.presentacion) AS CANTIDAD, insumo.envase AS ENVASE, insumo.presentacion AS PRESENTACION, um.descripcion AS UM FROM insumo, um WHERE insumo.id_UM = um.id_UM");
         }
 
-        public int agregarEntrada(int Pid_insumo, double Pcantidad, DateTime Pfecha, double Pprecio)
+        public int agregarEntrada(int Pid_insumo, double Pcantidad, DateTime Pfecha, double Pprecio, int idUmCompra, double presentacion)
         {
             ClsDatosInventario inventario = new ClsDatosInventario();
-            int msj = inventario.agregarEntrada(Pid_insumo, Pcantidad, Pfecha, Pprecio);
-            return msj;
+            
+            String sql = "SELECT insumo.id_UM AS UM FROM insumo WHERE insumo.id_insumo = "+Pid_insumo;
+            int idUmInsumo = Convert.ToInt32(inventario.consulta(sql).Rows[0][0]);
+            sql = "SELECT um.id_UM AS ID, um.conversion AS conversion FROM um";
+            DataTable um = inventario.consulta(sql);
+
+            double conversionUMCompra = -1;
+            double conversionUMInsumo = -1;
+
+
+            for (int i = 0; i < um.Rows.Count; i++)
+            {
+                if (conversionUMCompra == -1 || conversionUMInsumo == -1)
+                {
+                    if (idUmCompra == Convert.ToInt32(um.Rows[i][0]))
+                    {
+                        conversionUMCompra = Convert.ToDouble(um.Rows[i][1]);
+                    }
+                    if (idUmInsumo == Convert.ToInt32(um.Rows[i][0]))
+                    {
+                        conversionUMInsumo = Convert.ToDouble(um.Rows[i][1]);
+                    }
+                }
+                else
+                {
+                    i = um.Rows.Count;
+                }
+            }
+            if (conversionUMCompra != -1 && conversionUMInsumo != -1)
+            {
+                double cantidadEnUMInsumo = Pcantidad * presentacion * conversionUMCompra;
+
+                int msj = inventario.agregarEntrada(Pid_insumo, cantidadEnUMInsumo, Pfecha, Pprecio);
+                return msj;
+            }
+            else
+            {
+                return -1;
+            }
 
         }
         public DataTable listarInsumos()
@@ -93,6 +130,78 @@ namespace Logica
                 }
                     
             }
+        }
+
+        public DataTable generarKardex(int idInsumo, DateTime fechaInicial, DateTime fechaFinal)
+        {
+            Console.WriteLine("\n\n Entrada al metodo kardex");
+            ClsDatosInventario inventario = new ClsDatosInventario();
+            String sql = "SELECT fecha AS FECHA, cantidad AS CANTIDAD, precio AS PRECIO FROM entrada_inventario WHERE id_insumo = "+idInsumo+" AND fecha > '"+fechaInicial.ToString("yyy-MM-dd HH:mm:ss")+"' AND fecha < '"+fechaFinal.ToString("yyy-MM-dd HH:mm:ss") + "' ORDER BY fecha ASC";
+            DataTable dtEntradas = inventario.consulta(sql);
+            Console.WriteLine("dt entradas lineas: "+dtEntradas.Rows.Count);
+            sql = "SELECT fecha AS FECHA, cantidad AS CANTIDAD, precio AS PRECIO FROM salida_inventario WHERE id_insumo = " + idInsumo + " AND fecha > '" + fechaInicial.ToString("yyy-MM-dd HH:mm:ss") + "' AND fecha < '" + fechaFinal.ToString("yyy-MM-dd HH:mm:ss") + "' ORDER BY fecha ASC";
+            DataTable dtSalidas = inventario.consulta(sql);
+            Console.WriteLine("dt salidas lineas: " + dtSalidas.Rows.Count);
+
+            DataTable kardex = new DataTable();
+            kardex.Columns.Add("FECHA", typeof(String));
+            kardex.Columns.Add("CANTIDAD ENTRADAS", typeof(double));
+            kardex.Columns.Add("COSTO ENTRADAS", typeof(String));
+            kardex.Columns.Add("CANTIDAD SALIDAS", typeof(double));
+            kardex.Columns.Add("COSTO SALIDAS", typeof(String));
+
+
+            int filaEntrada = 0;
+            int filaSalida = 0;
+
+            while (filaEntrada < dtEntradas.Rows.Count || filaSalida < dtSalidas.Rows.Count)
+            {
+                Console.WriteLine("vuelta while");
+                kardex.Rows.Add();
+                if(filaSalida == dtSalidas.Rows.Count)
+                {
+                    kardex.Rows[kardex.Rows.Count - 1][0] = dtEntradas.Rows[filaEntrada][0].ToString();
+                    kardex.Rows[kardex.Rows.Count - 1][1] = (Convert.ToDouble(dtEntradas.Rows[filaEntrada][1])).ToString("#,#.#");
+                    kardex.Rows[kardex.Rows.Count - 1][2] = (Convert.ToDouble(dtEntradas.Rows[filaEntrada][2])).ToString("C$ #,#.00");
+                    filaEntrada++;
+                }
+                else if(filaEntrada == dtEntradas.Rows.Count)
+                {
+                    kardex.Rows[kardex.Rows.Count - 1][0] = dtSalidas.Rows[filaSalida][0].ToString();
+                    kardex.Rows[kardex.Rows.Count - 1][3] = (Convert.ToDouble(dtSalidas.Rows[filaSalida][1])).ToString("#,#.#");
+                    kardex.Rows[kardex.Rows.Count - 1][4] = (Convert.ToDouble(dtSalidas.Rows[filaSalida][2])).ToString("C$ #,#.00");
+                    filaSalida++;
+                }
+                else
+                {
+                    if (Convert.ToDateTime(dtEntradas.Rows[filaEntrada][0]) < Convert.ToDateTime(dtSalidas.Rows[filaSalida][0]))
+                    {
+                        kardex.Rows[kardex.Rows.Count - 1][0] = dtEntradas.Rows[filaEntrada][0].ToString();
+                        kardex.Rows[kardex.Rows.Count - 1][1] = (Convert.ToDouble(dtEntradas.Rows[filaEntrada][1])).ToString("#,#.#");
+                        kardex.Rows[kardex.Rows.Count - 1][2] = (Convert.ToDouble(dtEntradas.Rows[filaEntrada][2])).ToString("C$ #,#.00");
+                        filaEntrada++;
+                    }
+                    else
+                    {
+                        kardex.Rows[kardex.Rows.Count - 1][0] = dtSalidas.Rows[0][0].ToString();
+                        kardex.Rows[kardex.Rows.Count - 1][3] = (Convert.ToDouble(dtSalidas.Rows[filaSalida][1])).ToString("#,#.#");
+                        kardex.Rows[kardex.Rows.Count - 1][4] = (Convert.ToDouble(dtSalidas.Rows[filaSalida][2])).ToString("C$ #,#.00");
+                        filaSalida++;
+                    }
+                }
+                
+                Console.WriteLine("bucle while " + kardex.Rows.Count);
+            }
+
+            Console.WriteLine("\n\n\n\n\n\n\n\n\n\n\n\n\n");
+            for(int i=0; i<kardex.Rows.Count; i++)
+            {
+                for(int j=0; j<kardex.Columns.Count; j++)
+                {
+                    Console.WriteLine(kardex.Rows[i][j].ToString());
+                }
+            }
+            return kardex;
         }
     }
 }

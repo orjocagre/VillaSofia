@@ -303,7 +303,7 @@ namespace VillaSofia
 
 
 
-                inventario.agregarEntrada(Convert.ToInt32(dgvInsumo.Rows[i].Cells["id"].Value.ToString()), Convert.ToDouble(dgvInsumo.Rows[i].Cells["cantidad"].Value.ToString()), DateTime.Now, Convert.ToDouble(dgvInsumo.Rows[i].Cells["precio"].Value.ToString()));
+                inventario.agregarEntrada(Convert.ToInt32(dgvInsumo.Rows[i].Cells["id"].Value.ToString()), Convert.ToDouble(dgvInsumo.Rows[i].Cells["cantidad"].Value.ToString()), DateTime.Now, Convert.ToDouble(dgvInsumo.Rows[i].Cells["precio"].Value.ToString()), Convert.ToInt32(dgvInsumo.Rows[i].Cells["idum"].Value.ToString()), Convert.ToDouble(dgvInsumo.Rows[i].Cells["presentacion"].Value.ToString()));
             }
             MessageBox.Show("Inventario Actualizado!");
             dgvInsumo.Rows.Clear();

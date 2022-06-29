@@ -104,8 +104,5 @@ namespace Datos
                 conex.conectar.Close();
             }
         }
-
-
-
     }
 }
