@@ -203,5 +203,32 @@ namespace Logica
             }
             return kardex;
         }
+
+
+        public DataTable listarMinimos(String nombre)
+        {
+            ClsDatosInventario inventario = new ClsDatosInventario();
+            String sql = "SELECT insumo.id_insumo AS ID, insumo.nombre AS NOMBRE, insumo.minimo AS MINIMO, um.descripcion AS UM, insumo.envase AS ENVASE, insumo.presentacion AS PRESENTACION FROM insumo, um WHERE insumo.id_UM = um.id_UM AND insumo.nombre LIKE '%"+nombre+"%'";
+            DataTable DT = inventario.consulta(sql);
+
+            DataTable minimos = new DataTable();
+            minimos.Columns.Add("ID", typeof(int));
+            minimos.Columns.Add("NOMBRE", typeof(String));
+            minimos.Columns.Add("MINIMO", typeof(double));
+            minimos.Columns.Add("PRESENTACION", typeof(String));
+
+
+            for(int i=0; i<DT.Rows.Count; i++)
+            {
+                minimos.Rows.Add();
+                minimos.Rows[i][0] = DT.Rows[i][0];
+                minimos.Rows[i][1] = DT.Rows[i][1];
+                minimos.Rows[i][2] = Convert.ToDouble(DT.Rows[i][2]) / Convert.ToDouble(DT.Rows[i][5]);
+                //minimos.Rows[i][0] = DT.Rows[i][4].ToString() + " de " + (Convert.ToDouble(DT.Rows[i][5])).ToString("#,#.#") DT.Rows[i][3];
+
+            }
+            return DT;
+
+        }
     }
 }

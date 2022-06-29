@@ -26,7 +26,7 @@ namespace VillaSofia
         private void btnGuardarConexion_Click(object sender, EventArgs e)
         {
 
-            if(txtClave.Text.Trim() != "" && txtHost.Text.Trim() != "" && txtNombre_bd.Text.Trim() == "" && txtUsuario.Text.Trim() == "")
+            if(txtClave.Text.Trim() != "" && txtHost.Text.Trim() != "" && txtNombre_bd.Text.Trim() != "" && txtUsuario.Text.Trim() != "")
             {
                 String rt = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName, "credenciales.txt");
                 MessageBox.Show(rt);

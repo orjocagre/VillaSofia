@@ -135,6 +135,12 @@
     <Compile Include="CduPestanaAjusteInventarioIngresar.Designer.cs">
       <DependentUpon>CduPestanaAjusteInventarioIngresar.cs</DependentUpon>
     </Compile>
+    <Compile Include="CduPestanaInventarioMinimo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CduPestanaInventarioMinimo.Designer.cs">
+      <DependentUpon>CduPestanaInventarioMinimo.cs</DependentUpon>
+    </Compile>
     <Compile Include="CduPestanaKardex.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -369,6 +375,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CduPestanaAjusteInventarioIngresar.resx">
       <DependentUpon>CduPestanaAjusteInventarioIngresar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CduPestanaInventarioMinimo.resx">
+      <DependentUpon>CduPestanaInventarioMinimo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CduPestanaKardex.resx">
       <DependentUpon>CduPestanaKardex.cs</DependentUpon>
