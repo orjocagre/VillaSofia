@@ -59,8 +59,8 @@ namespace VillaSofia
                 if ((double)dtMinimos.Rows[i][2] != (double)dgvMinimos.Rows[i].Cells[2].Value)
                 {
                     int msj = inventario.editarMinimoInsumo((int)(dgvMinimos.Rows[i].Cells[0].Value), (double)(dgvMinimos.Rows[i].Cells[2].Value));
-                    MessageBox.Show(msj.ToString()+" "+ dtMinimos.Rows[i][2]+" "+dgvMinimos.Rows[i].Cells[2].Value);
                 }
+                MessageBox.Show("Inventario minimo actualizado");
             }
         }
     }
