@@ -32,11 +32,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnBuscar = new Guna.UI2.WinForms.Guna2Button();
             this.btnGuardar = new Guna.UI2.WinForms.Guna2Button();
             this.txtBusqueda = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.dgvMinimos = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMinimos)).BeginInit();
             this.SuspendLayout();
@@ -44,7 +44,7 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.White;
-            this.guna2Panel1.Controls.Add(this.guna2Button3);
+            this.guna2Panel1.Controls.Add(this.btnBuscar);
             this.guna2Panel1.Controls.Add(this.btnGuardar);
             this.guna2Panel1.Controls.Add(this.txtBusqueda);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel1);
@@ -57,8 +57,30 @@
             this.guna2Panel1.Size = new System.Drawing.Size(1164, 660);
             this.guna2Panel1.TabIndex = 5;
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.White;
+            this.btnBuscar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.btnBuscar.BorderRadius = 2;
+            this.btnBuscar.CheckedState.Parent = this.btnBuscar;
+            this.btnBuscar.CustomImages.Parent = this.btnBuscar;
+            this.btnBuscar.FillColor = System.Drawing.Color.White;
+            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.HoverState.Parent = this.btnBuscar;
+            this.btnBuscar.Image = global::VillaSofia.Properties.Resources.buscarNegro;
+            this.btnBuscar.Location = new System.Drawing.Point(360, 44);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.ShadowDecoration.Parent = this.btnBuscar;
+            this.btnBuscar.Size = new System.Drawing.Size(39, 36);
+            this.btnBuscar.TabIndex = 40;
+            this.btnBuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnBuscar.TextOffset = new System.Drawing.Point(0, 3);
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // btnGuardar
             // 
+            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGuardar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.btnGuardar.BorderRadius = 2;
             this.btnGuardar.BorderThickness = 1;
@@ -77,6 +99,7 @@
             this.btnGuardar.TabIndex = 39;
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.TextOffset = new System.Drawing.Point(0, 3);
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // txtBusqueda
             // 
@@ -151,9 +174,8 @@
             this.dgvMinimos.Location = new System.Drawing.Point(17, 91);
             this.dgvMinimos.MultiSelect = false;
             this.dgvMinimos.Name = "dgvMinimos";
-            this.dgvMinimos.ReadOnly = true;
             this.dgvMinimos.RowHeadersVisible = false;
-            this.dgvMinimos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvMinimos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvMinimos.Size = new System.Drawing.Size(1126, 498);
             this.dgvMinimos.TabIndex = 7;
             this.dgvMinimos.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Light;
@@ -170,7 +192,7 @@
             this.dgvMinimos.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
             this.dgvMinimos.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvMinimos.ThemeStyle.HeaderStyle.Height = 20;
-            this.dgvMinimos.ThemeStyle.ReadOnly = true;
+            this.dgvMinimos.ThemeStyle.ReadOnly = false;
             this.dgvMinimos.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvMinimos.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvMinimos.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -178,27 +200,6 @@
             this.dgvMinimos.ThemeStyle.RowsStyle.Height = 22;
             this.dgvMinimos.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.Silver;
             this.dgvMinimos.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            // 
-            // guna2Button3
-            // 
-            this.guna2Button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Button3.BackColor = System.Drawing.Color.White;
-            this.guna2Button3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.guna2Button3.BorderRadius = 2;
-            this.guna2Button3.CheckedState.Parent = this.guna2Button3;
-            this.guna2Button3.CustomImages.Parent = this.guna2Button3;
-            this.guna2Button3.FillColor = System.Drawing.Color.White;
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.HoverState.Parent = this.guna2Button3;
-            this.guna2Button3.Image = global::VillaSofia.Properties.Resources.buscarNegro;
-            this.guna2Button3.Location = new System.Drawing.Point(360, 44);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
-            this.guna2Button3.Size = new System.Drawing.Size(39, 36);
-            this.guna2Button3.TabIndex = 40;
-            this.guna2Button3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button3.TextOffset = new System.Drawing.Point(0, 3);
             // 
             // CduPestanaInventarioMinimo
             // 
@@ -221,6 +222,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtBusqueda;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2DataGridView dgvMinimos;
-        public Guna.UI2.WinForms.Guna2Button guna2Button3;
+        public Guna.UI2.WinForms.Guna2Button btnBuscar;
     }
 }

@@ -33,6 +33,7 @@ namespace VillaSofia
             SRtipoCambio.Tipo_Cambio_BCNSoapClient tc = new SRtipoCambio.Tipo_Cambio_BCNSoapClient();
             DateTime hoy = DateTime.Now;
             tipoCambio = tc.RecuperaTC_Dia(hoy.Year, hoy.Month, hoy.Day);
+            MessageBox.Show(tipoCambio.ToString());
             txtTotalDolares.Text = "$ " + (total / tipoCambio).ToString("#,0.00");
 
         }

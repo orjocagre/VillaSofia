@@ -20,6 +20,7 @@ namespace VillaSofia
         CduPestanaRegistrarCompras prc;
         CduPestanaAjusteInventario pai;
         CduPestanaKardex pka;
+        CduPestanaInventarioMinimo pim;
 
         public CduInventario(VillaSofia vs, int tipo_usuario)
         {
@@ -72,6 +73,14 @@ namespace VillaSofia
             pka.Size = new Size(this.Width, this.Height - 110);
             pka.Anchor = (AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Bottom);
             pka.SendToBack();
+
+            //panel de pestana de inventario minimo
+            pim = new CduPestanaInventarioMinimo();
+            this.Controls.Add(pim);
+            pim.Location = new Point(0, 110);
+            pim.Size = new Size(this.Width, this.Height - 110);
+            pim.Anchor = (AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Bottom);
+            pim.SendToBack();
 
             pinv.BringToFront();
 
@@ -134,6 +143,7 @@ namespace VillaSofia
             prc.SendToBack();
             pai.SendToBack();
             pka.SendToBack();
+            pim.SendToBack();
 
 
         }
@@ -154,6 +164,7 @@ namespace VillaSofia
             prc.SendToBack();
             pai.SendToBack();
             pka.SendToBack();
+            pim.SendToBack();
 
 
         }
@@ -174,6 +185,8 @@ namespace VillaSofia
             plc.SendToBack();
             pai.SendToBack();
             pka.SendToBack();
+            pim.SendToBack();
+
 
         }
 
@@ -193,6 +206,8 @@ namespace VillaSofia
             plc.SendToBack();
             prc.SendToBack();
             pka.SendToBack();
+            pim.SendToBack();
+
 
         }
 
@@ -212,6 +227,8 @@ namespace VillaSofia
             pinv.SendToBack();
             plc.SendToBack();
             prc.SendToBack();
+            pim.SendToBack();
+
         }
 
         private void btnInventarioMinimo_Click(object sender, EventArgs e)
@@ -224,6 +241,15 @@ namespace VillaSofia
             btnAjusteInventario.ForeColor = Color.Gray;
             btnKardex.ForeColor = Color.Gray;
             btnInventarioMinimo.ForeColor = Color.Black;
+
+            pim.BringToFront();
+            pai.SendToBack();
+            pinv.SendToBack();
+            plc.SendToBack();
+            prc.SendToBack();
+            pka.SendToBack();
+
+
         }
 
         private void CduInventario_SizeChanged(object sender, EventArgs e)

@@ -223,12 +223,24 @@ namespace Logica
                 minimos.Rows.Add();
                 minimos.Rows[i][0] = DT.Rows[i][0];
                 minimos.Rows[i][1] = DT.Rows[i][1];
+
                 minimos.Rows[i][2] = Convert.ToDouble(DT.Rows[i][2]) / Convert.ToDouble(DT.Rows[i][5]);
-                //minimos.Rows[i][0] = DT.Rows[i][4].ToString() + " de " + (Convert.ToDouble(DT.Rows[i][5])).ToString("#,#.#") DT.Rows[i][3];
+
+                minimos.Rows[i][3] = DT.Rows[i][4].ToString() + " de " + (Convert.ToDouble(DT.Rows[i][5])).ToString("#,#.#") +" "+ DT.Rows[i][3].ToString() + "(s)";
 
             }
-            return DT;
+            return minimos;
 
         }
+
+        public int editarMinimoInsumo(int PidInsumo, double Pminimo)
+        {
+            ClsDatosInventario inventario = new ClsDatosInventario();
+            int msj = inventario.editarMinimoInsumo(PidInsumo, Pminimo);
+            return msj;
+        }
+
+
+
     }
 }

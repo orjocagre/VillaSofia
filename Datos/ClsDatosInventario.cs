@@ -104,5 +104,43 @@ namespace Datos
                 conex.conectar.Close();
             }
         }
+
+        public int editarMinimoInsumo(int PidInsumo, double Pminimo)
+        {
+            MySqlCommand CM = new MySqlCommand();
+            MySqlParameter x = new MySqlParameter();
+
+            try
+            {
+                conex.conectar.Open();
+                CM.Connection = conex.conectar;
+                CM.CommandType = CommandType.StoredProcedure;
+                CM.CommandText = "EditarMinimo";
+
+                CM.Parameters.AddWithValue("PidInsumo", PidInsumo);
+                CM.Parameters["PidInsumo"].Direction = ParameterDirection.Input;
+
+                CM.Parameters.AddWithValue("Pminimo", Pminimo);
+                CM.Parameters["Pminimo"].Direction = ParameterDirection.Input;
+
+                x = CM.Parameters.AddWithValue("Pmsj", "");
+                CM.Parameters["Pmsj"].Direction = ParameterDirection.Output;
+
+                CM.ExecuteNonQuery();
+
+                return Convert.ToInt32(x.Value.ToString());
+
+
+            }
+            catch (MySqlException e)
+            {
+                Console.WriteLine(e.ToString());
+                return 3;
+            }
+            finally
+            {
+                conex.conectar.Close();
+            }
+        }
     }
 }
