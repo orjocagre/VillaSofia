@@ -70,7 +70,7 @@ namespace VillaSofia
             rbtServicioEnMesas.Checked = DT.Rows[0].Field<int>("TIPOSERVICIO") == 2 ? true : false;
             regeve2.txtNombre.Text = DT.Rows[0].Field<String>("NOMBRE");
             regeve2.txtApellido.Text = DT.Rows[0].Field<String>("APELLIDO");
-            regeve2.txtCedula.Text = DT.Rows[0].Field<String>("CEDULA");
+            regeve2.txtCedula.Text = DT.Rows[0].Field<string>("CEDULA");
             regeve2.txtTelefono.Text = DT.Rows[0].Field<int>("TELEFONO").ToString();
             regeve2.chbTotalCancelado.Checked = DT.Rows[0].Field<Int16>("TOTALCANCELADO") == 1 ? true : false;
             regeve2.chbAnticipoCancelado.Checked = DT.Rows[0].Field<Int16>("ANTICIPOCANCELADO") == 1 ? true : false;

@@ -33,7 +33,7 @@ namespace VillaSofia
             ClsLogicaOrden orden = new ClsLogicaOrden();
             ClsLogicaFactura factura = new ClsLogicaFactura();
             DataTable DT = factura.infoFactura(idFactura);
-            MessageBox.Show("Mesero " + DT.Rows[0][5]);
+            //MessageBox.Show("Mesero " + DT.Rows[0][5]);
             MessageBox.Show("Nombre" + DT.Rows[0].Field<String>(3));
             MessageBox.Show("RUC " + DT.Rows[0].Field<String>(4));
 

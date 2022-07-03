@@ -143,11 +143,11 @@ namespace VillaSofia
                 }
                 else
                 {
-                    //revisar e
-                    MessageBox.Show("Bienvenid@ a ISVS");
+                    
 
 
                 }
+                
             }
             catch (Exception ex)
             {

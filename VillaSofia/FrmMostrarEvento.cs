@@ -115,5 +115,10 @@ namespace VillaSofia
             pnPrincipal.Visible = false;
             evepre.Visible = true;
         }
+
+        private void guna2VSeparator1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

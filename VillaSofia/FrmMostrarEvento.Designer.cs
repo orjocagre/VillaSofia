@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnPrincipal = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblArea = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnDinero = new Guna.UI2.WinForms.Guna2Button();
             this.btnImprimir = new Guna.UI2.WinForms.Guna2Button();
             this.btnEditar = new Guna.UI2.WinForms.Guna2Button();
@@ -46,7 +47,6 @@
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.lblHora = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblTipoEvento = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblArea = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlatos)).BeginInit();
             this.SuspendLayout();
@@ -73,8 +73,19 @@
             this.pnPrincipal.Location = new System.Drawing.Point(0, 0);
             this.pnPrincipal.Name = "pnPrincipal";
             this.pnPrincipal.ShadowDecoration.Parent = this.pnPrincipal;
-            this.pnPrincipal.Size = new System.Drawing.Size(815, 577);
+            this.pnPrincipal.Size = new System.Drawing.Size(879, 577);
             this.pnPrincipal.TabIndex = 0;
+            // 
+            // lblArea
+            // 
+            this.lblArea.BackColor = System.Drawing.Color.Transparent;
+            this.lblArea.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArea.ForeColor = System.Drawing.Color.Gray;
+            this.lblArea.Location = new System.Drawing.Point(17, 337);
+            this.lblArea.Name = "lblArea";
+            this.lblArea.Size = new System.Drawing.Size(137, 41);
+            this.lblArea.TabIndex = 35;
+            this.lblArea.Text = "En salones";
             // 
             // btnDinero
             // 
@@ -166,13 +177,13 @@
             this.dgvPlatos.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPlatos.EnableHeadersVisualStyles = false;
             this.dgvPlatos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvPlatos.Location = new System.Drawing.Point(254, 147);
+            this.dgvPlatos.Location = new System.Drawing.Point(355, 137);
             this.dgvPlatos.Name = "dgvPlatos";
             this.dgvPlatos.ReadOnly = true;
             this.dgvPlatos.RowHeadersVisible = false;
             this.dgvPlatos.RowTemplate.Height = 24;
             this.dgvPlatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPlatos.Size = new System.Drawing.Size(537, 200);
+            this.dgvPlatos.Size = new System.Drawing.Size(521, 200);
             this.dgvPlatos.TabIndex = 34;
             this.dgvPlatos.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.dgvPlatos.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -199,10 +210,11 @@
             // 
             // guna2VSeparator1
             // 
-            this.guna2VSeparator1.Location = new System.Drawing.Point(228, 137);
+            this.guna2VSeparator1.Location = new System.Drawing.Point(339, 136);
             this.guna2VSeparator1.Name = "guna2VSeparator1";
             this.guna2VSeparator1.Size = new System.Drawing.Size(10, 429);
             this.guna2VSeparator1.TabIndex = 33;
+            this.guna2VSeparator1.Click += new System.EventHandler(this.guna2VSeparator1_Click);
             // 
             // lblFecha
             // 
@@ -221,9 +233,9 @@
             this.lblComentarios.BackColor = System.Drawing.Color.Transparent;
             this.lblComentarios.Font = new System.Drawing.Font("Tw Cen MT", 15.75F);
             this.lblComentarios.ForeColor = System.Drawing.Color.Gray;
-            this.lblComentarios.Location = new System.Drawing.Point(254, 363);
+            this.lblComentarios.Location = new System.Drawing.Point(355, 369);
             this.lblComentarios.Name = "lblComentarios";
-            this.lblComentarios.Size = new System.Drawing.Size(537, 186);
+            this.lblComentarios.Size = new System.Drawing.Size(523, 186);
             this.lblComentarios.TabIndex = 31;
             this.lblComentarios.Text = "87 invitados";
             this.lblComentarios.TextAlignment = System.Drawing.ContentAlignment.BottomLeft;
@@ -233,9 +245,9 @@
             this.lblNumInvitados.BackColor = System.Drawing.Color.Transparent;
             this.lblNumInvitados.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumInvitados.ForeColor = System.Drawing.Color.Gray;
-            this.lblNumInvitados.Location = new System.Drawing.Point(36, 243);
+            this.lblNumInvitados.Location = new System.Drawing.Point(17, 290);
             this.lblNumInvitados.Name = "lblNumInvitados";
-            this.lblNumInvitados.Size = new System.Drawing.Size(92, 24);
+            this.lblNumInvitados.Size = new System.Drawing.Size(160, 41);
             this.lblNumInvitados.TabIndex = 31;
             this.lblNumInvitados.Text = "87 invitados";
             // 
@@ -244,9 +256,9 @@
             this.lblTipoServicio.BackColor = System.Drawing.Color.Transparent;
             this.lblTipoServicio.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipoServicio.ForeColor = System.Drawing.Color.Gray;
-            this.lblTipoServicio.Location = new System.Drawing.Point(36, 213);
+            this.lblTipoServicio.Location = new System.Drawing.Point(17, 243);
             this.lblTipoServicio.Name = "lblTipoServicio";
-            this.lblTipoServicio.Size = new System.Drawing.Size(130, 24);
+            this.lblTipoServicio.Size = new System.Drawing.Size(225, 41);
             this.lblTipoServicio.TabIndex = 30;
             this.lblTipoServicio.Text = "Servicio en mesas";
             // 
@@ -255,9 +267,9 @@
             this.lblHoraComida.BackColor = System.Drawing.Color.Transparent;
             this.lblHoraComida.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHoraComida.ForeColor = System.Drawing.Color.Gray;
-            this.lblHoraComida.Location = new System.Drawing.Point(36, 183);
+            this.lblHoraComida.Location = new System.Drawing.Point(15, 196);
             this.lblHoraComida.Name = "lblHoraComida";
-            this.lblHoraComida.Size = new System.Drawing.Size(153, 24);
+            this.lblHoraComida.Size = new System.Drawing.Size(265, 41);
             this.lblHoraComida.TabIndex = 29;
             this.lblHoraComida.Text = "Comida a la 1:30 pm";
             // 
@@ -266,7 +278,7 @@
             this.lblNombre.BackColor = System.Drawing.Color.Transparent;
             this.lblNombre.Font = new System.Drawing.Font("Tw Cen MT", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.Silver;
-            this.lblNombre.Location = new System.Drawing.Point(423, 76);
+            this.lblNombre.Location = new System.Drawing.Point(487, 76);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(380, 39);
             this.lblNombre.TabIndex = 28;
@@ -276,7 +288,7 @@
             // 
             this.guna2Separator1.Location = new System.Drawing.Point(17, 121);
             this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(786, 10);
+            this.guna2Separator1.Size = new System.Drawing.Size(850, 10);
             this.guna2Separator1.TabIndex = 27;
             // 
             // lblHora
@@ -284,9 +296,9 @@
             this.lblHora.BackColor = System.Drawing.Color.Transparent;
             this.lblHora.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHora.ForeColor = System.Drawing.Color.Gray;
-            this.lblHora.Location = new System.Drawing.Point(36, 153);
+            this.lblHora.Location = new System.Drawing.Point(17, 153);
             this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(172, 24);
+            this.lblHora.Size = new System.Drawing.Size(299, 41);
             this.lblHora.TabIndex = 26;
             this.lblHora.Text = "De 12:00 pm a 5:00 pm";
             // 
@@ -295,34 +307,23 @@
             this.lblTipoEvento.BackColor = System.Drawing.Color.Transparent;
             this.lblTipoEvento.Font = new System.Drawing.Font("Tw Cen MT", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipoEvento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
-            this.lblTipoEvento.Location = new System.Drawing.Point(641, 12);
+            this.lblTipoEvento.Location = new System.Drawing.Point(695, 12);
             this.lblTipoEvento.Name = "lblTipoEvento";
             this.lblTipoEvento.Size = new System.Drawing.Size(162, 76);
             this.lblTipoEvento.TabIndex = 25;
             this.lblTipoEvento.Text = "BODA";
-            // 
-            // lblArea
-            // 
-            this.lblArea.BackColor = System.Drawing.Color.Transparent;
-            this.lblArea.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblArea.ForeColor = System.Drawing.Color.Gray;
-            this.lblArea.Location = new System.Drawing.Point(36, 273);
-            this.lblArea.Name = "lblArea";
-            this.lblArea.Size = new System.Drawing.Size(79, 24);
-            this.lblArea.TabIndex = 35;
-            this.lblArea.Text = "En salones";
             // 
             // FrmMostrarEvento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(815, 577);
+            this.ClientSize = new System.Drawing.Size(879, 577);
             this.Controls.Add(this.pnPrincipal);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(831, 616);
+            this.MaximumSize = new System.Drawing.Size(895, 616);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(831, 616);
+            this.MinimumSize = new System.Drawing.Size(895, 616);
             this.Name = "FrmMostrarEvento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMostrarEvento";

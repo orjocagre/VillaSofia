@@ -68,35 +68,85 @@ namespace VillaSofia
             areas[3] = regeve.chbSalones.Checked ? 1 : 0;
 
             String msj = evento.editarEvento(regeve.idEvento, DateTime.Now, regeve.dtpFechaEvento.Value, Convert.ToInt32(regeve.cmbTipoEvento.SelectedValue), Convert.ToInt32(regeve.txtNumPersonas.Text), formatoHora(regeve.txtHora.Text, regeve.btnAmPm.Text), idtipser, sololoc, formatoHora(regeve.txtHoraComida.Text, regeve.btnAmPmComida.Text), Convert.ToInt32(regeve.txtDuracion.Text) - 5, regeve.txtComentarios.Text, regeve.total, Convert.ToDouble(TxtAnticipo.Text), Convert.ToDouble(txtPendiente.Text), (chbAnticipoCancelado.Checked ? 1 : 0), (chbTotalCancelado.Checked ? 1 : 0), txtNombre.Text, txtApellido.Text, txtCedula.Text, Convert.ToInt32(txtTelefono.Text), areas);
+            guardarEvento();
             MessageBox.Show(msj);
-
-
 
         }
 
+        Boolean validarCedula()
+        {
+            errorProvider1.Clear();
+            String cedula = txtCedula.Text;
+            String cedulasimple = cedula.Replace("-", String.Empty);
+            cedulasimple = cedulasimple.ToUpper();
 
+
+            if (cedula.Length == 16)
+            {
+                Boolean prefijo, letra;
+                ClsLogicaValidacionesC validacion = new ClsLogicaValidacionesC();
+                prefijo = validacion.ValidarPrefijosCedula(cedulasimple);
+                //fecha = validacion.ValidarFechaCedula(cedulasimple);
+                letra = validacion.ValidarLetraCeduda(cedulasimple);
+
+                if (prefijo == true && letra == true)
+                {
+                    LblRespuesta.Text = "Cédula Válida";
+                    return true;
+                    // txtCedula.Text = String.Empty;
+                    LblRespuesta.ForeColor = Color.Green;
+                }
+                else
+                {
+                    if (prefijo == false || letra == false)
+                    {
+                        LblRespuesta.Text = "Cédula no es Válida";
+                        return false;
+                        txtCedula.Text = String.Empty;
+                        LblRespuesta.ForeColor = Color.Red;
+
+                    }
+
+                }
+                //lblCedulaDigitada.Visible = true;
+                //lblCedulaPasada.Visible = true;
+            }
+
+            else
+                errorProvider1.SetError(txtCedula, "Por favor ingresa los datos completos de la cédula");
+            return false;
+        }
 
         void guardarEvento()
         {
-            ClsLogicaEvento evento = new ClsLogicaEvento();
+            if (validarCedula())
+            {
+                ClsLogicaEvento evento = new ClsLogicaEvento();
 
-            int antcan = chbAnticipoCancelado.Checked ? 1 : 0;
-            int totcan = chbTotalCancelado.Checked ? 1 : 0;
+                int antcan = chbAnticipoCancelado.Checked ? 1 : 0;
+                int totcan = chbTotalCancelado.Checked ? 1 : 0;
 
-            int idtipser = regeve.rbtBuffet.Checked ? 1 : 2;
-            int sololoc = regeve.rbtSoloLocal.Checked ? 1 : 0;
+                int idtipser = regeve.rbtBuffet.Checked ? 1 : 2;
+                int sololoc = regeve.rbtSoloLocal.Checked ? 1 : 0;
 
-            int[] areas = new int[4];
+                int[] areas = new int[4];
 
-            areas[0] = regeve.chbSalon.Checked ? 1 : 0;
-            areas[1] = regeve.chbTerraza.Checked ? 1 : 0;
-            areas[2] = regeve.chbJardin.Checked ? 1 : 0;
-            areas[3] = regeve.chbSalones.Checked ? 1 : 0;
+                areas[0] = regeve.chbSalon.Checked ? 1 : 0;
+                areas[1] = regeve.chbTerraza.Checked ? 1 : 0;
+                areas[2] = regeve.chbJardin.Checked ? 1 : 0;
+                areas[3] = regeve.chbSalones.Checked ? 1 : 0;
 
-            String msj = evento.agregarEvento(DateTime.Now, regeve.dtpFechaEvento.Value, Convert.ToInt32(regeve.cmbTipoEvento.SelectedValue), Convert.ToInt32(regeve.txtNumPersonas.Text), formatoHora(regeve.txtHora.Text,regeve.btnAmPm.Text), idtipser, sololoc, formatoHora(regeve.txtHoraComida.Text, regeve.btnAmPmComida.Text), Convert.ToInt32(regeve.txtDuracion.Text) - 5, regeve.txtComentarios.Text, regeve.total, Convert.ToDouble(TxtAnticipo.Text), Convert.ToDouble(txtPendiente.Text), (chbAnticipoCancelado.Checked ? 1 : 0), (chbTotalCancelado.Checked ? 1 : 0), txtNombre.Text, txtApellido.Text, txtCedula.Text, Convert.ToInt32(txtTelefono.Text), areas);
-            MessageBox.Show(msj);
+                
+                String msj = evento.agregarEvento(DateTime.Now, regeve.dtpFechaEvento.Value, Convert.ToInt32(regeve.cmbTipoEvento.SelectedValue), Convert.ToInt32(regeve.txtNumPersonas.Text), formatoHora(regeve.txtHora.Text, regeve.btnAmPm.Text), idtipser, sololoc, formatoHora(regeve.txtHoraComida.Text, regeve.btnAmPmComida.Text), Convert.ToInt32(regeve.txtDuracion.Text) - 5, regeve.txtComentarios.Text, regeve.total, Convert.ToDouble(TxtAnticipo.Text), Convert.ToDouble(txtPendiente.Text), (chbAnticipoCancelado.Checked ? 1 : 0), (chbTotalCancelado.Checked ? 1 : 0), txtNombre.Text, txtApellido.Text, txtCedula.Text, Convert.ToInt32(txtTelefono.Text), areas);
+                MessageBox.Show(msj);
+            }
+            else
+            {
+                MessageBox.Show("No se ingreso una cedula valida");
+                editarEvento();
+            }
 
-           
+
 
         }
         void validarCampos()

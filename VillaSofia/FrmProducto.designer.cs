@@ -43,11 +43,11 @@
             this.btnEliminar = new Guna.UI2.WinForms.Guna2Button();
             this.dgvProducto = new Guna.UI2.WinForms.Guna2DataGridView();
             this.gbAgregarEditar = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.btnGuardar = new Guna.UI2.WinForms.Guna2Button();
             this.chbEventos = new Guna.UI2.WinForms.Guna2CheckBox();
             this.chbRestaurante = new Guna.UI2.WinForms.Guna2CheckBox();
             this.btnSinonimos = new Guna.UI2.WinForms.Guna2Button();
             this.btnCancelar = new Guna.UI2.WinForms.Guna2Button();
-            this.btnGuardar = new Guna.UI2.WinForms.Guna2Button();
             this.btnClasificacion = new Guna.UI2.WinForms.Guna2Button();
             this.rdbBarra = new Guna.UI2.WinForms.Guna2RadioButton();
             this.rdbCocina = new Guna.UI2.WinForms.Guna2RadioButton();
@@ -334,6 +334,21 @@
             this.gbAgregarEditar.TabIndex = 1;
             this.gbAgregarEditar.Text = "Agregar Producto";
             // 
+            // btnGuardar
+            // 
+            this.btnGuardar.CheckedState.Parent = this.btnGuardar;
+            this.btnGuardar.CustomImages.Parent = this.btnGuardar;
+            this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnGuardar.ForeColor = System.Drawing.Color.White;
+            this.btnGuardar.HoverState.Parent = this.btnGuardar;
+            this.btnGuardar.Location = new System.Drawing.Point(275, 168);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.ShadowDecoration.Parent = this.btnGuardar;
+            this.btnGuardar.Size = new System.Drawing.Size(172, 36);
+            this.btnGuardar.TabIndex = 9;
+            this.btnGuardar.Text = "AGREGAR PRODUCTO";
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
             // chbEventos
             // 
             this.chbEventos.AutoSize = true;
@@ -398,28 +413,13 @@
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
             this.btnCancelar.HoverState.Parent = this.btnCancelar;
-            this.btnCancelar.Location = new System.Drawing.Point(186, 168);
+            this.btnCancelar.Location = new System.Drawing.Point(169, 168);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.ShadowDecoration.Parent = this.btnCancelar;
-            this.btnCancelar.Size = new System.Drawing.Size(111, 36);
+            this.btnCancelar.Size = new System.Drawing.Size(100, 36);
             this.btnCancelar.TabIndex = 10;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.CheckedState.Parent = this.btnGuardar;
-            this.btnGuardar.CustomImages.Parent = this.btnGuardar;
-            this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.HoverState.Parent = this.btnGuardar;
-            this.btnGuardar.Location = new System.Drawing.Point(303, 168);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.ShadowDecoration.Parent = this.btnGuardar;
-            this.btnGuardar.Size = new System.Drawing.Size(144, 36);
-            this.btnGuardar.TabIndex = 9;
-            this.btnGuardar.Text = "AGREGAR RECETA";
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnClasificacion
             // 
