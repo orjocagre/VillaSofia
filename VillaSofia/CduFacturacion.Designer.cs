@@ -34,7 +34,6 @@
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnEliminar = new Guna.UI2.WinForms.Guna2Button();
             this.btnCerrar = new Guna.UI2.WinForms.Guna2Button();
-            this.lblFactura = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtBusqueda = new Guna.UI2.WinForms.Guna2TextBox();
             this.lsbProducto = new System.Windows.Forms.ListBox();
             this.btnNuevaCuenta = new Guna.UI2.WinForms.Guna2Button();
@@ -47,6 +46,7 @@
             this.chbMostrarTodas = new Guna.UI2.WinForms.Guna2CheckBox();
             this.pnBotonesFacturas = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblFactura = new System.Windows.Forms.Label();
             this.btnDividirCuenta = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtTotal = new Guna.UI2.WinForms.Guna2TextBox();
@@ -135,16 +135,6 @@
             this.btnCerrar.TabIndex = 12;
             this.btnCerrar.Text = "CERRAR CUENTA";
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
-            // lblFactura
-            // 
-            this.lblFactura.BackColor = System.Drawing.Color.Transparent;
-            this.lblFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFactura.Location = new System.Drawing.Point(13, 32);
-            this.lblFactura.Name = "lblFactura";
-            this.lblFactura.Size = new System.Drawing.Size(343, 115);
-            this.lblFactura.TabIndex = 11;
-            this.lblFactura.Text = "Factura ";
             // 
             // txtBusqueda
             // 
@@ -340,12 +330,12 @@
             // 
             // guna2Panel4
             // 
+            this.guna2Panel4.Controls.Add(this.lblFactura);
             this.guna2Panel4.Controls.Add(this.btnDividirCuenta);
             this.guna2Panel4.Controls.Add(this.guna2HtmlLabel3);
             this.guna2Panel4.Controls.Add(this.txtTotal);
             this.guna2Panel4.Controls.Add(this.lblError);
             this.guna2Panel4.Controls.Add(this.dgvCuenta);
-            this.guna2Panel4.Controls.Add(this.lblFactura);
             this.guna2Panel4.Controls.Add(this.guna2Panel2);
             this.guna2Panel4.Controls.Add(this.btnAbierta);
             this.guna2Panel4.Controls.Add(this.btnCerrar);
@@ -355,6 +345,16 @@
             this.guna2Panel4.ShadowDecoration.Parent = this.guna2Panel4;
             this.guna2Panel4.Size = new System.Drawing.Size(748, 691);
             this.guna2Panel4.TabIndex = 1;
+            // 
+            // lblFactura
+            // 
+            this.lblFactura.AutoSize = true;
+            this.lblFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFactura.Location = new System.Drawing.Point(16, 15);
+            this.lblFactura.Name = "lblFactura";
+            this.lblFactura.Size = new System.Drawing.Size(152, 42);
+            this.lblFactura.TabIndex = 20;
+            this.lblFactura.Text = "Factura";
             // 
             // btnDividirCuenta
             // 
@@ -865,7 +865,6 @@
 
         #endregion
         private Guna.UI2.WinForms.Guna2Button btnCerrar;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblFactura;
         private Guna.UI2.WinForms.Guna2TextBox txtBusqueda;
         private System.Windows.Forms.ListBox lsbProducto;
         private Guna.UI2.WinForms.Guna2Button btnNuevaCuenta;
@@ -909,5 +908,6 @@
         private Guna.UI2.WinForms.Guna2Button btnDividirCuenta;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel13;
+        private System.Windows.Forms.Label lblFactura;
     }
 }

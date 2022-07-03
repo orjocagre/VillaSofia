@@ -59,12 +59,14 @@
             this.txtHora = new Guna.UI2.WinForms.Guna2TextBox();
             this.dtpFechaEvento = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.cmbTipoEvento = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnPrincipal
             // 
             this.pnPrincipal.BackColor = System.Drawing.Color.White;
+            this.pnPrincipal.Controls.Add(this.guna2HtmlLabel8);
             this.pnPrincipal.Controls.Add(this.guna2HtmlLabel3);
             this.pnPrincipal.Controls.Add(this.rbtServicioEnMesas);
             this.pnPrincipal.Controls.Add(this.rbtBuffet);
@@ -402,8 +404,10 @@
             // 
             // btnProforma
             // 
-            this.btnProforma.BorderRadius = 3;
+            this.btnProforma.BorderRadius = 9;
             this.btnProforma.CheckedState.Parent = this.btnProforma;
+            this.btnProforma.CustomBorderColor = System.Drawing.Color.LightSlateGray;
+            this.btnProforma.CustomBorderThickness = new System.Windows.Forms.Padding(1);
             this.btnProforma.CustomImages.Parent = this.btnProforma;
             this.btnProforma.FillColor = System.Drawing.Color.Transparent;
             this.btnProforma.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -411,10 +415,10 @@
             this.btnProforma.HoverState.Parent = this.btnProforma;
             this.btnProforma.Image = global::VillaSofia.Properties.Resources.menu128;
             this.btnProforma.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnProforma.Location = new System.Drawing.Point(27, 226);
+            this.btnProforma.Location = new System.Drawing.Point(21, 257);
             this.btnProforma.Name = "btnProforma";
             this.btnProforma.ShadowDecoration.Parent = this.btnProforma;
-            this.btnProforma.Size = new System.Drawing.Size(96, 94);
+            this.btnProforma.Size = new System.Drawing.Size(102, 63);
             this.btnProforma.TabIndex = 12;
             this.btnProforma.Click += new System.EventHandler(this.btnProforma_Click);
             // 
@@ -604,6 +608,17 @@
             this.cmbTipoEvento.Size = new System.Drawing.Size(174, 36);
             this.cmbTipoEvento.TabIndex = 0;
             // 
+            // guna2HtmlLabel8
+            // 
+            this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel8.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F);
+            this.guna2HtmlLabel8.ForeColor = System.Drawing.Color.Gray;
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(27, 237);
+            this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
+            this.guna2HtmlLabel8.Size = new System.Drawing.Size(52, 22);
+            this.guna2HtmlLabel8.TabIndex = 35;
+            this.guna2HtmlLabel8.Text = "Platillos";
+            // 
             // FrmRegistroEvento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -654,5 +669,6 @@
         public Guna.UI2.WinForms.Guna2RadioButton rbtServicioEnMesas;
         public Guna.UI2.WinForms.Guna2RadioButton rbtBuffet;
         public Guna.UI2.WinForms.Guna2RadioButton rbtSoloLocal;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
     }
 }

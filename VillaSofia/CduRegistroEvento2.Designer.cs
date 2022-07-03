@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnPrincipal = new Guna.UI2.WinForms.Guna2Panel();
+            this.LblRespuesta = new System.Windows.Forms.Label();
             this.chbAnticipoCancelado = new Guna.UI2.WinForms.Guna2CheckBox();
             this.txtPendiente = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -52,12 +54,15 @@
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.pnPrincipal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnPrincipal
             // 
             this.pnPrincipal.BackColor = System.Drawing.Color.White;
+            this.pnPrincipal.Controls.Add(this.LblRespuesta);
             this.pnPrincipal.Controls.Add(this.chbAnticipoCancelado);
             this.pnPrincipal.Controls.Add(this.txtPendiente);
             this.pnPrincipal.Controls.Add(this.guna2HtmlLabel7);
@@ -88,6 +93,19 @@
             this.pnPrincipal.Size = new System.Drawing.Size(678, 541);
             this.pnPrincipal.TabIndex = 1;
             // 
+            // LblRespuesta
+            // 
+            this.LblRespuesta.AutoSize = true;
+            this.LblRespuesta.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.LblRespuesta.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblRespuesta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
+            this.LblRespuesta.Location = new System.Drawing.Point(454, 213);
+            this.LblRespuesta.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.LblRespuesta.Name = "LblRespuesta";
+            this.LblRespuesta.Size = new System.Drawing.Size(168, 22);
+            this.LblRespuesta.TabIndex = 42;
+            this.LblRespuesta.Text = "Esperando Respuesta";
+            // 
             // chbAnticipoCancelado
             // 
             this.chbAnticipoCancelado.AutoSize = true;
@@ -97,7 +115,7 @@
             this.chbAnticipoCancelado.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.chbAnticipoCancelado.Font = new System.Drawing.Font("Tw Cen MT Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chbAnticipoCancelado.ForeColor = System.Drawing.Color.Gray;
-            this.chbAnticipoCancelado.Location = new System.Drawing.Point(402, 369);
+            this.chbAnticipoCancelado.Location = new System.Drawing.Point(414, 369);
             this.chbAnticipoCancelado.Name = "chbAnticipoCancelado";
             this.chbAnticipoCancelado.Size = new System.Drawing.Size(96, 26);
             this.chbAnticipoCancelado.TabIndex = 40;
@@ -139,9 +157,9 @@
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.Gray;
             this.guna2HtmlLabel7.IsSelectionEnabled = false;
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(170, 420);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(118, 413);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(79, 24);
+            this.guna2HtmlLabel7.Size = new System.Drawing.Size(137, 41);
             this.guna2HtmlLabel7.TabIndex = 38;
             this.guna2HtmlLabel7.Text = "Pendiente:";
             // 
@@ -154,7 +172,7 @@
             this.chbTotalCancelado.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.chbTotalCancelado.Font = new System.Drawing.Font("Tw Cen MT Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chbTotalCancelado.ForeColor = System.Drawing.Color.Gray;
-            this.chbTotalCancelado.Location = new System.Drawing.Point(402, 320);
+            this.chbTotalCancelado.Location = new System.Drawing.Point(413, 320);
             this.chbTotalCancelado.Name = "chbTotalCancelado";
             this.chbTotalCancelado.Size = new System.Drawing.Size(96, 26);
             this.chbTotalCancelado.TabIndex = 37;
@@ -197,7 +215,7 @@
             this.lblPorcentaje.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPorcentaje.ForeColor = System.Drawing.Color.Gray;
             this.lblPorcentaje.IsSelectionEnabled = false;
-            this.lblPorcentaje.Location = new System.Drawing.Point(132, 371);
+            this.lblPorcentaje.Location = new System.Drawing.Point(100, 369);
             this.lblPorcentaje.Name = "lblPorcentaje";
             this.lblPorcentaje.Size = new System.Drawing.Size(32, 22);
             this.lblPorcentaje.TabIndex = 34;
@@ -228,9 +246,9 @@
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Gray;
             this.guna2HtmlLabel2.IsSelectionEnabled = false;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(170, 369);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(131, 364);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(66, 24);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(115, 41);
             this.guna2HtmlLabel2.TabIndex = 29;
             this.guna2HtmlLabel2.Text = "Anticipo:";
             // 
@@ -265,9 +283,9 @@
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.Gray;
             this.guna2HtmlLabel6.IsSelectionEnabled = false;
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(170, 322);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(151, 312);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(44, 24);
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(74, 41);
             this.guna2HtmlLabel6.TabIndex = 29;
             this.guna2HtmlLabel6.Text = "Total:";
             // 
@@ -324,7 +342,6 @@
             this.txtTelefono.HoverState.Parent = this.txtTelefono;
             this.txtTelefono.Location = new System.Drawing.Point(29, 167);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.txtTelefono.MaxLength = 8;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.PasswordChar = '\0';
             this.txtTelefono.PlaceholderText = "";
@@ -480,6 +497,10 @@
             this.guna2HtmlLabel5.TabIndex = 16;
             this.guna2HtmlLabel5.Text = "Nombre";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // CduRegistroEvento2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -491,6 +512,7 @@
             this.VisibleChanged += new System.EventHandler(this.CduRegistroEvento2_VisibleChanged);
             this.pnPrincipal.ResumeLayout(false);
             this.pnPrincipal.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -512,7 +534,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
-        public Guna.UI2.WinForms.Guna2TextBox txtCedula;
         public Guna.UI2.WinForms.Guna2TextBox txtTelefono;
         public Guna.UI2.WinForms.Guna2TextBox txtApellido;
         public Guna.UI2.WinForms.Guna2TextBox txtNombre;
@@ -521,5 +542,8 @@
         public Guna.UI2.WinForms.Guna2TextBox TxtAnticipo;
         public Guna.UI2.WinForms.Guna2CheckBox chbAnticipoCancelado;
         public Guna.UI2.WinForms.Guna2TextBox txtPendiente;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label LblRespuesta;
+        public Guna.UI2.WinForms.Guna2TextBox txtCedula;
     }
 }
