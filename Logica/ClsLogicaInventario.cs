@@ -240,6 +240,149 @@ namespace Logica
             return msj;
         }
 
+        public DataTable generarListaComprasPresentacionTodos()
+        {
+            ClsDatosInventario inventario = new ClsDatosInventario();
+            String sql;
+
+            sql = "SELECT insumo.id_insumo AS ID, insumo.nombre AS NOMBRE, insumo.envase AS ENVASE, insumo.existencia / insumo.presentacion AS EXISTENCIA, insumo.minimo / insumo.presentacion AS MINIMO, (insumo.minimo / insumo.presentacion) - (insumo.existencia / insumo.presentacion) AS COMPRAS, insumo.precio AS PRECIO, insumo.presentacion AS PRESENTACION FROM insumo ORDER BY insumo.id_insumo ASC";
+
+
+            DataTable DT = inventario.consulta(sql);
+            for(int i=0; i<DT.Rows.Count; i++)
+            {
+                DT.Rows[i][5] = Math.Ceiling((double)DT.Rows[i][5]);
+                DT.Rows[i][6] = (double)DT.Rows[i][6] * (double)DT.Rows[i][5];
+            }
+            return DT;
+        }
+
+        public DataTable generarListaComprasUMTodos()
+        {
+            ClsDatosInventario inventario = new ClsDatosInventario();
+            String sql;
+            sql = "SELECT insumo.id_insumo AS ID, insumo.nombre AS NOMBRE, um.descripcion AS UM, insumo.existencia AS EXISTENCIA, insumo.minimo AS MINIMO, (insumo.minimo / insumo.presentacion) - (insumo.existencia / insumo.presentacion) AS COMPRAS, insumo.precio AS PRECIO, insumo.presentacion AS presentacion FROM insumo, um WHERE insumo.id_UM = um.id_UM ORDER BY insumo.id_insumo ASC";
+
+
+            DataTable DT = inventario.consulta(sql);
+            for (int i = 0; i < DT.Rows.Count; i++)
+            {
+                double comprasPresentacion = Math.Ceiling((double)DT.Rows[i][5]);
+                DT.Rows[i][5] = comprasPresentacion * (double)DT.Rows[i][7];
+                DT.Rows[i][6] = (double)DT.Rows[i][6] * comprasPresentacion;
+            }
+            return DT;
+        }
+
+        public DataTable generarListaComprasPresentacion()
+        {
+            ClsDatosInventario inventario = new ClsDatosInventario();
+            String sql;
+            sql = "SELECT insumo.id_insumo AS ID, insumo.nombre AS NOMBRE, insumo.envase AS ENVASE, insumo.existencia / insumo.presentacion AS EXISTENCIA, insumo.minimo / insumo.presentacion AS MINIMO, (insumo.minimo / insumo.presentacion) - (insumo.existencia / insumo.presentacion) AS COMPRAS, insumo.precio AS PRECIO, insumo.presentacion AS PRESENTACION FROM insumo WHERE (insumo.minimo / insumo.presentacion) - (insumo.existencia / insumo.presentacion) > 0 ORDER BY insumo.id_insumo ASC";
+
+
+            DataTable DT = inventario.consulta(sql);
+            for (int i = 0; i < DT.Rows.Count; i++)
+            {
+                DT.Rows[i][5] = Math.Ceiling((double)DT.Rows[i][5]);
+                DT.Rows[i][6] = (double)DT.Rows[i][6] * (double)DT.Rows[i][5];
+            }
+            return DT;
+        }
+
+        public DataTable generarListaComprasUM()
+        {
+            ClsDatosInventario inventario = new ClsDatosInventario();
+            String sql;
+            sql = "SELECT insumo.id_insumo AS ID, insumo.nombre AS NOMBRE, um.descripcion AS UM, insumo.existencia AS EXISTENCIA, insumo.minimo AS MINIMO, (insumo.minimo / insumo.presentacion) - (insumo.existencia / insumo.presentacion) AS COMPRAS, insumo.precio AS PRECIO, insumo.presentacion AS presentacion FROM insumo, um WHERE insumo.id_UM = um.id_UM AND ((insumo.minimo / insumo.presentacion) - (insumo.existencia / insumo.presentacion) > 0)  ORDER BY insumo.id_insumo ASC";
+
+
+            DataTable DT = inventario.consulta(sql);
+            for (int i = 0; i < DT.Rows.Count; i++)
+            {
+                double comprasPresentacion = Math.Ceiling((double)DT.Rows[i][5]);
+                DT.Rows[i][5] = comprasPresentacion * (double)DT.Rows[i][7];
+                DT.Rows[i][6] = (double)DT.Rows[i][6] * comprasPresentacion;
+            }
+            return DT;
+        }
+        public int agregarListaCompras()
+        {
+            ClsDatosInventario inventario = new ClsDatosInventario();
+            return inventario.agregarListaCompras();
+        }
+
+        public int agregarInsumoListaCompras(int Pid_insumo, int Pid_listaCompras, String Penvase, double Pexistencia, double Ppresentacion, double Pprecio, double Pminimo, double Pcompras)
+        {
+            ClsDatosInventario inventario = new ClsDatosInventario();
+            int msj = inventario.agregarInsumoListaCompras(Pid_insumo, Pid_listaCompras, Penvase, Pexistencia, Ppresentacion, Pprecio, Pminimo, Pcompras);
+            return msj;
+
+        }
+
+        public DataTable generarListaComprasPresentacionTodos(int idListaCompras)
+        {
+            ClsDatosInventario inventario = new ClsDatosInventario();
+            String sql;
+
+            sql = "SELECT insumo.id_insumo AS ID, insumo.nombre AS NOMBRE, listacompras_insumo.envase AS ENVASE, listacompras_insumo.existencia / listacompras_insumo.presentacion AS EXISTENCIA, listacompras_insumo.minimo / listacompras_insumo.presentacion AS MINIMO, listacompras_insumo.compras AS COMPRAS, listacompras_insumo.precio AS PRECIO, listacompras_insumo.presentacion AS PRESENTACION FROM insumo, listacompras_insumo WHERE listacompras_insumo.id_insumo = insumo.id_insumo AND listacompras_insumo.id_listaCompras = "+idListaCompras+" ORDER BY insumo.id_insumo ASC";
+
+
+            DataTable DT = inventario.consulta(sql);
+            
+            return DT;
+        }
+
+        public DataTable generarListaComprasUMTodos(int idListaCompras)
+        {
+            ClsDatosInventario inventario = new ClsDatosInventario();
+            String sql;
+            sql = "SELECT insumo.id_insumo AS ID, insumo.nombre AS NOMBRE, um.descripcion AS UM, listacompras_insumo.existencia AS EXISTENCIA, listacompras_insumo.minimo AS MINIMO, (listacompras_insumo.compras * listacompras_insumo.presentacion) AS COMPRAS, listacompras_insumo.precio AS PRECIO, listacompras_insumo.presentacion AS presentacion FROM insumo, um, listacompras_insumo WHERE listacompras_insumo.id_insumo = insumo.id_insumo AND listacompras_insumo.id_UM = um.id_UM AND listacompras_insumo.id_listaCompras = " + idListaCompras + " ORDER BY insumo.id_insumo ASC";
+
+
+            DataTable DT = inventario.consulta(sql);
+            
+            return DT;
+        }
+
+        public DataTable generarListaComprasPresentacion(int idListaCompras)
+        {
+            ClsDatosInventario inventario = new ClsDatosInventario();
+            String sql;
+            sql = "SELECT insumo.id_insumo AS ID, insumo.nombre AS NOMBRE, listacompras_insumo.envase AS ENVASE, listacompras_insumo.existencia / listacompras_insumo.presentacion AS EXISTENCIA, listacompras_insumo.minimo / listacompras_insumo.presentacion AS MINIMO, listacompras_insumo.compras AS COMPRAS, listacompras_insumo.precio AS PRECIO, listacompras_insumo.presentacion AS PRESENTACION FROM insumo, listacompras_insumo WHERE listacompras_insumo.id_insumo = insumo.id_insumo AND listacompras_insumo.id_listaCompras = " + idListaCompras + " AND listacompras_insumo.compras > 0 ORDER BY insumo.id_insumo ASC";
+
+
+            DataTable DT = inventario.consulta(sql);
+            
+            return DT;
+        }
+
+        public DataTable generarListaComprasUM(int idListaCompras)
+        {
+            ClsDatosInventario inventario = new ClsDatosInventario();
+            String sql;
+
+            sql = "SELECT insumo.id_insumo AS ID, insumo.nombre AS NOMBRE, um.descripcion AS UM, listacompras_insumo.existencia AS EXISTENCIA, listacompras_insumo.minimo AS MINIMO, (listacompras_insumo.compras * listacompras_insumo.presentacion) AS COMPRAS, listacompras_insumo.precio AS PRECIO, listacompras_insumo.presentacion AS presentacion FROM insumo, um, listacompras_insumo WHERE listacompras_insumo.id_insumo = insumo.id_insumo AND listacompras_insumo.id_UM = um.id_UM AND listacompras_insumo.compras > 0 AND listacompras_insumo.id_listaCompras = " + idListaCompras + " ORDER BY insumo.id_insumo ASC";
+
+
+            DataTable DT = inventario.consulta(sql);
+            
+            return DT;
+        }
+
+        public DataTable listarListasCompras(DateTime fecha)
+        {
+            ClsDatosInventario inventario = new ClsDatosInventario();
+            String sql = "	SELECT id_listaCompras AS ID, fecha AS FECHA FROM listacompras WHERE fecha LIKE '%"+fecha.ToString("yyy-MM-dd")+ "%' ORDER BY fecha DESC";
+            return inventario.consulta(sql);
+        }
+
+        public DataTable listarListasCompras()
+        {
+            ClsDatosInventario inventario = new ClsDatosInventario();
+            String sql = "	SELECT id_listaCompras AS ID, fecha AS FECHA FROM listacompras";
+            return inventario.consulta(sql);
+        }
 
 
     }
