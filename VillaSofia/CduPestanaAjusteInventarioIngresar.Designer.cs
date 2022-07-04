@@ -108,6 +108,7 @@
             this.btnEditar.Size = new System.Drawing.Size(33, 32);
             this.btnEditar.TabIndex = 12;
             this.btnEditar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnEditar.Visible = false;
             // 
             // btnEliminar
             // 

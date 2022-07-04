@@ -160,5 +160,16 @@ namespace VillaSofia
             deEvento = true;
             guardarProforma();
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            dgvProforma.Rows.RemoveAt(dgvProforma.SelectedRows[0].Index);
+            calcularTotalesProforma();
+        }
+
+        private void btnArriba_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

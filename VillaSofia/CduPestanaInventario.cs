@@ -80,5 +80,33 @@ namespace VillaSofia
         {
             llenarDgvInventario();
         }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            Boolean primero = true;
+
+            for (int i = 0; i < dgvInventario.Rows.Count; i++)
+            {
+
+                if (dgvInventario.Rows[i].Cells[1].Value.ToString().Contains(txtBusqueda.Text))
+                {
+
+                    if (primero)
+                    {
+                        dgvInventario.Rows[i].Selected = true;
+                        dgvInventario.FirstDisplayedScrollingRowIndex = i;
+                        primero = false;
+                    }
+                }
+            }
+
+            if (primero)
+            {
+                MessageBox.Show("No se encontraron coincidencias");
+                txtBusqueda.Focus();
+                txtBusqueda.SelectionStart = 0;
+                txtBusqueda.SelectionLength = txtBusqueda.Text.Length;
+            }
+        }
     }
 }

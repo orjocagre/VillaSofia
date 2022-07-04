@@ -28,10 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.btnBuscar = new Guna.UI2.WinForms.Guna2Button();
+            this.txtEnvase = new System.Windows.Forms.TextBox();
+            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.chbDeshabilitados = new Guna.UI2.WinForms.Guna2CheckBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnEditar = new Guna.UI2.WinForms.Guna2Button();
@@ -40,7 +43,10 @@
             this.btnAgregar = new Guna.UI2.WinForms.Guna2Button();
             this.btnEliminar = new Guna.UI2.WinForms.Guna2Button();
             this.dgvInsumo = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.gbAgregarEditar = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.txtPresentacion = new System.Windows.Forms.TextBox();
+            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnGuardar = new Guna.UI2.WinForms.Guna2Button();
             this.cmbUm = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtPrecio = new System.Windows.Forms.TextBox();
@@ -48,12 +54,6 @@
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txtPresentacion = new System.Windows.Forms.TextBox();
-            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txtEnvase = new System.Windows.Forms.TextBox();
-            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInsumo)).BeginInit();
@@ -77,6 +77,47 @@
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1044, 589);
             this.guna2CustomGradientPanel1.TabIndex = 11;
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscar.BackColor = System.Drawing.Color.White;
+            this.btnBuscar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.btnBuscar.BorderRadius = 2;
+            this.btnBuscar.CheckedState.Parent = this.btnBuscar;
+            this.btnBuscar.CustomImages.Parent = this.btnBuscar;
+            this.btnBuscar.FillColor = System.Drawing.Color.White;
+            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.HoverState.Parent = this.btnBuscar;
+            this.btnBuscar.Image = global::VillaSofia.Properties.Resources.buscarNegro;
+            this.btnBuscar.Location = new System.Drawing.Point(927, 211);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.ShadowDecoration.Parent = this.btnBuscar;
+            this.btnBuscar.Size = new System.Drawing.Size(39, 36);
+            this.btnBuscar.TabIndex = 36;
+            this.btnBuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnBuscar.TextOffset = new System.Drawing.Point(0, 3);
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // txtEnvase
+            // 
+            this.txtEnvase.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtEnvase.Location = new System.Drawing.Point(124, 211);
+            this.txtEnvase.Name = "txtEnvase";
+            this.txtEnvase.Size = new System.Drawing.Size(100, 29);
+            this.txtEnvase.TabIndex = 17;
+            // 
+            // guna2HtmlLabel5
+            // 
+            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(29, 217);
+            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(51, 23);
+            this.guna2HtmlLabel5.TabIndex = 16;
+            this.guna2HtmlLabel5.Text = "Envase";
+            // 
             // chbDeshabilitados
             // 
             this.chbDeshabilitados.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -96,6 +137,7 @@
             this.chbDeshabilitados.UncheckedState.BorderThickness = 0;
             this.chbDeshabilitados.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.chbDeshabilitados.UseVisualStyleBackColor = false;
+            this.chbDeshabilitados.Visible = false;
             // 
             // guna2Panel1
             // 
@@ -132,6 +174,7 @@
             this.btnEditar.Size = new System.Drawing.Size(33, 32);
             this.btnEditar.TabIndex = 11;
             this.btnEditar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnEditar.Visible = false;
             // 
             // btnAbajo
             // 
@@ -151,6 +194,7 @@
             this.btnAbajo.Size = new System.Drawing.Size(33, 32);
             this.btnAbajo.TabIndex = 10;
             this.btnAbajo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAbajo.Visible = false;
             // 
             // btnArriba
             // 
@@ -170,6 +214,7 @@
             this.btnArriba.Size = new System.Drawing.Size(33, 32);
             this.btnArriba.TabIndex = 9;
             this.btnArriba.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnArriba.Visible = false;
             // 
             // btnAgregar
             // 
@@ -189,6 +234,7 @@
             this.btnAgregar.Size = new System.Drawing.Size(33, 32);
             this.btnAgregar.TabIndex = 8;
             this.btnAgregar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAgregar.Visible = false;
             // 
             // btnEliminar
             // 
@@ -208,16 +254,17 @@
             this.btnEliminar.Size = new System.Drawing.Size(33, 32);
             this.btnEliminar.TabIndex = 7;
             this.btnEliminar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnEliminar.Visible = false;
             // 
             // dgvInsumo
             // 
             this.dgvInsumo.AllowUserToAddRows = false;
             this.dgvInsumo.AllowUserToDeleteRows = false;
             this.dgvInsumo.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvInsumo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvInsumo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvInsumo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -226,23 +273,23 @@
             this.dgvInsumo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvInsumo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvInsumo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvInsumo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInsumo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvInsumo.ColumnHeadersHeight = 20;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvInsumo.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvInsumo.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvInsumo.EnableHeadersVisualStyles = false;
             this.dgvInsumo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
             this.dgvInsumo.Location = new System.Drawing.Point(12, 255);
@@ -276,6 +323,15 @@
             this.dgvInsumo.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.Silver;
             this.dgvInsumo.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBuscar.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtBuscar.Location = new System.Drawing.Point(613, 218);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(308, 29);
+            this.txtBuscar.TabIndex = 3;
+            // 
             // gbAgregarEditar
             // 
             this.gbAgregarEditar.Controls.Add(this.txtPresentacion);
@@ -295,6 +351,25 @@
             this.gbAgregarEditar.Size = new System.Drawing.Size(439, 237);
             this.gbAgregarEditar.TabIndex = 1;
             this.gbAgregarEditar.Text = "Agregar Insumo";
+            // 
+            // txtPresentacion
+            // 
+            this.txtPresentacion.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtPresentacion.Location = new System.Drawing.Point(112, 129);
+            this.txtPresentacion.Name = "txtPresentacion";
+            this.txtPresentacion.Size = new System.Drawing.Size(100, 29);
+            this.txtPresentacion.TabIndex = 15;
+            // 
+            // guna2HtmlLabel4
+            // 
+            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(17, 135);
+            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(92, 23);
+            this.guna2HtmlLabel4.TabIndex = 14;
+            this.guna2HtmlLabel4.Text = "Presentación";
             // 
             // btnGuardar
             // 
@@ -378,75 +453,6 @@
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(61, 23);
             this.guna2HtmlLabel1.TabIndex = 0;
             this.guna2HtmlLabel1.Text = "Nombre";
-            // 
-            // txtPresentacion
-            // 
-            this.txtPresentacion.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtPresentacion.Location = new System.Drawing.Point(112, 129);
-            this.txtPresentacion.Name = "txtPresentacion";
-            this.txtPresentacion.Size = new System.Drawing.Size(100, 29);
-            this.txtPresentacion.TabIndex = 15;
-            // 
-            // guna2HtmlLabel4
-            // 
-            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(17, 135);
-            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(92, 23);
-            this.guna2HtmlLabel4.TabIndex = 14;
-            this.guna2HtmlLabel4.Text = "Presentación";
-            // 
-            // txtEnvase
-            // 
-            this.txtEnvase.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtEnvase.Location = new System.Drawing.Point(124, 211);
-            this.txtEnvase.Name = "txtEnvase";
-            this.txtEnvase.Size = new System.Drawing.Size(100, 29);
-            this.txtEnvase.TabIndex = 17;
-            // 
-            // guna2HtmlLabel5
-            // 
-            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(29, 217);
-            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(51, 23);
-            this.guna2HtmlLabel5.TabIndex = 16;
-            this.guna2HtmlLabel5.Text = "Envase";
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBuscar.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtBuscar.Location = new System.Drawing.Point(613, 218);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(308, 29);
-            this.txtBuscar.TabIndex = 3;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscar.BackColor = System.Drawing.Color.White;
-            this.btnBuscar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.btnBuscar.BorderRadius = 2;
-            this.btnBuscar.CheckedState.Parent = this.btnBuscar;
-            this.btnBuscar.CustomImages.Parent = this.btnBuscar;
-            this.btnBuscar.FillColor = System.Drawing.Color.White;
-            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.HoverState.Parent = this.btnBuscar;
-            this.btnBuscar.Image = global::VillaSofia.Properties.Resources.buscarNegro;
-            this.btnBuscar.Location = new System.Drawing.Point(927, 211);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.ShadowDecoration.Parent = this.btnBuscar;
-            this.btnBuscar.Size = new System.Drawing.Size(39, 36);
-            this.btnBuscar.TabIndex = 36;
-            this.btnBuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnBuscar.TextOffset = new System.Drawing.Point(0, 3);
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // FrmInsumo
             // 
