@@ -18,9 +18,11 @@ namespace VillaSofia
         int idNuevaFactura;
         int idCmbMesero;
         Boolean todos;
+        CduFacturacion fact;
 
-        public FrmDividirCuenta(int idFactura, int idCmbMesero)
+        public FrmDividirCuenta(int idFactura, int idCmbMesero, CduFacturacion fact)
         {
+            this.fact = fact;
             this.idCmbMesero = idCmbMesero;
             this.idFactura = idFactura;
             todos = false;
@@ -247,6 +249,8 @@ namespace VillaSofia
                 agregarNuevaFactura();
                 guardarFacturas();
                 dgvSubCuenta.Rows.Clear();
+
+                fact.cargarPanelFacturas();
             }
         }
 

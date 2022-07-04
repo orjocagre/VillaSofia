@@ -81,7 +81,7 @@ namespace VillaSofia
         //    List<byte>
         //}
 
-        void cargarPanelFacturas()
+        public void cargarPanelFacturas()
         {
             pnBotonesFacturas.Controls.Clear();
 
@@ -775,6 +775,7 @@ namespace VillaSofia
         {
             facturaEditada = true;
             eliminarRegistro();
+            calcularTotalesFactura();
         }
         //161
         private void btnAtras_Click(object sender, EventArgs e)
@@ -803,6 +804,9 @@ namespace VillaSofia
                 lblMesero.Location = new Point(lblMesero.Location.X, lblMesero.Location.Y - 158);
                 txtBusqueda.Location = new Point(txtBusqueda.Location.X, txtBusqueda.Location.Y - 158);
                 lsbProducto.Location = new Point(lsbProducto.Location.X, lsbProducto.Location.Y - 158);
+                lblIngrese.Location = new Point(lblIngrese.Location.X, lblIngrese.Location.Y - 158);
+                pbIngrese.Location = new Point(pbIngrese.Location.X, pbIngrese.Location.Y - 158);
+
                 btnDesplegarNombre.Image = Properties.Resources.abajoWhiteSmoke32;
                 desplegado = false;
             }
@@ -813,6 +817,8 @@ namespace VillaSofia
                 cmbMesero.Location = new Point(cmbMesero.Location.X, cmbMesero.Location.Y + 158);
                 txtBusqueda.Location = new Point(txtBusqueda.Location.X, txtBusqueda.Location.Y + 158);
                 lsbProducto.Location = new Point(lsbProducto.Location.X, lsbProducto.Location.Y + 158);
+                lblIngrese.Location = new Point(lblIngrese.Location.X, lblIngrese.Location.Y + 158);
+                pbIngrese.Location = new Point(pbIngrese.Location.X, pbIngrese.Location.Y + 158);
                 btnDesplegarNombre.Image = Properties.Resources.arribaWhiteSmoke32;
                 desplegado = true;
 
@@ -846,7 +852,7 @@ namespace VillaSofia
             if(dgvCuenta.Rows.Count > 0)
             {
                 dejarAbiertaFactura();
-                FrmDividirCuenta dividir = new FrmDividirCuenta(idFactura, Convert.ToInt32(cmbMesero.SelectedValue));
+                FrmDividirCuenta dividir = new FrmDividirCuenta(idFactura, Convert.ToInt32(cmbMesero.SelectedValue), this);
                 dividir.Visible = true;
             }
             else

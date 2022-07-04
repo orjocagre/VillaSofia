@@ -51,7 +51,7 @@ namespace VillaSofia
             cmbAgno.Items.Add("2021");
             cmbAgno.Items.Add("2022");
 
-            cmbAgno.SelectedIndex = 1;
+            cmbAgno.SelectedIndex = 2;
             cmbMes.SelectedIndex = DateTime.Now.Month - 1;
 
             cmbLlenos = true;

@@ -234,5 +234,37 @@ namespace Datos
                 conex.conectar.Close();
             }
         }
+
+        public int editarExistenciaInsumo(int Pid_insumo, double Pexistencia)
+        {
+            MySqlCommand CM = new MySqlCommand();
+            MySqlParameter x = new MySqlParameter();
+
+            try
+            {
+                conex.conectar.Open();
+                CM.Connection = conex.conectar;
+                CM.CommandType = CommandType.StoredProcedure;
+                CM.CommandText = "EditarExistenciaInsumo";
+
+                CM.Parameters.AddWithValue("Pid_insumo", Pid_insumo);
+                CM.Parameters["Pid_insumo"].Direction = ParameterDirection.Input;
+
+                CM.Parameters.AddWithValue("Pexistencia", Pexistencia);
+                CM.Parameters["Pexistencia"].Direction = ParameterDirection.Input;
+
+                CM.ExecuteNonQuery();
+                return 1;
+            }
+            catch (MySqlException e)
+            {
+                Console.WriteLine(e.ToString());
+                return 3;
+            }
+            finally
+            {
+                conex.conectar.Close();
+            }
+        }
     }
 }

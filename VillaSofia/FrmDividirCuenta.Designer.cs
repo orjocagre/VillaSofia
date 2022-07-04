@@ -132,12 +132,12 @@
             this.btnDescartar.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDescartar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.btnDescartar.HoverState.Parent = this.btnDescartar;
-            this.btnDescartar.Location = new System.Drawing.Point(1045, 595);
+            this.btnDescartar.Location = new System.Drawing.Point(1068, 595);
             this.btnDescartar.Name = "btnDescartar";
             this.btnDescartar.ShadowDecoration.Parent = this.btnDescartar;
-            this.btnDescartar.Size = new System.Drawing.Size(128, 46);
+            this.btnDescartar.Size = new System.Drawing.Size(105, 46);
             this.btnDescartar.TabIndex = 25;
-            this.btnDescartar.Text = "DESCARTAR";
+            this.btnDescartar.Text = "SALIR";
             this.btnDescartar.Click += new System.EventHandler(this.btnDescartar_Click);
             // 
             // btnDividir

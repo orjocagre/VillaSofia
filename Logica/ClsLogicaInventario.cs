@@ -384,6 +384,25 @@ namespace Logica
             return inventario.consulta(sql);
         }
 
+        public DataTable listarInventarioReajuste()
+        {
+            ClsDatosInventario inventario = new ClsDatosInventario();
+            String sql = "SELECT insumo.id_insumo AS ID, insumo.nombre AS NOMBRE, insumo.envase AS ENVASE, insumo.presentacion AS PRESENTACION, um.descripcion AS UM, insumo.existencia / insumo.presentacion AS INVENTARIO FROM insumo, um WHERE insumo.id_UM = um.id_UM ORDER BY insumo.id_insumo ASC";
+            return inventario.consulta(sql);
+        }
+
+        public DataTable listarInventarioReajusteConPrecio()
+        {
+            ClsDatosInventario inventario = new ClsDatosInventario();
+            String sql = "SELECT insumo.id_insumo AS ID, insumo.nombre AS NOMBRE, insumo.envase AS ENVASE, insumo.presentacion AS PRESENTACION, um.descripcion AS UM, insumo.existencia / insumo.presentacion AS INVENTARIO, insumo.precio_UM * insumo.presentacion AS PRECIO FROM insumo, um WHERE insumo.id_UM = um.id_UM ORDER BY insumo.id_insumo ASC";
+            return inventario.consulta(sql);
+        }
+
+        public int editarExistenciaInsumo(int Pid_insumo, double Pexistencia)
+        {
+            ClsDatosInventario invetario = new ClsDatosInventario();
+            return invetario.editarExistenciaInsumo(Pid_insumo, Pexistencia);
+        }
 
     }
 }
